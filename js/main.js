@@ -1,3 +1,4 @@
+
 let name;
 
 function set_name() {
@@ -13,4 +14,5 @@ function PopUpRegole(){
     console.log("Le regole")
     console.log("Dario gay")
 }
+
 

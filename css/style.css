@@ -1,9 +1,17 @@
+
+#intro_project {
+    opacity: 50%;
+    text-align: center;
+    width: auto;
+    height: 500pt;
+
 #container_name_project {
     opacity: 50%;
     text-align: center;
     width: auto;
     height: auto;
     padding-bottom: 30pt;
+
     animation-name: change_color;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -11,10 +19,17 @@
 }
 
 @keyframes change_color {
+
+    0%   {background-color: black;}
+    25%  {background-color: darkgrey;}
+    50%  {background-color: grey;}
+    100% {background-color: lightgray;}
+
     0%   {background-color: #9bf83a;}
     25%  {background-color: yellow;}
     50%  {background-color: blue;}
     100% {background-color: #008000;}
+
 
 }
 
@@ -24,6 +39,26 @@
     animation-name: change_size;
     animation-duration: 5s;
 
+}
+.athon-app{
+    line-height: 300px;
+    margin: 0;
+    font-family: 'Red Hat Display',sans-serif;
+    font-weight: 900;
+    background-size: 40%;
+    background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg") 50% 50%;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,0.08);
+    animation: zoomout 50s ease 500ms forwards;
+}
+
+@keyframes zoomout {
+    from{
+        background-size: 40%;
+    }
+    to{
+        background-size: 10%;
+    }
 }
 
 @keyframes change_size {
