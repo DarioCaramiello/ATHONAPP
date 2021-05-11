@@ -6,17 +6,42 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="intro_project">
+
+<div id="container_name_project">
     <div id="name_project">
         <p class="athon-app">AthonApp</p>
+    </div>
+
+    <div id="cite_intro">
+        <p>
+            "Più difficile è la vittoria, più grande è la felicità nel vincere."
+        </p>
+    </div>
+    
+</div>
+
+<div id="container_rules_project">
+    <div id="rules_project">
+        <p>
+            Ciao <p id="name_utente"></p> queste sono le <p id="regole" onmouseover="PopUpRegole()">regole </p>di athonApp
+        </p>
+        
+    </div>
+
+    <div id="insert_name">
+        <p>Inserisci il tuo nome</p>
+        <input type="text" id="utent_id" name="utent_id">
+        <input type="button" value="confirm" onclick="set_name()">
     </div>
     <div id="name_developer">
         <p>
             Dario Caramiello - Simone Lanza - Vincenzo Russo</br>
         </p>
     </div>
-</div>
 
-    <script language="JavaScript" src="js/main.js"></script>
+
+</div>
+<script language="JavaScript" src="js/main.js"></script>
+
 </body>
 </html>
