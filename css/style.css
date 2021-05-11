@@ -1,37 +1,64 @@
 
-#intro_project {
+#container_name_project {
     opacity: 50%;
     text-align: center;
     width: auto;
-    height: 615pt;
+    height: auto;
+    padding-bottom: 30pt;
     animation-name: change_color;
-    animation-duration: 18s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
+
 }
 
 @keyframes change_color {
     0%   {background-color: #9bf83a;}
     25%  {background-color: yellow;}
     50%  {background-color: blue;}
-    100% {background-color: green;}
+    100% {background-color: #008000;}
 
 }
 
 #name_project {
-    font-size: 100pt;
-    padding-top: 250pt;
+    font-size: 170pt;
+    padding-top: 30pt;
     animation-name: change_size;
     animation-duration: 5s;
+
 }
 
 @keyframes change_size {
-    from { font-size:  200pt}
-    to { font-size: 100pt}
+    from { font-size:  300pt; }
+    to { font-size: 170pt; }
 }
 
-#name_developer {
-    font-size: 15pt;
+#cite_intro {
+    font-size: 20pt;
+    animation-name: change_size_2;
+    animation-duration: 6s;
 }
+
+@keyframes change_size_2 {
+    from { font-size: 10pt; }
+    to { font-size: 20pt; }
+}
+
+#container_rules_project {
+    background-color: darkorange;
+    opacity: 100%;
+    text-align: center;
+    animation-name: change_opacity;
+    animation-duration: 6s;
+    padding-top: 30pt;
+    padding-bottom: 30pt;
+}
+
+@keyframes change_opacity {
+    from { opacity: 20% }
+    to { opacity: 100% }
+}
+
+
 
 body {
     margin: 0 0 0 0;
