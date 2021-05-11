@@ -1,4 +1,3 @@
-
 #container_name_project {
     opacity: 50%;
     text-align: center;
@@ -55,11 +54,12 @@
 
 @keyframes change_opacity {
     from { opacity: 20% }
-    to { opacity: 100% }
-=======
-#name_developer {
+    to { opacity: 100% 
+    }
+}
+
+#name_developer{
     font-size: 15pt;
-    position: fixed;
     width: 100%;
     height: 100px;
     top: auto;
