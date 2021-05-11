@@ -9,3 +9,8 @@ function set_name() {
 
     console.log("global name : "+name)
 }
+
+function PopUpRegole(){
+    let id=document.getElementById("regole")
+    console.log("Le regole")
+}
