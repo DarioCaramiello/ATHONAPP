@@ -1,0 +1,42 @@
+
+#intro_project {
+    opacity: 50%;
+    text-align: center;
+    width: auto;
+    height: 615pt;
+    animation-name: change_color;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change_color {
+    0%   {background-color: #9bf83a;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+
+}
+
+#name_project {
+    font-size: 100pt;
+    padding-top: 250pt;
+    animation-name: change_size;
+    animation-duration: 5s;
+}
+
+@keyframes change_size {
+    from { font-size:  200pt}
+    to { font-size: 100pt}
+}
+
+#name_developer {
+    font-size: 15pt;
+}
+
+body {
+    margin: 0 0 0 0;
+}
+
+p {
+    margin: 0 0 0 0;
+}
