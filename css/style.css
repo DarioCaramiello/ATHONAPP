@@ -5,7 +5,7 @@
     width: auto;
     height: 615pt;
     animation-name: change_color;
-    animation-duration: 4s;
+    animation-duration: 18s;
     animation-iteration-count: infinite;
 }
 
@@ -18,8 +18,19 @@
 }
 
 #name_project {
-    font-size: 80pt;
+    font-size: 100pt;
     padding-top: 250pt;
+    animation-name: change_size;
+    animation-duration: 5s;
+}
+
+@keyframes change_size {
+    from { font-size:  200pt}
+    to { font-size: 100pt}
+}
+
+#name_developer {
+    font-size: 15pt;
 }
 
 body {
