@@ -6,7 +6,7 @@ function start_game() {
 }
 
 function change_color_on() {
-    document.getElementById("btn_id").style.backgroundColor = "green"
+    document.getElementById("btn_id").style.backgroundColor = "white"
 }
 
 function change_color_off() {
@@ -16,7 +16,6 @@ function change_color_off() {
 function change_size_on() {
     document.getElementById("cite_intro").style.fontSize = "25pt"
     document.getElementById("cite_intro").style.color = "green"
-
 }
 
 function change_size_off() {
