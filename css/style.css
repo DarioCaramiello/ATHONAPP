@@ -4,7 +4,7 @@ body {
 
     /* animazione sfondo pagina */
     animation-name: change_color;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
 
 }
@@ -18,7 +18,7 @@ body {
 
 #container_name_project {
     text-align: center;
-    padding-top: 0pt;
+    margin-bottom: 60pt;
 
 }
 #name_project {
@@ -54,13 +54,13 @@ body {
 
 
 #cite_intro {
-    font-size: 14pt;
+    font-size: 17pt;
     animation-name: change_size_2;
     animation-duration: 6s;
 }
 @keyframes change_size_2 {
     from { font-size: 9pt; }
-    to { font-size: 14pt; }
+    to { font-size: 17pt; }
 }
 
 
@@ -71,8 +71,6 @@ body {
 
     animation-name: change_opacity;
     animation-duration: 6s;
-
-
 }
 @keyframes change_opacity {
     from { opacity: 0%; }
@@ -80,8 +78,9 @@ body {
 }
 
 
+
 #footer_project {
-    padding-top: 130pt;
+    padding-top: 80pt;
 }
 
 
@@ -103,7 +102,7 @@ div[class*=box] {
     cursor: pointer;
 }
 .btn-three {
-    color: #FFF;
+    color: #000000;
     transition: all 0.5s;
     position: relative;
 }

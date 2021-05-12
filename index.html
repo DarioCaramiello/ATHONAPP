@@ -7,41 +7,30 @@
 </head>
 
 <body>
-
-
     <div id="container_name_project">
         <div id="name_project">
             <p class="athon-app">AthonApp</p>
         </div>
 
-        <div id="cite_intro">
-            <p>
-                "Più difficile è la vittoria, più grande è la felicità nel vincere."
-            </p>
+        <div id="cite_intro" onmouseover="change_size_on()" onmouseout="change_size_off()">
+            <p>"Più difficile è la vittoria, più grande è la felicità nel vincere."</p>
         </div>
     </div>
 
-    <div id="container_start">
+    <div id="container_start" onmouseover="change_color_on()" onmouseout="change_color_off()">
         <div class="box-3">
-            <div class="btn btn-three" onclick="start_game()">
-                <span>START</span>
+            <div class="btn btn-three" id="btn_id" onclick="start_game()">
+                <span style="font-size: 20pt">START</span>
             </div>
         </div>
-
     </div>
-
-
-
 
     <footer>
         <div id="footer_project" style="text-align: center;">
-            <p>
-                Dario Caramiello - Simone Lanza - Vincenzo Russo</br>
-            </p>
+            <p>Dario Caramiello - Simone Lanza - Vincenzo Russo</p>
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js/"></script>
     <script language="JavaScript" src="js/main.js"></script>
 </body>
 </html>
