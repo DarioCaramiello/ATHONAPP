@@ -4,34 +4,31 @@ body {
 
     /* animazione sfondo pagina */
     animation-name: change_color;
-    animation-duration: 6s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
+
 }
 @keyframes change_color {
-    0%   {background-color: black;}
-    25%  {background-color: darkgrey;}
-    50%  {background-color: grey;}
+    0%   {background-color: #ffffff;}
+    25%  {background-color: #696262;}
+    50%  {background-color: #484646;}
     100% {background-color: lightgray;}
 }
 
 
-
 #container_name_project {
     text-align: center;
-    width: auto;
-    height: auto;
+    padding-top: 0pt;
+
 }
-
-
 #name_project {
-    font-size: 190pt;
-    padding-top: 50pt;
+    font-size: 200pt;
     animation-name: change_size;
     animation-duration: 6s;
 }
 @keyframes change_size {
     from { font-size:  300pt; }
-    to { font-size: 190pt; }
+    to { font-size: 200pt; }
 }
 
 
@@ -48,6 +45,7 @@ body {
     animation: zoomout 10s ease-in 500ms forwards;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+
 }
 @keyframes zoomout {
     from{ background-size: 40%; }
@@ -56,37 +54,29 @@ body {
 
 
 #cite_intro {
-    font-size: 20pt;
+    font-size: 14pt;
     animation-name: change_size_2;
     animation-duration: 6s;
 }
 @keyframes change_size_2 {
     from { font-size: 9pt; }
-    to { font-size: 18pt; }
+    to { font-size: 14pt; }
 }
 
 
 #container_start {
-    animation-name: change_position;
-    position: relative;
-    left: 500pt;
-
-    animation-duration: 6s;
     padding-top: 70pt;
     padding-bottom: 70pt;
-}
+    opacity: 100%;
 
-@keyframes change_position {
-    from {
-        left: 0pt;
-        display: none;
-        opacity: 10%;
-    }
-    to {
-        left: 500pt;
-        display: block;
-        opacity: 100%;
-    }
+    animation-name: change_opacity;
+    animation-duration: 6s;
+
+
+}
+@keyframes change_opacity {
+    from { opacity: 0%; }
+    to { opacity: 100% ;}
 }
 
 
@@ -95,13 +85,16 @@ body {
 }
 
 
+
+
 /* button style */
 div[class*=box] {
     height: 33.33%;
     width: 100%;
     display: flex;
+    align-content: center;
+    justify-content: center;
 }
-
 .btn {
     line-height: 50px;
     height: 50px;
@@ -109,13 +102,11 @@ div[class*=box] {
     width: 250px;
     cursor: pointer;
 }
-
 .btn-three {
     color: #FFF;
     transition: all 0.5s;
     position: relative;
 }
-
 .btn-three::before {
     content: '';
     position: absolute;
@@ -127,12 +118,10 @@ div[class*=box] {
     background-color: rgba(255,255,255,0.1);
     transition: all 0.3s;
 }
-
 .btn-three:hover::before {
     opacity: 0 ;
     transform: scale(0.5,0.5);
 }
-
 .btn-three::after {
     content: '';
     position: absolute;
@@ -146,13 +135,9 @@ div[class*=box] {
     border: 1px solid rgba(255,255,255,0.5);
     transform: scale(1.2,1.2);
 }
-
 .btn-three:hover::after {
     opacity: 1;
     transform: scale(1,1);
 }
-
-
-
 
 
