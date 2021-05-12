@@ -1,11 +1,11 @@
 
 body {
     margin: 0 0 0 0;
+    overflow: hidden;
 
     /* animazione sfondo pagina */
-    animation-name: change_color;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    animation: change_color 10s infinite alternate;
+
 
 }
 @keyframes change_color {
@@ -22,13 +22,13 @@ body {
 
 }
 #name_project {
-    font-size: 200pt;
+    font-size: 150pt;
     animation-name: change_size;
     animation-duration: 6s;
 }
 @keyframes change_size {
     from { font-size:  300pt; }
-    to { font-size: 200pt; }
+    to { font-size: 150pt; }
 }
 
 /* animazione imagine sottofondo scritta AthonApp */
@@ -53,19 +53,19 @@ body {
 
 #cite_intro {
     font-family: SignPainter;
-    font-size: 25pt;
+    font-size: 15pt;
     animation-name: change_size_2;
     animation-duration: 6s;
 }
 @keyframes change_size_2 {
     from { font-size: 9pt; }
-    to { font-size: 25pt; }
+    to { font-size: 15pt; }
 }
 
 
 #container_start {
-    padding-top: 70pt;
-    padding-bottom: 70pt;
+    padding-top: 40pt;
+    padding-bottom: 40pt;
     opacity: 100%;
 
     animation-name: change_opacity;
@@ -73,13 +73,11 @@ body {
 }
 @keyframes change_opacity {
     from { opacity: 0%; }
-    to { opacity: 100% ;}
+    to { opacity: 100%;}
 }
 
 #footer_project {
-    position: absolute;
-    top: 700pt;
-    left: 585pt;
+    padding-top: 10pt;
 }
 
 
