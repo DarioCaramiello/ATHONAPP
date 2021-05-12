@@ -1,19 +1,12 @@
-#intro_project {
-    text-align: center;
-    width: auto;
-    height: 500pt;
-}
 
-#container_name_project {
-    text-align: center;
-    width: auto;
-    height: auto;
-    padding-bottom: 20pt;
+body {
+    margin: 0 0 0 0;
+
+    /* animazione sfondo pagina */
     animation-name: change_color;
-    animation-duration: 5s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
 }
-
 @keyframes change_color {
     0%   {background-color: black;}
     25%  {background-color: darkgrey;}
@@ -21,13 +14,28 @@
     100% {background-color: lightgray;}
 }
 
-#name_project {
-    font-size: 170pt;
-    padding-top: 30pt;
-    animation-name: change_size;
-    animation-duration: 5s;
+
+
+#container_name_project {
+    text-align: center;
+    width: auto;
+    height: auto;
 }
 
+
+#name_project {
+    font-size: 190pt;
+    padding-top: 50pt;
+    animation-name: change_size;
+    animation-duration: 6s;
+}
+@keyframes change_size {
+    from { font-size:  300pt; }
+    to { font-size: 190pt; }
+}
+
+
+/* animazione imagine sottofondo scritta AthonApp */
 .athon-app{
     line-height: 300px;
     margin: 0;
@@ -36,65 +44,63 @@
     background-size: 40%;
     background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg") 50% 50%;
     -webkit-background-clip: text;
-    color: rgba(0,0,0,0.08);
-    animation: zoomout 10s ease 500ms forwards;
+    color: rgba(0,0,0,0);
+    animation: zoomout 10s ease-in 500ms forwards;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
 @keyframes zoomout {
-    from{
-        background-size: 40%;
-    }
-    to{
-        background-size: 10%;
-    }
+    from{ background-size: 40%; }
+    to{ background-size: 10%; }
 }
 
-@keyframes change_size {
-    from { font-size:  300pt; }
-    to { font-size: 170pt; }
-}
 
 #cite_intro {
     font-size: 20pt;
     animation-name: change_size_2;
     animation-duration: 6s;
 }
-
 @keyframes change_size_2 {
-    from { font-size: 10pt; }
-    to { font-size: 20pt; }
+    from { font-size: 9pt; }
+    to { font-size: 18pt; }
 }
+
 
 #container_start {
+    animation-name: change_position;
+    position: relative;
+    left: 500pt;
 
-    text-align: center;
-    animation-name: change_opacity;
     animation-duration: 6s;
-    padding-top: 30pt;
-    padding-bottom: 30pt;
+    padding-top: 70pt;
+    padding-bottom: 70pt;
 }
 
-@keyframes change_opacity {
-    from { opacity: 20% }
-    to { opacity: 100% }
+@keyframes change_position {
+    from {
+        left: 0pt;
+        display: none;
+        opacity: 10%;
+    }
+    to {
+        left: 500pt;
+        display: block;
+        opacity: 100%;
+    }
 }
 
-#name_developer {
-    text-align: center;
-    margin-top: 10pt;
+
+#footer_project {
+    padding-top: 130pt;
 }
+
 
 /* button style */
 div[class*=box] {
     height: 33.33%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
 
 .btn {
     line-height: 50px;
@@ -109,6 +115,7 @@ div[class*=box] {
     transition: all 0.5s;
     position: relative;
 }
+
 .btn-three::before {
     content: '';
     position: absolute;
@@ -120,10 +127,12 @@ div[class*=box] {
     background-color: rgba(255,255,255,0.1);
     transition: all 0.3s;
 }
+
 .btn-three:hover::before {
     opacity: 0 ;
     transform: scale(0.5,0.5);
 }
+
 .btn-three::after {
     content: '';
     position: absolute;
@@ -137,6 +146,7 @@ div[class*=box] {
     border: 1px solid rgba(255,255,255,0.5);
     transform: scale(1.2,1.2);
 }
+
 .btn-three:hover::after {
     opacity: 1;
     transform: scale(1,1);
@@ -144,10 +154,5 @@ div[class*=box] {
 
 
 
-
-/* annullamento margini dell'intera pagina web */
-body {
-    margin:  0 0 0 0;
-}
 
 

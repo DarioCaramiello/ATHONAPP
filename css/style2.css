@@ -45,13 +45,9 @@ html, body {
 }
 
 @keyframes marquee {
-    from {
-        left: 100%;
-    }
-    
-    to {
-        left: -100%;
-    }
+    from {left: 100%;}
+
+    to {left: -100%;}
 }
 
 #name_developer {
