@@ -4,38 +4,28 @@
     height: 500pt;
 }
 
-body {
-    
-    animation-name: change_color;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-
-}
 #container_name_project {
     text-align: center;
     width: auto;
     height: auto;
     padding-bottom: 20pt;
-
+    animation-name: change_color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes change_color {
-
     0%   {background-color: black;}
     25%  {background-color: darkgrey;}
     50%  {background-color: grey;}
     100% {background-color: lightgray;}
-
 }
-
-
 
 #name_project {
     font-size: 170pt;
     padding-top: 30pt;
     animation-name: change_size;
     animation-duration: 5s;
-
 }
 
 .athon-app{
@@ -45,7 +35,7 @@ body {
     font-weight: 900;
     background-size: 40%;
     background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg") 50% 50%;
-    background-clip: text;
+    -webkit-background-clip: text;
     color: rgba(0,0,0,0.08);
     animation: zoomout 10s ease 500ms forwards;
     animation-iteration-count: infinite;
@@ -88,17 +78,15 @@ body {
 
 @keyframes change_opacity {
     from { opacity: 20% }
-    to { opacity: 100% 
-    }
+    to { opacity: 100% }
 }
 
 #name_developer {
     text-align: center;
-       margin-top: 10pt;
+    margin-top: 10pt;
 }
 
 /* button style */
-
 div[class*=box] {
     height: 33.33%;
     width: 100%;
@@ -154,6 +142,12 @@ div[class*=box] {
     transform: scale(1,1);
 }
 
-/* prove */
+
+
+
+/* annullamento margini dell'intera pagina web */
+body {
+    margin:  0 0 0 0;
+}
 
 
