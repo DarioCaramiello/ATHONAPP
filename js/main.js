@@ -9,21 +9,25 @@ function start_game() {
     point_rank = 0;
 }
 
-function change_color_on() {
-    document.getElementById("btn_id").style.color = "white"
+
+/* funzione del cambio di colore migliorata */
+function change_color() {
+    let obj = document.getElementById("btn_id")
+    if( obj.style.color === "white") {
+        obj.style.color = "black"
+    } else {
+        obj.style.color = "white"
+    }
 }
 
-function change_color_off() {
-    document.getElementById("btn_id").style.color = "black"
+
+/* funzione del cambio display migliorate */
+function change_display() {
+    let obj = document.getElementById("myForm")
+    if( obj.style.display === "block" ) {
+        obj.style.display = "none"
+    } else {
+        obj.style.display = "block"
+    }
 }
 
-
-
-//Funzioni per il form
-function closeForm(){
-    let x = document.getElementById("myForm").style.display = "none";
-}
-
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-}

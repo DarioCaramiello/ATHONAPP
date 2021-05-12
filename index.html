@@ -22,7 +22,7 @@
 
 <div id="container_start">
     <div class="box-3">
-        <div class="btn btn-three" id="btn_id" onclick="openForm()"  onmouseover="change_color_on()" onmouseout="change_color_off()">
+        <div class="btn btn-three" id="btn_id" onclick="change_display()"  onmouseover="change_color()" onmouseout="change_color()">
             <span id="span_id" style="font-size: 25pt">START</span>
             <!--Ho aggiunto un div per il form pop up-->
             <div class="form-popup" id="myForm">
@@ -32,7 +32,7 @@
                     <input type="text" placeholder="Enter your nickname" name="nickname" id="nickname" required>
 
                     <button type="button" class="btn" onclick="start_game()">Login</button> <!--Ho inserito qui la funzione di start game-->
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    <button type="button" class="btn cancel" onclick="change_display()">Close</button>
                 </div>
             </div>
         </div>
