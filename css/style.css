@@ -1,12 +1,9 @@
 
 body {
     margin: 0 0 0 0;
-    overflow: hidden;
-
+    overflow: auto;
     /* animazione sfondo pagina */
     animation: change_color 10s infinite alternate;
-
-
 }
 @keyframes change_color {
     0%   {background-color: #cdeac0;}
@@ -18,17 +15,17 @@ body {
 
 #container_name_project {
     text-align: center;
-    margin-bottom: 60pt;
+    margin-bottom: 10pt;
 
 }
 #name_project {
-    font-size: 150pt;
+    font-size: 200pt;
     animation-name: change_size;
     animation-duration: 6s;
 }
 @keyframes change_size {
     from { font-size:  300pt; }
-    to { font-size: 150pt; }
+    to { font-size: 200pt; }
 }
 
 /* animazione imagine sottofondo scritta AthonApp */
@@ -53,19 +50,19 @@ body {
 
 #cite_intro {
     font-family: SignPainter;
-    font-size: 15pt;
+    font-size: 20pt;
     animation-name: change_size_2;
     animation-duration: 6s;
 }
 @keyframes change_size_2 {
     from { font-size: 9pt; }
-    to { font-size: 15pt; }
+    to { font-size: 20pt; }
 }
 
 
 #container_start {
-    padding-top: 40pt;
-    padding-bottom: 40pt;
+    margin-top: 100pt;
+    margin-bottom: 50pt;
     opacity: 100%;
 
     animation-name: change_opacity;
@@ -77,7 +74,7 @@ body {
 }
 
 #footer_project {
-    padding-top: 10pt;
+    padding-top: 200pt;
 }
 
 
@@ -134,25 +131,30 @@ div[class*=box] {
     transform: scale(1,1);
 }
 
-/* popup style 2*/
-
-
+/* popup style */
 /* The popup form - hidden by default */
+/* aggiungo la posizione maualmente del div del nick e animazione */
+
 .form-popup {
     display: none;
-    position: relative;
-    border: 3px solid #f1f1f1;
+    position: absolute;
+    left: -60pt;
+    top: -40pt;
+    border: 2px solid #f1f1f1;
     z-index: 5;
+    width: 300pt;
+    animation: change_dimension 1s 5;
 }
-
+@keyframes change_dimension {
+    33%{ transform: scale(1); }
+    66%{ transform: scale(1.05); }
+    100%{ transform: scale(1); }
+}
 
 .form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: mediumseagreen;
+    padding-top: 10pt;
+    background-color: powderblue;
 }
-
-
 .form-container input[type=text]{
     width: 85%;
     padding: 15px;
@@ -160,13 +162,10 @@ div[class*=box] {
     border: none;
     background: lightgrey;
 }
-
-
 .form-container input[type=text]:focus{
     background-color: lightgrey;
     outline: none;
 }
-
 .form-container .btn {
     background-color: whitesmoke;
     color: lightseagreen;
@@ -177,13 +176,11 @@ div[class*=box] {
     margin-bottom:10px;
     opacity: 0.8;
 }
-
 /* Add a red background color to the cancel button */
 .form-container .cancel {
     background-color: red;
     width: 70%;
 }
-
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;

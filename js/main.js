@@ -1,6 +1,4 @@
-
-var  playerName;
-
+let playerName;
 
 function start_game() {
     console.log("Hi, by start_game()");
@@ -17,9 +15,11 @@ function change_color_off() {
     document.getElementById("btn_id").style.color = "black"
 }
 
+
+
 //Funzioni per il form
 function closeForm(){
-    document.getElementById("myForm").style.display = "none";
+    let x = document.getElementById("myForm").style.display = "none"
 }
 
 function openForm() {
