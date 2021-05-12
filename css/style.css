@@ -9,12 +9,12 @@ body {
 
 }
 @keyframes change_color {
-    0%   {background-color: #ffffff;}
-    25%  {background-color: #b0ffb5;}
+    0%   {background-color: #d3efbc;}
+    25%  {background-color: #a3c8a5;}
     50%  {background-color: #b8ecd0;}
-    75%  {background-color: #a6f5ac
+    75%  {background-color: #c8f3c9
     }
-    100% {background-color: #ffffff;}
+    100% {background-color: #d2f6b9;}
 }
 
 #container_name_project {
@@ -53,13 +53,13 @@ body {
 }
 
 #cite_intro {
-    font-size: 17pt;
+    font-size: 25pt;
     animation-name: change_size_2;
     animation-duration: 6s;
 }
 @keyframes change_size_2 {
     from { font-size: 9pt; }
-    to { font-size: 17pt; }
+    to { font-size: 25pt; }
 }
 
 #container_start {
@@ -76,7 +76,7 @@ body {
 }
 
 #footer_project {
-    padding-top: 80pt;
+    padding-top: 60pt;
 }
 
 
@@ -125,7 +125,7 @@ div[class*=box] {
     z-index: 1;
     opacity: 0;
     transition: all 0.3s;
-    border: 3px solid rgb(0, 78, 100);
+    border: 2px solid rgb(255, 255, 255);
     transform: scale(1.2,1.2);
 }
 .btn-three:hover::after {
