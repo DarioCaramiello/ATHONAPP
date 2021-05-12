@@ -4,17 +4,16 @@ body {
 
     /* animazione sfondo pagina */
     animation-name: change_color;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
 
 }
 @keyframes change_color {
-    0%   {background-color: #d3efbc;}
-    25%  {background-color: #a3c8a5;}
-    50%  {background-color: #b8ecd0;}
-    75%  {background-color: #c8f3c9
-    }
-    100% {background-color: #d2f6b9;}
+    0%   {background-color: #c6def1;}
+    25%  {background-color: #f7d9c4;}
+    50%  {background-color: #cbf3f0;}
+    75%  {background-color: #80ed99;}
+    100% {background-color: #aad576;}
 }
 
 #container_name_project {
@@ -53,6 +52,7 @@ body {
 }
 
 #cite_intro {
+    font-family: SignPainter;
     font-size: 25pt;
     animation-name: change_size_2;
     animation-duration: 6s;
@@ -76,7 +76,7 @@ body {
 }
 
 #footer_project {
-    padding-top: 60pt;
+    padding-top: 30pt;
 }
 
 
