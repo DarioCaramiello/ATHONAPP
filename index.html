@@ -7,32 +7,46 @@
 </head>
 
 <body>
-    <div id="container_name_project">
-        <div id="name_project">
-            <p class="athon-app">AthonApp</p>
-        </div>
+<div id="container_name_project">
+    <div id="name_project">
+        <p class="athon-app">AthonApp</p>
+    </div>
 
-        <div id="change_dimension_id">
+    <div id="change_dimension_id">
         <div id="cite_intro">
             <p>"Più difficile è la vittoria, più grande è la felicità nel vincere."</p>
         </div>
-        </div>
     </div>
+</div>
 
-    <div id="container_start">
-        <div class="box-3">
-            <div class="btn btn-three" id="btn_id" onclick="start_game()" onmouseover="change_color_on()" onmouseout="change_color_off()">
-                <span id="span_id" style="font-size: 25pt">START</span>
+<div id="container_start">
+    <div class="box-3">
+        <div class="btn btn-three" id="btn_id" onclick="openForm()"  onmouseover="change_color_on()" onmouseout="change_color_off()">
+            <span id="span_id" style="font-size: 25pt">START</span>
+            <!--Ho aggiunto un div per il form pop up-->
+            <div class="form-popup" id="myForm">
+                <div class="form-container">
+                    <h1>Insert nickname!</h1>
+
+                    <label for="nickname"><b>Nickname</b></label>
+                    <input type="text" placeholder="Enter your nickname" name="nickname" id="nickname" required>
+
+                    <button type="submit" class="btn" onclick="start_game()">Login</button> <!--Ho inserito qui la funzione di start game-->
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </div>
             </div>
+
+
         </div>
     </div>
+</div>
 
-    <footer>
-        <div id="footer_project" style="text-align: center;">
-            <p>Dario Caramiello - Simone Lanza - Vincenzo Russo</p>
-        </div>
-    </footer>
+<footer>
+    <div id="footer_project" style="text-align: center;">
+        <p>Dario Caramiello - Simone Lanza - Vincenzo Russo</p>
+    </div>
+</footer>
 
-    <script language="JavaScript" src="js/main.js"></script>
+<script language="JavaScript" src="js/main.js"></script>
 </body>
 </html>

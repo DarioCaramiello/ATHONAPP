@@ -136,4 +136,57 @@ div[class*=box] {
     transform: scale(1,1);
 }
 
+/* popup style 2*/
 
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: relative;
+    border: 3px solid #f1f1f1;
+    z-index: 5;
+}
+
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: mediumseagreen;
+}
+
+
+.form-container input[type=text]{
+    width: 85%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: lightgrey;
+}
+
+
+.form-container input[type=text]:focus{
+    background-color: lightgrey;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: whitesmoke;
+    color: lightseagreen;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+    width: 70%;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
