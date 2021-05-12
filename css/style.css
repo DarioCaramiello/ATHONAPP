@@ -4,16 +4,16 @@ body {
 
     /* animazione sfondo pagina */
     animation-name: change_color;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
 
 }
 @keyframes change_color {
-    0%   {background-color: #c6def1;}
-    25%  {background-color: #f7d9c4;}
+    0%   {background-color: #cdeac0;}
+    25%  {background-color: #b2ff9e;}
     50%  {background-color: #cbf3f0;}
     75%  {background-color: #80ed99;}
-    100% {background-color: #aad576;}
+    100% {background-color: #9fffcb;}
 }
 
 #container_name_project {
@@ -61,6 +61,7 @@ body {
     from { font-size: 9pt; }
     to { font-size: 25pt; }
 }
+
 
 #container_start {
     padding-top: 70pt;
