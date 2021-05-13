@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<div id="container_name_project">
+<div id="container_name_project" style="text-align: center">
 
     <div id="name_project">
         <p class="athon-app">AthonApp</p>
@@ -22,23 +22,20 @@
 
 <div id="container_start">
     <div class="box-3">
-        <div class="btn btn-three" id="btn_id" onclick="change_display()"  onmouseover="change_color()" onmouseout="change_color()">
+        <div class="btn btn-three" id="btn_id" onclick="change_display_on()"  onmouseover="change_color()" onmouseout="change_color()">
             <span id="span_id" style="font-size: 25pt">START</span>
-            <!--Ho aggiunto un div per il form pop up-->
+            <!--Ho aggiunto un div per il form pop up--> <!-- eliminato il div esterno ed ho inserito le specifiche nel div 'form-popup' -->
             <div class="form-popup" id="myForm">
                 <div class="form-container">
-                    <h1>Insert nickname!</h1>
-                    <label for="nickname"><b>Nickname</b></label>
-                    <input type="text" placeholder="Enter your nickname" name="nickname" id="nickname" required>
-
-                    <button type="button" class="btn" onclick="start_game()">Login</button> <!--Ho inserito qui la funzione di start game-->
-                    <button type="button" class="btn cancel" onclick="change_display()">Close</button>
+                    <h1 style="font-family: 'Menlo'">Insert nickname!</h1>
+                    <input type="text" placeholder="Enter your nickname" name="nickname" id="nickname">
+                    <input type="button" class="btn" value="Login" onclick="start_game()"> <!--Ho inserito qui la funzione di start game-->
+                    <input type="button" class="btn cancel" value="Close" onclick="change_display_off()"> <!-- il bottone cancel non funziona -->
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <footer>
     <div id="footer_project" style="text-align: center;">
