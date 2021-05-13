@@ -143,7 +143,6 @@ div[class*=box] {
 /* The popup form - hidden by default */
 /* aggiungo la posizione maualmente del div del nick e animazione */
 
-
 .form-popup {
     display: none;
     position: absolute;
