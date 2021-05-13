@@ -3,12 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    animation: change_color 10s infinite alternate;
+    overflow: hidden;
+}
+@keyframes change_color {
+    0%   {background-color: #cdeac0;}
+    25%  {background-color: #b2ff9e;}
+    50%  {background-color: #cbf3f0;}
+    75%  {background-color: #80ed99;}
+    100% {background-color: #9fffcb;}
+}
+
 .main-page{
     width: 100%;
     height: 100vh;
-    background-image: url("https://cdn.hipwallpaper.com/i/31/7/7Szqk4.jpg");
-    background-size: cover;
-    background-position: center;
     position: relative;
     overflow: hidden;
 }
