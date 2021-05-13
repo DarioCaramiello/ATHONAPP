@@ -22,6 +22,10 @@ function for_cite_off() {
     cite.color = "black"
 }
 
+function start_game(){
+    window.location = 'page2.html'
+}
+
 /*
 
   Funzioni per il cambio displey ( show - hidden ).

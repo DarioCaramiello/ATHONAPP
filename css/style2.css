@@ -1,44 +1,11 @@
 
-
-body {
-    background-color: #cdffd5;
-    margin: 0 0 0 0;
-}
-
-.hidden {
-    opacity: 30%;
-}
-
-.user_name {
-    color: red;
-}
-
-
 #container_user_name {
     font-size: 20pt;
     padding-left: 20pt;
 }
 
-#flip {
-    background-color: #545353;
-    text-align: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
-#panel {
-    display: none;
-    background-color: #55a630;
-    padding-bottom: 20px;
-    padding-top: 20px;
-
-}
-
-
-
-
-
 /* inizio css del login */
+
 .form-popup {
     width: 400px;
     height: 200px;
@@ -56,16 +23,15 @@ body {
 }
 .form-container {
     padding: 30px 50px 30px 50px;
+    background-image: linear-gradient(to right, #eeef20,#007f5f );
     border-radius: 20px;
-    animation: change_color_back 3s infinite alternate-reverse;
+
+    animation: change_color_back 1s infinite alternate-reverse;
+
 }
 @keyframes change_color_back {
-    0% { background-color: #ffff3f; }
-    20% { background-color: #eeef20; }
-    50% { background-color: #bfd200; }
-    70% { background-color: #55a630; }
-    90% { background-color: #2b9348; }
-    100% { background-color: #007f5f; }
+   from { background-image: linear-gradient(to right, #eeef20,#007f5f ); }
+    to { background-image: linear-gradient(to right, lawngreen, #545353 ); }
 }
 .form-container input[type=text]{
     border: none;
@@ -91,6 +57,7 @@ body {
 }
 
 /* testing simon stuff */
+
 
 body {
     background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png)
