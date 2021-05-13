@@ -1,10 +1,12 @@
+
 .form-popup {
     width: 400px;
     height: 200px;
     position: absolute;
-    top: 250px;
-    left: 500px;
-    border: none;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
     animation: change_dimension 3s infinite;
 }
 @keyframes change_dimension {
@@ -55,4 +57,6 @@
 }
 
 
-
+.hidden {
+    display: none;
+}

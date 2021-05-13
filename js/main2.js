@@ -18,13 +18,15 @@ function change_border_off() {
 
 
 function start () {
-
     player_name = document.getElementById("nickname").value
     point_rank = 0
     console.log("player name : "+player_name)
     console.log("point rank : "+point_rank)
 
     document.getElementById("container_start").style.display = "none"
-
+    let x = document.getElementsByClassName("hidden");
+    for (let i = 0; i < x.length; i++) {
+        x[i].style.display = "block";
+    }
 }
 
