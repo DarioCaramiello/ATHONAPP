@@ -9,6 +9,7 @@ function start_game() {
     point_rank = 0;
 }
 
+
 /* funzione del cambio di colore migliorata */
 function change_color() {
     console.log("hi, by change_color()");
@@ -20,7 +21,7 @@ function change_color() {
     }
 }
 
-/*  Funzioni per il cambio displey ( show - hidden )
+/*  Funzioni per il cambio displey ( show - hidden ).
     Note : ho provato ad ottimizare la funzione come in 'change color ' solo che non puo essere
     ottmizzata perche altrimenti il senso logico verrebbe corrotto
 */
