@@ -28,12 +28,7 @@ function change_color() {
 function change_display_on () {
     console.log("hi , by change_display_on()")
     document.getElementById("myForm").style.display = "block"
+    document.getElementById("span_id").style.display = "none"
 }
-
-function change_display_off () {
-    console.log("hi , by change_display_off()")
-    document.getElementById("myForm").style.display = "none"
-}
-
 
 
