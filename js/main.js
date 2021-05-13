@@ -1,6 +1,3 @@
-function start_game() {
-    location.href="page2.html"
-}
 
 
 /* funzione del cambio di colore migliorata */
