@@ -24,9 +24,19 @@ function start () {
     console.log("point rank : "+point_rank)
 
     document.getElementById("container_start").style.display = "none"
+
     let x = document.getElementsByClassName("hidden");
     for (let i = 0; i < x.length; i++) {
-        x[i].style.display = "block";
+        x[i].style.opacity = "100%";
     }
+
+    let y = document.getElementsByClassName("user_name");
+    for( let i = 0; i < y.length; i++){
+        y[i].innerText = player_name
+    }
+
+    document.getElementById("container_user_name").innerText = player_name
+
+    document.body.style.backgroundColor = "#dda15e"
 }
 

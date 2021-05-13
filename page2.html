@@ -4,26 +4,47 @@
     <meta charset="UTF-8">
     <title>AthonApp-Home</title>
     <link rel="stylesheet" href="css/style2.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
+
     <div id="container_start">
-    <div class="box-3">
-        <div class="form-popup" id="myForm">
-            <div class="form-container">
-                <h1 style=" font-size: 20pt; text-align: center; color: #80ed99">INSERT NICKNAME</h1>
-                <input type="text" placeholder="nickname" name="nickname" id="nickname" style="text-align: center;">
-                <input type="button" class="btn" value="Login" id="login_id" onmouseover="change_border_on()" onmouseout="change_border_off()" onclick="start()">
+        <div class="box-3">
+            <div class="form-popup" id="myForm">
+                <div class="form-container">
+                    <h1 style=" font-size: 25pt; text-align: center; color: black;">Insert nickname</h1>
+                    <input type="text" placeholder="nickname" name="nickname" id="nickname" style="text-align: center;">
+                    <input type="button" class="btn" value="Login" id="login_id" onmouseover="change_border_on()" onmouseout="change_border_off()" onclick="start()">
+                </div>
             </div>
         </div>
     </div>
+    <!-- end login -->
+
+    <div id="flip"class="hidden">
+        <p style="font-size: 22pt">AthonInfo</p>
     </div>
 
-    <div id="box_page" class="hidden">
-        <div id="bunner_user" class="hidden">
-            <h1>ciao</h1>
-        </div>
-    </div>
-<script language="JavaScript" src="js/main2.js"></script>
+    <div id="panel">Clicl for close</div>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown("slow");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#panel").click(function() {
+                $("#panel").slideUp("slow");
+            });
+        });
+    </script>
+
+    <!-- end banner user -->
+
+    <script language="JavaScript" src="js/main2.js"></script>
+
 </body>
 </html>
