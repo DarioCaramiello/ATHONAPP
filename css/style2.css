@@ -1,45 +1,44 @@
 
-#container_user_name {
-    font-size: 20pt;
-    padding-left: 20pt;
-}
+
 
 /* inizio css del login */
 
+#container_start {
+    /*animation: change_opacity 5s 1; */
+    opacity: 100%;
+}
+@keyframes change_opacity {
+    from { opacity: 0; }
+    to { opacity: 100%; }
+}
+
 .form-popup {
-    width: 400px;
-    height: 200px;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-top: -100px;
     margin-left: -200px;
-    animation: change_dimension 3s infinite;
+    animation: change_dimension 1s infinite reverse;
 }
 @keyframes change_dimension {
     33%{ transform: scale(1); }
     66%{ transform: scale(1.05); }
     100%{ transform: scale(1); }
 }
+
 .form-container {
-    padding: 30px 50px 30px 50px;
-    background-image: linear-gradient(to right, #eeef20,#007f5f );
+    padding: 70px 20px 0px 20px;
+    background-image: linear-gradient(to right, #e5e5de, #83e7cf);
     border-radius: 20px;
-
-    animation: change_color_back 1s infinite alternate-reverse;
-
-}
-@keyframes change_color_back {
-   from { background-image: linear-gradient(to right, #eeef20,#007f5f ); }
-    to { background-image: linear-gradient(to right, lawngreen, #545353 ); }
 }
 .form-container input[type=text]{
     border: none;
     align-items: center;
     width: 80%;
-    padding: 15px;
-    margin: 5px 10px 22px 10px;
-    background: lightgrey;
+    padding: 0px 20px 15px 20px;
+    margin: 112px 10px 22px 10px;
+    background: black;
+    color: white;
 }
 .form-container input[type=text]:focus{
     background-color: lightgrey;
@@ -54,7 +53,72 @@
     height: 50px;
     margin-bottom:10px;
     margin-left: 100px;
+    border-radius: 10px;
 }
+
+/*
+
+#container_start {
+    animation: change_opacity 5s 1;
+    opacity: 100%;
+}
+@keyframes change_opacity {
+    from { opacity: 0; }
+    to { opacity: 100%; }
+}
+
+#insert_nick {
+    opacity: 100%;
+    animation: change_opacity_1 15s 1;
+}
+@keyframes change_opacity_1 {
+    from { opacity: 0; }
+    to { opacity: 100%; }
+}
+
+#nickname {
+    opacity: 100%;
+    animation: change_opacity_2 15s 1;
+}
+@keyframes change_opacity_2 {
+    from { opacity: 0; }
+    to { opacity: 100%; }
+}
+
+
+#login_id {
+    opacity: 100%;
+    animation: change_opacity_3 20s 1;
+}
+@keyframes change_opacity_3 {
+    from { opacity: 0; }
+    to { opacity: 100%; }
+}
+
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* testing simon stuff */
 

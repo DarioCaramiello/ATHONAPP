@@ -57,7 +57,7 @@ body {
 
     from {
         font-size: 9pt;
-        opacity: 0%;
+        opacity: 0;
         color: white;
     }
     to {
@@ -78,17 +78,17 @@ body {
     animation-duration: 6s;
 }
 @keyframes change_opacity {
-    from { opacity: 0%; }
+    from { opacity: 0; }
     to { opacity: 100%;}
 }
 
-/*
+
 #footer_project {
     padding-top: 140pt;
     margin-bottom: 50pt;
     color: white;
 }
-*/
+
 
 /* button style */
 div[class*=box] {
@@ -150,15 +150,14 @@ div[class*=box] {
 
 .light {
     position: absolute;
-    width: 0px;
+    width: 0;
     opacity: .75;
     background-color: #545353;
-    box-shadow: #313737 0px 0px 20px 2px;
-    opacity: 0;
+    box-shadow: #313737 0 0 20px 2px;
     top: 100vh;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
 }
 
@@ -274,28 +273,28 @@ div[class*=box] {
 @-webkit-keyframes floatUp{
   0%{top: 100vh; opacity: 0;}
   25%{opacity: 1;}
-  50%{top: 0vh; opacity: .8;}
+  50%{top: 0; opacity: .8;}
   75%{opacity: 1;}
   100%{top: -100vh; opacity: 0;}
 }
 @-moz-keyframes floatUp{
   0%{top: 100vh; opacity: 0;}
   25%{opacity: 1;}
-  50%{top: 0vh; opacity: .8;}
+  50%{top: 0; opacity: .8;}
   75%{opacity: 1;}
   100%{top: -100vh; opacity: 0;}
 }
 @-o-keyframes floatUp{
   0%{top: 100vh; opacity: 0;}
   25%{opacity: 1;}
-  50%{top: 0vh; opacity: .8;}
+  50%{top: 0; opacity: .8;}
   75%{opacity: 1;}
   100%{top: -100vh; opacity: 0;}
 }
 @keyframes floatUp{
   0%{top: 100vh; opacity: 0;}
   25%{opacity: 1;}
-  50%{top: 0vh; opacity: .8;}
+  50%{top: 0; opacity: .8;}
   75%{opacity: 1;}
   100%{top: -100vh; opacity: 0;}
 }
@@ -453,6 +452,5 @@ div[class*=box] {
   position: fixed;
   -webkit-transform: translate(95vw,90vh);
   -moz-transform: translate(95vw,90vh);
-  transform: translate(95vw,90vh);
   transform: translate(95vw,90vh);
 }

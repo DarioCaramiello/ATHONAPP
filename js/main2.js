@@ -14,7 +14,7 @@ function change_border_on() {
 }
 function change_border_off() {
     let x = document.getElementById("login_id")
-    x.style.borderRadius = "0"
+    x.style.borderRadius = "10px"
     x.style.backgroundColor = "#80ed99"
     x.style.color = "black"
 }
