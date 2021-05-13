@@ -1,27 +1,26 @@
 
 body {
-    margin: 0 0 0 0;
     overflow: hidden;
-
-    /* animazione sfondo pagina */
-    animation: change_color 10s infinite alternate;
+    margin: 0 0 0 0;
+    height: 100vh;
+    font-weight: 100;
+    background: radial-gradient(#80ed99, #c7f9cc);
+    -webkit-overflow-Y: hidden;
+    -moz-overflow-Y: hidden;
+    -o-overflow-Y: hidden;
+    overflow-y: hidden;
+    -webkit-animation: fadeIn 1 1s ease-out;
+    -moz-animation: fadeIn 1 1s ease-out;
+    -o-animation: fadeIn 1 1s ease-out;
+    animation: fadeIn 1 1s ease-out;
 }
-@keyframes change_color {
-    0%   {background-color: #cdeac0;}
-    25%  {background-color: #b2ff9e;}
-    50%  {background-color: #cbf3f0;}
-    75%  {background-color: #80ed99;}
-    100% {background-color: #9fffcb;}
-}
 
+/* box of name */
 #name_project {
     font-size: 160pt;
     margin-bottom: -20pt;
-
     animation-name: change_size;
-    animation-duration: 6s;
-    
-    
+    animation-duration: 10s;
 }
 @keyframes change_size {
     from { font-size:  300pt; }
@@ -38,12 +37,9 @@ body {
     background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg") 50% 50%;
     -webkit-background-clip: text;
     color: rgba(0,0,0,0);
-    animation: zoomout 10s ease-in 500ms forwards;
+    animation: zoomout 15s ease-in 500ms forwards;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-  
-
-    
 
 }
 @keyframes zoomout {
@@ -59,11 +55,13 @@ body {
     animation-name: change_size_2;
     animation-duration: 6s;
 
+
 }
 @keyframes change_size_2 {
+
     from {
         font-size: 9pt;
-        opacity: 10%;
+        opacity: 0%;
         color: white;
     }
     to {
@@ -71,6 +69,8 @@ body {
         opacity: 100%;
         color: black;
     }
+
+
 }
 
 #container_start {
@@ -86,10 +86,13 @@ body {
     to { opacity: 100%;}
 }
 
+/*
 #footer_project {
     padding-top: 140pt;
+    margin-bottom: 50pt;
+    color: white;
 }
-
+*/
 
 /* button style */
 div[class*=box] {
@@ -144,94 +147,17 @@ div[class*=box] {
     transform: scale(1,1);
 }
 
-/* popup style */
-/* The popup form - hidden by default */
-/* aggiungo la posizione maualmente del div del nick e animazione */
 
 
-#myForm {
-    display:none;
-}
-
-
-
-.form-popup {
-    display: none;
-    position: absolute;
-    left: -60pt;
-    top: -50pt;
-    border: 2px solid #f1f1f1;
-    z-index: 5;
-    width: 300pt;
-    animation: change_dimension 1s 5;
-}
-@keyframes change_dimension {
-    33%{ transform: scale(1); }
-    66%{ transform: scale(1.05); }
-    100%{ transform: scale(1); }
-}
-
-.form-container {
-    padding-top: 10pt;
-    background-color: powderblue;
-}
-.form-container input[type=text]{
-    width: 85%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: lightgrey;
-}
-.form-container input[type=text]:focus{
-    background-color: lightgrey;
-    outline: none;
-}
-.form-container .btn {
-    background-color: whitesmoke;
-    color: lightseagreen;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 70%;
-    margin-bottom:10px;
-    opacity: 0.8;
-}
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-    background-color: red;
-    width: 70%;
-}
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-}
 
 /* qui inizia l'animazione del background */
-
-body {
-    margin: 0;
-    height: 100vh;
-    font-weight: 100;
-    background: radial-gradient(#085525,#000000);
-    -webkit-overflow-Y: hidden;
-    -moz-overflow-Y: hidden;
-    -o-overflow-Y: hidden;
-    overflow-y: hidden;
-    -webkit-animation: fadeIn 1 1s ease-out;
-    -moz-animation: fadeIn 1 1s ease-out;
-    -o-animation: fadeIn 1 1s ease-out;
-    animation: fadeIn 1 1s ease-out;
-}
-
-
-
 
 .light {
     position: absolute;
     width: 0px;
     opacity: .75;
-    background-color: white;
-    box-shadow: #e9f1f1 0px 0px 20px 2px;
+    background-color: #545353;
+    box-shadow: #313737 0px 0px 20px 2px;
     opacity: 0;
     top: 100vh;
     bottom: 0px;

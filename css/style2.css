@@ -1,79 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    animation: change_color 10s infinite alternate;
-    overflow: hidden;
-}
-@keyframes change_color {
-    0%   {background-color: #cdeac0;}
-    25%  {background-color: #b2ff9e;}
-    50%  {background-color: #cbf3f0;}
-    75%  {background-color: #80ed99;}
-    100% {background-color: #9fffcb;}
-}
-.main-page{
-    width: 100%;
-    height: 100vh;
+.form-popup {
+    width: 400px;
     position: relative;
-    overflow: hidden;
+    border: none;
+    animation: change_dimension 3s infinite;
 }
-.sign{
-    width: 85%;
-    height: 15%;
-    margin: auto;
-    display: flex;
+@keyframes change_dimension {
+    33%{ transform: scale(1); }
+    66%{ transform: scale(1.05); }
+    100%{ transform: scale(1); }
+}
+
+.form-container {
+    padding: 30px 50px 30px 50px;
+    animation: change_color_back 2s infinite alternate;
+}
+@keyframes change_color_back {
+    from { background-color: #80ed99 ; }
+    to { background-color: #363b3b; }
+}
+
+.form-container input[type=text]{
+    border: none;
     align-items: center;
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    background: lightgrey;
 }
-/*bottone sign up*/
-.sign button{
-    font-family: 'Red Hat Display', sans-serif;
-    font-weight: 900;
-    position: absolute;
-    top: 50px;
-    right: 100px;
-    color: #7C8483;
-    padding: 10px 25px;
-    background: transparent;
-    border: 5px solid #4C5F6B;
-    border-radius: 20px;
+.form-container input[type=text]:focus{
+    background-color: lightgrey;
+    outline: none;
+}
+.form-container .btn {
+    background-color: #343232;
+    color: black;
+    border: none;
     cursor: pointer;
-    animation: button-anim 1s ease-in infinite forwards;
+    width: 100px;
+    height: 30px;
+    margin-bottom:10px;
+    margin-left: 50px;
+    opacity: 0.8;
 }
-/*animazione bottone sign up*/
-@keyframes button-anim {
-    33%{
-        opacity: 1;
-        transform: scale(1);
-    }
-    66%{
-        opacity: 0.8;
-        transform: scale(1.05);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+    width: 70%;
 }
-.modes {
-    width: 100%;
-    height: 100%;
-    margin: 10px;
-    border:10px;
-    position: absolute;
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
 }
-.b1{
-    position: relative;
-    font-family: 'Red Hat Display', sans-serif;
-    width: 0;
-    height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 200px solid #7C8483;
-}
-#name_developer {
-    text-align: center;
-    margin-top: 10pt;
-}
+
+
+
