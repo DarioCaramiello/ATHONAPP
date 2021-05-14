@@ -11,11 +11,10 @@
 
     <div id="container_page" style="display: none">
 
-        <div id="flip_info_user">
-            <p>Info User</p>
-        </div>
-        <div id="panel" style="display:none;">
-            <p>Info</p>
+
+        <div id="container_info">
+            <p id="pre_info">Info</p>
+            <p id="info" style="display: none">Ciao</p>
         </div>
 
 
@@ -62,21 +61,6 @@
     <!-- end banner user -->
 
     <script language="JavaScript" src="js/main2.js"></script>
-
-    <!-- script in jquery per lo slide delle info user -->
-    <script language="JavaScript">
-        $(document).ready(function () {
-            $("#flip_info_user").click(function () {
-                $("#panel").slideDown("slow");
-            });
-        });
-
-        $(document).ready(function () {
-            $("#panel").click(function () {
-                $("#panel").slideUp();
-            });
-        });
-    </script>
 
 </body>
 </html>

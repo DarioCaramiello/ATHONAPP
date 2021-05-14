@@ -98,7 +98,6 @@ function light_off(value){
 
    }
 }
-
 function untoggle()
 {
  toggle_topleft = false;
@@ -108,3 +107,18 @@ function untoggle()
  toggle_count=0;
 
 }
+
+/* funzioni per le info user */
+$(document).ready( function() {
+    $("#container_info").mouseenter(function () {
+        $("#container_info").animate({padding: '20px 100px 100px 20px ' }, "slow");
+        $("#container_info").animate({padding: '23px 0 123px 0 ' }, "slow");
+        $("#container_info").animate({padding: '0 200px 300px 0px ' }, "slow");
+        document.getElementById("pre_info").style.display = "none"
+        document.getElementById("info").style.display = "block";
+    });
+});
+
+$(document).ready( function() {
+    £
+})

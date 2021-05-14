@@ -104,19 +104,12 @@ body {
 
 /* inizio bunner info user */
 
-#flip_info_user {
-    margin: 20px 500px 0 500px;
-    padding: 5px 0 5px 0;
-    font-size: 15pt;
-    background-color: #330000;
-    text-align: center;
-}
-#panel {
-    margin: 0px 100px 0 100px;
-    padding: 5px 0 5px 0;
+#container_info {
+    margin: 50px 500px 50px 500px;
     font-size: 15pt;
     text-align: center;
     background-color: #cd6969;
+
 }
 
 /* inizio animazione sfondo */
