@@ -3,6 +3,8 @@ function start_game() {
     document.getElementById("myForm").style.display="none";
 
     document.getElementById("outer-circle").style.display="block";
+
+    document.body.style.backgroundColor = "yellow"
 }
 
 // function for dynamic buttom login
