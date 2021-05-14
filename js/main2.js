@@ -1,10 +1,22 @@
+
+let user_point
+let user_name
+
+
+
 function start_game() {
 
-    document.getElementById("myForm").style.display="none";
 
+    document.getElementById("myForm").style.display="none";
     document.getElementById("outer-circle").style.display="block";
 
-    document.body.style.backgroundColor = "yellow"
+    user_name = document.getElementById("nickname").value
+    user_point = 0
+
+    console.log(user_name)
+    console.log(user_point)
+
+
 }
 
 // function for dynamic buttom login
