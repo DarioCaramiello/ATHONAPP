@@ -10,21 +10,17 @@ let user_point
 let user_name
 
 
-
+function addpoint(point) {
+    user_point += point
+}
 
 function start_game() {
-
-
     document.getElementById("myForm").style.display="none";
     document.getElementById("outer-circle").style.display="block";
-
     user_name = document.getElementById("nickname").value
     user_point = 0
-
     console.log(user_name)
     console.log(user_point)
-
-
 }
 
 // function for dynamic buttom login
@@ -44,7 +40,7 @@ function change_border_off() {
 function toggle(value) {
     console.log("hi")
     document.getElementById("start").style.display = "block"
-    if (toggle_count==1)
+    if (toggle_count===1)
     {
         untoggle()
     }
