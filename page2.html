@@ -5,16 +5,20 @@
     <title>AthonApp-Home</title>
     <link rel="stylesheet" href="css/style2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
     <div id="container_page" style="display: none">
 
-        <div id="container_user_info">
-            <div id=container_button_info">
-                <p id="buttom_info">AthonInfo User</p>
-            </div>
+        <div id="flip_info_user">
+            <p>Info User</p>
         </div>
+        <div id="panel" style="display:none;">
+            <p>Info</p>
+        </div>
+
+
 
         <div id="outer-circle">
             <div id="topleft">
@@ -58,6 +62,15 @@
     <!-- end banner user -->
 
     <script language="JavaScript" src="js/main2.js"></script>
+
+    <!-- script in jquery per lo slide delle info user -->
+    <script language="JavaScript">
+        $(document).ready(function () {
+            $("#flip_info_user").click(function () {
+                $("#panel").slideDown();
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -26,15 +26,3 @@ function start_game(){
     window.location = 'page2.html'
 }
 
-/*
-
-  Funzioni per il cambio displey ( show - hidden ).
-    Note : ho provato ad ottimizare la funzione come in 'change color ' solo che non puo essere
-    ottmizzata perche altrimenti il senso logico verrebbe corrotto
-
-function change_display_on () {
-    document.getElementById("myForm").style.display = "block"
-    document.getElementById("span_id").style.display = "none"
-}
-
- */

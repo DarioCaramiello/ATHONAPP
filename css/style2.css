@@ -103,8 +103,14 @@ body {
 
 
 /* inizio bunner info user */
-#
 
+#flip_info_user, #panel {
+    margin: 0 0 0 0;
+    padding: 20px 0 20px 0;
+    font-size: 22pt;
+    background: linear-gradient(#80ed99,#313737);
+    text-align: center;
+}
 
 /* inizio animazione sfondo */
 .light {

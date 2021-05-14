@@ -9,15 +9,17 @@ let user_point
 let user_name
 
 
-function addpoint(point) {
-    user_point += point
-}
-
 function start_game() {
     document.getElementById("myForm").style.display="none";
     document.getElementById("container_page").style.display="block";
     user_name = document.getElementById("nickname").value
     user_point = 0
+
+    let x = document.getElementsByClassName("user_name_show")
+    for(let i=0; i<x.length; i++) {
+        x[i].innerHTML = user_name
+    }
+
     console.log(user_name)
     console.log(user_point)
 }
@@ -87,10 +89,10 @@ function light_up(value) {
 
 function light_off(value){
    switch(value) {
-       case 1 : if(toggle_topleft==true) break;document.getElementById("button_topleft").style.background = "darkgreen"; break;
-       case 2 : if(toggle_topright==true) break;document.getElementById("button_topright").style.background = "darkred";break;
-       case 3 : if(toggle_bottomleft==true) break;document.getElementById("button_bottomleft").style.background = "goldenrod";break;
-       case 4 : if(toggle_bottomright==true) break;document.getElementById("button_bottomright").style.background = "darkblue";break;
+       case 1 : if(toggle_topleft===true) break;document.getElementById("button_topleft").style.background = "darkgreen"; break;
+       case 2 : if(toggle_topright===true) break;document.getElementById("button_topright").style.background = "darkred";break;
+       case 3 : if(toggle_bottomleft===true) break;document.getElementById("button_bottomleft").style.background = "goldenrod";break;
+       case 4 : if(toggle_bottomright===true) break;document.getElementById("button_bottomright").style.background = "darkblue";break;
        default :  break;
 
 
