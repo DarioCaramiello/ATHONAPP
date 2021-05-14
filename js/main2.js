@@ -17,7 +17,7 @@ function start_game() {
 
     let x = document.getElementsByClassName("user_name_show")
     for(let i=0; i<x.length; i++) {
-        x[i].innerHTML = user_name
+        x[i].innerText = user_name
     }
 
     console.log(user_name)

@@ -67,7 +67,13 @@
     <script language="JavaScript">
         $(document).ready(function () {
             $("#flip_info_user").click(function () {
-                $("#panel").slideDown();
+                $("#panel").slideDown("slow");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#panel").click(function () {
+                $("#panel").slideUp();
             });
         });
     </script>

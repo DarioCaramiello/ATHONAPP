@@ -40,8 +40,8 @@ body {
     border: none;
     text-align: center;
     width: 80%;
-    padding: 10px 0px 10px 0px;
-    margin: 50px 0px 50px 50px;
+    padding: 10px 0 10px 0;
+    margin: 50px 0 50px 50px;
     background: black;
     color: #020202;
 }
@@ -104,12 +104,19 @@ body {
 
 /* inizio bunner info user */
 
-#flip_info_user, #panel {
-    margin: 0 0 0 0;
-    padding: 20px 0 20px 0;
-    font-size: 22pt;
-    background: linear-gradient(#80ed99,#313737);
+#flip_info_user {
+    margin: 20px 500px 0 500px;
+    padding: 5px 0 5px 0;
+    font-size: 15pt;
+    background-color: #330000;
     text-align: center;
+}
+#panel {
+    margin: 0px 100px 0 100px;
+    padding: 5px 0 5px 0;
+    font-size: 15pt;
+    text-align: center;
+    background-color: #cd6969;
 }
 
 /* inizio animazione sfondo */
