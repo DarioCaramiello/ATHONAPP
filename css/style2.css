@@ -3,6 +3,7 @@
 body {
     overflow: hidden;
     margin: 0 0 0 0;
+    background-color: #545353;
 }
 
 #container_start {
@@ -33,9 +34,8 @@ body {
     padding: 100px  20px 100px 20px;
     border-radius: 20px;
 
-    background: radial-gradient(#80ed99, #c7f9cc);
+    background: radial-gradient(#3e8f51, #c7f9cc);
 }
-
 .form-container input[type=text]{
     border: none;
     text-align: center;
@@ -92,7 +92,6 @@ body {
     to { opacity: 100%; }
 }
 
-
 #login_id {
     opacity: 100%;
     animation: change_opacity_3 15s 1;
@@ -103,170 +102,157 @@ body {
 }
 
 
+/* inizio bunner info user */
+#
+
+
 /* inizio animazione sfondo */
 .light {
     position: absolute;
     width: 0;
     opacity: .75;
     background-color: #050505;
-    box-shadow: #ffffff 0 0 2px 1px;
+    box-shadow: #9cffa1 0 0 2px 3px;
     top: 100vh;
     bottom: 100px;
     left: 0;
     right: 0;
     margin: auto;
 }
-
 .x1{
-    -webkit-animation: floatUp 4s infinite linear;
-    -moz-animation: floatUp 4s infinite linear;
-    -o-animation: floatUp 4s infinite linear;
-    animation: floatUp 4s infinite linear;
-    -webkit-transform: scale(1.0);
-    -moz-transform: scale(1.0);
-    -o-transform: scale(1.0);
-    transform: scale(1.0);
+    -webkit-animation: floatUp 1s infinite linear; /*4*/
+    -moz-animation: floatUp 1s infinite linear;
+    -o-animation: floatUp 1s infinite linear;
+    animation: floatUp 1s infinite linear;
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -o-transform: scale(0.2);
+    transform: scale(0.2);
 }
-
 .x2{
-    -webkit-animation: floatUp 7s infinite linear;
-    -moz-animation: floatUp 7s infinite linear;
-    -o-animation: floatUp 7s infinite linear;
-    animation: floatUp 7s infinite linear;
-    -webkit-transform: scale(1.6);
-    -moz-transform: scale(1.6);
-    -o-transform: scale(1.6);
-    transform: scale(1.6);
+    -webkit-animation: floatUp 3s infinite linear; /*7*/
+    -moz-animation: floatUp 3s infinite linear;
+    -o-animation: floatUp 3s infinite linear;
+    animation: floatUp 3s infinite linear;
+    -webkit-transform: scale(0.1); /*1.6*/
+    -moz-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    transform: scale(0.1);
     left: 15%;
 }
-
 .x3{
-    -webkit-animation: floatUp 2.5s infinite linear;
-    -moz-animation: floatUp 2.5s infinite linear;
-    -o-animation: floatUp 2.5s infinite linear;
-    animation: floatUp 2.5s infinite linear;
-    -webkit-transform: scale(.5);
-    -moz-transform: scale(.5);
-    -o-transform: scale(.5);
-    transform: scale(.5);
+    -webkit-animation: floatUp 1.5s infinite linear; /*2.5*/
+    -moz-animation: floatUp 1.5s infinite linear;
+    -o-animation: floatUp 1.5s infinite linear;
+    animation: floatUp 1.5s infinite linear;
+    -webkit-transform: scale(0.3); /*.5 */
+    -moz-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
     left: -15%;
 }
-
 .x4{
-    -webkit-animation: floatUp 4.5s infinite linear;
-    -moz-animation: floatUp 4.5s infinite linear;
-    -o-animation: floatUp 4.5s infinite linear;
-    animation: floatUp 4.5s infinite linear;
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-animation: floatUp 2s infinite linear; /*4.5*/
+    -moz-animation: floatUp 2s infinite linear;
+    -o-animation: floatUp 2s infinite linear;
+    animation: floatUp 2s infinite linear;
+    -webkit-transform: scale(0.2); /*1.2*/
+    -moz-transform: scale(0.2);
+    -o-transform: scale(0.2);
+    transform: scale(0.2);
     left: -34%;
 }
-
 .x5{
-    -webkit-animation: floatUp 8s infinite linear;
-    -moz-animation: floatUp 8s infinite linear;
-    -o-animation: floatUp 8s infinite linear;
-    animation: floatUp 8s infinite linear;
-    -webkit-transform: scale(2.2);
-    -moz-transform: scale(2.2);
-    -o-transform: scale(2.2);
-    transform: scale(2.2);
+    -webkit-animation: floatUp 3s infinite linear; /*8*/
+    -moz-animation: floatUp 3s infinite linear;
+    -o-animation: floatUp 3s infinite linear;
+    animation: floatUp 3s infinite linear;
+    -webkit-transform: scale(0.3); /*2.2*/
+    -moz-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
     left: -57%;
 }
-
 .x6{
     -webkit-animation: floatUp 3s infinite linear;
     -moz-animation: floatUp 3s infinite linear;
     -o-animation: floatUp 3s infinite linear;
     animation: floatUp 3s infinite linear;
-    -webkit-transform: scale(.8);
-    -moz-transform: scale(.8);
-    -o-transform: scale(.8);
-    transform: scale(.8);
+    -webkit-transform: scale(0.5); /*.8*/
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
     left: -81%;
 }
-
 .x7{
     -webkit-animation: floatUp 5.3s infinite linear;
     -moz-animation: floatUp 5.3s infinite linear;
     -o-animation: floatUp 5.3s infinite linear;
     animation: floatUp 5.3s infinite linear;
-    -webkit-transform: scale(3.2);
-    -moz-transform: scale(3.2);
-    -o-transform: scale(3.2);
-    transform: scale(3.2);
+    -webkit-transform: scale(0.4); /*3.2*/
+    -moz-transform: scale(0.4);
+    -o-transform: scale(0.4);
+    transform: scale(0.4);
     left: 37%;
 }
-
 .x8{
     -webkit-animation: floatUp 4.7s infinite linear;
     -moz-animation: floatUp 4.7s infinite linear;
     -o-animation: floatUp 4.7s infinite linear;
     animation: floatUp 4.7s infinite linear;
-    -webkit-transform: scale(1.7);
-    -moz-transform: scale(1.7);
-    -o-transform: scale(1.7);
-    transform: scale(1.7);
+    -webkit-transform: scale(0.6);/*1.7*/
+    -moz-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
     left: 62%;
 }
-
 .x9{
     -webkit-animation: floatUp 4.1s infinite linear;
     -moz-animation: floatUp 4.1s infinite linear;
     -o-animation: floatUp 4.1s infinite linear;
     animation: floatUp 4.1s infinite linear;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    transform: scale(0.1);
     left: 85%;
 }
-
-
-
 @-webkit-keyframes floatUp{
-    0%{top: 100vh; opacity: 0;}
+    0%{top: 1px; opacity: 0;}
     25%{opacity: 1;}
     50%{top: 0; opacity: .8;}
     75%{opacity: 1;}
-    100%{top: -100vh; opacity: 0;}
+    100%{top: -700px; opacity: 0;}
 }
 @-moz-keyframes floatUp{
-    0%{top: 100vh; opacity: 0;}
+    0%{top: 60px; opacity: 0;}
     25%{opacity: 1;}
     50%{top: 0; opacity: .8;}
     75%{opacity: 1;}
-    100%{top: -100vh; opacity: 0;}
+    100%{top: -100px; opacity: 0;}
 }
 @-o-keyframes floatUp{
-    0%{top: 100vh; opacity: 0;}
+    0%{top: 60px; opacity: 0;}
     25%{opacity: 1;}
     50%{top: 0; opacity: .8;}
     75%{opacity: 1;}
-    100%{top: -100vh; opacity: 0;}
+    100%{top: -100px; opacity: 0;}
 }
 @keyframes floatUp{
-    0%{top: 100vh; opacity: 0;}
+    0%{top: 200px; opacity: 0;}
     25%{opacity: 1;}
     50%{top: 0; opacity: .8;}
     75%{opacity: 1;}
-    100%{top: -100vh; opacity: 0;}
+    100%{top: -100px; opacity: 0;}
 }
-
-
-
 
 
 
 /* testing simon stuff */
-
 .toggle {
     margin-left: 20px;
     margin-right: 20px;
 }
-
 #start {
     border-radius: 50% !important;
     font-size: 1.5em;
@@ -275,8 +261,6 @@ body {
     margin-left: 50px;
 
 }
-
-
 #title {
     font-family: 'Original Surfer', cursive;
     position: absolute;
@@ -284,14 +268,12 @@ body {
     margin-left: 30px;
     margin-top: 35px;
 }
-
 #switches {
     position: absolute;
     font-family: 'Original Surfer', cursive;
     margin-left: 26px;
     margin-top: 110px;
 }
-
 #turn {
     position: absolute;
     background: #330000;
@@ -306,8 +288,8 @@ body {
     vertical-align: middle;
     line-height: 30px;
 }
-
 #outer-circle {
+
     background: #385a94;
     border-radius: 50%;
     height: 500px;
@@ -316,10 +298,9 @@ body {
     border-style: solid;
     border-width: 10px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 200px;
     box-shadow: 8px 8px 15px 5px #888888;
 }
-
 #button_topleft {
     position: absolute;
     height: 250px;
@@ -341,7 +322,6 @@ body {
     color: white;
     text-shadow: 3px 3px black ;
 }
-
 #button_topright {
     position: absolute;
     height: 250px;
@@ -365,7 +345,6 @@ body {
     text-shadow: 3px 3px black ;
 
 }
-
 #button_bottomleft {
     position: absolute;
     height: 250px;
@@ -388,7 +367,6 @@ body {
     text-shadow: 3px 3px black ;
 
 }
-
 #button_bottomright {
     position: absolute;
     height: 250px;
@@ -411,7 +389,6 @@ body {
     text-shadow: 3px 3px black ;
 
 }
-
 #inner-circle {
     position: absolute;
     background: grey;
