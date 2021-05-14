@@ -1,6 +1,14 @@
 
+let toggle_topleft = false;
+let toggle_topright = false;
+let toggle_bottomleft = false;
+let toggle_bottomright = false;
+let toggle_count=0;
+
+
 let user_point
 let user_name
+
 
 
 
@@ -36,22 +44,31 @@ function change_border_off() {
 function toggle(value) {
     console.log("hi")
     document.getElementById("start").style.display = "block"
+    if (toggle_count==1)
+    {
+        untoggle()
+    }
     switch (value) {
         case (1) :
             document.getElementById("button_topleft").style.background = "green";
+            toggle_topleft=true;
             break;
         case 2 :
             document.getElementById("button_topright").style.background = "red";
+            toggle_topright=true;
             break;
         case 3 :
             document.getElementById("button_bottomleft").style.background = "yellow";
+            toggle_bottomleft=true;
             break;
         case 4 :
             document.getElementById("button_bottomright").style.background = "blue";
+            toggle_bottomright=true;
             break;
         default :
             break;
     }
+    toggle_count=toggle_count+1;
 }
 
 function light_up(value) {
@@ -75,12 +92,22 @@ function light_up(value) {
 
 function light_off(value){
    switch(value) {
-       case 1 : document.getElementById("button_topleft").style.background = "darkgreen"; break;
-       case 2 : document.getElementById("button_topright").style.background = "darkred";break;
-       case 3 : document.getElementById("button_bottomleft").style.background = "goldenrod";break;
-       case 4 : document.getElementById("button_bottomright").style.background = "darkblue";break;
+       case 1 : if(toggle_topleft==true) break;document.getElementById("button_topleft").style.background = "darkgreen"; break;
+       case 2 : if(toggle_topright==true) break;document.getElementById("button_topright").style.background = "darkred";break;
+       case 3 : if(toggle_bottomleft==true) break;document.getElementById("button_bottomleft").style.background = "goldenrod";break;
+       case 4 : if(toggle_bottomright==true) break;document.getElementById("button_bottomright").style.background = "darkblue";break;
        default :  break;
 
 
    }
+}
+
+function untoggle()
+{
+ toggle_topleft = false;
+ toggle_topright = false;
+ toggle_bottomleft = false;
+ toggle_bottomright = false;
+ toggle_count=0;
+
 }
