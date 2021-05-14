@@ -8,16 +8,14 @@
 </head>
 <body>
 
-    <div id="outer-circle">
-
-        <div id="topleft">
-            <input type="button" id="button_topleft" value="HTML" onclick="toggle(1)" onmouseover="light_up(1)" onmouseout="light_off(1)">
-        </div>
-
+    <div id="container_page" style="display: none">
+        <div id="outer-circle">
+            <div id="topleft">
+                <input type="button" id="button_topleft" value="HTML" onclick="toggle(1)" onmouseover="light_up(1)" onmouseout="light_off(1)">
+            </div>
         <div id="topright">
             <input type="button" id="button_topright" value="CSS" onclick="toggle(2)" onmouseover="light_up(2)" onmouseout="light_off(2)">
         </div>
-
         <div id="bottomleft"></div>
         <input type="button" id="button_bottomleft" value="C++" onclick="toggle(3)" onmouseover="light_up(3)" onmouseout="light_off(3)">
         <div id="bottomright"></div>
@@ -28,6 +26,7 @@
                 <button class="button" id="start" style="display:none">Start</button>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -44,6 +43,11 @@
             </div>
         </div>
     </div>
+
+    <div id="container_info_user" class="container_i">
+
+    </div>
+
 
 
 

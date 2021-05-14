@@ -260,9 +260,6 @@ body {
 
 
 
-
-
-
 /* testing simon stuff */
 
 .toggle {
@@ -311,7 +308,6 @@ body {
 }
 
 #outer-circle {
-    display:none;
     background: #385a94;
     border-radius: 50%;
     height: 500px;
