@@ -1,10 +1,12 @@
 
-
-
 /* inizio css del login */
+body {
+    overflow: hidden;
+    margin: 0 0 0 0;
+}
 
 #container_start {
-    /*animation: change_opacity 5s 1; */
+    animation: change_opacity 5s 1;
     opacity: 100%;
 }
 @keyframes change_opacity {
@@ -16,8 +18,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -100px;
-    margin-left: -200px;
+    margin-top: -200px;
+    margin-left: -280px;
     animation: change_dimension 1s infinite reverse;
 }
 @keyframes change_dimension {
@@ -27,24 +29,28 @@
 }
 
 .form-container {
-    padding: 70px 20px 0px 20px;
-    background-image: linear-gradient(to right, #e5e5de, #83e7cf);
+    margin: 0 0 0 0;
+    padding: 100px  20px 100px 20px;
     border-radius: 20px;
+
+    background: radial-gradient(#80ed99, #c7f9cc);
 }
+
 .form-container input[type=text]{
     border: none;
-    align-items: center;
+    text-align: center;
     width: 80%;
-    padding: 0px 20px 15px 20px;
-    margin: 112px 10px 22px 10px;
+    padding: 10px 0px 10px 0px;
+    margin: 50px 0px 50px 50px;
     background: black;
-    color: white;
+    color: #020202;
 }
 .form-container input[type=text]:focus{
     background-color: lightgrey;
     outline: none;
 }
 .form-container .btn {
+
     background-color: #80ed99;
     color: black;
     border: none;
@@ -52,24 +58,25 @@
     width: 100px;
     height: 50px;
     margin-bottom:10px;
-    margin-left: 100px;
+    margin-left: 200px;
     border-radius: 10px;
 }
 
-/*
 
 #container_start {
     animation: change_opacity 5s 1;
     opacity: 100%;
 }
 @keyframes change_opacity {
-    from { opacity: 0; }
+    from { opacity: 0;  }
     to { opacity: 100%; }
 }
 
 #insert_nick {
     opacity: 100%;
-    animation: change_opacity_1 15s 1;
+    animation: change_opacity_1 8s 1;
+    margin-left: 5px;
+    margin-bottom: 50px;
 }
 @keyframes change_opacity_1 {
     from { opacity: 0; }
@@ -78,7 +85,7 @@
 
 #nickname {
     opacity: 100%;
-    animation: change_opacity_2 15s 1;
+    animation: change_opacity_2 10s 1;
 }
 @keyframes change_opacity_2 {
     from { opacity: 0; }
@@ -88,7 +95,7 @@
 
 #login_id {
     opacity: 100%;
-    animation: change_opacity_3 20s 1;
+    animation: change_opacity_3 15s 1;
 }
 @keyframes change_opacity_3 {
     from { opacity: 0; }
@@ -96,21 +103,157 @@
 }
 
 
+/* inizio animazione sfondo */
+.light {
+    position: absolute;
+    width: 0;
+    opacity: .75;
+    background-color: #050505;
+    box-shadow: #ffffff 0 0 2px 1px;
+    top: 100vh;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 
- */
+.x1{
+    -webkit-animation: floatUp 4s infinite linear;
+    -moz-animation: floatUp 4s infinite linear;
+    -o-animation: floatUp 4s infinite linear;
+    animation: floatUp 4s infinite linear;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    transform: scale(1.0);
+}
+
+.x2{
+    -webkit-animation: floatUp 7s infinite linear;
+    -moz-animation: floatUp 7s infinite linear;
+    -o-animation: floatUp 7s infinite linear;
+    animation: floatUp 7s infinite linear;
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+    left: 15%;
+}
+
+.x3{
+    -webkit-animation: floatUp 2.5s infinite linear;
+    -moz-animation: floatUp 2.5s infinite linear;
+    -o-animation: floatUp 2.5s infinite linear;
+    animation: floatUp 2.5s infinite linear;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+    left: -15%;
+}
+
+.x4{
+    -webkit-animation: floatUp 4.5s infinite linear;
+    -moz-animation: floatUp 4.5s infinite linear;
+    -o-animation: floatUp 4.5s infinite linear;
+    animation: floatUp 4.5s infinite linear;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    left: -34%;
+}
+
+.x5{
+    -webkit-animation: floatUp 8s infinite linear;
+    -moz-animation: floatUp 8s infinite linear;
+    -o-animation: floatUp 8s infinite linear;
+    animation: floatUp 8s infinite linear;
+    -webkit-transform: scale(2.2);
+    -moz-transform: scale(2.2);
+    -o-transform: scale(2.2);
+    transform: scale(2.2);
+    left: -57%;
+}
+
+.x6{
+    -webkit-animation: floatUp 3s infinite linear;
+    -moz-animation: floatUp 3s infinite linear;
+    -o-animation: floatUp 3s infinite linear;
+    animation: floatUp 3s infinite linear;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+    left: -81%;
+}
+
+.x7{
+    -webkit-animation: floatUp 5.3s infinite linear;
+    -moz-animation: floatUp 5.3s infinite linear;
+    -o-animation: floatUp 5.3s infinite linear;
+    animation: floatUp 5.3s infinite linear;
+    -webkit-transform: scale(3.2);
+    -moz-transform: scale(3.2);
+    -o-transform: scale(3.2);
+    transform: scale(3.2);
+    left: 37%;
+}
+
+.x8{
+    -webkit-animation: floatUp 4.7s infinite linear;
+    -moz-animation: floatUp 4.7s infinite linear;
+    -o-animation: floatUp 4.7s infinite linear;
+    animation: floatUp 4.7s infinite linear;
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7);
+    left: 62%;
+}
+
+.x9{
+    -webkit-animation: floatUp 4.1s infinite linear;
+    -moz-animation: floatUp 4.1s infinite linear;
+    -o-animation: floatUp 4.1s infinite linear;
+    animation: floatUp 4.1s infinite linear;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    left: 85%;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
+@-webkit-keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
+@-moz-keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
+@-o-keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
+@keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
 
 
 
@@ -121,11 +264,6 @@
 
 
 /* testing simon stuff */
-
-
-body {
-    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png)
-}
 
 .toggle {
     margin-left: 20px;

@@ -1,14 +1,30 @@
+
 let toggle_topleft = false;
 let toggle_topright = false;
 let toggle_bottomleft = false;
 let toggle_bottomright = false;
 let toggle_count=0;
 
+
+let user_point
+let user_name
+
+
+
+
 function start_game() {
 
-    document.getElementById("myForm").style.display="none";
 
+    document.getElementById("myForm").style.display="none";
     document.getElementById("outer-circle").style.display="block";
+
+    user_name = document.getElementById("nickname").value
+    user_point = 0
+
+    console.log(user_name)
+    console.log(user_point)
+
+
 }
 
 // function for dynamic buttom login
