@@ -118,7 +118,3 @@ $(document).ready( function() {
         document.getElementById("info").style.display = "block";
     });
 });
-
-$(document).ready( function() {
-    £
-})
