@@ -105,8 +105,10 @@ body {
 /* inizio bunner info user */
 
 #container_info {
-    margin: 50px 400px 50px 400px;
-    padding: 0 0 0 0;
+    paddin: 0 0 0 0;
+    margin: 20px 1000px 20px 0px;
+    width: 300 px;
+
 
     font-size: 15pt;
     text-align: center;

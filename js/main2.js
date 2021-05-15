@@ -67,7 +67,6 @@ function toggle(value) {
     }
     toggle_count=toggle_count+1;
 }
-
 function light_up(value) {
     switch (value) {
         case (1) :
@@ -86,7 +85,6 @@ function light_up(value) {
             break;
     }
 }
-
 function light_off(value){
    switch(value) {
        case 1 : if(toggle_topleft===true) break;document.getElementById("button_topleft").style.background = "darkgreen"; break;
@@ -109,13 +107,14 @@ function untoggle()
 }
 
 
+
 /* funzioni per user info */
 $(document).ready( function() {
     $("#container_info").mouseenter(function () {
 
         $("#container_info").animate({
             margin: '20px 100px 100px 20px',
-            padding: '0 500px 300px 0'
+            padding: '0 500px 300px 0',
         }, "slow");
 
         $("#pre_info").hide()
@@ -123,19 +122,20 @@ $(document).ready( function() {
     });
 });
 
-
 $(document).ready( function() {
     $("#container_info").mouseleave(function () {
 
         $("#container_info").animate({
             margin: ' 50px 400px 50px 400px',
-            padding: '0 0 0 0'
+            padding: '0 0 0 0',
         }, "slow");
 
         $("#pre_info").show()
         $("#info").hide()
     });
 });
+
+
 
 
 
