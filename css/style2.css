@@ -105,7 +105,7 @@ body {
 /* inizio bunner info user */
 #container_info {
     padding: 0 0 0 0;
-    margin: 20px 1000px 20px 0px;
+    margin: 20px 1000px 20px 0;
     width: 100px;
 
 
@@ -261,13 +261,19 @@ body {
     margin-left: 20px;
     margin-right: 20px;
 }
-#start {
-    border-radius: 50% !important;
+#start{
+    border-radius: 10px;
     font-size: 1.5em;
-    background-color: lightgray;
-    position: absolute  ;
-    margin-left: 50px;
-
+    position: absolute;
+    margin-left: 55px;
+    background-color: grey;
+    border-color: black;
+    color: black;
+    box-shadow: 0 0 40px 40px grey inset, 0 0 0 0 black;
+    transition: all 150ms ease-in-out;
+}
+#start:hover {
+    box-shadow: 0 0 10px 0 grey inset, 0 0 10px 4px black;
 }
 #title {
     font-family: 'Original Surfer', cursive;
@@ -306,7 +312,6 @@ body {
     border-style: solid;
     border-width: 10px;
     margin: auto;
-    margin-top: 200px;
     box-shadow: 8px 8px 15px 5px #888888;
 }
 #button_topleft {
@@ -319,17 +324,22 @@ body {
     background: darkgreen;
     top: 50%;
     left: 50%;
-    margin: -250px 0px 0px -250px;
+    margin: -250px 0 0 -250px;
     border-style: solid;
     border-width: 5px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    position: absolute;
     font-size: 40px;
     color: white;
     text-shadow: 3px 3px black ;
+    z-index: 1;
 }
+#button_topleft:hover{
+    transform: scale(1.1);
+    z-index: 9;
+}
+
 #button_topright {
     position: absolute;
     height: 250px;
@@ -340,18 +350,22 @@ body {
     background: darkred;
     top: 50%;
     left: 50%;
-    margin: -250px 0px 0px 0px;
+    margin: -250px 0 0 0;
     border-style: solid;
     border-width: 5px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     font-family: 'Original Surfer', cursive;
-    position: absolute;
     font-size: 40px;
     color: white;
     text-shadow: 3px 3px black ;
+    z-index: 1;
 
+}
+#button_topright:hover{
+    transform: scale(1.1);
+    z-index: 9;
 }
 #button_bottomleft {
     position: absolute;
@@ -363,17 +377,21 @@ body {
     background: goldenrod;
     top: 50%;
     left: 50%;
-    margin: 0px -250px 0px -250px;
+    margin: 0 -250px 0 -250px;
     border-style: solid;
     border-width: 5px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    position: absolute;
     font-size: 40px;
     color: white;
     text-shadow: 3px 3px black ;
+    z-index: 1;
 
+}
+#button_bottomleft:hover{
+    transform: scale(1.1);
+    z-index: 9;
 }
 #button_bottomright {
     position: absolute;
@@ -385,17 +403,19 @@ body {
     background: darkblue;
     top: 50%;
     left: 50%;
-    margin: 0px 0px -250px 0px;
+    margin: 0 0 -250px 0;
     border-style: solid;
     border-width: 5px;
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    position: absolute;
     font-size: 40px;
     color: white;
     text-shadow: 3px 3px black ;
-
+    z-index: 1;
+}
+#button_bottomright:hover{
+    transform: scale(1.1);
+    z-index: 9;
 }
 #inner-circle {
     position: absolute;
@@ -407,9 +427,9 @@ body {
     border-width: 10px;
     top: 50%;
     left: 50%;
-    margin: -125px 0px 0px -125px;
-    box-sizing: border-box;
+    margin: -125px 0 0 -125px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    z-index: 10;
 }
 
