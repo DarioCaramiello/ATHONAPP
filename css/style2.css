@@ -7,10 +7,6 @@ body {
     box-sizing: border-box;
 }
 
-#container_start {
-    animation: change_opacity 5s 1;
-    opacity: 100%;
-}
 @keyframes change_opacity {
     from { opacity: 0; }
     to { opacity: 100%; }
