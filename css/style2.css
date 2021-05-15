@@ -4,6 +4,7 @@ body {
     overflow: hidden;
     margin: 0 0 0 0;
     background-color: #545353;
+    box-sizing: border-box;
 }
 
 #container_start {
@@ -101,13 +102,11 @@ body {
     to { opacity: 100%; }
 }
 
-
 /* inizio bunner info user */
-
 #container_info {
-    paddin: 0 0 0 0;
+    padding: 0 0 0 0;
     margin: 20px 1000px 20px 0px;
-    width: 300 px;
+    width: 100px;
 
 
     font-size: 15pt;
@@ -255,7 +254,6 @@ body {
     75%{opacity: 1;}
     100%{top: -100px; opacity: 0;}
 }
-
 
 
 /* testing simon stuff */

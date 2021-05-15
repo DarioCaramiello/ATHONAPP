@@ -107,13 +107,12 @@ function untoggle()
 }
 
 
-
 /* funzioni per user info */
 $(document).ready( function() {
     $("#container_info").mouseenter(function () {
 
         $("#container_info").animate({
-            margin: '20px 100px 100px 20px',
+            margin: '20px 100px 100px 0',
             padding: '0 500px 300px 0',
         }, "slow");
 
@@ -121,12 +120,11 @@ $(document).ready( function() {
         $("#info").show()
     });
 });
-
 $(document).ready( function() {
     $("#container_info").mouseleave(function () {
 
         $("#container_info").animate({
-            margin: ' 50px 400px 50px 400px',
+            margin: ' 20px 1000px 20px 0px',
             padding: '0 0 0 0',
         }, "slow");
 
@@ -134,10 +132,6 @@ $(document).ready( function() {
         $("#info").hide()
     });
 });
-
-
-
-
 
 
 

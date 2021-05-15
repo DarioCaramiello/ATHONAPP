@@ -10,18 +10,6 @@ function change_color() {
     }
 }
 
-function for_cite_on() {
-    let cite = document.getElementById("cite_intro").style
-    cite.fontSize = "26pt"
-    cite.color = "white"
-}
-
-function for_cite_off() {
-    let cite = document.getElementById("cite_intro").style
-    cite.fontSize = "20pt"
-    cite.color = "black"
-}
-
 function start_game(){
     window.location = 'page2.html'
 }
