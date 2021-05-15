@@ -1,15 +1,16 @@
 
 
-function start_game() {
-    console.log("Hi, by start_game()");
-    location.href="page2.html"
+/* funzione del cambio di colore migliorata */
+function change_color() {
+    let obj = document.getElementById("btn_id")
+    if( obj.style.color === "white") {
+        obj.style.color = "black"
+    } else {
+        obj.style.color = "white"
+    }
 }
 
-function change_color_on() {
-    document.getElementById("btn_id").style.color = "white"
-}
-
-function change_color_off() {
-    document.getElementById("btn_id").style.color = "black"
+function start_game(){
+    window.location = 'page2.html'
 }
 

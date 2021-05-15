@@ -4,31 +4,64 @@
     <meta charset="UTF-8">
     <title>AthonApp-Home</title>
     <link rel="stylesheet" href="css/style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="main-page">
-    <div class="sign">
-        <button type="button">Sign Up</button>
-    </div>
-    <div class="modes">
-        <svg height="180" width="400">
-            <a href="index3.html">
-                <path d="M150 0 L75 200 L225 200 Z" />
-                <text x="90"
-                      y="30"
-                      fill="#FFFFFF"
-                      text-anchor="middle"
-                      alignment-baseline="middle">
-                      Esercizio 1
-                </text>
-            </a>
-        </svg>
-        <button type="button" class="b2">Esercizio 2</button>
-        <button type="button" class="b3">Esercizio 3</button>
-        <button type="button" class="b4">Esercizio 4</button>
-    </div>
-</div>
 
-<script language="JavaScript" src="js/main.js"></script>
+    <div id="container_page" style="display: none">
+
+
+        <div id="container_info">
+            <p id="pre_info">Info</p>
+            <p id="info" style="display: none">Ciao</p>
+        </div>
+
+
+        <div id="outer-circle" >
+            <div id="topleft">
+                <input type="button" id="button_topleft" value="HTML" onclick="toggle(1)" onmouseover="light_up(1)" onmouseout="light_off(1)">
+            </div>
+            <div id="topright">
+                <input type="button" id="button_topright" value="CSS" onclick="toggle(2)" onmouseover="light_up(2)" onmouseout="light_off(2)">
+            </div>
+            <div id="bottomleft"></div>
+            <input type="button" id="button_bottomleft" value="C++" onclick="toggle(3)" onmouseover="light_up(3)" onmouseout="light_off(3)">
+            <div id="bottomright"></div>
+            <input type="button" id="button_bottomright" value="Java" onclick="toggle(4)" onmouseover="light_up(4)" onmouseout="light_off(4)">
+            <div id="inner-circle">
+                <div id="title" class="font-effect-emboss">AthonAPP!</div>
+                <div id="switches">
+                    <button class="button" id="start" style="display:none">Start</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div id="container_start">
+        <div class="form-popup" id="myForm">
+        <div class='light x3'></div>
+        <div class='light x4'></div>
+        <div class='light x5'></div>
+        <div class='light x6'></div>
+        <div class='light x7'></div>
+        <div class='light x8'></div>
+        <div class='light x9'></div>
+            <div class="form-container">
+                <h1 id="insert_nick" style="font-size: 25pt; text-align: center; color: black;">insert your nickname</h1>
+                <input type="text" placeholder="nickname" name="nickname" id="nickname" style="text-align: center;">
+                <input type="button" class="btn" value="Login" id="login_id" onmouseover="change_border_on()" onmouseout="change_border_off()" onclick="start_game()">
+            </div>
+        </div>
+
+    </div>
+    <!-- end banner user -->
+
+    <script language="JavaScript" src="js/main2.js"></script>
+
 </body>
 </html>
