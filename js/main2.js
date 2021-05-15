@@ -108,13 +108,36 @@ function untoggle()
 
 }
 
-/* funzioni per le info user */
+
+/* funzioni per user info */
 $(document).ready( function() {
     $("#container_info").mouseenter(function () {
-        $("#container_info").animate({padding: '20px 100px 100px 20px ' }, "slow");
-        $("#container_info").animate({padding: '23px 0 123px 0 ' }, "slow");
-        $("#container_info").animate({padding: '0 200px 300px 0px ' }, "slow");
-        document.getElementById("pre_info").style.display = "none"
-        document.getElementById("info").style.display = "block";
+
+        $("#container_info").animate({
+            margin: '20px 100px 100px 20px',
+            padding: '0 500px 300px 0'
+        }, "slow");
+
+        $("#pre_info").hide()
+        $("#info").show()
     });
 });
+
+
+$(document).ready( function() {
+    $("#container_info").mouseleave(function () {
+
+        $("#container_info").animate({
+            margin: ' 50px 400px 50px 400px',
+            padding: '0 0 0 0'
+        }, "slow");
+
+        $("#pre_info").show()
+        $("#info").hide()
+    });
+});
+
+
+
+
+

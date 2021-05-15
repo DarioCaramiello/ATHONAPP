@@ -105,14 +105,16 @@ body {
 /* inizio bunner info user */
 
 #container_info {
-    margin: 50px 500px 50px 500px;
+    margin: 50px 400px 50px 400px;
+    padding: 0 0 0 0;
+
     font-size: 15pt;
     text-align: center;
     background-color: #cd6969;
 
 }
 
-/* inizio animazione sfondo */
+/* sfondo del login */
 .light {
     position: absolute;
     width: 0;
