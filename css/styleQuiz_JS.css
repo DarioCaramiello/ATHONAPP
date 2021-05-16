@@ -1,0 +1,14 @@
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+.left_div {
+    background-color: #3e8f51;
+    height: 10vh;
+    width: 50vw;
+}
+
+.right_div {
+}

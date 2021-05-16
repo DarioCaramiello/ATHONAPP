@@ -111,23 +111,6 @@ $(document).ready( function() {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*funciton per user info rank */
 $(document).ready( function() {
     $("#container_info_rank").click(function () {
