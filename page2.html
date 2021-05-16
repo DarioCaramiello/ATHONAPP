@@ -14,29 +14,32 @@
 
         <div id="container_info">
             <p id="pre_info">Info</p>
-            <p id="info" style="display: none">Ciao</p>
+            <pre id="info" style="display: none">NickName : <pre class="user_name_show"></pre>Point rank : <pre class="user_point_rank"></pre>Classifica : </pre>
         </div>
 
+        <div id="container_info_rank">
+            <p id="pre_info_rank">Rank</p>
+            <div id="rank" style="display: none">
+
+            </div>
+        </div>
 
         <div id="outer-circle" >
             <div id="topleft"></div>
-                <input type="button" id="button_topleft" value="HTML" onclick="button_start_on()">
+                <input type="button" id="button_topleft" value="HTML" onclick="button_start_on()" onmouseleave="button_start_off()">
             <div id="topright"></div>
-                <input type="button" id="button_topright" value="CSS" onclick="button_start_on()">
+                <input type="button" id="button_topright" value="CSS" onclick="button_start_on()" onmouseleave="button_start_off()">
             <div id="bottomleft"></div>
-                <input type="button" id="button_bottomleft" value="LOGIC" onclick="button_start_on()">
+                <input type="button" id="button_bottomleft" value="LOGIC" onclick="button_start_on()" onmouseleave="button_start_off()">
             <div id="bottomright"></div>
-                <input type="button" id="button_bottomright" value="Java" onclick="button_start_on()">
+                <input type="button" id="button_bottomright" value="Java" onclick="button_start_on()" onmouseleave="button_start_off()">
             <div id="inner-circle">
                 <div id="switches">
                     <input type="button" value="Start" id="start" style="display:none">
                 </div>
             </div>
         </div>
-
-
     </div>
-
 
 
     <div id="container_start">

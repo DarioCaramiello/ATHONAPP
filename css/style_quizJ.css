@@ -1,0 +1,66 @@
+
+body {
+    overflow: hidden;
+}
+
+#container_quizJava{
+    margin: 20px 20px 20px 20px;
+}
+
+/*border piu esterno*/
+#border1 {
+    height: 40vh;
+    width: 50vw;
+    border-radius: 20px;
+    border: 1px solid darkred;
+    padding: 20px 20px 20px 20px;
+    /*animation: border1_a 1s infinite reverse;*/
+}
+@keyframes border1_a {
+    from {
+       border: 1px solid darkred;
+    }
+    to {
+        border: 3px solid #9cffa1;
+    }
+
+}
+#border2 {
+    height: 33vh;
+    width: 47vw;
+    margin: 20px 30px 20px 20px;
+    border-radius: 20px;
+    border: 1px solid darkorange;
+    /*animation: border2_a 1s infinite reverse;*/
+}
+@keyframes border2_a {
+    from {
+        border: 1px solid darkred;
+    }
+    to {
+        border: 5px solid skyblue;
+    }
+}
+/*
+#border3 {
+    height: 27vh;
+    width: 32.5vw;
+    border-radius: 20px;
+    border: 1px solid saddlebrown;
+    animation: border3_a 1s infinite reverse;
+}
+@keyframes border3_a {
+    from {
+        border: 1px solid darkred;
+    }
+    to {
+        border: none;
+    }
+}
+/*
+
+#container_game {
+    background-color: #80ed99;
+}
+
+

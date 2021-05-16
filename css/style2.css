@@ -1,5 +1,5 @@
 
-/* inizio css del login */
+
 body {
     overflow: hidden;
     margin: 0 0 0 0;
@@ -7,6 +7,7 @@ body {
     box-sizing: border-box;
 }
 
+/* login */
 #container_start {
     animation: change_opacity 5s 1;
     opacity: 100%;
@@ -15,7 +16,6 @@ body {
     from { opacity: 0; }
     to { opacity: 100%; }
 }
-
 .form-popup {
     position: absolute;
     top: 50%;
@@ -29,7 +29,6 @@ body {
     66%{ transform: scale(1.05); }
     100%{ transform: scale(1); }
 }
-
 .form-container {
     margin: 0 0 0 0;
     padding: 100px  20px 100px 20px;
@@ -62,8 +61,6 @@ body {
     margin-left: 200px;
     border-radius: 10px;
 }
-
-
 #container_start {
     animation: change_opacity 5s 1;
     opacity: 100%;
@@ -72,7 +69,6 @@ body {
     from { opacity: 0;  }
     to { opacity: 100%; }
 }
-
 #insert_nick {
     opacity: 100%;
     animation: change_opacity_1 8s 1;
@@ -83,7 +79,6 @@ body {
     from { opacity: 0; }
     to { opacity: 100%; }
 }
-
 #nickname {
     opacity: 100%;
     animation: change_opacity_2 10s 1;
@@ -92,7 +87,6 @@ body {
     from { opacity: 0; }
     to { opacity: 100%; }
 }
-
 #login_id {
     opacity: 100%;
     animation: change_opacity_3 15s 1;
@@ -104,7 +98,41 @@ body {
 
 /* inizio bunner info user */
 #container_info {
-    padding: 0 0 30px 0;
+    padding: 0 0 10px 0;
+    margin: 20px 100px 20px 0;
+    width: 100px;
+
+    font-size: 15pt;
+    text-align: center;
+    background-color: #cd6969;
+    animation-name: change_dimension2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes change_dimension2 {
+    from {
+        width: 100px;
+    }
+    to {
+        width: 0;
+    }
+}
+
+#info {
+    font-size: 15pt;
+    text-align: center;
+}
+pre {
+    text-align: center;
+
+}
+
+
+/* inizio bunner info rank */
+#container_info_rank {
+    padding: 0 0 10px 0;
     margin: 20px 100px 20px 0;
     width: 100px;
 
