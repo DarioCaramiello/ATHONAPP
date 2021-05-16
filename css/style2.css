@@ -280,7 +280,7 @@ body {
     font-size: 10pt;
     position: absolute;
     margin-left: 5px;
-    background-color: grey;
+    background-color: darkred;
     border-color: black;
     color: black;
     box-shadow: 0 0 40px 40px grey inset, 0 0 0 0 black;
@@ -288,6 +288,7 @@ body {
 }
 #start:hover {
     box-shadow: 0 0 10px 0 grey inset, 0 0 10px 4px black;
+
 }
 #title {
     font-family: 'Original Surfer', cursive;
