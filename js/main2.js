@@ -1,10 +1,4 @@
 
-let toggle_topleft = false;
-let toggle_topright = false;
-let toggle_bottomleft = false;
-let toggle_bottomright = false;
-let toggle_count=0;
-
 let user_point
 let user_name
 
@@ -37,75 +31,12 @@ function change_border_off() {
     x.style.backgroundColor = "#80ed99"
     x.style.color = "black"
 }
-
-function toggle(value) {
-    console.log("hi")
-    document.getElementById("start").style.display = "block"
-    if (toggle_count===1)
-    {
-        untoggle()
-    }
-    switch (value) {
-        case (1) :
-            document.getElementById("button_topleft").style.background = "green";
-            toggle_topleft=true;
-            break;
-        case 2 :
-            document.getElementById("button_topright").style.background = "red";
-            toggle_topright=true;
-            break;
-        case 3 :
-            document.getElementById("button_bottomleft").style.background = "yellow";
-            toggle_bottomleft=true;
-            break;
-        case 4 :
-            document.getElementById("button_bottomright").style.background = "blue";
-            toggle_bottomright=true;
-            break;
-        default :
-            break;
-    }
-    toggle_count=toggle_count+1;
+function button_start_on(){
+    document.getElementById("start").style.display="block"
 }
-function light_up(value) {
-    switch (value) {
-        case (1) :
-            document.getElementById("button_topleft").style.background = "green";
-            break;
-        case 2 :
-            document.getElementById("button_topright").style.background = "red";
-            break;
-        case 3 :
-            document.getElementById("button_bottomleft").style.background = "yellow";
-            break;
-        case 4 :
-            document.getElementById("button_bottomright").style.background = "blue";
-            break;
-        default :
-            break;
-    }
+function button_start_off(){
+    document.getElementById("start").style.display="none"
 }
-function light_off(value){
-   switch(value) {
-       case 1 : if(toggle_topleft===true) break;document.getElementById("button_topleft").style.background = "darkgreen"; break;
-       case 2 : if(toggle_topright===true) break;document.getElementById("button_topright").style.background = "darkred";break;
-       case 3 : if(toggle_bottomleft===true) break;document.getElementById("button_bottomleft").style.background = "goldenrod";break;
-       case 4 : if(toggle_bottomright===true) break;document.getElementById("button_bottomright").style.background = "darkblue";break;
-       default :  break;
-
-
-   }
-}
-function untoggle(){
- toggle_topleft = false;
- toggle_topright = false;
- toggle_bottomleft = false;
- toggle_bottomright = false;
- toggle_count=0;
-
-}
-
-
 
 /* funzioni per user info */
 $(document).ready( function() {

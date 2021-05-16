@@ -19,20 +19,17 @@
 
 
         <div id="outer-circle" >
-            <div id="topleft">
-                <input type="button" id="button_topleft" value="HTML" onclick="toggle(1)" onmouseover="light_up(1)" onmouseout="light_off(1)">
-            </div>
-            <div id="topright">
-                <input type="button" id="button_topright" value="CSS" onclick="toggle(2)" onmouseover="light_up(2)" onmouseout="light_off(2)">
-            </div>
+            <div id="topleft"></div>
+                <input type="button" id="button_topleft" value="HTML" onclick="button_start_on()">
+            <div id="topright"></div>
+                <input type="button" id="button_topright" value="CSS" onclick="button_start_on()">
             <div id="bottomleft"></div>
-            <input type="button" id="button_bottomleft" value="C++" onclick="toggle(3)" onmouseover="light_up(3)" onmouseout="light_off(3)">
+                <input type="button" id="button_bottomleft" value="LOGIC" onclick="button_start_on()">
             <div id="bottomright"></div>
-            <input type="button" id="button_bottomright" value="Java" onclick="toggle(4)" onmouseover="light_up(4)" onmouseout="light_off(4)">
+                <input type="button" id="button_bottomright" value="Java" onclick="button_start_on()">
             <div id="inner-circle">
-                <div id="title" class="font-effect-emboss">AthonAPP!</div>
                 <div id="switches">
-                    <button class="button" id="start" style="display:none">Start</button>
+                    <input type="button" value="Start" id="start" style="display:none">
                 </div>
             </div>
         </div>

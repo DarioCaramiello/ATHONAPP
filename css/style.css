@@ -44,7 +44,7 @@ body {
 }
 
 #cite_intro {
-    font-family: "Gill Sans";
+    font-family: "Gill Sans",sans-serif;
     font-size: 20pt;
     opacity: 100%;
 
@@ -107,7 +107,7 @@ div[class*=box] {
 }
 .btn-three {
     color: #000000;
-    font-family: Skia;
+    font-family: Skia,sans-serif;
     transition: all 0.5s;
     position: relative;
 }
