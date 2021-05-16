@@ -1,4 +1,4 @@
-
+/*ok*/
 
 /* funzione del cambio di colore migliorata */
 function change_color() {

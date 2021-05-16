@@ -31,13 +31,13 @@ function change_border_off() {
     x.style.backgroundColor = "#80ed99"
     x.style.color = "black"
 }
-function button_start_on(){
-    document.getElementById("start").style.display="block"
-}
-function button_start_off(){
-    document.getElementById("start").style.display="none"
-}
 
+function button_start_on() {
+    document.getElementById("start").style.display = "block"
+}
+function button_start_off() {
+    document.getElementById("start").style.display = "none"
+}
 /* funzioni per user info */
 $(document).ready( function() {
     $("#container_info").mouseenter(function () {
