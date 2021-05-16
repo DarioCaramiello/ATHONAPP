@@ -1,12 +1,12 @@
 body {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    box-sizing: border-box;
-}
 
+}
 
 .container_div {
     display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
     /*
     1auto : elemento
     2auto : elemento
@@ -16,13 +16,16 @@ body {
     6auto : scelta utente
     7auto : scelta utente
      */
-    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+
+.cella, .cella_elem {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
 }
 .cella {
     background-color: #9cffa1;
-    padding: 50px;
-    margin: 10px;
-    text-align: center;
 }
 
 .cella:hover {
@@ -30,11 +33,12 @@ body {
     color: red;
 }
 
+/*sono piu grandi ( anche se hanno stesso padding e stesso margin ) perche il font è piu grande */
 .cella_elem {
-    padding: 50px;
-    margin: 10px;
     background-color: red;
     color: black;
+    font-size: 20pt;
+
 }
 
 .cella_elem:hover{
