@@ -3,7 +3,7 @@
 body {
     overflow: hidden;
     margin: 0 0 0 0;
-    background-color: #545353;
+    background-color:  gray;
     box-sizing: border-box;
 }
 
@@ -98,43 +98,44 @@ body {
 
 /* inizio bunner info user */
 #container_info {
-    padding: 0 0 10px 0;
-    margin: 20px 100px 20px 0;
-    width: 100px;
-
+    padding: 5px 0 5px 0;
+    margin: 200px 300px 10px 0;
+    width: 10vw;
     font-size: 15pt;
     text-align: center;
-    background-color: #cd6969;
-    animation-name: change_dimension2;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-}
-@keyframes change_dimension2 {
-    from {
-        width: 100px;
-    }
-    to {
-        width: 0;
-    }
+    background: linear-gradient(to left, floralwhite, seagreen);
 }
 
-#info {
-    font-size: 15pt;
+#container_info2 {
+    padding: 100px 0px 50px 100px;
+}
+
+#container_name_user {
+    font-size: 22pt;
+    font-family: "Times New Roman";
+}
+
+#pre_info {
+    font-family: "Times New Roman";
+    font-size: 23pt;
+}
+
+#id_nickname {
+    color: #f30606;
+    border: 1px solid #020202;
+    border-radius: 20px;
+    padding: 0 100px 0 0;
     text-align: center;
 }
-pre {
-    text-align: center;
 
-}
+
 
 
 /* inizio bunner info rank */
 #container_info_rank {
-    padding: 0 0 10px 0;
-    margin: 20px 100px 20px 0;
-    width: 100px;
+    padding: 10px 0 10px 0;
+    margin: 0px 100px 20px 0;
+    width: 10vw;
 
 
     font-size: 15pt;
@@ -148,7 +149,7 @@ pre {
 }
 @keyframes change_dimension2 {
     from {
-        width: 100px;
+        width: 10vw;
     }
     to {
         width: 0;
@@ -298,7 +299,6 @@ pre {
 
 /******* testing simon stuff ********/
 
-
 #outer-circle {
     background: #385a94;
     border-radius: 50%;
@@ -395,7 +395,6 @@ pre {
     transform: scale(1.1);
     z-index: 9;
 }
-
 
 #button_topright {
     position: absolute;
