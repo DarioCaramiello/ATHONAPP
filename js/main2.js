@@ -4,18 +4,25 @@ let user_name
 
 
 function start_game() {
-    document.getElementById("myForm").style.display="none";
-    document.getElementById("container_page").style.display="block";
+
     user_name = document.getElementById("nickname").value
-    user_point = 0
 
-    let x = document.getElementsByClassName("user_name_show")
-    for(let i=0; i<x.length; i++) {
-        x[i].innerText = user_name
+
+    if( user_name === ""){
+        document.getElementById("myForm").style.display="block";
+        document.getElementById("container_page").style.display="none";
+    } else {
+        document.getElementById("myForm").style.display="none";
+        document.getElementById("container_page").style.display="block";
+        user_point = 0
+
+        let x = document.getElementsByClassName("user_name_show")
+        for(let i=0; i<x.length; i++) {
+            x[i].innerText = user_name
+        }
+        console.log(user_name)
+        console.log(user_point)
     }
-
-    console.log(user_name)
-    console.log(user_point)
 }
 
 // function for dynamic buttom login
@@ -40,10 +47,11 @@ function button_start_off() {
 }
 /* funzioni per user info */
 $(document).ready( function() {
-    $("#container_info").mouseenter(function () {
+    $("#container_info").click(function () {
 
         $("#container_info").animate({
             padding: '0 500px 300px 0',
+            animationDelay: '1000000000000s',
             animationDuration: '0s'
         }, "slow");
 
@@ -56,7 +64,8 @@ $(document).ready( function() {
 
         $("#container_info").animate({
             padding: '0 0 30px 0',
-            animationDuration: '1s'
+            animationDuration: '1s',
+            animationDelay: '0s'
         }, "slow");
 
         $("#pre_info").show()
