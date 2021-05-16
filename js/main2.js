@@ -1,9 +1,11 @@
-
+/*ok*/
 let toggle_topleft = false;
 let toggle_topright = false;
 let toggle_bottomleft = false;
 let toggle_bottomright = false;
 let toggle_count=0;
+
+
 
 let user_point
 let user_name
