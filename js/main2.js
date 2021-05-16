@@ -2,7 +2,6 @@
 let user_point
 let user_name
 
-
 function start_game() {
 
     user_name = document.getElementById("nickname").value
@@ -20,6 +19,14 @@ function start_game() {
         for(let i=0; i<x.length; i++) {
             x[i].innerText = user_name
         }
+
+        let y = document.getElementsByClassName("user_point_rank")
+        for(let i=0; i<y.length; i++) {
+            y[i].innerText = 0
+        }
+
+        document.body.style.background = '#fffffe'
+
         console.log(user_name)
         console.log(user_point)
     }
@@ -81,29 +88,65 @@ $(document).ready( function() {
     $("#container_info").click(function () {
 
         $("#container_info").animate({
-            padding: '0 500px 300px 0',
-            animationDelay: '1000000000000s',
-            animationDuration: '0s'
+            padding: '0 200px 10px 0',
+            animationDelay: '1000000000000s'
         }, "slow");
 
         $("#pre_info").hide()
-        $("#info").show()
+        $("#container_info2").show()
     });
 });
 $(document).ready( function() {
     $("#container_info").mouseleave(function () {
 
         $("#container_info").animate({
-            padding: '0 0 30px 0',
-            animationDuration: '1s',
+            padding: '5px 0 5px 0',
             animationDelay: '0s'
-        }, "slow");
+        }, "fast");
 
         $("#pre_info").show()
-        $("#info").hide()
+        $("#container_info2").hide()
 
     });
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*funciton per user info rank */
+$(document).ready( function() {
+    $("#container_info_rank").click(function () {
+
+        $("#container_info_rank").animate({
+            padding: '0 500px 300px 0',
+            animationDelay: '1000000000000s',
+            animationDuration: '0s'
+        }, "slow");
+    });
+});
+$(document).ready( function() {
+    $("#container_info_rank").mouseleave(function () {
+
+        $("#container_info_rank").animate({
+            padding: '0 0 10px 0',
+            animationDuration: '1s',
+            animationDelay: '0s'
+        }, "slow");
+    });
+});
 

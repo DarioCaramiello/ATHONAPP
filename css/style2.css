@@ -1,12 +1,13 @@
 
-/* inizio css del login */
+
 body {
     overflow: hidden;
     margin: 0 0 0 0;
-    background-color: #545353;
+    background-color:  gray;
     box-sizing: border-box;
 }
 
+/* login */
 #container_start {
     animation: change_opacity 5s 1;
     opacity: 100%;
@@ -15,7 +16,6 @@ body {
     from { opacity: 0; }
     to { opacity: 100%; }
 }
-
 .form-popup {
     position: absolute;
     top: 50%;
@@ -29,7 +29,6 @@ body {
     66%{ transform: scale(1.05); }
     100%{ transform: scale(1); }
 }
-
 .form-container {
     margin: 0 0 0 0;
     padding: 100px  20px 100px 20px;
@@ -62,8 +61,6 @@ body {
     margin-left: 200px;
     border-radius: 10px;
 }
-
-
 #container_start {
     animation: change_opacity 5s 1;
     opacity: 100%;
@@ -72,7 +69,6 @@ body {
     from { opacity: 0;  }
     to { opacity: 100%; }
 }
-
 #insert_nick {
     opacity: 100%;
     animation: change_opacity_1 8s 1;
@@ -83,7 +79,6 @@ body {
     from { opacity: 0; }
     to { opacity: 100%; }
 }
-
 #nickname {
     opacity: 100%;
     animation: change_opacity_2 10s 1;
@@ -92,7 +87,6 @@ body {
     from { opacity: 0; }
     to { opacity: 100%; }
 }
-
 #login_id {
     opacity: 100%;
     animation: change_opacity_3 15s 1;
@@ -104,10 +98,47 @@ body {
 
 /* inizio bunner info user */
 #container_info {
-    padding: 0 0 30px 0;
-    margin: 20px 100px 20px 0;
-    width: 100px;
+    padding: 5px 0 5px 0;
+    margin: 200px 300px 10px 0;
+    width: 10vw;
+    font-size: 15pt;
+    text-align: center;
+    background: linear-gradient(to left, floralwhite, seagreen);
     cursor: pointer;
+}
+
+#container_info2 {
+    padding: 100px 0px 50px 100px;
+}
+
+#container_name_user {
+    font-size: 22pt;
+    font-family: "Times New Roman";
+}
+
+#pre_info {
+    font-family: "Times New Roman";
+    font-size: 23pt;
+}
+
+#id_nickname {
+    color: #f30606;
+    border: 1px solid #020202;
+    border-radius: 20px;
+    padding: 0 100px 0 0;
+    text-align: center;
+}
+
+
+
+
+/* inizio bunner info rank */
+#container_info_rank {
+    padding: 10px 0 10px 0;
+    margin: 0px 100px 20px 0;
+    width: 10vw;
+
+
     font-size: 15pt;
     text-align: center;
     background-color: #cd6969;
@@ -119,7 +150,7 @@ body {
 }
 @keyframes change_dimension2 {
     from {
-        width: 100px;
+        width: 10vw;
     }
     to {
         width: 0;
@@ -269,7 +300,6 @@ body {
 
 /******* testing simon stuff ********/
 
-
 #outer-circle {
     background: #385a94;
     border-radius: 50%;
@@ -369,7 +399,6 @@ body {
     transform: scale(1.1);
     z-index: 9;
 }
-
 
 #button_topright {
     position: absolute;
