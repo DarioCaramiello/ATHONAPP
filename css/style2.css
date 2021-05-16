@@ -107,8 +107,7 @@ body {
     padding: 0 0 30px 0;
     margin: 20px 100px 20px 0;
     width: 100px;
-
-
+    cursor: pointer;
     font-size: 15pt;
     text-align: center;
     background-color: #cd6969;
@@ -286,22 +285,23 @@ body {
 /*bottone start*/
 #start{
     border-radius: 50%;
-    height: 230px;
-    width: 230px;
+    height: 235px;
+    width: 235px;
     text-align: center;
-    font-size: 10pt;
+    font-family: subway, cursive;
+    font-size: 47pt;
     position: absolute;
     margin-left: 5px;
-    background-color: darkred;
     border-color: black;
     color: black;
-    box-shadow: 0 0 40px 40px grey inset, 0 0 0 0 black;
+    box-shadow: 0 0 40px 40px #2D383A inset, 0 0 0 0 black;
     transition: all 150ms ease-in-out;
 }
 #start:hover {
-    box-shadow: 0 0 10px 0 grey inset, 0 0 10px 4px black;
-
+    box-shadow: 0 0 10px 0 black inset, 0 0 10px 4px black;
+    transform: scale(1.05);
 }
+
 #title {
     font-family: 'Original Surfer', cursive;
     position: absolute;
@@ -312,9 +312,9 @@ body {
 #switches {
     position: absolute;
     font-family: 'Original Surfer', cursive;
-    margin-left: 3px;
+    margin-left: 0;
     margin-right: 11px;
-    margin-top: 6px;
+    margin-top: 4px;
 }
 #turn {
     position: absolute;
@@ -335,10 +335,15 @@ body {
     position: absolute;
     height: 250px;
     width: 250px;
+    font-family: Tahoma,sans-serif;
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: 1px 1px #2D383A;
+    color: black;
+    cursor: pointer;
     border-radius: 250px 0 0 0;
     -moz-border-radius: 250px 0 0 0;
     -webkit-border-radius: 250px 0 0 0;
-    background: darkgreen;
     background: url("https://hackr.io/tutorials/learn-html-5/logo/logo-html-5?ver=1587977020");
     top: 50%;
     left: 50%;
@@ -347,9 +352,6 @@ body {
     border-width: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-size: 40px;
-    color: white;
-    text-shadow: 3px 3px black ;
     z-index: 1;
     animation: zoomout3 6s ease-in 500ms forwards;
     animation-iteration-count: infinite;
@@ -373,23 +375,23 @@ body {
     position: absolute;
     height: 250px;
     width: 250px;
+    font-family: Tahoma, cursive;
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: 1px 1px #2D383A;
+    color: black;
+    cursor: pointer;
     border-radius: 0 250px 0 0;
     -moz-border-radius: 0 250px 0 0;
     -webkit-border-radius: 0 250px 0 0;
-    background: darkred;
     background: url("https://codeplus.it/uploads/css3.jpg");
     top: 50%;
     left: 50%;
     margin: -250px 0 0 0;
     border-style: solid;
     border-width: 0;
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-family: 'Original Surfer', cursive;
-    font-size: 40px;
-    color: white;
-    text-shadow: 3px 3px black ;
     z-index: 1;
     animation: zoomout1 6s ease-in 500ms forwards;
     animation-iteration-count: infinite;
@@ -412,22 +414,23 @@ body {
     position: absolute;
     height: 250px;
     width: 250px;
+    font-family: Tahoma,sans-serif;
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: 1px 1px #2D383A;
+    color: black;
+    cursor: pointer;
     border-radius: 0 0 0 250px;
     -moz-border-radius: 0 0 0 250px;
     -webkit-border-radius: 0 0 0 250px;
-    background: goldenrod;
     background: url("https://www.clipartkey.com/mpngs/m/176-1760594_problem-solving-icon-vector-home-logo-png.png");
     top: 50%;
     left: 50%;
     margin: 0 -250px 0 -250px;
     border-style: solid;
     border-width: 0;
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-size: 40px;
-    color: white;
-    text-shadow: 3px 3px black ;
     z-index: 1;
     animation: zoomout4 6s ease-in 500ms forwards;
     animation-iteration-count: infinite;
@@ -449,11 +452,16 @@ body {
     position: absolute;
     height: 250px;
     width: 250px;
+    font-family: Tahoma,sans-serif;
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: 1px 1px #2D383A;
+    color: black;
+    cursor: pointer;
     border-radius: 0 0 250px 0;
     -moz-border-radius: 0 0 250px 0;
     -webkit-border-radius: 0 0 250px 0;
-    background: darkblue;
-    background: url("https://www.myti.it/wp-content/uploads/2019/02/javascript-logo.jpg") ;
+    background: url("https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/04/javascript-960x504.png") ;
     top: 50%;
     left: 50%;
     margin: 0 0 -250px 0;
@@ -461,9 +469,6 @@ body {
     border-width: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-size: 40px;
-    color: white;
-    text-shadow: 3px 3px black ;
     z-index: 1;
     animation: zoomout2 6s ease-in 500ms forwards;
     animation-iteration-count: infinite;
@@ -483,7 +488,7 @@ body {
 }
 #inner-circle {
     position: absolute;
-    background: grey;
+    background: #2D383A;
     border-radius: 50%;
     height: 250px;
     width: 250px;

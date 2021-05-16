@@ -39,12 +39,43 @@ function change_border_off() {
     x.style.color = "black"
 }
 
-function button_start_on() {
+/*quando si clicca diventa verde e tutti gli altri neri (per capire quale è stato scelto)*/
+function button_start_on1() {
     document.getElementById("start").style.display = "block"
+    document.getElementById("start").style.backgroundColor = "#DB8211FF"
+    document.getElementById("button_bottomright").style.color="#2D383A"
+    document.getElementById("button_bottomleft").style.color="#2D383A"
+    document.getElementById("button_topleft").style.color="#FF6D3A"
+    document.getElementById("button_topright").style.color="#2D383A"
 }
-function button_start_off() {
-    document.getElementById("start").style.display = "none"
+
+function button_start_on2() {
+    document.getElementById("start").style.display = "block"
+    document.getElementById("start").style.backgroundColor = "#1E90FF"
+    document.getElementById("button_bottomright").style.color="#2D383A"
+    document.getElementById("button_bottomleft").style.color="#2D383A"
+    document.getElementById("button_topleft").style.color="#2D383A"
+    document.getElementById("button_topright").style.color="#2E2D88"
 }
+
+function button_start_on3() {
+    document.getElementById("start").style.display = "block"
+    document.getElementById("start").style.backgroundColor = "#58427C"
+    document.getElementById("button_bottomright").style.color="#2D383A"
+    document.getElementById("button_bottomleft").style.color="#733380"
+    document.getElementById("button_topleft").style.color="#2D383A"
+    document.getElementById("button_topright").style.color="#2D383A"
+}
+
+function button_start_on4() {
+    document.getElementById("start").style.display = "block"
+    document.getElementById("start").style.backgroundColor = "#FFDB00"
+    document.getElementById("button_bottomright").style.color="#E77200"
+    document.getElementById("button_bottomleft").style.color="#2D383A"
+    document.getElementById("button_topleft").style.color="#2D383A"
+    document.getElementById("button_topright").style.color="#2D383A"
+}
+
 /* funzioni per user info */
 $(document).ready( function() {
     $("#container_info").click(function () {
