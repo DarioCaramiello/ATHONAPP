@@ -7,6 +7,7 @@ body {
 .container_div {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
+    grid-column-gap: -100px;
     /*
     1auto : elemento
     2auto : elemento
@@ -19,13 +20,10 @@ body {
 }
 
 
-.cella, .cella_elem {
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-}
 .cella {
     background-color: #9cffa1;
+    padding: 20px 250px 20px 250px;
+    text-align: center;
 }
 
 .cella:hover {
@@ -35,9 +33,13 @@ body {
 
 /*sono piu grandi ( anche se hanno stesso padding e stesso margin ) perche il font è piu grande */
 .cella_elem {
+    padding: 10px;
+    margin: 5px;
     background-color: red;
     color: black;
     font-size: 20pt;
+    margin-left: -10px;
+    text-align: center;
 
 }
 
