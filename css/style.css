@@ -29,18 +29,21 @@ body {
     margin: 0;
     font-family: 'Red Hat Display',sans-serif;
     font-weight: 900;
-    background-size: 40%;
-    background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg") 50% 50%;
+    background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg");
     -webkit-background-clip: text;
     color: rgba(0,0,0,0);
-    animation: zoomout 15s ease-in 500ms forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: zoomout 20s ease-in-out 500ms forwards infinite;
 
 }
 @keyframes zoomout {
-    from{ background-size: 40%; }
-    to{ background-size: 10%; }
+    from{
+        background-size: 100%;
+        background-position: bottom;
+    }
+    to{
+        background-size: 10%;
+        background-position: top;
+    }
 }
 
 #cite_intro {
@@ -146,7 +149,7 @@ div[class*=box] {
 
 
 
-/* qui inizia l'animazione del background */
+/* background animation */
 
 .light {
     position: absolute;

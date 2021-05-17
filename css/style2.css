@@ -299,11 +299,13 @@ body {
 /******* testing simon stuff ********/
 
 #outer-circle {
+    position: absolute;
+    top: 60pt;
+    left: 325pt;
     background: #385a94;
     border-radius: 50%;
     height: 500px;
     width: 500px;
-    position: relative;
     border-style: solid;
     border-width: 3px;
     margin: auto;
@@ -312,6 +314,7 @@ body {
 
 /*bottone start*/
 #start{
+    cursor: pointer;
     border-radius: 50%;
     height: 235px;
     width: 235px;
