@@ -12,4 +12,12 @@ function drop (ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 
+function verifica_quiz() {
+    let x = document.getElementById("cella_utent1").innerText
+    let y = document.getElementById("cella_utent2").innerText
+    let z = document.getElementById("cella_utent3").innerText
 
+    console.log(x)
+    console.log(y)
+    console.log(z)
+}
