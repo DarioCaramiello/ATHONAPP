@@ -135,3 +135,16 @@ $(document).ready( function() {
     });
 });
 
+
+function pop_up_istruzioni()
+{
+    let displayCerchio=document.getElementById("outer-circle").style.display
+
+    if(displayCerchio!="block"){
+        document.getElementById("outer-circle").style.display = "block";
+    }
+    else(displayCerchio=="block")
+    {
+        document.getElementById("outer-circle").style.display = "none";
+    }
+}
