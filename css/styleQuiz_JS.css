@@ -3,7 +3,7 @@ body {
     padding: 0 0 0 0;
     box-sizing: border-box;
     overflow: hidden;
-    background: #447604;
+    background: #616161;
 }
 
 .container_div {
@@ -101,11 +101,11 @@ body {
 }
 @keyframes unzoom {
     0%{
-        background-position: 20vh;
+        background-position: 20vw;
         transform: scale(1.0);
     }
     100%{
-        background-position: 50vh;
+        background-position: 52vw;
         transform: scale(1.05);
     }
 }

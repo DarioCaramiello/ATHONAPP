@@ -3,14 +3,14 @@ body {
     margin: 0 0 0 0;
     height: 100vh;
     font-weight: 100;
-    background: radial-gradient(#80ed99, #c7f9cc);
+    background: radial-gradient(#616161, forestgreen);
     -webkit-animation: fadeIn 1 1s ease-out;
     -moz-animation: fadeIn 1 1s ease-out;
     -o-animation: fadeIn 1 1s ease-out;
     animation: fadeIn 1 1s ease-out;
 }
 
-/* box of name */
+/* name box */
 #name_project {
     font-size: 160pt;
     margin-bottom: -20pt;
@@ -18,8 +18,14 @@ body {
     animation-duration: 10s;
 }
 @keyframes change_size {
-    from { font-size:  300pt; }
-    to { font-size: 160pt; }
+    from {
+        font-size:  300pt;
+        margin-left: -200px;
+    }
+    to {
+        font-size: 160pt;
+        margin-left: 0;
+    }
 }
 
 
@@ -32,16 +38,15 @@ body {
     background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg");
     -webkit-background-clip: text;
     color: rgba(0,0,0,0);
-    animation: zoomout 20s ease-in-out 500ms forwards infinite;
+    background-size: 50%;
+    animation: zoomout 28s ease-in-out infinite alternate forwards;
 
 }
 @keyframes zoomout {
     from{
-        background-size: 100%;
         background-position: bottom;
     }
     to{
-        background-size: 10%;
         background-position: top;
     }
 }
@@ -52,16 +57,19 @@ body {
     opacity: 100%;
 
     animation-name: change_size_2;
-    animation-duration: 6s;
+    animation-duration: 7s;
 
 
 }
 @keyframes change_size_2 {
 
     from {
-        font-size: 9pt;
+        font-size: 0;
         opacity: 0;
-        color: white;
+        color: transparent;
+    }
+    50%{
+        opacity: 50%;
     }
     to {
         font-size: 20pt;
