@@ -1,4 +1,4 @@
-
+let risultato=0;
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -42,3 +42,23 @@ function verifica_quiz() {
     console.log(y)
     console.log(z)
 }
+
+//timer
+
+let timer = 60;
+// Update the count down every 1 second
+let x = setInterval(function() {
+    timer = timer - 1;
+
+    document.getElementById("timer").innerHTML = timer;
+    /
+    if (timer < 0) {
+        clearInterval(x);
+       let timerValue = document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+    /*if (timerValue=="EXPIRED")
+    {
+        nextquestion() ipotetica funzione per andare alla prossima domanda senza incrementare il risultato
+    }*/
+}, 1000);
+

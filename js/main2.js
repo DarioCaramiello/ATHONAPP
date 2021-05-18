@@ -135,3 +135,8 @@ $(document).ready( function() {
     });
 });
 
+
+function pop_up_istruzioni()
+{
+    document.getElementById("popup_istruzioni").style.display="block";
+}

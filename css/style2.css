@@ -836,3 +836,26 @@ body {
     100%{opacity: 1;}
 }
 
+/* istruzioni */
+
+#istruzioni{
+    position:center;
+    font-family: Tahoma,sans-serif;
+    font-size: 40px;
+    color:black;
+    text-align: center;
+    margin: auto;
+    width: 400px;
+}
+
+#popup_istruzioni {
+    position: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    opacity: 0;
+}
+
