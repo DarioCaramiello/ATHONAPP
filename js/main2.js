@@ -10,9 +10,11 @@ function start_game() {
     if( user_name === ""){
         document.getElementById("myForm").style.display="block";
         document.getElementById("container_page").style.display="none";
+        document.getElementById("Athonapp").style.display="none";
     } else {
         document.getElementById("myForm").style.display="none";
         document.getElementById("container_page").style.display="block";
+        document.getElementById("AthonApp").style.display="block";
         user_point = 0
 
         let x = document.getElementsByClassName("user_name_show")
@@ -46,7 +48,7 @@ function change_border_off() {
     x.style.color = "black"
 }
 
-/*quando si clicca diventa verde e tutti gli altri neri (per capire quale è stato scelto)*/
+/*quando si clicca diventa colorato e tutti gli altri neri (per capire quale è stato scelto)*/
 function button_start_on1() {
     document.getElementById("start").style.display = "block"
     document.getElementById("start").style.backgroundColor = "#DB8211FF"

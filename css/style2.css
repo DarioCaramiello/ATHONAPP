@@ -5,8 +5,29 @@ body {
     background-color:  #616161!important;
     box-sizing: border-box;
 }
-body:a{
-    background-color: #616161;
+#AthonApp{
+    font-family: 'Red Hat Display',sans-serif;
+    margin: 10px;
+    padding: 10px;
+    font-size: 50px;
+    text-shadow: 2px 2px 20px darkgreen;
+}
+
+#Athon_p{
+    background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg");
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,0);
+    background-size: 20%;
+    animation: zoomout 20s ease-in-out infinite alternate forwards;
+}
+
+@keyframes zoomout {
+    from{
+        background-position: bottom;
+    }
+    to{
+        background-position: top;
+    }
 }
 /* login */
 
