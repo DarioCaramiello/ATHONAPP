@@ -45,15 +45,20 @@
                 </div>
             </div>
         </div>
-        <div id="istruzioni" >
-            <input type="button" id="istruzioni_button" value="Clicca per le istruzioni!" onclick="pop_up_istruzioni()">
+        <!-- Bottone istruzioni --!>
+        <div class="box">
+            <a class="button" href="#popup1" onclick="pop_up_istruzioni()">Clicca per le istruzioni!</a>
         </div>
-        <div id="popup_istruzioni" style="display: none">
-              <h2>Regole del gioco</h2>
-                 <div class="content">
-                    Queste saranno le regole del gioco
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Regole del gioco</h2>
+                <a class="close" href="#">&times;</a onclick="pop_up_istruzioni()">
+                <div class="content">
+                    Qui vanno scritte le regole!
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
