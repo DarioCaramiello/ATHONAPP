@@ -428,11 +428,22 @@ body {
 /* timer */
 
 #timerLabel{
-    position:center;
-    font-family: Tahoma,sans-serif;
+
+    border: 3px solid #000000;
+    padding: 20px;
+    width: 150px;
+    height: 130px;
+    border-radius: 50%;
+    margin:auto;
+}
+
+#timer {
+
+    font-family: Tahoma, sans-serif;
     font-size: 40px;
-    color:black;
-    text-align: center;
-    margin: auto;
+    color: black;
     width: 400px;
+    margin-left: 55px;
+    margin-top: 30px;
+
 }
