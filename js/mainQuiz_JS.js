@@ -16,6 +16,7 @@ function verifica_quiz() {
     let count_ris = 0;
     let risp_row1 = "def"
     let risp_row2 = "gamma"
+    let risp_row3 = ">"
 
     let x = document.getElementById("cella_utent1").innerText
     let y = document.getElementById("cella_utent2").innerText
@@ -27,8 +28,11 @@ function verifica_quiz() {
     if ( y === risp_row2 ) {
         count_ris += 1
     }
+    if ( z === risp_row3 ) {
+        count_ris += 1
+    }
 
-    if(count_ris === 2 ){
+    if(count_ris === 3 ){
         document.getElementById("risp_corretta").style.display = "block"
     } else {
         document.getElementById("risp_errata").style.display = "block"
