@@ -425,3 +425,14 @@ body {
     80%{opacity: .9;}
     100%{opacity: 1;}
 }
+/* timer */
+
+#timerLabel{
+    position:center;
+    font-family: Tahoma,sans-serif;
+    font-size: 40px;
+    color:black;
+    text-align: center;
+    margin: auto;
+    width: 400px;
+}

@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-
+    <div id="AthonApp" style="display: none"><p id="Athon_p">AthonApp</p></div>
     <div id="container_page" style="display: none">
         <div id="container_info">
             <p id="pre_info">Info</p>
@@ -41,11 +41,27 @@
                 <input type="button" id="button_bottomright" value="JAVA" onclick="button_start_on4()">
             <div id="inner-circle">
                 <div id="switches">
-                    <input type="button" value="START" id="start" style="display:none">
+                    <input type="button" value="START" id="start" style="display:none" >
                 </div>
             </div>
         </div>
+        <!-- Bottone istruzioni --!>
+        <div class="box">
+            <a class="button" href="#popup1" onclick="pop_up_istruzioni()">Clicca per le istruzioni!</a>
+        </div>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Regole del gioco</h2>
+                <a class="close" href="#">&times;</a onclick="pop_up_istruzioni()">
+                <div class="content">
+                    Qui vanno scritte le regole!
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
+
 
 
     <div id="container_start">
