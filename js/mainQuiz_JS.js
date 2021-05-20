@@ -48,26 +48,24 @@ function verifica_quiz() {
 
 //timer
 
-let timer = 60;
+$('.go').on('click', function() {
+    $('.clock').addClass('count');
+});
 
+let timer = 5;
 // Update the count down every 1 second
 let x = setInterval(function() {
-
     timer -= 1
     document.getElementById("timer").innerHTML = timer;
-
     if (timer < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "Time-out";
         verifica_quiz();
     }
-
     let confirm_button_id = document.getElementById("input_button")
-
     /* quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
     confirm_button_id.addEventListener("click", () => {
         timer = 0;
         document.getElementById("confirm_button").style.display = "none"
     } )
-
 }, 1000);

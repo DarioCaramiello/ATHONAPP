@@ -416,63 +416,92 @@ body {
 }
 /* timer */
 
-#timerLabel{
-    font-size: 15pt;
-    text-align: center;
-    padding: 20px;
-    width: 150px;
-    height: 130px;
+.container_timer{
+    position: relative;
+    left: 39vw;
+    top: 5px;
+
+}
+
+.clock {
+    position: relative;
     border-radius: 50%;
-    margin: 40px 100px 10px 600px;
-
-    -webkit-animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
-    animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
-    box-shadow: 0 0 0 1.875vmin, inset 3.75vmin 3.75vmin 7.5vmin rgb(253, 253, 253), 3.75vmin 3.75vmin 7.5vmin rgba(255, 255, 255, 0.918);
+    background-color: transparent;
+    border: 4px solid blue;
+    width: 300px;
+    height: 300px;
+}
+.clock:before, .clock:after, .lightUp:before, .clock-segments:before {
+    content: ' ';
+    display: block;
+}
+.clock:before {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, transparent 149px, black 149px, black 151px, transparent 151px), linear-gradient(to bottom, transparent 149px, black 149px, black 151px, transparent 151px);
+}
+.clock:after {
+    position: absolute;
+    bottom: 144px;
+    left: 144px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 150px solid black;
+    transition: transform 30s linear;
+    transform-origin: 50% calc(100% - 6px);
+}
+.count.clock:after {
+    transform: rotate(180deg);
 }
 
-#timer {
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 35pt;
-    color: rgb(255, 255, 255);
-    padding: 30px 50px 30px 50px;
-    text-shadow: 3.75vmin 3.75vmin 7.5vmin rgb(255, 255, 255);
-    font-weight: 300;
+.lightUp {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 150px;
+    height:300px;
+    border-radius: 0 300px 300px 0;
+    overflow: hidden;
+}
+.lightUp:before {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,0,0.4);
+    position: absolute;
+    top: 0;
+    left: -150px;
+    transform-origin: 100% 50%;
+    transition: transform 30s linear;
+    border-radius: 300px 0 0 300px;
+}
+.count .lightUp:before {
+    transform: rotate(180deg);
 }
 
-
-@keyframes background_color {
-    
-   50.6666666667% {
-        background-color: #ecf01e;
-      }
-    75.6666666667% {
-        background-color: #ff0606;
-    }
-  
+.clock-segments {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background-image:
+            linear-gradient(30deg, transparent 184px, black 184px, black 186px, transparent 186px),
+            linear-gradient(60deg, transparent 184px, black 184px, black 186px, transparent 186px),
+            linear-gradient(120deg, transparent 184px, black 184px, black 186px, transparent 186px),
+            linear-gradient(150deg, transparent 184px, black 184px, black 186px, transparent 186px);
+    border-radius: 50%;
+    z-index: -100;
 }
-
-#timer {
-    -webkit-animation: timer_beat 1s ease-in-out infinite alternate forwards;
-    animation: timer_beat 1s ease-in-out infinite alternate forwards;
-    
-                
-      }
-
-@-webkit-keyframes timer_beat {
-      from {
-          transform: none;
-        }
-        to {
-          transform: scale(1.125);
-        }
-      }
-      @keyframes timer_beat {
-        from {
-          transform: none;
-        }
-        to {
-          transform: scale(1.125);
-        }
-      }
-    
+.clock-segments:before {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    background-color: #FFF;
+    z-index: -50;
+    border-radius: 50%;
+}
