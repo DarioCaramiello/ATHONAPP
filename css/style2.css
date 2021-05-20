@@ -530,7 +530,6 @@ body {
 /*background animation*/
 
 .light {
-    position: absolute;
     width: 0;
     opacity: .75;
     background-color: #545353;
