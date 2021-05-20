@@ -51,20 +51,18 @@ function verifica_quiz() {
 
 /*
 let timer = 60;
+let timer = 5;
 // Update the count down every 1 second
 let x = setInterval(function() {
     timer = timer - 1;
 
     document.getElementById("timer").innerHTML = timer;
-    /
+
     if (timer < 0) {
         clearInterval(x);
-       let timerValue = document.getElementById("timer").innerHTML = "EXPIRED";
+        document.getElementById("timer").innerHTML = "EXPIRED";
+        verifica_quiz();
     }
-    /*if (timerValue=="EXPIRED")
-    {
-        nextquestion() ipotetica funzione per andare alla prossima domanda senza incrementare il risultato
-    }
+
 }, 1000);
-*/
 

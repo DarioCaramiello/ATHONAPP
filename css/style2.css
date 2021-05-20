@@ -530,7 +530,6 @@ body {
 /*background animation*/
 
 .light {
-    position: absolute;
     width: 0;
     opacity: .75;
     background-color: #545353;
@@ -854,14 +853,14 @@ body {
     font-size: 1em;
     padding: 10px;
     color: #fff;
-    border: 2px solid #06D85F;
+    border: 2px solid #097014;
     border-radius: 20px/50px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
 .button:hover {
-    background: #06D85F;
+    background: #097014;
 }
 
 .overlay {
@@ -886,7 +885,7 @@ body {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
+    width: 40%;
     position: relative;
     transition: all 5s ease-in-out;
 }
@@ -907,7 +906,7 @@ body {
     color: #333;
 }
 .popup .close:hover {
-    color: #06D85F;
+    color: #097014;
 }
 .popup .content {
     max-height: 30%;

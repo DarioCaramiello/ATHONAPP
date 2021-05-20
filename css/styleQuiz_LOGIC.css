@@ -1,0 +1,97 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: Georgia,sans-serif;
+}
+/*usato per accedere all'elemento root e definire variabili globali*/
+:root{
+    /*colore default*/
+    --color-neutral: darkslategrey;
+    /*colore risposta errata*/
+    --color-wrong: red;
+    /*colore risposta corretta*/
+    --color-correct: green;
+
+}
+
+body{
+    /*imposto il background a un colore di default*/
+    /*noinspection CssUnresolvedCustomProperty*/
+    background-color: var(--color-neutral);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*noinspection ALL*/
+body.correct{
+    /*se la risposta è corretta cambio colore sfondo*/
+    background-color: var(--color-correct);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+body.wrong{
+    /*se la risposta è sbagliata cambio colore sfondo*/
+    background-color: var(--color-correct);
+}
+
+.container{
+    height: 360px;
+    width: 800px;
+    max-width: 80%;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+.btn-grid{
+    display: grid;
+    /*2 colonne*/
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+.btn{
+    font-size: 20px;
+    font-weight: 500;
+    width: 28.1vw;
+    height: 13vh;
+    margin-top: 20px;
+    border: 1px solid grey;
+    background-color: lightgreen;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #313131;
+    outline: none;
+}
+
+.btn:hover{
+    border-color: black;
+}
+.btn.correct{
+    /*noinspection CssUnresolvedCustomProperty*/
+    background-color: var(--color-correct);
+}
+.btn.wrong{
+    /*noinspection CssUnresolvedCustomProperty*/
+    background-color: var(--color-wrong);
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-btn, .next-btn{
+    margin: 0;
+    height: 9vh;
+    width: 16vw;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px 20px;
+}
+.hide{
+    display: none;
+}
