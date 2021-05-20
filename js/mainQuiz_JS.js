@@ -49,9 +49,9 @@ function verifica_quiz() {
 
 //timer
 
-/*
 let timer = 60;
-let timer = 5;
+let confirm_button_id = document.getElementById("input_button")
+
 // Update the count down every 1 second
 let x = setInterval(function() {
     timer = timer - 1;
@@ -64,5 +64,9 @@ let x = setInterval(function() {
         verifica_quiz();
     }
 
-}, 1000);
+    /* quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
+    confirm_button_id.addEventListener("click", () => {
+        timer = 0;
+    } )
 
+}, 1000);

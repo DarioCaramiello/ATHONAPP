@@ -1,7 +1,7 @@
 const startButton = document.getElementById('start-btn')
 const questionContainerElement=document.getElementById('question_container')
 /*variabile per rendere random le domande*/
-const randomQuestions, currentQuestionIndex
+let randomQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
 
@@ -9,7 +9,7 @@ function startGame(){
     console.log('start')
     startButton.classList.add('hide')
     /*genera domande in ordine casuale all'interno dell'array*/
-    randomQuestions = questions-array.sort(() => Math.random() - .5)
+    randomQuestions = questions_array.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
     nextQuestion()
@@ -27,7 +27,7 @@ function selectAnswer(){
 
 }
 /*array per tutte le domande*/
-const questions-array = [
+const questions_array = [
     {
         question: 'Completare la seguente serie numerica:',
         answers: [
