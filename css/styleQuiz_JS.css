@@ -8,9 +8,9 @@ body {
 
 .container_div {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto ;
     gap: 10pt;
-    margin-top: 100px;
+    margin: 20px 0 100px 250px;
     position:absolute;
     font-family: Tahoma,sans-serif;
     font-size: 14px;
@@ -82,7 +82,7 @@ body {
 /*confirm button style*/
 #confirm_button{
     position: absolute;
-    bottom: 100px;
+    bottom: 60px;
     left: 40%;
 }
 #input_button{
@@ -114,19 +114,10 @@ body {
 
 #risp_errata,#risp_corretta {
     font-size: 15pt;
-}
-
-#risp_corretta {
-    position: absolute;
-    bottom: 200px;
-    left: 40%;
-}
-#risp_errata {
     position: absolute;
     bottom: 20px;
     left: 40%;
 }
-
 
 /* animazione sfondo */
 .light {
@@ -248,8 +239,6 @@ body {
     transform: scale(0.9);
     left: 85%;
 }
-
-
 
 @-webkit-keyframes floatUp{
     0%{top: 100vh; opacity: 0;}
@@ -428,29 +417,25 @@ body {
 /* timer */
 
 #timerLabel{
-
-    border: 2px solid #000000;
+    font-size: 15pt;
+    text-align: center;
     padding: 20px;
     width: 150px;
     height: 130px;
     border-radius: 50%;
-    margin:auto;
-    background-color: #000000c0;
+    margin: 40px 100px 10px 600px;
+
     -webkit-animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
-          animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
+    animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
     box-shadow: 0 0 0 1.875vmin, inset 3.75vmin 3.75vmin 7.5vmin rgb(253, 253, 253), 3.75vmin 3.75vmin 7.5vmin rgba(255, 255, 255, 0.918);
-    
-    
 }
 
 #timer {
 
     font-family: "Montserrat", sans-serif;
-    font-size: 50px;
+    font-size: 35pt;
     color: rgb(255, 255, 255);
-    width: 400px;
-    margin-left: 55px;
-    margin-top: 30px;
+    padding: 30px 50px 30px 50px;
     text-shadow: 3.75vmin 3.75vmin 7.5vmin rgb(255, 255, 255);
     font-weight: 300;
 }
