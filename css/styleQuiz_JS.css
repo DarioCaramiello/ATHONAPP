@@ -422,12 +422,9 @@ body {
     padding: 20px;
     width: 150px;
     height: 130px;
-    border-radius: 50%;
     margin: 40px 100px 10px 600px;
-
     -webkit-animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
     animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
-    box-shadow: 0 0 0 1.875vmin, inset 3.75vmin 3.75vmin 7.5vmin rgb(253, 253, 253), 3.75vmin 3.75vmin 7.5vmin rgba(255, 255, 255, 0.918);
 }
 
 #timer {
@@ -455,9 +452,7 @@ body {
 #timer {
     -webkit-animation: timer_beat 1s ease-in-out infinite alternate forwards;
     animation: timer_beat 1s ease-in-out infinite alternate forwards;
-    
-                
-      }
+}
 
 @-webkit-keyframes timer_beat {
       from {
