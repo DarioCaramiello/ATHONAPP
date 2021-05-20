@@ -49,6 +49,7 @@ function verifica_quiz() {
 
 //timer
 
+/*
 let timer = 60;
 // Update the count down every 1 second
 let x = setInterval(function() {
@@ -63,6 +64,7 @@ let x = setInterval(function() {
     /*if (timerValue=="EXPIRED")
     {
         nextquestion() ipotetica funzione per andare alla prossima domanda senza incrementare il risultato
-    }*/
+    }
 }, 1000);
+*/
 
