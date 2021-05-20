@@ -62,5 +62,10 @@ let x = setInterval(function() {
         verifica_quiz();
     }
 
+    /* quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
+    confirm_button_id.addEventListener("click", () => {
+        timer = 0;
+    } )
+
 }, 1000);
 
