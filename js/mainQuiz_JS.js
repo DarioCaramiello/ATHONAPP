@@ -49,7 +49,7 @@ function verifica_quiz() {
 
 //timer
 
-let timer = 5;
+let timer = 60;
 // Update the count down every 1 second
 let x = setInterval(function() {
     timer = timer - 1;

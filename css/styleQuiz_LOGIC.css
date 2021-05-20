@@ -1,13 +1,14 @@
 *,*::before,*::after{
     box-sizing: border-box;
     font-family: Georgia,sans-serif;
+    overflow: hidden;
 }
 /*usato per accedere all'elemento root e definire variabili globali*/
 :root{
     /*colore default*/
-    --color-neutral: darkslategrey;
+    --color-neutral: hsla(214, 100%, 16%, 0.9);
     /*colore risposta errata*/
-    --color-wrong: red;
+    --color-wrong: hsla(360, 96%, 22%, 0.89);
     /*colore risposta corretta*/
     --color-correct: green;
 
@@ -35,18 +36,28 @@ body.correct{
 /*noinspection CssUnresolvedCustomProperty*/
 body.wrong{
     /*se la risposta è sbagliata cambio colore sfondo*/
-    background-color: var(--color-correct);
+    background-color: var(--color-wrong);
 }
 
 .container{
     height: 360px;
     width: 800px;
     max-width: 80%;
-    background-color: lightgray;
+    background-color: hsla(201, 73%, 62%, 0.92);
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 }
+#question{
+    font-family: "Book Antiqua",sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+
 .btn-grid{
     display: grid;
     /*2 colonne*/
@@ -55,16 +66,17 @@ body.wrong{
     margin: 20px 0;
 }
 .btn{
+    cursor: pointer;
     font-size: 20px;
     font-weight: 500;
+    color: white;
     width: 28.1vw;
     height: 13vh;
     margin-top: 20px;
-    border: 1px solid grey;
-    background-color: lightgreen;
+    border: 1px solid #1f00e6;
+    background-color: hsla(223, 100%, 60%, 1);
     border-radius: 5px;
     padding: 5px 10px;
-    color: #313131;
     outline: none;
 }
 
@@ -84,14 +96,57 @@ body.wrong{
     justify-content: center;
     align-items: center;
 }
-.start-btn, .next-btn{
-    margin: 0;
-    height: 9vh;
-    width: 16vw;
+.start-btn, .next-btn, .restart-btn{
+    cursor: pointer;
+    color: black;
+    margin-top: 125px;
     font-size: 30px;
     font-weight: 800;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
+.next-btn, .restart-btn{
+    font-size: 20px;
+    margin: 0;
+    padding: 2px;
+    height: 38px;
+    width: 180px;
+}
+
+.start-btn:hover{
+    animation: start-btn-anim 1s infinite alternate;
+}
+.next-btn:hover, .restart-btn:hover{
+    animation: next-btn-anim 1s infinite alternate;
+}
+
+
+@keyframes start-btn-anim {
+    from{
+        opacity: 100%;
+
+    }
+    to{
+        opacity: 90%;
+        border-radius: 20px;
+        font-size: 33px;
+        transform: scale(1.01);
+        background-color: hsla(223, 100%, 40%, 1);
+    }
+}
+@keyframes next-btn-anim {
+    from{
+        opacity: 100%;
+
+    }
+    to{
+        opacity: 90%;
+        border-radius: 20px;
+        font-size: 22px;
+        transform: scale(1.01);
+        background-color: hsla(223, 100%, 40%, 1);
+    }
+}
+
 .hide{
     display: none;
 }
