@@ -429,21 +429,65 @@ body {
 
 #timerLabel{
 
-    border: 3px solid #000000;
+    border: 2px solid #000000;
     padding: 20px;
     width: 150px;
     height: 130px;
     border-radius: 50%;
     margin:auto;
+    background-color: #000000c0;
+    -webkit-animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
+          animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
+    box-shadow: 0 0 0 1.875vmin, inset 3.75vmin 3.75vmin 7.5vmin rgb(253, 253, 253), 3.75vmin 3.75vmin 7.5vmin rgba(255, 255, 255, 0.918);
+    
+    
 }
 
 #timer {
 
-    font-family: Tahoma, sans-serif;
-    font-size: 40px;
-    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
     width: 400px;
     margin-left: 55px;
     margin-top: 30px;
-
+    text-shadow: 3.75vmin 3.75vmin 7.5vmin rgb(255, 255, 255);
+    font-weight: 300;
 }
+
+
+@keyframes background_color {
+    
+   50.6666666667% {
+        background-color: #ecf01e;
+      }
+    75.6666666667% {
+        background-color: #ff0606;
+    }
+  
+}
+
+#timer {
+    -webkit-animation: timer_beat 1s ease-in-out infinite alternate forwards;
+    animation: timer_beat 1s ease-in-out infinite alternate forwards;
+    
+                
+      }
+
+@-webkit-keyframes timer_beat {
+      from {
+          transform: none;
+        }
+        to {
+          transform: scale(1.125);
+        }
+      }
+      @keyframes timer_beat {
+        from {
+          transform: none;
+        }
+        to {
+          transform: scale(1.125);
+        }
+      }
+    
