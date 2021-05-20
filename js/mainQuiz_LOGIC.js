@@ -27,7 +27,7 @@ function selectAnswer(){
 
 }
 /*array per tutte le domande*/
-const questions-array = [
+const questions_array = [
     {
         question: 'Completare la seguente serie numerica:',
         answers: [
