@@ -1,9 +1,21 @@
 const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
+const restartButton = document.getElementById('restart-btn')
 const questionContainerElement=document.getElementById('question_container')
+/*costante per la singola domanda*/
+const questionElement = document.getElementById('question')
+const answerButtonsElement = document.getElementById('answer-buttons')
 /*variabile per rendere random le domande*/
-const randomQuestions, currentQuestionIndex
+let randomQuestions, currentQuestionIndex
+
 
 startButton.addEventListener('click', startGame)
+restartButton.addEventListener('click',startGame)
+nextButton.addEventListener('click',()=>{
+    /*incremento il contatore*/
+    currentQuestionIndex++
+    nextQuestion()
+})
 
 function startGame(){
     restartButton.classList.add('hide')
@@ -24,7 +36,7 @@ function nextQuestion(){
 function showQuestion(question){
     /*mostra il testo di una domanda che si trova nell'array question*/
     questionElement.innerText = question['question']
-     /*ciclo le risposte da far vedere*/
+    /*ciclo le risposte da far vedere*/
     question['answers'].forEach(answer => {
         /*si crea un bottone per ogni risposta*/
         const button = document.createElement('button')
@@ -89,7 +101,7 @@ function clearStatusClass(element){
 
 
 /*array per tutte le domande*/
-const questions-array = [
+const questions_array = [
     {
         question: 'Completare la seguente serie numerica: 2, 6, 7, 10, 12, 14, 17, 18, 22, ?, ??',
         answers: [
