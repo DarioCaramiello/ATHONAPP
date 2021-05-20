@@ -1,5 +1,3 @@
-/*ok*/
-
 /* funzione del cambio di colore migliorata */
 function change_color() {
     let obj = document.getElementById("btn_id")

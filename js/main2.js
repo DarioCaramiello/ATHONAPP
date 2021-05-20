@@ -29,14 +29,10 @@ function start_game() {
             y[i].innerText = 0
         }
 
-        document.body.style.background = '#fffffe'
-
         console.log(user_name)
         console.log(user_point)
     }
 }
-
-
 
 function goQuiz() {
     switch (choice_quiz) {
