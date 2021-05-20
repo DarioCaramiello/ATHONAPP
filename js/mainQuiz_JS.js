@@ -1,4 +1,3 @@
-let risultato=0;
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -48,7 +47,6 @@ function verifica_quiz() {
 }
 
 //timer
-
 let timer = 60;
 let confirm_button_id = document.getElementById("input_button")
 
