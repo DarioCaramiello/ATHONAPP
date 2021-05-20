@@ -12,6 +12,7 @@ function start_game() {
         document.getElementById("container_page").style.display="none";
         document.getElementById("Athonapp").style.display="none";
     } else {
+        document.getElementById("outer-circle").style.display="block";
         document.getElementById("myForm").style.display="none";
         document.getElementById("container_page").style.display="block";
         document.getElementById("AthonApp").style.display="block";
@@ -135,3 +136,17 @@ $(document).ready( function() {
     });
 });
 
+
+function pop_up_istruzioni()
+{
+    let displayCerchio=document.getElementById("outer-circle").style.display
+    console.log(displayCerchio)
+
+    if(displayCerchio!=="block"){
+        document.getElementById("outer-circle").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("outer-circle").style.display = "none";
+    }
+}

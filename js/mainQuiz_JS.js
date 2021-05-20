@@ -1,4 +1,4 @@
-
+let risultato=0;
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -18,6 +18,7 @@ function verifica_quiz() {
     let count_ris = 0;
     let risp_row1 = "def"
     let risp_row2 = "gamma"
+    let risp_row3 = ">"
 
     let x = document.getElementById("cella_utent1").innerText
     let y = document.getElementById("cella_utent2").innerText
@@ -29,8 +30,11 @@ function verifica_quiz() {
     if ( y === risp_row2 ) {
         count_ris += 1
     }
+    if ( z === risp_row3 ) {
+        count_ris += 1
+    }
 
-    if(count_ris === 2 ){
+    if(count_ris === 3 ){
         document.getElementById("risp_corretta").style.display = "block"
     } else {
         document.getElementById("risp_errata").style.display = "block"
@@ -42,3 +46,21 @@ function verifica_quiz() {
     console.log(y)
     console.log(z)
 }
+
+//timer
+
+let timer = 5;
+// Update the count down every 1 second
+let x = setInterval(function() {
+    timer = timer - 1;
+
+    document.getElementById("timer").innerHTML = timer;
+
+    if (timer < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+        verifica_quiz();
+    }
+
+}, 1000);
+

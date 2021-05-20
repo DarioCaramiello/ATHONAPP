@@ -109,6 +109,26 @@ body {
         transform: scale(1.05);
     }
 }
+
+/* risp-corretta-errata */
+
+#risp_errata,#risp_corretta {
+    font-size: 15pt;
+}
+
+#risp_corretta {
+    position: absolute;
+    bottom: 200px;
+    left: 40%;
+}
+#risp_errata {
+    position: absolute;
+    bottom: 20px;
+    left: 40%;
+}
+
+
+/* animazione sfondo */
 .light {
     position: absolute;
     width: 0;
@@ -404,4 +424,26 @@ body {
     30%{opacity: 1;}
     80%{opacity: .9;}
     100%{opacity: 1;}
+}
+/* timer */
+
+#timerLabel{
+
+    border: 3px solid #000000;
+    padding: 20px;
+    width: 150px;
+    height: 130px;
+    border-radius: 50%;
+    margin:auto;
+}
+
+#timer {
+
+    font-family: Tahoma, sans-serif;
+    font-size: 40px;
+    color: black;
+    width: 400px;
+    margin-left: 55px;
+    margin-top: 30px;
+
 }
