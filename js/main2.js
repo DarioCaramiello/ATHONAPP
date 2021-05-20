@@ -1,6 +1,7 @@
 
 let user_point
 let user_name
+let choice_quiz = -1
 
 function start_game() {
 
@@ -28,12 +29,25 @@ function start_game() {
             y[i].innerText = 0
         }
 
-        document.body.style.background = '#fffffe'
-
         console.log(user_name)
         console.log(user_point)
     }
 }
+
+function goQuiz() {
+    switch (choice_quiz) {
+        case 2 :
+            window.location='pageQuiz_CSS.html'
+            break
+        case 3 :
+            window.location='pageQuiz_LOGIC.html'
+            break
+        case 4 :
+            window.location='pageQuiz_JS.html'
+            break
+    }
+}
+
 
 // function for dynamic buttom login
 function change_border_on() {
@@ -50,40 +64,44 @@ function change_border_off() {
 }
 
 /*quando si clicca diventa colorato e tutti gli altri neri (per capire quale è stato scelto)*/
-function button_start_on1() {
+function button_start_on1(choice) {
     document.getElementById("start").style.display = "block"
     document.getElementById("start").style.backgroundColor = "#DB8211FF"
     document.getElementById("button_bottomright").style.color="#2D383A"
     document.getElementById("button_bottomleft").style.color="#2D383A"
     document.getElementById("button_topleft").style.color="#FF6D3A"
     document.getElementById("button_topright").style.color="#2D383A"
+    choice_quiz = choice
 }
 
-function button_start_on2() {
+function button_start_on2(choice) {
     document.getElementById("start").style.display = "block"
     document.getElementById("start").style.backgroundColor = "#1E90FF"
     document.getElementById("button_bottomright").style.color="#2D383A"
     document.getElementById("button_bottomleft").style.color="#2D383A"
     document.getElementById("button_topleft").style.color="#2D383A"
     document.getElementById("button_topright").style.color="#2E2D88"
+    choice_quiz = choice
 }
 
-function button_start_on3() {
+function button_start_on3(choice) {
     document.getElementById("start").style.display = "block"
     document.getElementById("start").style.backgroundColor = "#58427C"
     document.getElementById("button_bottomright").style.color="#2D383A"
     document.getElementById("button_bottomleft").style.color="#733380"
     document.getElementById("button_topleft").style.color="#2D383A"
     document.getElementById("button_topright").style.color="#2D383A"
+    choice_quiz = choice
 }
 
-function button_start_on4() {
+function button_start_on4(choice) {
     document.getElementById("start").style.display = "block"
     document.getElementById("start").style.backgroundColor = "#FFDB00"
     document.getElementById("button_bottomright").style.color="#E77200"
     document.getElementById("button_bottomleft").style.color="#2D383A"
     document.getElementById("button_topleft").style.color="#2D383A"
     document.getElementById("button_topright").style.color="#2D383A"
+    choice_quiz = choice
 }
 
 /* funzioni per user info */
