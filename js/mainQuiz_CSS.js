@@ -2,18 +2,19 @@ const startButton = document.getElementById('start-btn')
 const questionContainerElement=document.getElementById('question_container')
 
 startButton.addEventListener("click",function start_game(){
-startButton.style.display="none";
-questionContainerElement.style.display="block";
+    startButton.style.display="none";
+    questionContainerElement.style.display="block";
 
-randomQuestions = questions_array.sort(() => Math.random() - .5)
-currentQuestionIndex = 0
-nextQuestion()
-
+    randomQuestions = questions_array.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    nextQuestion()
 });
 
 function nextQuestion(){
     showQuestion(randomQuestions[currentQuestionIndex])
 }
+
+
 
 function showQuestion(question)
 {

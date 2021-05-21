@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>AthonApp-Home</title>
@@ -11,25 +11,37 @@
 <body>
     <div id="AthonApp" style="display: none"><p id="Athon_p">AthonApp</p></div>
     <div id="container_page" style="display: none">
+
         <div id="container_info">
             <p id="pre_info">Info</p>
+
             <div id="container_info2" style="display: none">
-                <p id ="container_name_user">
-                    NickName:<p class="user_name_show" id="id_nickname"></p>
-                </p>
-                <p id="count_point_rank">
-                    PointRank: <p class="user_point_rank" style="color:saddlebrown;"></p>
-                </p>
+
+                <div id ="container_name_user">
+                    <p>
+                        NickName:<p class="user_name_show" id="id_nickname"></p>
+                    </p>
+                </div>
+                <div id="container_point_rank">
+                    <p id="count_point_rank">
+                        PointRank: <p class="user_point_rank" style="color:saddlebrown;"></p>
+                    </p>
+                </div>
                 <!-- <img> -->
             </div>
+
         </div>
 
         <div id="container_info_rank">
-            <p id="pre_info_rank">Rank</p>
-            <div id="rank" style="display: none">
+            <p id="pre_info_rank">Ranked</p>
+            <div id="container_info_rank2" style="display: none">
+                <div id="rank" style="display: none">
 
+                </div>
             </div>
         </div>
+
+
         <div id="outer-circle" >
             <div id="topleft"></div>
                 <input type="button" id="button_topleft" value="HTML" onclick="button_start_on1(1)">

@@ -7,7 +7,6 @@ function start_game() {
 
     user_name = document.getElementById("nickname").value
 
-
     if( user_name === ""){
         document.getElementById("myForm").style.display="block";
         document.getElementById("container_page").style.display="none";
@@ -104,12 +103,14 @@ function button_start_on4(choice) {
     choice_quiz = choice
 }
 
-/* funzioni per user info */
+
+
+/* funzioni per user info con Jquery*/
 $(document).ready( function() {
     $("#container_info").click(function () {
 
         $("#container_info").animate({
-            padding: '0 200px 10px 0',
+            padding: '50px 200px 5px 0',
             animationDelay: '1000000000000s'
         }, "slow");
 
@@ -137,20 +138,26 @@ $(document).ready( function() {
     $("#container_info_rank").click(function () {
 
         $("#container_info_rank").animate({
-            padding: '0 500px 300px 0',
+            padding: '50px 200px 10px 0',
             animationDelay: '1000000000000s',
             animationDuration: '0s'
         }, "slow");
+
+        $("#pre_info_rank").hide()
+        $("#container_info_rank2").show()
     });
 });
 $(document).ready( function() {
     $("#container_info_rank").mouseleave(function () {
 
         $("#container_info_rank").animate({
-            padding: '0 0 10px 0',
+            padding: '5px 0 5px 0',
             animationDuration: '1s',
             animationDelay: '0s'
         }, "slow");
+
+        $("#pre_info_rank").show()
+        $("#container_info_rank2").hide()
     });
 });
 
