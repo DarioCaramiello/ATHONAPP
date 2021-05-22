@@ -5,12 +5,27 @@ body {
     background-color:  #616161!important;
     box-sizing: border-box;
 }
+
+#container_all_banner_info {
+    margin-top: 0;
+}
+
 #AthonApp{
     font-family: 'Red Hat Display',sans-serif;
-    margin: 10px;
-    padding: 10px;
-    font-size: 50px;
+    font-size: 60pt;
     text-shadow: 2px 2px 20px darkgreen;
+    background:linear-gradient(to right, #b3eccd, #e98686);
+    text-align: center;
+    margin-top: -90px;
+    animation: entry_bgr 5s 1
+}
+@keyframes entry_bgr {
+    from{
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 #Athon_p{
@@ -96,15 +111,16 @@ body {
 
 #button_exit_info,#button_exit_info_rank{
     border-radius: 50px;
-    background-color: red;
+    background-color: #ff0000;
     border: none;
     display: none;
-    margin-top: -50px;
+    margin-left: 5px;
+
 }
 
 #container_info_rank2 { padding: 100px; }
 
-#container_info { background: linear-gradient(to left, #8defae, seagreen); }
+#container_info { background: linear-gradient(to left, #8defae, #2e8b57); }
 #container_info2 { margin-left: 10px; }
 
 #container_name_user, #count_point_rank {
@@ -137,7 +153,6 @@ body {
     border: 1px solid black;
     border-radius: 20px;
 }
-
 #container_info_rank { background: linear-gradient(to right, #f57777,darkred); }
 
 
@@ -294,8 +309,8 @@ body {
 
 #outer-circle {
     position: absolute;
-    top: 60pt;
-    left: 325pt;
+    top: 125px;
+    left: 420px;
     background: #385a94;
     border-radius: 50%;
     height: 500px;
@@ -842,9 +857,9 @@ body {
 
 .box {
     width: 40%;
-    margin: 0 auto;
+    margin: 250px 0 0 350px;
+    padding: 25px;
     background: rgba(255,255,255,0.2);
-    padding: 35px;
     border: 2px solid #fff;
     border-radius: 20px/50px;
     background-clip: padding-box;

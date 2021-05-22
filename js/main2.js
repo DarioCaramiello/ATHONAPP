@@ -47,7 +47,6 @@ function goQuiz() {
     }
 }
 
-
 // function for dynamic buttom login
 function change_border_on() {
     let x = document.getElementById("login_id")
@@ -133,7 +132,6 @@ $(document).ready( function() {
         $("#pre_info").show()
         $("#container_info2").hide()
         $("#button_exit_info").hide()
-
     });
 });
 
@@ -149,6 +147,7 @@ $(document).ready( function() {
         $("#pre_info_rank").hide()
         $("#container_info_rank2").show()
         $("#button_exit_info_rank").show()
+
     });
 });
 $(document).ready( function() {
