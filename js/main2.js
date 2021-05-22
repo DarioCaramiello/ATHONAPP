@@ -115,10 +115,15 @@ $(document).ready( function() {
 
         $("#pre_info").hide()
         $("#container_info2").show()
+        $("#button_exit_info").show()
     });
 });
+
+
+
+
 $(document).ready( function() {
-    $("#container_info").mouseleave(function () {
+    $("#button_exit_info").click(function () {
 
         $("#container_info").animate({
             padding: '0',
@@ -127,6 +132,7 @@ $(document).ready( function() {
 
         $("#pre_info").show()
         $("#container_info2").hide()
+        $("#button_exit_info").hide()
 
     });
 });
@@ -142,10 +148,11 @@ $(document).ready( function() {
 
         $("#pre_info_rank").hide()
         $("#container_info_rank2").show()
+        $("#button_exit_info_rank").show()
     });
 });
 $(document).ready( function() {
-    $("#container_info_rank").mouseleave(function () {
+    $("#button_exit_info_rank").click(function () {
 
         $("#container_info_rank").animate({
             padding: '0',
@@ -154,6 +161,7 @@ $(document).ready( function() {
 
         $("#pre_info_rank").show()
         $("#container_info_rank2").hide()
+        $("#button_exit_info_rank").hide()
     });
 });
 

@@ -94,8 +94,15 @@ body {
     cursor: pointer;
 }
 
-#container_info_rank2 { padding: 100px; }
+#button_exit_info,#button_exit_info_rank{
+    border-radius: 50px;
+    background-color: red;
+    border: none;
+    display: none;
+    margin-top: -50px;
+}
 
+#container_info_rank2 { padding: 100px; }
 
 #container_info { background: linear-gradient(to left, #8defae, seagreen); }
 #container_info2 { margin-left: 10px; }
