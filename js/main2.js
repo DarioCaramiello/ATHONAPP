@@ -105,12 +105,11 @@ function button_start_on4(choice) {
 
 
 
-/* funzioni per user info con Jquery*/
 $(document).ready( function() {
     $("#container_info").click(function () {
 
         $("#container_info").animate({
-            padding: '50px 200px 5px 0',
+            padding: '5px 50px 5px 0',
             animationDelay: '1000000000000s'
         }, "slow");
 
@@ -122,9 +121,9 @@ $(document).ready( function() {
     $("#container_info").mouseleave(function () {
 
         $("#container_info").animate({
-            padding: '5px 0 5px 0',
+            padding: '0',
             animationDelay: '0s'
-        }, "fast");
+        }, "slow");
 
         $("#pre_info").show()
         $("#container_info2").hide()
@@ -133,14 +132,12 @@ $(document).ready( function() {
 });
 
 
-/*funciton per user info rank */
 $(document).ready( function() {
     $("#container_info_rank").click(function () {
 
         $("#container_info_rank").animate({
-            padding: '50px 200px 10px 0',
-            animationDelay: '1000000000000s',
-            animationDuration: '0s'
+            padding: '5px 50px 5px 0',
+            animationDelay: '1000000000000s'
         }, "slow");
 
         $("#pre_info_rank").hide()
@@ -151,8 +148,7 @@ $(document).ready( function() {
     $("#container_info_rank").mouseleave(function () {
 
         $("#container_info_rank").animate({
-            padding: '5px 0 5px 0',
-            animationDuration: '1s',
+            padding: '0',
             animationDelay: '0s'
         }, "slow");
 

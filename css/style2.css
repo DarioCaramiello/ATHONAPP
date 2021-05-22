@@ -84,43 +84,55 @@ body {
 }
 
 /* info e ranked utente ---------------------------------- */
-#container_info, #container_info_rank {
-    padding: 5px 0 5px 0;
-    margin: 0px 300px 5px 0;
+#container_info, #container_info_rank{
+    padding: 0;
+    margin: 0 200px 5px 0;
     width: 10vw;
+    border: 1px solid black;
+    border-left: none;
     text-align: center;
     cursor: pointer;
 }
 
-#container_info { background: linear-gradient(to left, darkslategray, seagreen); }
-#container_info2 {
-    padding: 50px 20px 50px 30px;
-    margin: 40px;
-}
+#container_info_rank2 { padding: 100px; }
 
-#container_name_user {
-    font-size: 25pt;
+
+#container_info { background: linear-gradient(to left, #8defae, seagreen); }
+#container_info2 { margin-left: 10px; }
+
+#container_name_user, #count_point_rank {
+    font-size: 20pt;
+    color: white;
     font-family: "Times New Roman",sans-serif;
 }
 
 #pre_info, #pre_info_rank{
     font-size: 22pt;
-    color: white;
+    opacity: 30%;
+    color: black;
 }
 
+#pre_info:hover, #pre_info_rank:hover{
+    opacity: 100%;
+    color: seashell;
+}
 
+#point_rank {
+    font-size: 30px;
+    height: 5vh;
+}
 
 #id_nickname{
-    font-size: 25pt;
+    margin-left: 10px;
+    font-size: 20pt;
     color: #6513a4;
-    text-align: center;
-    margin-top: -30px;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
-#container_info_rank {
-    background: linear-gradient(to right,#000000,darkred);
-    height: 20vh;
-}
+#container_info_rank { background: linear-gradient(to right, #f57777,darkred); }
+
 
 /* sfondo del login */
 .light {

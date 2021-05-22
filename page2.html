@@ -12,7 +12,7 @@
     <div id="AthonApp" style="display: none"><p id="Athon_p">AthonApp</p></div>
     <div id="container_page" style="display: none">
 
-        <div id="container_info">
+        <div id="container_info" onclick="open_info()">
             <p id="pre_info">Info</p>
 
             <div id="container_info2" style="display: none">
@@ -22,9 +22,9 @@
                         NickName:<p class="user_name_show" id="id_nickname"></p>
                     </p>
                 </div>
-                <div id="container_point_rank">
+                <div id="container_point_rank" onclick="open_info()">
                     <p id="count_point_rank">
-                        PointRank: <p class="user_point_rank" style="color:saddlebrown;"></p>
+                        PointRank: <p class="user_point_rank" id="point_rank"></p>
                     </p>
                 </div>
                 <!-- <img> -->
@@ -33,11 +33,15 @@
         </div>
 
         <div id="container_info_rank">
+
             <p id="pre_info_rank">Ranked</p>
+
             <div id="container_info_rank2" style="display: none">
+
                 <div id="rank" style="display: none">
 
                 </div>
+
             </div>
         </div>
 
