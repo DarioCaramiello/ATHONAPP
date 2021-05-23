@@ -6,15 +6,11 @@ body {
     box-sizing: border-box;
 }
 
-#container_all_banner_info {
-    margin-top: 0;
-}
-
 #AthonApp{
     font-family: 'Red Hat Display',sans-serif;
     font-size: 60pt;
     text-shadow: 2px 2px 20px darkgreen;
-    background:linear-gradient(to right, #b3eccd, #e98686);
+    background:linear-gradient(to right, #03045e, #90e0ef);
     text-align: center;
     margin-top: -90px;
     animation: entry_bgr 5s 1
@@ -116,6 +112,10 @@ body {
     display: none;
     margin-left: 5px;
 
+}
+
+#container_all_banner_info {
+    margin-top: 0;
 }
 
 #container_info_rank2 { padding: 100px; }
@@ -857,7 +857,7 @@ body {
 
 .box {
     width: 40%;
-    margin: 250px 0 0 350px;
+    margin: 320px 0 0 370px;
     padding: 25px;
     background: rgba(255,255,255,0.2);
     border: 2px solid #fff;

@@ -118,9 +118,6 @@ $(document).ready( function() {
     });
 });
 
-
-
-
 $(document).ready( function() {
     $("#button_exit_info").click(function () {
 
