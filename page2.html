@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>AthonApp-Home</title>
@@ -8,27 +8,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-    <div id="AthonApp" style="display: none"><p id="Athon_p">AthonApp</p></div>
     <div id="container_page" style="display: none">
-        <div id="container_info">
-            <p id="pre_info">Info</p>
-            <div id="container_info2" style="display: none">
-                <p id ="container_name_user">
-                    NickName:<p class="user_name_show" id="id_nickname"></p>
-                </p>
-                <p id="count_point_rank">
-                    PointRank: <p class="user_point_rank" style="color:saddlebrown;"></p>
-                </p>
-                <!-- <img> -->
+        <div id="container_all_banner_info">
+            <!-- start banner info e rank -->
+            <div id="AthonApp" style="display: none"><p id="Athon_p">AthonApp</p></div>
+            <input type="button" id="button_exit_info">
+            <div id="container_info" onclick="open_info()">
+                <p id="pre_info">Info</p>
+                <div id="container_info2" style="display: none">
+                    <div id ="container_name_user">
+                        <p>
+                            NickName:<p class="user_name_show" id="id_nickname"></p>
+                        </p>
+                    </div>
+                    <div id="container_point_rank" onclick="open_info()">
+                        <p id="count_point_rank">
+                            PointRank: <p class="user_point_rank" id="point_rank"></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <input type="button" id="button_exit_info_rank">
+            <div id="container_info_rank">
+                <p id="pre_info_rank">Ranked</p>
+                <div id="container_info_rank2" style="display: none">
+                    <div id="rank" style="display: none">
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="container_info_rank">
-            <p id="pre_info_rank">Rank</p>
-            <div id="rank" style="display: none">
+        <!-- end banner info rank -->
 
-            </div>
-        </div>
         <div id="outer-circle" >
             <div id="topleft"></div>
                 <input type="button" id="button_topleft" value="HTML" onclick="button_start_on1(1)">
@@ -44,8 +55,8 @@
                 </div>
             </div>
         </div>
-        <!-- Bottone istruzioni -->
 
+        <!-- Bottone istruzioni -->
         <div class="box">
             <a class="button" href="#popup1" onclick="pop_up_istruzioni()">Clicca per le istruzioni!</a>
         </div>

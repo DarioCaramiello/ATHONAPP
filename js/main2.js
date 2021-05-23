@@ -7,7 +7,6 @@ function start_game() {
 
     user_name = document.getElementById("nickname").value
 
-
     if( user_name === ""){
         document.getElementById("myForm").style.display="block";
         document.getElementById("container_page").style.display="none";
@@ -47,7 +46,6 @@ function goQuiz() {
             break
     }
 }
-
 
 // function for dynamic buttom login
 function change_border_on() {
@@ -104,53 +102,65 @@ function button_start_on4(choice) {
     choice_quiz = choice
 }
 
-/* funzioni per user info */
+
+
 $(document).ready( function() {
     $("#container_info").click(function () {
 
         $("#container_info").animate({
-            padding: '0 200px 10px 0',
+            padding: '5px 50px 5px 0',
             animationDelay: '1000000000000s'
         }, "slow");
 
         $("#pre_info").hide()
         $("#container_info2").show()
+        $("#button_exit_info").show()
     });
 });
+
+
+
+
 $(document).ready( function() {
-    $("#container_info").mouseleave(function () {
+    $("#button_exit_info").click(function () {
 
         $("#container_info").animate({
-            padding: '5px 0 5px 0',
+            padding: '0',
             animationDelay: '0s'
-        }, "fast");
+        }, "slow");
 
         $("#pre_info").show()
         $("#container_info2").hide()
-
+        $("#button_exit_info").hide()
     });
 });
 
 
-/*funciton per user info rank */
 $(document).ready( function() {
     $("#container_info_rank").click(function () {
 
         $("#container_info_rank").animate({
-            padding: '0 500px 300px 0',
-            animationDelay: '1000000000000s',
-            animationDuration: '0s'
+            padding: '5px 50px 5px 0',
+            animationDelay: '1000000000000s'
         }, "slow");
+
+        $("#pre_info_rank").hide()
+        $("#container_info_rank2").show()
+        $("#button_exit_info_rank").show()
+
     });
 });
 $(document).ready( function() {
-    $("#container_info_rank").mouseleave(function () {
+    $("#button_exit_info_rank").click(function () {
 
         $("#container_info_rank").animate({
-            padding: '0 0 10px 0',
-            animationDuration: '1s',
+            padding: '0',
             animationDelay: '0s'
         }, "slow");
+
+        $("#pre_info_rank").show()
+        $("#container_info_rank2").hide()
+        $("#button_exit_info_rank").hide()
     });
 });
 

@@ -39,7 +39,7 @@ body.wrong{
 }
 
 .container{
-    height: 600px;
+    height: 500px;
     width: 1000px;
     max-width: 80%;
     background-color: lightgray;
@@ -94,7 +94,70 @@ body.wrong{
     left:40px;
     overflow:hidden;
     float:left;
+
     top:100px;
+    font-size: 12px;
     
 
 }
+
+
+#timerLabel{
+    font-size: 15pt;
+    text-align: center;
+    padding: 20px;
+    width: 150px;
+    height: 130px;
+   /*margin: 40px 10px;*/
+    top: 0;
+    -webkit-animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
+    animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
+    display:none;
+    position: absolute;
+
+}
+
+#timer {
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 35pt;
+    color: rgb(255, 255, 255);
+    padding: 30px 50px 30px 50px;
+    text-shadow: 3.75vmin 3.75vmin 7.5vmin rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+
+@keyframes background_color {
+
+    50.6666666667% {
+        background-color: #ecf01e;
+    }
+    75.6666666667% {
+        background-color: #ff0606;
+    }
+
+}
+
+#timer {
+    -webkit-animation: timer_beat 1s ease-in-out infinite alternate forwards;
+    animation: timer_beat 1s ease-in-out infinite alternate forwards;
+}
+
+@-webkit-keyframes timer_beat {
+    from {
+        transform: none;
+    }
+    to {
+        transform: scale(1.125);
+    }
+}
+@keyframes timer_beat {
+    from {
+        transform: none;
+    }
+    to {
+        transform: scale(1.125);
+    }
+}
+

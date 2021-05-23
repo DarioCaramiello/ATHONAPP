@@ -8,7 +8,5 @@ function change_color() {
     }
 }
 
-function start_game(){
-    window.location = 'page2.html'
-}
+function start_game(){ window.location = 'page2.html' }
 

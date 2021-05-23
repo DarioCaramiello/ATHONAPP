@@ -5,12 +5,27 @@ body {
     background-color:  #616161!important;
     box-sizing: border-box;
 }
+
+#container_all_banner_info {
+    margin-top: 0;
+}
+
 #AthonApp{
     font-family: 'Red Hat Display',sans-serif;
-    margin: 10px;
-    padding: 10px;
-    font-size: 50px;
+    font-size: 60pt;
     text-shadow: 2px 2px 20px darkgreen;
+    background:linear-gradient(to right, #b3eccd, #e98686);
+    text-align: center;
+    margin-top: -90px;
+    animation: entry_bgr 5s 1
+}
+@keyframes entry_bgr {
+    from{
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 #Athon_p{
@@ -83,61 +98,63 @@ body {
     z-index: 10;
 }
 
-/* banner info user */
-#container_info {
-    padding: 5px 0 5px 0;
-    margin: 200px 300px 10px 0;
+/* info e ranked utente ---------------------------------- */
+#container_info, #container_info_rank{
+    padding: 0;
+    margin: 0 200px 5px 0;
     width: 10vw;
-    font-size: 15pt;
+    border: 1px solid black;
+    border-left: none;
     text-align: center;
-    background: linear-gradient(to left, darkslategray, seagreen);
     cursor: pointer;
 }
 
-#container_info2 {
-    padding: 100px 0 50px 100px;
+#button_exit_info,#button_exit_info_rank{
+    border-radius: 50px;
+    background-color: #ff0000;
+    border: none;
+    display: none;
+    margin-left: 5px;
+
 }
 
-#container_name_user {
+#container_info_rank2 { padding: 100px; }
+
+#container_info { background: linear-gradient(to left, #8defae, #2e8b57); }
+#container_info2 { margin-left: 10px; }
+
+#container_name_user, #count_point_rank {
+    font-size: 20pt;
+    color: white;
+    font-family: "Times New Roman",sans-serif;
+}
+
+#pre_info, #pre_info_rank{
     font-size: 22pt;
-    font-family: "Times New Roman",sans-serif;
+    opacity: 30%;
+    color: black;
 }
 
-#pre_info {
-    font-family: "Times New Roman",sans-serif;
-    font-size: 23pt;
+#pre_info:hover, #pre_info_rank:hover{
+    opacity: 100%;
+    color: seashell;
 }
 
-#id_nickname {
-    color: #f30606;
-    border: 1px solid #020202;
+#point_rank {
+    font-size: 30px;
+    height: 5vh;
+}
+
+#id_nickname{
+    margin-left: 10px;
+    font-size: 20pt;
+    color: #6513a4;
+    margin-top: 5px;
+    border: 1px solid black;
     border-radius: 20px;
-    padding: 0 100px 0 0;
-    text-align: center;
 }
+#container_info_rank { background: linear-gradient(to right, #f57777,darkred); }
 
-/* inizio bunner info rank */
-#container_info_rank {
-    padding: 10px 0 10px 0;
-    margin: 0 100px 20px 0;
-    width: 10vw;
-    font-size: 15pt;
-    text-align: center;
-    background-color: #cd6969;
-    animation-name: change_dimension2;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-}
-@keyframes change_dimension2 {
-    from {
-        width: 10vw;
-    }
-    to {
-        width: 0;
-    }
-}
 
 /* sfondo del login */
 .light {
@@ -292,8 +309,8 @@ body {
 
 #outer-circle {
     position: absolute;
-    top: 60pt;
-    left: 325pt;
+    top: 125px;
+    left: 420px;
     background: #385a94;
     border-radius: 50%;
     height: 500px;
@@ -840,9 +857,9 @@ body {
 
 .box {
     width: 40%;
-    margin: 0 auto;
+    margin: 250px 0 0 350px;
+    padding: 25px;
     background: rgba(255,255,255,0.2);
-    padding: 35px;
     border: 2px solid #fff;
     border-radius: 20px/50px;
     background-clip: padding-box;
