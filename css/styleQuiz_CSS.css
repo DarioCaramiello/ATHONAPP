@@ -5,7 +5,7 @@
 /*usato per accedere all'elemento root e definire variabili globali*/
 :root{
     /*colore default*/
-    --color-neutral: darkslategrey;
+    --color-neutral: #668586;
     /*colore risposta errata*/
     --color-wrong: red;
     /*colore risposta corretta*/
@@ -39,16 +39,19 @@ body.wrong{
 }
 
 .container{
-    height: 500px;
-    width: 1000px;
+    height: 600px;
+    width: 1100px;
     max-width: 80%;
-    background-color: lightgray;
+    background-color: #82AEB1;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
    
 }
-
 
 .controls{
     display: flex;
@@ -58,45 +61,93 @@ body.wrong{
 .start-btn, .next-btn{
     margin: 0;
     height: 9vh;
-    width: 16vw;
+    width: 18vw;
     font-size: 30px;
     font-weight: 800;
     padding: 10px 20px;
+
 }
+
+.start-btn:hover{
+    animation: start-btn-anim 1s infinite alternate;
+}
+
+.next-btn:hover{
+    animation: next-btn-anim 1s infinite alternate;
+}
+
 .hide{
     display: none;
 }
 
+.next-btn{
+    bottom: 20px;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    top:450px;
+    right:550px;
+}
+
 #img_question{
     height: 400px;
-    width: 500px;
-    max-width: 50%;
+    width: 750px;
+    max-width: 55%;
     background-color: white;
     border-radius: 7px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    position: relative;;
+    position: relative;
     overflow:hidden;
-    left:50px;
+    left:9px;
     float:left;
-    top:100px;
+    top:35px;
 }
 
+
+@keyframes start-btn-anim {
+    from{
+        opacity: 100%;
+
+    }
+    to{
+        opacity: 90%;
+        border-radius: 20px;
+        font-size: 33px;
+        transform: scale(1.01);
+        background-color: hsla(223, 100%, 40%, 1);
+    }
+}
+
+@keyframes next-btn-anim {
+    from{
+        opacity: 100%;
+
+    }
+    to{
+        opacity: 90%;
+        border-radius: 20px;
+        font-size: 33px;
+        transform: scale(1.01);
+        background-color: hsla(223, 100%, 40%, 1);
+    }
+}
 #fill_form{
     height: 400px;
-    width: 400px;
-    max-width: 40%;
-    background-color: lightgray;
+    width: 650px;
+    max-width:44%;
+    background-color: #93C6D6;
     border-radius: 7px;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0 0 10px 2px;
     position:relative;
-    left:40px;
+    left:2px;
     overflow:hidden;
     float:left;
-
-    top:100px;
-    font-size: 12px;
+    top:35px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
     
 
 }

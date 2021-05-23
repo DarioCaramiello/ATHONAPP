@@ -51,13 +51,14 @@ function showQuestion(question)
     x.setAttribute("id", "textTofill");
     //element.appendChild(x)
     element.insertAdjacentElement("afterbegin", x)
+    document.getElementById("Domanda").innerText= "Domanda "+ (currentQuestionIndex+1)
 
 
 }
 
 const questions_array = [
     {
-        question: "Inserisci l'attributo mancante:",
+        question: "Inserisci la proprietà mancante per avere l'elemento raffigurato nell'immagine a destra:",
         code1 :"<!DOCTYPE html>\n<html>\n<head>\n<style>\n.div2 {\nwidth: 300px;\nheight: 100px; \npadding: 50px;\nborder: 1px solid red;\n",
         code2 : ": border-box;\n}\n</style>\n</head>\n<body>\n<div class='div2'>Hooray!</div>\n</body>\n</html>\n" ,
 
