@@ -106,12 +106,13 @@ body {
 }
 
 #button_exit_info,#button_exit_info_rank{
-    border-radius: 50px;
+    border-radius: 60%;
     background-color: #ff0000;
     border: none;
     display: none;
-    margin-left: 5px;
-
+    margin-left: 170px;
+    width: 1.5vw;
+    height: .5 vh;
 }
 
 #container_all_banner_info {

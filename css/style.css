@@ -1,6 +1,6 @@
 body {
-    overflow: hidden;
     margin: 0 0 0 0;
+    overflow: hidden;
     height: 100vh;
     font-weight: 100;
     background: radial-gradient(#616161, forestgreen);
@@ -457,11 +457,9 @@ div[class*=box] {
 }
 
 #footer{
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
-  color: white;
-  position: fixed;
-  -webkit-transform: translate(95vw,90vh);
-  -moz-transform: translate(95vw,90vh);
-  transform: translate(95vw,90vh);
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    color: white;
+    text-align: center;
 }

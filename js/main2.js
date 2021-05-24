@@ -119,7 +119,7 @@ $(document).ready( function() {
 });
 
 $(document).ready( function() {
-    $("#button_exit_info").click(function () {
+    $("#button_exit_info").mouseover(function () {
 
         $("#container_info").animate({
             padding: '0',
