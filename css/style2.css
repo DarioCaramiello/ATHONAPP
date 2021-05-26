@@ -1,16 +1,15 @@
 
 body {
-    overflow: hidden;
+    /*overflow: hidden; */
     margin: 0 0 0 0;
-    background-color:  #616161!important;
+    /*background-color: #fff0f0 !important;*/
     box-sizing: border-box;
 }
 
 #AthonApp{
+    display: flex;
     font-family: 'Red Hat Display',sans-serif;
-    font-size: 60pt;
-    text-shadow: 2px 2px 20px darkgreen;
-    background:linear-gradient(to right, #03045e, #90e0ef);
+    text-shadow: 2px 2px 20px #006400;
     text-align: center;
     margin-top: -90px;
     animation: entry_bgr 5s 1
@@ -25,6 +24,8 @@ body {
 }
 
 #Athon_p{
+    font-size: 100pt;
+    margin-top: 70px;
     background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg");
     -webkit-background-clip: text;
     color: rgba(0,0,0,0);
@@ -40,8 +41,9 @@ body {
         background-position: top;
     }
 }
-/* login */
 
+
+/* --------------------------------  LOGIN  ------------------------------------ */
 .form-popup {
     position: absolute;
     top: 50%;
@@ -94,7 +96,7 @@ body {
     z-index: 10;
 }
 
-/* info e ranked utente ---------------------------------- */
+/* --------------------------------- BANNER UTENTE  ---------------------------------- */
 #container_info, #container_info_rank{
     padding: 0;
     margin: 0 200px 5px 0;
@@ -112,7 +114,7 @@ body {
     display: none;
     margin-left: 170px;
     width: 1.5vw;
-    height: .5 vh;
+    height: .5vh;
 }
 
 #container_all_banner_info {
@@ -163,7 +165,7 @@ body {
     width: 0;
     opacity: .75;
     background-color: #050505;
-    box-shadow: #616161 0 0 2px 3px;
+    box-shadow: #a99f9f 0 0 2px 3px;
     top: 100vh;
     bottom: 100px;
     left: 0;
@@ -306,23 +308,12 @@ body {
     100%{top: -100px; opacity: 0;}
 }
 
-/******* testing simon stuff ********/
+/* ---------------------- testing simon stuff ------------------ */
 
 #outer-circle {
-    position: absolute;
-    top: 125px;
-    left: 420px;
-    background: #385a94;
-    border-radius: 50%;
-    height: 500px;
-    width: 500px;
-    border-style: solid;
-    border-width: 3px;
-    margin: auto;
-    box-shadow: 0 0 15px 15px #000000;
+    display: flex;
 }
 
-/*bottone start*/
 #start{
     cursor: pointer;
     border-radius: 50%;
@@ -375,6 +366,7 @@ body {
 }
 
 #button_topleft {
+
     position: absolute;
     height: 250px;
     width: 250px;
@@ -550,7 +542,7 @@ body {
 .light {
     width: 0;
     opacity: .75;
-    background-color: #545353;
+    background-color: #f3eded;
     box-shadow: #313737 0 0 20px 2px;
     top: 100vh;
     bottom: 0;

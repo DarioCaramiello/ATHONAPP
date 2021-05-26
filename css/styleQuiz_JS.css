@@ -14,17 +14,7 @@ body {
     position:absolute;
     font-family: Tahoma,sans-serif;
     font-size: 14px;
-    /*
-    1auto : elemento
-    2auto : elemento
-    3auto : scelta utente
-    4auto : scelta utente
-    5auto : scelta utente
-    6auto : scelta utente
-    7auto : scelta utente
-     */
 }
-
 
 .cella {
     background-color: #9cffa1;
@@ -90,14 +80,14 @@ body {
     background: url("https://image.freepik.com/free-vector/abstract-technology-background-web-developer-computer-code_88211-423.jpg") 50%;
     width: 200pt;
     height: 60pt;
-    font-weight: 900;
-    font-family: 'Original Surfer', cursive;
+    font-weight: 100;
+    font-family: 'Fira Code Light';
     font-size: 40px;
-    color: #379634;
-    text-shadow: 2px 2px  #000000;
+    color: #ecf01e;
+    border: 2px solid #ecf01e;
 }
 #input_button:hover{
-    animation: unzoom 300ms ease-in-out forwards;
+    animation: unzoom 5s infinite linear alternate-reverse;
 }
 @keyframes unzoom {
     0%{
@@ -111,14 +101,12 @@ body {
 }
 
 /* risp-corretta-errata */
-
 #risp_errata,#risp_corretta {
     font-size: 15pt;
     position: absolute;
     bottom: 20px;
     left: 40%;
 }
-
 /* animazione sfondo */
 .light {
     position: absolute;

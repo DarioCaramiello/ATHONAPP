@@ -6,6 +6,7 @@ let choice_quiz = -1
 function start_game() {
 
     user_name = document.getElementById("nickname").value
+    document.body.style.backgroundColor = "#2a9d8f"
 
     if( user_name === ""){
         document.getElementById("myForm").style.display="block";
@@ -18,18 +19,32 @@ function start_game() {
         document.getElementById("AthonApp").style.display="block";
         user_point = 0
 
+        /*
+        // da rivedere
         let x = document.getElementsByClassName("user_name_show")
         for(let i=0; i<x.length; i++) {
             x[i].innerText = user_name
         }
 
+        // da rivedere
         let y = document.getElementsByClassName("user_point_rank")
         for(let i=0; i<y.length; i++) {
             y[i].innerText = 0
         }
+        */
 
-        console.log(user_name)
-        console.log(user_point)
+
+        $.ajax({
+            url: "http://localhost:5000/api/server-login",
+            type: "POST",
+            data: {
+                nickname: $("#nickname").val()
+            },
+            success: function(result) {
+                $("#id_nickname").innerText = result["name_user"]
+                console.log("send data server web")
+            }
+        })
     }
 }
 
@@ -160,6 +175,9 @@ $(document).ready( function() {
         $("#button_exit_info_rank").hide()
     });
 });
+
+
+
 
 
 function pop_up_istruzioni()
