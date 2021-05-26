@@ -3,7 +3,7 @@ body {
     padding: 0 0 0 0;
     box-sizing: border-box;
     overflow: hidden;
-    background: #6ABEA7;
+    background: #f0db4f;
 }
 
 .container_div {
@@ -112,8 +112,8 @@ body {
     position: absolute;
     width: 0;
     opacity: .75;
-    background-color: #6ABEA7;
-    box-shadow: lightblue 0 0 20px 2px;
+    background-color: #999900;
+    box-shadow: #999900 0 0 20px 2px;
     top: 100vh;
     bottom: 0;
     left: 0;
@@ -184,8 +184,9 @@ body {
 /* timer */
 
 .container_timer{
-    font-size: 3rem;
+    font-size: 2.9rem;
     margin-top: 20px;
+    margin-right: -50px;
     display: flex;
     justify-content: center;
     align-items: center;

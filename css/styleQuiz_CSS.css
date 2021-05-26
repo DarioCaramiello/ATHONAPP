@@ -5,7 +5,7 @@
 /*usato per accedere all'elemento root e definire variabili globali*/
 :root{
     /*colore default*/
-    --color-neutral: #668586;
+    --color-neutral: #264de4;
     /*colore risposta errata*/
     --color-wrong: red;
     /*colore risposta corretta*/

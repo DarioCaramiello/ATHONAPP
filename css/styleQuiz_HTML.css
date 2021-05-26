@@ -1,33 +1,369 @@
-* {
-    box-sizing: border-box;
-}
+
 body{
-    background: #6ABEA7;
+    box-sizing: border-box;
     display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #e34c26;
+    margin: 0;
+    padding: 0;
 }
 
-#name_project{
-    text-shadow: 2px 2px 20px #006400;
-    font-size: 3em;
+/*--------------------------------TIMER--------------------*/
+.container_timer{
+    font-size: 2.9rem;
+    margin-top: 20px;
+    margin-right: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#timer{
+    padding: 1px;
+    margin: 3px;
+    height: 20vh;
+    width: 20vh;
+}
+#timer_value{
+    margin-left: 1px;
 }
 
-.athon-app{
-    font-family: 'Red Hat Display',sans-serif;
-    margin: 0.1em auto auto 0.1em;
-    background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg");
-    -webkit-background-clip: text;
-    color: rgba(0,0,0,0);
-    background-size: 30%;
-    animation: zoomout 15s ease-in-out infinite alternate;
+#circle_animation1{
+    margin: 1px;
+    position: relative;
+    bottom: 69px;
+    left: 27px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
 }
-@keyframes zoomout {
-    from{
-        background-position: top;
+#circle_animation2{
+    margin: 1px;
+    position: relative;
+    bottom: 76px;
+    left: 35px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 1.15s;
+}
+#circle_animation3{
+    margin: 1px;
+    position: relative;
+    bottom: 82px;
+    left: 43px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 2.30s;
+}
+#circle_animation4{
+    margin: 1px;
+    position: relative;
+    bottom: 85px;
+    left: 50px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 3.45s;
+}
+#circle_animation5{
+    margin: 1px;
+    position: relative;
+    bottom: 87px;
+    left: 56px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 4.60s;
+}
+#circle_animation6{
+    margin: 1px;
+    position: relative;
+    bottom: 87px;
+    left: 59px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 5.75s;
+}
+#circle_animation7{
+    margin: 1px;
+    position: relative;
+    bottom: 87px;
+    left: 60px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 6.90s;
+}
+#circle_animation8{
+    margin: 1px;
+    position: relative;
+    bottom: 87px;
+    left: 59px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 8.05s;
+}
+#circle_animation9{
+    margin: 1px;
+    position: relative;
+    bottom: 87px;
+    left: 56px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 9.20s;
+}
+#circle_animation10{
+    margin: 1px;
+    position: relative;
+    bottom: 88px;
+    left: 51px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 10.35s;
+}
+#circle_animation11{
+    margin: 1px;
+    position: relative;
+    bottom: 92px;
+    left: 43px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 11.50s;
+}
+#circle_animation12{
+    margin: 1px;
+    position: relative;
+    bottom: 97px;
+    left: 35px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 12.65s;
+}
+#circle_animation13{
+    margin: 1px;
+    position: relative;
+    bottom: 104px;
+    left: 27px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 13.80s;
+}
+#circle_animation14{
+    margin: 1px;
+    position: relative;
+    bottom: 112px;
+    left: 19px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 14.95s;
+}
+#circle_animation15{
+    margin: 1px;
+    position: relative;
+    bottom: 121px;
+    left: 11px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 16.10s;
+}
+#circle_animation16{
+    margin: 1px;
+    position: relative;
+    bottom: 132px;
+    left: 3px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 17.25s;
+}
+#circle_animation17{
+    margin: 1px;
+    position: relative;
+    bottom: 144px;
+    right: 4px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 18.40s;
+}
+#circle_animation18{
+    margin: 1px;
+    position: relative;
+    bottom: 159px;
+    right: 8px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 19.55s;
+}
+#circle_animation19{
+    margin: 1px;
+    position: relative;
+    bottom: 175px;
+    right: 11px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 20.70s;
+}
+#circle_animation20{
+    margin: 1px;
+    position: relative;
+    bottom: 191px;
+    right: 12px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 21.85s;
+}
+#circle_animation21{
+    margin: 1px;
+    position: relative;
+    bottom: 207px;
+    right: 10px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 23.00s;
+}
+#circle_animation22{
+    margin: 1px;
+    position: relative;
+    bottom: 222px;
+    right: 6px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 24.15s;
+}
+#circle_animation23{
+    margin: 1px;
+    position: relative;
+    bottom: 236px;
+    right: 1px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 25.30s;
+}
+#circle_animation24{
+    margin: 1px;
+    position: relative;
+    bottom: 248px;
+    left: 5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 26.45s;
+}
+#circle_animation25{
+    margin: 1px;
+    position: relative;
+    bottom: 259px;
+    left: 12px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in forwards;
+    animation-delay: 27.60s;
+}
+#circle_animation26{
+    margin: 1px;
+    position: relative;
+    bottom: 269px;
+    left: 19px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: timer-anim 1.15s ease-in-out forwards;
+    animation-delay: 28.75s;
+}
+@keyframes timer-anim {
+    0%{
+        background-color: inherit;
     }
-    to{
-        background-position: bottom;
+    100%{
+        background-color: darkred;
     }
 }
+
+.container{
+    height: 50%;
+    width: 50%;
+    background-color: #82AEB1;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    z-index: 100;
+}
+
 
 
 /*---------------------------BACKGROUND ANIMATION-----------------------*/
@@ -36,7 +372,7 @@ body{
     width: 0;
     opacity: .75;
     background-color: #5E6973;
-    box-shadow: lightblue 0 0 20px 2px;
+    box-shadow: darkred 0 0 20px 2px;
     top: 100vh;
     bottom: 0;
     left: 0;
