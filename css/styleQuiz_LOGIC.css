@@ -6,7 +6,7 @@
 /*usato per accedere all'elemento root e definire variabili globali*/
 :root{
     /*colore default*/
-    --color-neutral: hsla(214, 100%, 16%, 0.9);
+    --color-neutral: hsla(273, 98%, 60%, 1);
     /*colore risposta errata*/
     --color-wrong: hsla(360, 96%, 22%, 0.89);
     /*colore risposta corretta*/
