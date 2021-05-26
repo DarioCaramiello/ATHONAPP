@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background: #6ABEA7;
+    display: flex;
+}
+
+#name_project{
+    text-shadow: 2px 2px 20px #006400;
+    font-size: 3em;
+}
+
+.athon-app{
+    font-family: 'Red Hat Display',sans-serif;
+    margin: 0.1em auto auto 0.1em;
+    background: url("https://i.pinimg.com/originals/cf/b2/a8/cfb2a87b5f335bd0ec9bd657edef45f0.jpg");
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,0);
+    background-size: 30%;
+    animation: zoomout 15s ease-in-out infinite alternate;
+}
+@keyframes zoomout {
+    from{
+        background-position: top;
+    }
+    to{
+        background-position: bottom;
+    }
+}
+
+
+/*---------------------------BACKGROUND ANIMATION-----------------------*/
+.light {
+    position: absolute;
+    width: 0;
+    opacity: .75;
+    background-color: #5E6973;
+    box-shadow: lightblue 0 0 20px 2px;
+    top: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.x1{
+    animation: floatUp 4s infinite linear;
+    transform: scale(1.0);
+}
+
+.x2{
+    animation: floatUp 7s infinite linear;
+    transform: scale(1.6);
+    left: 15%;
+}
+
+.x3{
+    animation: floatUp 2.5s infinite linear;
+    transform: scale(.5);
+    left: -15%;
+}
+
+.x4{
+    animation: floatUp 4.5s infinite linear;
+    transform: scale(1.2);
+    left: -34%;
+}
+
+.x5{
+    animation: floatUp 8s infinite linear;
+    transform: scale(2.2);
+    left: -57%;
+}
+
+.x6{
+    animation: floatUp 3s infinite linear;
+    transform: scale(.8);
+    left: -81%;
+}
+
+.x7{
+    animation: floatUp 5.3s infinite linear;
+    transform: scale(3.2);
+    left: 37%;
+}
+
+.x8{
+    animation: floatUp 4.7s infinite linear;
+    transform: scale(1.7);
+    left: 62%;
+}
+
+.x9{
+    animation: floatUp 4.1s infinite linear;
+    transform: scale(0.9);
+    left: 85%;
+}
+
+@keyframes floatUp{
+    0%{top: -100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: 100vh; opacity: 0;}
+}
