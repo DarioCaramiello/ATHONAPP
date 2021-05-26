@@ -22,8 +22,12 @@ body {
     background-size: 30%;
     animation: zoomout 15s ease-in-out infinite alternate;
 }
+
 @keyframes zoomout {
     from{
+        background-position: bottom;
+    }
+    to{
         background-position: top;
     }
     to{
@@ -94,16 +98,6 @@ body {
     border-left: none;
     text-align: center;
     cursor: pointer;
-}
-
-#button_exit_info,#button_exit_info_rank{
-    border-radius: 60%;
-    background-color: #ff0000;
-    border: none;
-    display: none;
-    margin-left: 170px;
-    width: 1.5vw;
-    height: .5vh;
 }
 
 #container_all_banner_info {
