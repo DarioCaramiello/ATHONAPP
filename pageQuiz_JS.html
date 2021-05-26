@@ -5,104 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styleQuiz_JS.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>AthonApp - Quiz</title>
+    <title>AthonApp - JS Quiz</title>
 </head>
-    <body>
-        <div class="container_timer">
-            <div id="timer"><span id="timer_value">30</span>
-                <div id="circle_animation1" class="circle_animation"></div>
-                <div id="circle_animation2" class="circle_animation"></div>
-                <div id="circle_animation3" class="circle_animation"></div>
-                <div id="circle_animation4" class="circle_animation"></div>
-                <div id="circle_animation5" class="circle_animation"></div>
-                <div id="circle_animation6" class="circle_animation"></div>
-                <div id="circle_animation7" class="circle_animation"></div>
-                <div id="circle_animation8" class="circle_animation"></div>
-                <div id="circle_animation9" class="circle_animation"></div>
-                <div id="circle_animation10" class="circle_animation"></div>
-                <div id="circle_animation11" class="circle_animation"></div>
-                <div id="circle_animation12" class="circle_animation"></div>
-                <div id="circle_animation13" class="circle_animation"></div>
-                <div id="circle_animation14" class="circle_animation"></div>
-                <div id="circle_animation15" class="circle_animation"></div>
-                <div id="circle_animation16" class="circle_animation"></div>
-                <div id="circle_animation17" class="circle_animation"></div>
-                <div id="circle_animation18" class="circle_animation"></div>
-                <div id="circle_animation19" class="circle_animation"></div>
-                <div id="circle_animation20" class="circle_animation"></div>
-                <div id="circle_animation21" class="circle_animation"></div>
-                <div id="circle_animation22" class="circle_animation"></div>
-                <div id="circle_animation23" class="circle_animation"></div>
-                <div id="circle_animation24" class="circle_animation"></div>
-                <div id="circle_animation25" class="circle_animation"></div>
-                <div id="circle_animation26" class="circle_animation"></div>
-            </div>
-            <!--<button class="go">Start!</button>-->
+<body>
+    <div class="container_timer">
+        <div id="timer"><span id="timer_value">30</span>
+            <div id="circle_animation1" class="circle_animation"></div>
+            <div id="circle_animation2" class="circle_animation"></div>
+            <div id="circle_animation3" class="circle_animation"></div>
+            <div id="circle_animation4" class="circle_animation"></div>
+            <div id="circle_animation5" class="circle_animation"></div>
+            <div id="circle_animation6" class="circle_animation"></div>
+            <div id="circle_animation7" class="circle_animation"></div>
+            <div id="circle_animation8" class="circle_animation"></div>
+            <div id="circle_animation9" class="circle_animation"></div>
+            <div id="circle_animation10" class="circle_animation"></div>
+            <div id="circle_animation11" class="circle_animation"></div>
+            <div id="circle_animation12" class="circle_animation"></div>
+            <div id="circle_animation13" class="circle_animation"></div>
+            <div id="circle_animation14" class="circle_animation"></div>
+            <div id="circle_animation15" class="circle_animation"></div>
+            <div id="circle_animation16" class="circle_animation"></div>
+            <div id="circle_animation17" class="circle_animation"></div>
+            <div id="circle_animation18" class="circle_animation"></div>
+            <div id="circle_animation19" class="circle_animation"></div>
+            <div id="circle_animation20" class="circle_animation"></div>
+            <div id="circle_animation21" class="circle_animation"></div>
+            <div id="circle_animation22" class="circle_animation"></div>
+            <div id="circle_animation23" class="circle_animation"></div>
+            <div id="circle_animation24" class="circle_animation"></div>
+            <div id="circle_animation25" class="circle_animation"></div>
+            <div id="circle_animation26" class="circle_animation"></div>
+        </div>
+        <!--<button class="go">Start!</button>-->
+    </div>
+
+    <div class="container_div">
+
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_function" draggable="true" ondragstart="drag(event)">function ( a + b )</p>
+        </div>
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_while" draggable="true" ondragstart="drag(event)">while</p>
+        </div>
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_def"  draggable="true" ondragstart="drag(event)">def</p>
         </div>
 
-        <div class="container_div">
 
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_function" draggable="true" ondragstart="drag(event)">function ( a + b )</p>
-            </div>
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_while" draggable="true" ondragstart="drag(event)">while</p>
-            </div>
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_def"  draggable="true" ondragstart="drag(event)">def</p>
-            </div>
+        <div id="cella_utent1" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 
-            <div id="cella_utent1" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_y" draggable="true" ondragstart="drag(event)">y</p>
-            </div>
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_phi" draggable="true" ondragstart="drag(event)">phi</p>
-            </div>
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_theta" draggable="true" ondragstart="drag(event)">thta</p>
-            </div>
-
-
-            <div id="cella_utent2" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_maggiore" draggable="true" ondragstart="drag(event)">></p>
-            </div>
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_minore" draggable="true" ondragstart="drag(event)"><</p>
-            </div>
-            <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p id="id_return_nan" draggable="true" ondragstart="drag(event)">return Nan</p>
-            </div>
-
-            <div id="cella_utent3" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_y" draggable="true" ondragstart="drag(event)">y</p>
+        </div>
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_phi" draggable="true" ondragstart="drag(event)">phi</p>
+        </div>
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_theta" draggable="true" ondragstart="drag(event)">thta</p>
         </div>
 
-        <div id="confirm_button">
-            <input id="input_button" type="button" value="Confirm" onclick="verifica_quiz()">
-        </div>
-        <div class='light x2'></div>
-        <div class='light x3'></div>
-        <div class='light x4'></div>
-        <div class='light x5'></div>
-        <div class='light x6'></div>
-        <div class='light x7'></div>
-        <div class='light x8'></div>
-        <div class='light x9'></div>
-        <script src="js/mainQuiz_JS.js"></script>
 
-        <div id="risp_corretta" style="display: none; background-color: #80ed99; color: black">
-            <p>Codice compilato ... Soluzione corretta</p>
+        <div id="cella_utent2" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_maggiore" draggable="true" ondragstart="drag(event)">></p>
         </div>
-        <div id="risp_errata" style="display:none; background-color: black; color:white">
-            <p>Codice compilato ... Soluzione errata</p>
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_minore" draggable="true" ondragstart="drag(event)"><</p>
+        </div>
+        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="id_return_nan" draggable="true" ondragstart="drag(event)">return Nan</p>
         </div>
 
-    </body>
+        <div id="cella_utent3" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    </div>
+
+    <div id="confirm_button">
+        <input id="input_button" type="button" value="Confirm" onclick="verifica_quiz()">
+    </div>
+    <div class='light x2'></div>
+    <div class='light x3'></div>
+    <div class='light x4'></div>
+    <div class='light x5'></div>
+    <div class='light x6'></div>
+    <div class='light x7'></div>
+    <div class='light x8'></div>
+    <div class='light x9'></div>
+
+    <div id="risp_corretta" style="display: none; background-color: #80ed99; color: black">
+        <p>Codice compilato ... Soluzione corretta</p>
+    </div>
+    <div id="risp_errata" style="display:none; background-color: black; color:white">
+        <p>Codice compilato ... Soluzione errata</p>
+    </div>
+    <script src="js/mainQuiz_JS.js"></script>
+</body>
 </html>
