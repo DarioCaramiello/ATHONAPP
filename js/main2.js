@@ -31,6 +31,32 @@ function start_game() {
     }
 }
 
+$(document).ready( function daily_prizes()
+{
+
+    let today=new Date()
+    let day=today.getDay()
+    let daily_list=[
+        ["PS Store Credit" , "Dogecoing", "Amazon Credit"],
+        ["Google Credit", "Prize2" , "Prize3"],
+        ["Day3prie", "PRize2", "prize3"],
+        ["Day4prie", "PRize2", "prize3"],
+        ["Day5prie", "PRize2", "prize3"],
+        ["Day6prie", "PRize2", "prize3"],
+        ["Day7prie", "PRize2", "prize3"],
+    ]
+    let element=document.getElementById("lista")
+    let i
+    for (i=0; i<daily_list[day].length;i++)
+    {
+        let x = document.createElement("li");
+        x.innerText= daily_list[day][i].toString();
+        element.appendChild(x)
+
+    }
+
+});
+
 function goQuiz() {
     switch (choice_quiz) {
         case 1 :
