@@ -1,10 +1,9 @@
-
 let choice_quiz = -1
-
 
 function start_game() {
 
     let user_name = document.getElementById("nickname").value
+
     if( user_name === ""){
         document.getElementById("myForm").style.display="block";
         document.getElementById("container_page").style.display="none";
@@ -14,21 +13,7 @@ function start_game() {
         document.getElementById("myForm").style.display="none";
         document.getElementById("container_page").style.display="block";
         document.getElementById("name_project").style.display="block";
-        user_point = 0
 
-        /*
-        // da rivedere
-        let x = document.getElementsByClassName("user_name_show")
-        for(let i=0; i<x.length; i++) {
-            x[i].innerText = user_name
-        }
-
-        // da rivedere
-        let y = document.getElementsByClassName("user_point_rank")
-        for(let i=0; i<y.length; i++) {
-            y[i].innerText = 0
-        }
-        */
 
         $.ajax({
             url: "http://localhost:5000/api/server-login",
@@ -172,6 +157,37 @@ $(document).ready( function() {
 
             $("#pre_info_rank").show()
             $("#container_info_rank2").hide()
+
+
+            open_rank = 0
+        }
+
+    });
+});
+
+$(document).ready( function() {
+    $("#container_info_prizes").click(function () {
+
+        if(open_rank === 0) {
+
+            $("#container_info_prizes").animate({
+                padding: '5px 50px 5px 0',
+                animationDelay: '1000000000000s'
+            }, "slow");
+
+            $("#info_prize").hide()
+            $("#container_info_prizes2").show()
+
+            open_rank = 1
+        } else {
+
+            $("#container_info_prizes").animate({
+                padding: '0',
+                animationDelay: '0s'
+            }, "slow");
+
+            $("#info_prize").show()
+            $("#container_info_prizes2").hide()
 
 
             open_rank = 0

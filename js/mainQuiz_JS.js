@@ -1,4 +1,18 @@
 
+let index_id
+
+$("document").ready(function(){
+    $.ajax({
+        url: "http://localhost:5000/api/return-index",
+        type: "POST",
+        dataType: "text",
+        success: function(result) {
+            console.log("index_ricevuto : "+result)
+            index_id = result
+        }
+    })
+})
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -39,11 +53,24 @@ function verifica_quiz() {
         document.getElementById("risp_errata").style.display = "block"
     }
 
-    /* da implementare la funzione per aggiungere i punti ( serve conoscenza lato server ) */
+    $.ajax({
+        url: "http://localhost:5000/api/update-point",
+        type: "POST",
+        dataType: "text",
+        data: {
+            point: 100,
+            index: index_id
+        },
+        success: function(result) {
+            console.log(result)
+        }
+    })
 
     console.log(x)
     console.log(y)
     console.log(z)
+
+
 }
 
 //timer
@@ -76,3 +103,4 @@ let x = setInterval(function() {
         document.getElementById("confirm_button").style.display = "none"
     } )
 }, 1000);
+
