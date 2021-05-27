@@ -165,6 +165,37 @@ $(document).ready( function() {
     });
 });
 
+$(document).ready( function() {
+    $("#container_info_prizes").click(function () {
+
+        if(open_rank === 0) {
+
+            $("#container_info_prizes").animate({
+                padding: '5px 50px 5px 0',
+                animationDelay: '1000000000000s'
+            }, "slow");
+
+            $("#info_prize").hide()
+            $("#container_info_prizes2").show()
+
+            open_rank = 1
+        } else {
+
+            $("#container_info_prizes").animate({
+                padding: '0',
+                animationDelay: '0s'
+            }, "slow");
+
+            $("#info_prize").show()
+            $("#container_info_prizes2").hide()
+
+
+            open_rank = 0
+        }
+
+    });
+});
+
 function pop_up_istruzioni()
 {
     let displayCerchio=document.getElementById("outer-circle").style.display
