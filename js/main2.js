@@ -1,13 +1,10 @@
 
-let user_point
-let user_name
 let choice_quiz = -1
+
 
 function start_game() {
 
-    user_name = document.getElementById("nickname").value
-    document.body.style.backgroundColor = "#2a9d8f"
-
+    let user_name = document.getElementById("nickname").value
     if( user_name === ""){
         document.getElementById("myForm").style.display="block";
         document.getElementById("container_page").style.display="none";
@@ -16,7 +13,7 @@ function start_game() {
         document.getElementById("outer-circle").style.display="block";
         document.getElementById("myForm").style.display="none";
         document.getElementById("container_page").style.display="block";
-        document.getElementById("AthonApp").style.display="block";
+        document.getElementById("name_project").style.display="block";
         user_point = 0
 
         /*
@@ -33,16 +30,17 @@ function start_game() {
         }
         */
 
-
         $.ajax({
             url: "http://localhost:5000/api/server-login",
             type: "POST",
+            dataType: "json",
             data: {
                 nickname: $("#nickname").val()
             },
             success: function(result) {
-                $("#id_nickname").innerText = result["name_user"]
-                console.log("send data server web")
+                $("#id_nickname").html(result["name"])
+                $("#point_rank").html(result["point"])
+                console.log("login effettuato")
             }
         })
     }
@@ -50,6 +48,9 @@ function start_game() {
 
 function goQuiz() {
     switch (choice_quiz) {
+        case 1 :
+            window.location='pageQuiz_HTML.html'
+            break
         case 2 :
             window.location='pageQuiz_CSS.html'
             break
@@ -118,67 +119,66 @@ function button_start_on4(choice) {
 }
 
 
+let open_info = 0
+let open_rank = 0
 
 $(document).ready( function() {
     $("#container_info").click(function () {
+        if(open_info === 0) {
 
-        $("#container_info").animate({
-            padding: '5px 50px 5px 0',
-            animationDelay: '1000000000000s'
-        }, "slow");
+            $("#container_info").animate({
+                padding: '5px 50px 5px 0',
+                animationDelay: '1000000000000s'
+            }, "slow");
+            $("#pre_info").hide()
+            $("#container_info2").show()
 
-        $("#pre_info").hide()
-        $("#container_info2").show()
-        $("#button_exit_info").show()
+            open_info = 1
+
+        } else {
+
+            $("#container_info").animate({
+                padding: '0',
+                animationDelay: '0s'
+            }, "slow");
+            $("#pre_info").show()
+            $("#container_info2").hide()
+
+            open_info = 0
+        }
     });
 });
-
-$(document).ready( function() {
-    $("#button_exit_info").mouseover(function () {
-
-        $("#container_info").animate({
-            padding: '0',
-            animationDelay: '0s'
-        }, "slow");
-
-        $("#pre_info").show()
-        $("#container_info2").hide()
-        $("#button_exit_info").hide()
-    });
-});
-
 
 $(document).ready( function() {
     $("#container_info_rank").click(function () {
 
-        $("#container_info_rank").animate({
-            padding: '5px 50px 5px 0',
-            animationDelay: '1000000000000s'
-        }, "slow");
+        if(open_rank === 0) {
 
-        $("#pre_info_rank").hide()
-        $("#container_info_rank2").show()
-        $("#button_exit_info_rank").show()
+            $("#container_info_rank").animate({
+                padding: '5px 50px 5px 0',
+                animationDelay: '1000000000000s'
+            }, "slow");
+
+            $("#pre_info_rank").hide()
+            $("#container_info_rank2").show()
+
+            open_rank = 1
+        } else {
+
+            $("#container_info_rank").animate({
+                padding: '0',
+                animationDelay: '0s'
+            }, "slow");
+
+            $("#pre_info_rank").show()
+            $("#container_info_rank2").hide()
+
+
+            open_rank = 0
+        }
 
     });
 });
-$(document).ready( function() {
-    $("#button_exit_info_rank").click(function () {
-
-        $("#container_info_rank").animate({
-            padding: '0',
-            animationDelay: '0s'
-        }, "slow");
-
-        $("#pre_info_rank").show()
-        $("#container_info_rank2").hide()
-        $("#button_exit_info_rank").hide()
-    });
-});
-
-
-
-
 
 function pop_up_istruzioni()
 {
