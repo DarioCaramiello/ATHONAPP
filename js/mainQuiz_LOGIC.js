@@ -9,6 +9,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 let randomQuestions, currentQuestionIndex
 
 
+
 startButton.addEventListener('click', startGame)
 restartButton.addEventListener('click',startGame)
 nextButton.addEventListener('click',()=>{

@@ -11,337 +11,161 @@ body{
 }
 
 /*--------------------------------TIMER--------------------*/
-.container_timer{
+#container_timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2.9rem;
     padding: 0;
+    border-radius: 50%;
     margin: 0 auto;
+    height: 52vh;
+    width: 27vw;
+    z-index: 1;
+}
+
+.container_timer .animation_js_outer{
+    animation: outer_anim 60s linear forwards;
+}
+
+@keyframes outer_anim {
+    from{
+        height: 52vh;
+        border-radius: 50%;
+        background-color: inherit;
+
+    }
+    to{
+        border-radius: 0;
+        height: 100vh;
+        background-color: #B22222;
+    }
 }
 #timer{
+    min-width: 30%;
     max-height: 10vh;
     padding: 1px;
 }
 #timer_value{
-    margin-left: 1px;
+    margin-left: 0.5em;
     margin-bottom: 0;
 }
 
-#circle_animation1{
-    margin: 1px;
-    position: relative;
-    bottom: 69px;
-    left: 27px;
-    height: 5px;
-    width: 5px;
+.circle_animation{
+    height: 75px;
+    width: 75px;
     border-radius: 50%;
     border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
+    z-index: 2;
+}
+.animation_js_circle{
+    animation: timer-anim 6s ease-in forwards;
+}
+
+#circle_animation1{
+    margin-left: 23%;
+    position: relative;
+    bottom: 199px;
 }
 #circle_animation2{
-    margin: 1px;
+    margin-left: 93%;
     position: relative;
-    bottom: 76px;
-    left: 35px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 1.15s;
+    bottom: 246px;
+    animation-delay: 6s;
 }
 #circle_animation3{
-    margin: 1px;
+    margin-left: 134%;
     position: relative;
-    bottom: 82px;
-    left: 43px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 2.30s;
+    bottom: 255px;
+    animation-delay: 12s;
 }
 #circle_animation4{
-    margin: 1px;
+    margin-left: 126%;
     position: relative;
-    bottom: 85px;
-    left: 50px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 3.45s;
+    bottom: 253px;
+    animation-delay: 18s;
 }
 #circle_animation5{
-    margin: 1px;
+    margin-left: 76%;
     position: relative;
-    bottom: 87px;
-    left: 56px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 4.60s;
+    bottom: 270px;
+    animation-delay: 24s;
 }
 #circle_animation6{
-    margin: 1px;
+    margin-left: 0;
     position: relative;
-    bottom: 87px;
-    left: 59px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 5.75s;
+    bottom: 331px;
+    animation-delay: 30s;
 }
 #circle_animation7{
-    margin: 1px;
+    margin-left: -70%;
     position: relative;
-    bottom: 87px;
-    left: 60px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 6.90s;
+    bottom: 439px;
+    animation-delay: 36s;
 }
 #circle_animation8{
-    margin: 1px;
+    margin-left: -109%;
     position: relative;
-    bottom: 87px;
-    left: 59px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 8.05s;
+    bottom: 584px;
+    animation-delay: 42s;
 }
 #circle_animation9{
-    margin: 1px;
+    margin-left: -99%;
     position: relative;
-    bottom: 87px;
-    left: 56px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 9.20s;
+    bottom: 738px;
+    animation-delay: 48s;
 }
 #circle_animation10{
-    margin: 1px;
+    margin-left: -51%;
     position: relative;
-    bottom: 88px;
-    left: 51px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 10.35s;
+    bottom: 875px;
+    animation-delay: 54s;
 }
-#circle_animation11{
-    margin: 1px;
-    position: relative;
-    bottom: 92px;
-    left: 43px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 11.50s;
-}
-#circle_animation12{
-    margin: 1px;
-    position: relative;
-    bottom: 97px;
-    left: 35px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 12.65s;
-}
-#circle_animation13{
-    margin: 1px;
-    position: relative;
-    bottom: 104px;
-    left: 27px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 13.80s;
-}
-#circle_animation14{
-    margin: 1px;
-    position: relative;
-    bottom: 112px;
-    left: 19px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 14.95s;
-}
-#circle_animation15{
-    margin: 1px;
-    position: relative;
-    bottom: 121px;
-    left: 11px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 16.10s;
-}
-#circle_animation16{
-    margin: 1px;
-    position: relative;
-    bottom: 132px;
-    left: 3px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 17.25s;
-}
-#circle_animation17{
-    margin: 1px;
-    position: relative;
-    bottom: 144px;
-    right: 4px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 18.40s;
-}
-#circle_animation18{
-    margin: 1px;
-    position: relative;
-    bottom: 159px;
-    right: 8px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 19.55s;
-}
-#circle_animation19{
-    margin: 1px;
-    position: relative;
-    bottom: 175px;
-    right: 11px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 20.70s;
-}
-#circle_animation20{
-    margin: 1px;
-    position: relative;
-    bottom: 191px;
-    right: 12px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 21.85s;
-}
-#circle_animation21{
-    margin: 1px;
-    position: relative;
-    bottom: 207px;
-    right: 10px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 23.00s;
-}
-#circle_animation22{
-    margin: 1px;
-    position: relative;
-    bottom: 222px;
-    right: 6px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 24.15s;
-}
-#circle_animation23{
-    margin: 1px;
-    position: relative;
-    bottom: 236px;
-    right: 1px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 25.30s;
-}
-#circle_animation24{
-    margin: 1px;
-    position: relative;
-    bottom: 248px;
-    left: 5px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 26.45s;
-}
-#circle_animation25{
-    margin: 1px;
-    position: relative;
-    bottom: 259px;
-    left: 12px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 27.60s;
-}
-#circle_animation26{
-    margin: 1px;
-    position: relative;
-    bottom: 269px;
-    left: 19px;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    border: 1px solid black;
-    animation: timer-anim 1.15s ease-in-out forwards;
-    animation-delay: 28.75s;
-}
+
+
 @keyframes timer-anim {
     0%{
         background-color: inherit;
     }
+    10%{
+        background-color: #1EB200;
+        transform: scale(1.01);
+    }
+    20%{
+        background-color: #53B200;
+        transform: scale(1);
+    }
+    30%{
+        background-color: #77B200;
+        transform: scale(1.01);
+    }
+    40%{
+        background-color: #AEC100;
+        transform: scale(1);
+    }
+    50%{
+        background-color: #EEE607;
+        transform: scale(1.01);
+    }
+    60%{
+        background-color: #EEB007;
+        transform: scale(1);
+    }
+    70%{
+        background-color: #D87605;
+        transform: scale(1.01);
+    }
+    80%{
+        background-color: #E14705;
+        transform: scale(1);
+    }
+    90%{
+        background-color: #E12205;
+        transform: scale(1.01);
+    }
     100%{
-        background-color: darkred;
+        background-color: #CB0909;
+        transform: scale(1);
     }
 }
 
@@ -367,6 +191,24 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.btn{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    width: 28.1vw;
+    height: 13vh;
+    margin-top: 20px;
+    border: 1px solid #1f00e6;
+    background-color: hsla(223, 100%, 60%, 1);
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.btn:hover{
+    border-color: black;
 }
 .start-btn, .next-btn, .restart-btn{
     cursor: pointer;
@@ -399,8 +241,8 @@ body{
     to{
         opacity: 90%;
         border-radius: 20px;
-        font-size: 33px;
-        transform: scale(1.01);
+        font-size: 28px;
+        transform: scale(0.9);
         background-color: hsla(223, 100%, 40%, 1);
     }
 }
