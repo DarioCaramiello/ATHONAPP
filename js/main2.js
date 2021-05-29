@@ -31,6 +31,32 @@ function start_game() {
     }
 }
 
+$(document).ready( function daily_prizes()
+{
+
+    let today=new Date()
+    let day=today.getDay()
+    let daily_list=[
+        ["PS Store Credit" , "Dogecoing", "Amazon Credit"],
+        ["Google Credit", "Prize2" , "Prize3"],
+        ["Day3prie", "PRize2", "prize3"],
+        ["Day4prie", "PRize2", "prize3"],
+        ["Day5prie", "PRize2", "prize3"],
+        ["Day6prie", "PRize2", "prize3"],
+        ["Day7prie", "PRize2", "prize3"],
+    ]
+    let element=document.getElementById("lista")
+    let i
+    for (i=0; i<daily_list[day].length;i++)
+    {
+        let x = document.createElement("li");
+        x.innerText= daily_list[day][i].toString();
+        element.appendChild(x)
+
+    }
+
+});
+
 function goQuiz() {
     switch (choice_quiz) {
         case 1 :
@@ -157,6 +183,37 @@ $(document).ready( function() {
 
             $("#pre_info_rank").show()
             $("#container_info_rank2").hide()
+
+
+            open_rank = 0
+        }
+
+    });
+});
+
+$(document).ready( function() {
+    $("#container_info_prizes").click(function () {
+
+        if(open_rank === 0) {
+
+            $("#container_info_prizes").animate({
+                padding: '5px 50px 5px 0',
+                animationDelay: '1000000000000s'
+            }, "slow");
+
+            $("#info_prize").hide()
+            $("#container_info_prizes2").show()
+
+            open_rank = 1
+        } else {
+
+            $("#container_info_prizes").animate({
+                padding: '0',
+                animationDelay: '0s'
+            }, "slow");
+
+            $("#info_prize").show()
+            $("#container_info_prizes2").hide()
 
 
             open_rank = 0
