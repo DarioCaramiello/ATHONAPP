@@ -86,7 +86,6 @@ function verifica_quiz() {
 }
 
 function change_quiz() {
-
     $("#game_").show()
     $("#timer").show()
     $("#confirm_button").show()
@@ -94,6 +93,7 @@ function change_quiz() {
     $("#reset_button").hide()
 
     if(tot_reset === 1){
+        timer = 30
         $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
         $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">b</code>")
         $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">c</code>")
@@ -104,6 +104,7 @@ function change_quiz() {
         $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
         $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
     } else {
+        timer = 30
         $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">x</code>")
         $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">y</code>")
         $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
@@ -128,12 +129,14 @@ function reset() {
     }
 }
 
-//timer
+
+/* var for timer */
 var time_out = "Time out";
-/*per cambiare font size alla scritta Time out*/
+/* per cambiare font size alla scritta Time out */
 var result_time_out = time_out.fontsize(6);
 let timer = 30;
 // Update the count down every 1 second
+
 let x = setInterval(function () {
     timer -= 1
     document.getElementById("timer_value").innerText = timer;
@@ -152,6 +155,7 @@ let x = setInterval(function () {
         verifica_quiz();
     }
     let confirm_button_id = document.getElementById("input_button")
+
     /* quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
     confirm_button_id.addEventListener("click", () => {
         timer = 0;
