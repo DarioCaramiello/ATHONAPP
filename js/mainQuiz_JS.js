@@ -37,6 +37,7 @@ function verifica_quiz_2(a, b, c, x, y, z){
 
     if (a === x && b === y && c === z) {
         $("#risp_corretta").show()
+        $("#risp_errata").hide()
         $.ajax({
             url: "http://localhost:5000/api/update-point",
             type: "POST",
@@ -51,6 +52,7 @@ function verifica_quiz_2(a, b, c, x, y, z){
         })
     } else {
         $("#risp_errata").show()
+        $("#risp_corretta").hide()
     }
 }
 function verifica_quiz() {
@@ -58,8 +60,10 @@ function verifica_quiz() {
     $("#game_").hide()
     $("#timer").hide()
     $("#confirm_button").hide()
+    $("#reset_button").show()
 
     $("#riassunto_game").show()
+
 
     let a = document.getElementById("cella_utent1").innerText
     let b = document.getElementById("cella_utent2").innerText
@@ -72,7 +76,6 @@ function verifica_quiz() {
             break
         case 1:
             verifica_quiz_2(risposteQ2[0], risposteQ2[1], risposteQ2[2], a, b, c)
-            $("#reset_button").show()
             console.log("switch verifica quiz case 1")
             break
         case 2:
@@ -116,7 +119,9 @@ function change_quiz() {
 function reset() {
     tot_reset = tot_reset + 1
     console.log(tot_reset)
-    if (tot_reset >= 3) {
+
+    if (tot_reset > 2) {
+        confirm("Tentativi finiti - rilogga per aggiornare")
         window.location = 'page2.html'
     } else {
         change_quiz()
@@ -153,5 +158,3 @@ let x = setInterval(function () {
         document.getElementById("confirm_button").style.display = "none"
     })
 }, 1000);
-
-

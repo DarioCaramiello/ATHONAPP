@@ -130,8 +130,6 @@ body {
     color: #ecf01e;
     border: 2px solid #ecf01e;
     border-radius: 20px;
-
-
 }
 #reset_button:hover{
     animation: unzoom 5s infinite linear alternate-reverse;
@@ -159,9 +157,10 @@ body {
 #risp_errata,#risp_corretta {
     font-size: 3em;
     animation: change_ 10s 1;
-    padding: 5px;
+    padding: 30px;
     margin-top: 10%;
     text-align: center;
+    border-radius: 20px;
     z-index: 10;
 }
 @keyframes change_  {
@@ -171,7 +170,7 @@ body {
         opacity: 0;
     }
     to {
-        padding: 5px;
+        padding: 30px;
         opacity: 100%;
         margin-top: 10%;
     }
