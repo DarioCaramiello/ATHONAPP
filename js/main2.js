@@ -1,4 +1,6 @@
 let choice_quiz = -1
+let listaPremi
+let quiz
 
 function start_game() {
 
@@ -26,17 +28,24 @@ function start_game() {
                 $("#id_nickname").html(result["name"])
                 $("#point_rank").html(result["point"])
                 console.log("login effettuato")
+                console.log(result)
+                listaPremi=result[1]
+                console.log(listaPremi)
+                daily_prizes(listaPremi)
             }
         })
+
+
     }
 }
 
-$(document).ready( function daily_prizes()
+function daily_prizes(daily_list)
 {
 
     let today=new Date()
     let day=today.getDay()
-    let daily_list=[
+    console.log(day)
+    /* let daily_list=[
         ["PS Store Credit" , "Dogecoing", "Amazon Credit"],
         ["Google Credit", "Prize2" , "Prize3"],
         ["Day3prie", "PRize2", "prize3"],
@@ -44,18 +53,19 @@ $(document).ready( function daily_prizes()
         ["Day5prie", "PRize2", "prize3"],
         ["Day6prie", "PRize2", "prize3"],
         ["Day7prie", "PRize2", "prize3"],
-    ]
+    ]*/
     let element=document.getElementById("lista")
     let i
     for (i=0; i<daily_list[day].length;i++)
     {
+
         let x = document.createElement("li");
         x.innerText= daily_list[day][i].toString();
         element.appendChild(x)
 
     }
 
-});
+}
 
 function goQuiz() {
     switch (choice_quiz) {
@@ -161,6 +171,29 @@ $(document).ready( function() {
 });
 
 $(document).ready( function() {
+    $.ajax({
+        url: 'http://localhost:5000/api/root',
+        type: 'GET',
+        dataType: "json",
+
+        success: function(result) {
+            quiz=result
+            console.log(quiz)
+        }
+    });
+    setTimeout(function() {
+        for (const key in quiz) {
+            console.log(key + quiz[key])
+            if (quiz[key] === "true")
+                $("input[value = "+key+"").prop("disabled",true)
+        }
+    },2000)
+});
+
+
+
+
+$(document).ready( function() {
     $("#container_info_rank").click(function () {
 
         if(open_rank === 0) {
@@ -235,3 +268,4 @@ function pop_up_istruzioni()
         document.getElementById("outer-circle").style.display = "none";
     }
 }
+
