@@ -1,4 +1,5 @@
 let choice_quiz = -1
+let listaPremi
 
 function start_game() {
 
@@ -26,17 +27,24 @@ function start_game() {
                 $("#id_nickname").html(result["name"])
                 $("#point_rank").html(result["point"])
                 console.log("login effettuato")
+                console.log(result)
+                listaPremi=result[1]
+                console.log(listaPremi)
+                daily_prizes(listaPremi)
             }
         })
+
+
     }
 }
 
-$(document).ready( function daily_prizes()
+function daily_prizes(daily_list)
 {
 
     let today=new Date()
     let day=today.getDay()
-    let daily_list=[
+    console.log(day)
+    /* let daily_list=[
         ["PS Store Credit" , "Dogecoing", "Amazon Credit"],
         ["Google Credit", "Prize2" , "Prize3"],
         ["Day3prie", "PRize2", "prize3"],
@@ -44,18 +52,19 @@ $(document).ready( function daily_prizes()
         ["Day5prie", "PRize2", "prize3"],
         ["Day6prie", "PRize2", "prize3"],
         ["Day7prie", "PRize2", "prize3"],
-    ]
+    ]*/
     let element=document.getElementById("lista")
     let i
     for (i=0; i<daily_list[day].length;i++)
     {
+
         let x = document.createElement("li");
         x.innerText= daily_list[day][i].toString();
         element.appendChild(x)
 
     }
 
-});
+}
 
 function goQuiz() {
     switch (choice_quiz) {
