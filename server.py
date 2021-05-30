@@ -19,6 +19,27 @@ premi = [
         ["Day6prie", "PRize2", "prize3"],
         ["Day7prie", "PRize2", "prize3"],
     ]
+#dizionario dei quiz
+quiz ={
+    "CSS": "false",
+    "JS": "false",
+    "HTML": "false",
+    "LOGIC": "false",
+}
+
+@app.route('/api/update-quiz', methods=['POST'])
+def quiz_done():
+    quiz_aggiornato = request.form.get('quiz','non definito')
+    stato = request.form.get('stato', 'false')
+    quiz[quiz_aggiornato]= stato
+    return str('quiz aggiornato')
+
+
+@app.route('/api/root', methods=['GET'])
+def give_quiz():
+    return jsonify(quiz)
+
+
 
 @app.route('/')
 def root():
