@@ -1,5 +1,6 @@
 let choice_quiz = -1
 let listaPremi
+let quiz
 
 function start_game() {
 
@@ -170,6 +171,29 @@ $(document).ready( function() {
 });
 
 $(document).ready( function() {
+    $.ajax({
+        url: 'http://localhost:5000/api/root',
+        type: 'GET',
+        dataType: "json",
+
+        success: function(result) {
+            quiz=result
+            console.log(quiz)
+        }
+    });
+    setTimeout(function() {
+        for (const key in quiz) {
+            console.log(key + quiz[key])
+            if (quiz[key] === "true")
+                $("input[value = "+key+"").prop("disabled",true)
+        }
+    },2000)
+});
+
+
+
+
+$(document).ready( function() {
     $("#container_info_rank").click(function () {
 
         if(open_rank === 0) {
@@ -244,3 +268,4 @@ function pop_up_istruzioni()
         document.getElementById("outer-circle").style.display = "none";
     }
 }
+
