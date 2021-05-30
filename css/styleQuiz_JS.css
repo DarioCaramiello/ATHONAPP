@@ -46,6 +46,8 @@ body {
 
 /*sono piu grandi ( anche se hanno stesso padding e stesso margin ) perche il font è piu grande */
 .cella_elem {
+    background-color: #999898;
+
     cursor: grab;
     color: black;
     text-align: center;

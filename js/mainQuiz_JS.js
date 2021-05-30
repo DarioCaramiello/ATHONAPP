@@ -5,6 +5,7 @@ let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "retur
 let risposteQ2 = [ "a", "b", "c" ]
 let risposteQ3 = [ "x", "y", "z" ]
 
+let timer = 30;
 
 /* --- request server for id user --- */
 $("document").ready(function(){
@@ -85,15 +86,16 @@ function verifica_quiz() {
     }
 }
 
+/* function for rendering reset quiz */
 function change_quiz() {
     $("#game_").show()
     $("#timer").show()
     $("#confirm_button").show()
     $("#riassunto_game").hide()
     $("#reset_button").hide()
+    timer = 30
 
     if(tot_reset === 1){
-        timer = 30
         $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
         $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">b</code>")
         $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">c</code>")
@@ -104,7 +106,6 @@ function change_quiz() {
         $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
         $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
     } else {
-        timer = 30
         $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">x</code>")
         $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">y</code>")
         $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
@@ -117,6 +118,7 @@ function change_quiz() {
     }
 }
 
+/* function verify logic reset */
 function reset() {
     tot_reset = tot_reset + 1
     console.log(tot_reset)
@@ -130,11 +132,9 @@ function reset() {
 }
 
 
-/* var for timer */
 var time_out = "Time out";
 /* per cambiare font size alla scritta Time out */
-var result_time_out = time_out.fontsize(6);
-let timer = 30;
+var result_time_out = time_out.fontsize(15);
 // Update the count down every 1 second
 
 let x = setInterval(function () {
@@ -155,10 +155,4 @@ let x = setInterval(function () {
         verifica_quiz();
     }
     let confirm_button_id = document.getElementById("input_button")
-
-    /* quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
-    confirm_button_id.addEventListener("click", () => {
-        timer = 0;
-        document.getElementById("confirm_button").style.display = "none"
-    })
 }, 1000);
