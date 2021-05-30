@@ -40,7 +40,6 @@ body {
 }
 
 .cella:hover {
-    opacity: 80%;
     color: red;
 }
 
@@ -66,11 +65,12 @@ body {
     max-height: 10vh;
     min-width: 10vw;
     min-height: 10vh;
+
+    z-index: 10;
 }
 
 
 .cella_elem:hover{
-    opacity: 80%;
     color: white;
     animation: zoom-button 500ms ease infinite alternate;
 }
@@ -83,7 +83,100 @@ body {
         font-weight: 550;
     }
 }
-/*confirm button style*/
+
+
+/* style button */
+.container_button {
+    position: absolute;
+    bottom: 60px;
+    left: 40%;
+}
+.style_button {
+    cursor: pointer;
+    background: url("https://image.freepik.com/free-vector/abstract-technology-background-web-developer-computer-code_88211-423.jpg") 50%;
+    width: 200pt;
+    height: 60pt;
+    font-weight: 100;
+    font-family: 'Fira Code Light', sans-serif;
+    font-size: 40px;
+    color: #ecf01e;
+    border: 2px solid #ecf01e;
+    border-radius: 20px;
+}
+.style_button:hover {
+    animation: unzoom 5s infinite linear alternate-reverse;
+}
+@keyframes unzoom {
+    0%{
+        background-position: 20vw;
+        transform: scale(1.0);
+    }
+    100%{
+        background-position: 52vw;
+        transform: scale(1.05);
+    }
+}
+
+/* start button */
+
+
+#container_start {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #000000;
+
+    width: 70vw;
+    z-index: 20;
+    margin: 100px;
+}
+
+#start-btn{
+    margin: 50px;
+}
+.btn{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    width: 28.1vw;
+    height: 13vh;
+    margin-top: 20px;
+    border: 1px solid #1f00e6;
+    background-color: hsla(223, 100%, 60%, 1);
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    z-index: 10;
+}
+.start-btn {
+    cursor: pointer;
+    color: black;
+    margin-top: 125px;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px 10px;
+    z-index: 10;
+}
+
+.start-btn:hover{
+    animation: start-btn-anim 1s infinite alternate;
+}
+@keyframes start-btn-anim {
+    from{
+        opacity: 100%;
+
+    }
+    to{
+        opacity: 90%;
+        border-radius: 20px;
+        font-size: 33px;
+        transform: scale(1.01);
+        background-color: hsla(223, 100%, 40%, 1);
+    }
+}
+
+/*
 #confirm_button{
     position: absolute;
     bottom: 60px;
@@ -115,7 +208,7 @@ body {
     }
 }
 
-/* RESET GAME BUTTON */
+
 #reset_game{
     position: absolute;
     bottom: 60px;
@@ -148,6 +241,37 @@ body {
 }
 
 
+#main_page_{
+    position: absolute;
+    bottom: 60px;
+    left: 40%;
+}
+#main_page_button{
+    cursor: pointer;
+    background: url("https://image.freepik.com/free-vector/abstract-technology-background-web-developer-computer-code_88211-423.jpg") 50%;
+    width: 200pt;
+    height: 60pt;
+    font-weight: 100;
+    font-family: 'Fira Code Light', sans-serif;
+    font-size: 40px;
+    color: #ecf01e;
+    border: 2px solid #ecf01e;
+    border-radius: 20px;
+}
+#main_page_button:hover{
+    animation: unzoom 5s infinite linear alternate-reverse;
+}
+@keyframes unzoom {
+    0%{
+        background-position: 20vw;
+        transform: scale(1.0);
+    }
+    100%{
+        background-position: 52vw;
+        transform: scale(1.05);
+    }
+}
+*/
 
 /* risp-corretta-errata */
 #riassunto_game {
@@ -155,10 +279,9 @@ body {
     align-items: center;
     display: flex;
 }
-
 #risp_errata,#risp_corretta {
     font-size: 3em;
-    animation: change_ 10s 1;
+    animation: change_ 3s 1;
     padding: 30px;
     margin-top: 10%;
     text-align: center;
@@ -177,6 +300,7 @@ body {
         margin-top: 10%;
     }
 }
+
 
 /* animazione sfondo */
 .light {

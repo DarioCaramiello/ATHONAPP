@@ -8,6 +8,10 @@
     <title>AthonApp - JS Quiz</title>
 </head>
 <body>
+
+    <div id="container_start" style="display: none">
+        <button id="start-btn" class="start-btn btn" onclick="show_game()">Start</button>
+    </div>
     <!-- timer ---->
     <div class="container_timer">
         <div id="timer"><span id="timer_value">30</span>
@@ -75,11 +79,12 @@
         </div>
         <div id="cella_utent3" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
-    <div id="confirm_button">
-        <input id="input_button" type="button" value="Confirm" onclick="verifica_quiz()">
+    <div id="confirm_button" class="container_button">
+        <input id="input_button" type="button" class="style_button" value="Confirm" onclick="verifica_quiz()">
     </div>
     <!--------------------------------------->
 
+    <!-- ESITO GAME ----------->
     <div id="riassunto_game" style="display: none">
         <div id="risp_corretta" style="display: none; background-color: green">
             <p>Soluzione corretta</p>
@@ -89,8 +94,21 @@
             <p>Soluzione errata</p>
             <p>Hai guadagnato 0 punti!</p>
         </div>
-        <div id="reset_game">
-            <input id="reset_button" type="button" value="Restart" onclick="reset()">
+        <div id="reset_game" class="container_button">
+            <input id="reset_button" class="style_button" type="button" value="Next" onclick="reset()">
+        </div>
+    </div>
+    <!--- END -------------->
+
+    <!-- INDICE ERRORI -->
+    <div id="container_error_index" style="display: none">
+        <div id="container_list">
+            <ul>
+                <li>Riferimento alle funzioni in Python : <a href="https://www.w3schools.com/js/js_functions.asp">Function in JavaScript</a> </li>
+            </ul>
+        </div>
+        <div id="main_page_" class="container_button">
+            <input id="main_page_button" class="style_button" type="button" value="Main Page" onclick="return_main_page()">
         </div>
     </div>
 
