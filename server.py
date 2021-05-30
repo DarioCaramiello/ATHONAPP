@@ -10,6 +10,15 @@ utenti = {}
 tot_user = len(utenti)
 # array globale di supporto alla route 'return-index'
 index_mem = []
+premi = [
+        ["PS Store Credit" , "Dogecoing", "Amazon Credit"],
+        ["Google Credit", "Prize2" , "Prize3"],
+        ["Day3prie", "PRize2", "prize3"],
+        ["Day4prie", "PRize2", "prize3"],
+        ["Day5prie", "PRize2", "prize3"],
+        ["Day6prie", "PRize2", "prize3"],
+        ["Day7prie", "PRize2", "prize3"],
+    ]
 
 @app.route('/')
 def root():
@@ -38,7 +47,7 @@ def name_user():
         if utenti[key]['name'] == request.form.get('nickname', 'non definito'):
             return jsonify(utenti[index_mem[0]])
     utenti[index] = {'name': request.form.get('nickname', 'non definito'), 'point': 0}
-    return jsonify(utenti[index_mem[0]])
+    return jsonify(utenti[index_mem[0]], premi)
 
 # dopo aver richiamato il login , ogni quiz quando si carica richiama il server che restituisce l'index
 # associato al dizionario per poi fare una request per aggiornamento di punti per quell'index
