@@ -1,6 +1,13 @@
-
 let index_id
+let tot_reset = 0
 
+let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "return }" ]
+let risposteQ2 = [ "a", "b", "c" ]
+let risposteQ3 = [ "x", "y", "z" ]
+
+let timer = 30;
+
+/* --- request server for id user --- */
 $("document").ready(function(){
     $.ajax({
         url: "http://localhost:5000/api/return-index",
@@ -13,77 +20,128 @@ $("document").ready(function(){
     })
 })
 
+/* ---- function for drag and drop ---- */
 function allowDrop(ev) {
     ev.preventDefault();
 }
-
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
-
 function drop (ev) {
     ev.preventDefault();
     let data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
 
-function verifica_quiz() {
-    let count_ris = 0;
-    let risp_row1 = "while"
-    let risp_row2 = "y"
-    let risp_row3 = ">"
+/* ---- function for verify quiz ---- */
+function verifica_quiz_2(a, b, c, x, y, z){
 
-    let x = document.getElementById("cella_utent1").innerText
-    let y = document.getElementById("cella_utent2").innerText
-    let z = document.getElementById("cella_utent3").innerText
-
-    if ( x===risp_row1 ) {
-        count_ris += 1
-    }
-    if ( y === risp_row2 ) {
-        count_ris += 1
-    }
-    if ( z === risp_row3 ) {
-        count_ris += 1
-    }
-
-    if(count_ris === 3 ){
-        document.getElementById("risp_corretta").style.display = "block"
+    if (a === x && b === y && c === z) {
+        $("#risp_corretta").show()
+        $("#risp_errata").hide()
+        $.ajax({
+            url: "http://localhost:5000/api/update-point",
+            type: "POST",
+            dataType: "text",
+            data: {
+                point: 100,
+                index: index_id
+            },
+            success: function (result) {
+                console.log(result)
+            }
+        })
     } else {
-        document.getElementById("risp_errata").style.display = "block"
+        $("#risp_errata").show()
+        $("#risp_corretta").hide()
     }
+}
+function verifica_quiz() {
 
-    $.ajax({
-        url: "http://localhost:5000/api/update-point",
-        type: "POST",
-        dataType: "text",
-        data: {
-            point: 100,
-            index: index_id
-        },
-        success: function(result) {
-            console.log(result)
-        }
-    })
+    $("#game_").hide()
+    $("#timer").hide()
+    $("#confirm_button").hide()
+    $("#reset_button").show()
 
-    console.log(x)
-    console.log(y)
-    console.log(z)
+    $("#riassunto_game").show()
 
 
+    let a = document.getElementById("cella_utent1").innerText
+    let b = document.getElementById("cella_utent2").innerText
+    let c = document.getElementById("cella_utent3").innerText
+
+    switch (tot_reset) {
+        case 0:
+            verifica_quiz_2(risposteQ1[0], risposteQ1[1], risposteQ1[2], a, b, c)
+            console.log("switch verifica quiz case 0")
+            break
+        case 1:
+            verifica_quiz_2(risposteQ2[0], risposteQ2[1], risposteQ2[2], a, b, c)
+            console.log("switch verifica quiz case 1")
+            break
+        case 2:
+            verifica_quiz_2(risposteQ3[0], risposteQ3[1], risposteQ3[2], a, b, c)
+            console.log("switch verifica quiz case 2")
+            break
+    }
 }
 
-//timer
+/* function for rendering reset quiz */
+function change_quiz() {
+    $("#game_").show()
+    $("#timer").show()
+    $("#confirm_button").show()
+    $("#riassunto_game").hide()
+    $("#reset_button").hide()
+    timer = 30
+
+    if(tot_reset === 1){
+        $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
+        $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">b</code>")
+        $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">c</code>")
+        $("#id_drop4").html("<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
+        $("#id_drop5").html("<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
+        $("#id_drop6").html("<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
+        $("#id_drop7").html("<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
+        $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
+        $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
+    } else {
+        $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">x</code>")
+        $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">y</code>")
+        $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
+        $("#id_drop4").html("<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
+        $("#id_drop5").html("<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
+        $("#id_drop6").html("<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
+        $("#id_drop7").html("<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
+        $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
+        $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
+    }
+}
+
+/* function verify logic reset */
+function reset() {
+    tot_reset = tot_reset + 1
+    console.log(tot_reset)
+
+    if (tot_reset > 2) {
+        confirm("Tentativi finiti - rilogga per aggiornare")
+        window.location = 'page2.html'
+    } else {
+        change_quiz()
+    }
+}
+
+
 var time_out = "Time out";
-/*per cambiare font size alla scritta Time out*/
-var result_time_out = time_out.fontsize(6);
-let timer = 30;
+/* per cambiare font size alla scritta Time out */
+var result_time_out = time_out.fontsize(15);
 // Update the count down every 1 second
-let x = setInterval(function() {
+
+let x = setInterval(function () {
     timer -= 1
     document.getElementById("timer_value").innerText = timer;
     /*per spostare i numeri al centro*/
-    if(timer < 10) {
+    if (timer < 10) {
         document.getElementById("timer_value").style.marginLeft = "15px";
     }
     if (timer < 0) {
@@ -97,10 +155,4 @@ let x = setInterval(function() {
         verifica_quiz();
     }
     let confirm_button_id = document.getElementById("input_button")
-    /* quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
-    confirm_button_id.addEventListener("click", () => {
-        timer = 0;
-        document.getElementById("confirm_button").style.display = "none"
-    } )
 }, 1000);
-

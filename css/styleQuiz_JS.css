@@ -3,32 +3,39 @@ body {
     padding: 0 0 0 0;
     box-sizing: border-box;
     overflow: hidden;
-    background: #f0db4f;
+    background: #ffd000;
 }
 
 .container_div {
     display: grid;
     grid-template-columns: auto auto auto auto ;
     gap: 10pt;
-    margin: 20px 0 100px 250px;
+    margin: 0 0 100px 250px;
     position:absolute;
     font-family: Tahoma,sans-serif;
-    font-size: 14px;
+    font-size: 15pt;
 }
 
 .cella {
-    background-color: lightgray;
-    padding: 10px;
+    background-color: #333533;
+
+    padding: 40px;
     text-align: center;
-    border-radius: 50px;
+    color: white;
+    border-radius: 20px;
+
     position: relative;
     right: -40px;
-    top: 40px;
-    width: 20vw;
+    top: -50px;
+
+    width: 50vw;
+    height: 50vh;
+
     max-width: 20vw;
     max-height: 10vh;
     min-width: 10vw;
     min-height: 10vh;
+
     z-index: 10;
 }
 
@@ -39,22 +46,29 @@ body {
 
 /*sono piu grandi ( anche se hanno stesso padding e stesso margin ) perche il font è piu grande */
 .cella_elem {
+    background-color: #999898;
+
     cursor: grab;
-    padding: 10px;
-    position: relative;
-    background-color: red;
     color: black;
-    margin: 0 0 0 0;
     text-align: center;
-    border-radius: 50px;
-    top: 40px;
-    left: 10px;
+
+    border-radius: 20px;
+
+    position: relative;
+    top: -40px;
+    left: -40px;
+
+    padding: 30px;
+    width: 50vw;
+    height: 50vh;
+
     max-width: 10vw;
     max-height: 10vh;
     min-width: 10vw;
     min-height: 10vh;
-    z-index: 10;
 }
+
+
 .cella_elem:hover{
     opacity: 80%;
     color: white;
@@ -85,6 +99,7 @@ body {
     font-size: 40px;
     color: #ecf01e;
     border: 2px solid #ecf01e;
+    border-radius: 20px;
 }
 #input_button:hover{
     animation: unzoom 5s infinite linear alternate-reverse;
@@ -100,20 +115,76 @@ body {
     }
 }
 
-/* risp-corretta-errata */
-#risp_errata,#risp_corretta {
-    font-size: 15pt;
+/* RESET GAME BUTTON */
+#reset_game{
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
     left: 40%;
 }
+#reset_button{
+    cursor: pointer;
+    background: url("https://image.freepik.com/free-vector/abstract-technology-background-web-developer-computer-code_88211-423.jpg") 50%;
+    width: 200pt;
+    height: 60pt;
+    font-weight: 100;
+    font-family: 'Fira Code Light', sans-serif;
+    font-size: 40px;
+    color: #ecf01e;
+    border: 2px solid #ecf01e;
+    border-radius: 20px;
+}
+#reset_button:hover{
+    animation: unzoom 5s infinite linear alternate-reverse;
+}
+@keyframes unzoom {
+    0%{
+        background-position: 20vw;
+        transform: scale(1.0);
+    }
+    100%{
+        background-position: 52vw;
+        transform: scale(1.05);
+    }
+}
+
+
+
+/* risp-corretta-errata */
+#riassunto_game {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#risp_errata,#risp_corretta {
+    font-size: 3em;
+    animation: change_ 10s 1;
+    padding: 30px;
+    margin-top: 10%;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 10;
+}
+@keyframes change_  {
+    from{
+        margin: 0;
+        padding: 10%;
+        opacity: 0;
+    }
+    to {
+        padding: 30px;
+        opacity: 100%;
+        margin-top: 10%;
+    }
+}
+
 /* animazione sfondo */
 .light {
     position: absolute;
     width: 0;
     opacity: .75;
     background-color: #999900;
-    box-shadow: #999900 0 0 20px 2px;
+    box-shadow: #000000 0 0 20px 2px;
     top: 100vh;
     bottom: 0;
     left: 0;
