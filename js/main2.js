@@ -37,6 +37,9 @@ function start_game() {
                     console.log("create new user");
                 } else if ( result["access"] === 0 ){
                     console.log("accesso negato")
+                    $("#myForm").show()
+                    $("#container_page").hide()
+                    $("#Athonapp").hide()
                 } else {
                     console.log("ERROR")
                 }
