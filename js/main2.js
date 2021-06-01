@@ -28,15 +28,25 @@ function start_game() {
 
             success: function(result) {
                 console.log(result)
+                if( result["access"] === 1){
+                    $("#id_nickname").html(result["name"])
+                    $("#point_rank").html(result["point"])
+                } else if ( result["access"] === "create" ){
+                    $("#id_nickname").html(result["name"])
+                    $("#point_rank").html(result["point"])
+                    console.log("create new user");
+                } else if ( result["access"] === 0 ){
+                    console.log("accesso negato")
+                } else {
+                    console.log("ERROR")
+                }
                 /*
-                $("#id_nickname").html(result["name"])
-                $("#point_rank").html(result["point"])
                 console.log("login effettuato")
                 console.log(result)
                 listaPremi=result[1]
                 console.log(listaPremi)
                 daily_prizes(listaPremi)
-             */
+                */
             }
         })
 
