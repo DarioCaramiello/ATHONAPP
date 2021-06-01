@@ -1,5 +1,6 @@
 let choice_quiz = -1
 let listaPremi
+let quiz
 
 function start_game() {
 
@@ -21,16 +22,34 @@ function start_game() {
             type: "POST",
             dataType: "json",
             data: {
-                nickname: $("#nickname").val()
+                nickname: $("#nickname").val(),
+                password: $("#password").val()
             },
+
             success: function(result) {
-                $("#id_nickname").html(result["name"])
-                $("#point_rank").html(result["point"])
+                console.log(result)
+                if( result["access"] === 1){
+                    $("#id_nickname").html(result["name"])
+                    $("#point_rank").html(result["point"])
+                } else if ( result["access"] === "create" ){
+                    $("#id_nickname").html(result["name"])
+                    $("#point_rank").html(result["point"])
+                    console.log("create new user");
+                } else if ( result["access"] === 0 ){
+                    console.log("accesso negato")
+                    $("#myForm").show()
+                    $("#container_page").hide()
+                    $("#Athonapp").hide()
+                } else {
+                    console.log("ERROR")
+                }
+                /*
                 console.log("login effettuato")
                 console.log(result)
                 listaPremi=result[1]
                 console.log(listaPremi)
                 daily_prizes(listaPremi)
+                */
             }
         })
 
@@ -169,6 +188,30 @@ $(document).ready( function() {
     });
 });
 
+/*
+$(document).ready( function() {
+    $.ajax({
+        url: 'http://localhost:5000/api/root',
+        type: 'GET',
+        dataType: "json",
+
+        success: function(result) {
+            quiz=result
+            console.log(quiz)
+        }
+    });
+    setTimeout(function() {
+        for (const key in quiz) {
+            console.log(key + quiz[key])
+            if (quiz[key] === "true")
+                $("input[value = "+key+"").prop("disabled",true)
+        }
+    },2000)
+});
+*/
+
+
+
 $(document).ready( function() {
     $("#container_info_rank").click(function () {
 
@@ -244,3 +287,4 @@ function pop_up_istruzioni()
         document.getElementById("outer-circle").style.display = "none";
     }
 }
+

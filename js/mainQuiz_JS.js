@@ -4,11 +4,14 @@ let tot_reset = 0
 let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "return }" ]
 let risposteQ2 = [ "a", "b", "c" ]
 let risposteQ3 = [ "x", "y", "z" ]
+let correct_risp_user = 0
 
 let timer = 30;
 
-/* --- request server for id user --- */
+/* function onload document */
 $("document").ready(function(){
+
+    /* --- request server for id user --- */
     $.ajax({
         url: "http://localhost:5000/api/return-index",
         type: "POST",
@@ -18,7 +21,22 @@ $("document").ready(function(){
             index_id = result
         }
     })
+
+    $("#game_").hide()
+    $("#timer").hide()
+    $("#confirm_button").hide()
+    $("#riassunto_game").hide()
+    $("#reset_button").hide()
+    $("#container_start").show()
 })
+
+
+function show_game(){
+    $("#timer").show()
+    $("#game_").show()
+    $("#confirm_button").show()
+    $("#container_start").hide()
+}
 
 /* ---- function for drag and drop ---- */
 function allowDrop(ev) {
@@ -37,6 +55,7 @@ function drop (ev) {
 function verifica_quiz_2(a, b, c, x, y, z){
 
     if (a === x && b === y && c === z) {
+        correct_risp_user+=1
         $("#risp_corretta").show()
         $("#risp_errata").hide()
         $.ajax({
@@ -124,11 +143,19 @@ function reset() {
     console.log(tot_reset)
 
     if (tot_reset > 2) {
-        confirm("Tentativi finiti - rilogga per aggiornare")
-        window.location = 'page2.html'
+        $("#game_").hide()
+        $("#timer").hide()
+        $("#confirm_button").hide()
+        $("#riassunto_game").hide()
+        $("#reset_button").hide()
+        $("#container_error_index").show()
     } else {
         change_quiz()
     }
+}
+
+function return_main_page() {
+    window.location = 'page2.html'
 }
 
 

@@ -178,5 +178,23 @@ function show_Result(){
 }
 
 $("#getback-btn").click(function(){
-    window.location = 'page2.html'
+    $.ajax({
+        url:'http://localhost:5000/api/update-quiz',
+        type:'POST',
+        dataType : 'json',
+        data:
+            {
+                quiz: 'CSS',
+                stato: 'true'
+            },
+
+        success: function (result){
+            console.log(result)
+        }
+
+    })
+    setTimeout(function(){
+        window.location = 'page2.html'
+    },2000)
+
 });
