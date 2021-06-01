@@ -1,5 +1,6 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const confirmButton = document.getElementById('confirm-btn')
 const questionContainerElement = document.getElementById('question_container')
 /*costante per la singola domanda*/
 const questionElement = document.getElementById('request')
@@ -27,6 +28,7 @@ nextButton.addEventListener('click',()=>{
     currentQuestionIndex++
     nextQuestion()
 })
+confirmButton.addEventListener('click', correct_string)
 
 function startGame(){
     startButton.classList.add('hide')
@@ -55,6 +57,7 @@ function startGame(){
     randomQuestions = questions_array.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
+    confirmButton.classList.remove('hide')
     nextQuestion()
 }
 
@@ -152,8 +155,10 @@ function timerStart(){
 
 }
 
-function correct_string(){
-
+function correct_string(question){
+    textAreaCorrect.value = question['answer']
+    textArea.value = question['code']
+    console.log(textAreaCorrect)
 }
 
 /*array delle domande*/
@@ -161,8 +166,20 @@ const questions_array = [
     {
         question: "In questo esercizio ci sono 2 errori, trovali e corregili!",
         code: "<!doctype html>\n" +
-            "    <html lang=\"en\">\n" +
-            "    \n" +
+                "<html lang=\"en\">\n" +
+                "        <meta charset=\"UTF-8\">\n" +
+                "        <meta name=\"viewport\"\n" +
+                "              content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n" +
+                "        <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n" +
+                "        <title>Document</title>\n" +
+                "    </head>\n" +
+                "    <body>\n" +
+                "       <h1>Questo è un esercizio html!<h1>\n" +
+                "    </body>\n" +
+                "</html>",
+        answer: "<!doctype html>\n" +
+            "<html lang=\"en\">\n" +
+            "    <head>\n" +
             "        <meta charset=\"UTF-8\">\n" +
             "        <meta name=\"viewport\"\n" +
             "              content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n" +
@@ -170,9 +187,9 @@ const questions_array = [
             "        <title>Document</title>\n" +
             "    </head>\n" +
             "    <body>\n" +
-            "       <h1>Questo è un esercizio html!<h1>\n" +
+            "       <h1>Questo è un esercizio html!<\h1>\n" +
             "    </body>\n" +
-            "    </html>"
+            "</html>"
     },
     {
         question: "In questo esercizio ci sono 3 errori, trovali e corregili!",

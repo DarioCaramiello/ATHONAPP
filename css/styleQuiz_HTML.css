@@ -216,7 +216,7 @@ body{
         transform: scale(1);
     }
     100%{
-        transform: scale(1.007);
+        transform: scale(1.04);
     }
 }
 
@@ -225,7 +225,7 @@ body{
         transform: scale(1);
     }
     100%{
-        transform: scale(0.993);
+        transform: scale(0.960);
     }
 }
 
@@ -265,8 +265,8 @@ body{
     width: 28.1vw;
     height: 13vh;
     margin-top: 20px;
-    border: 1px solid #1f00e6;
-    background-color: hsla(223, 100%, 60%, 1);
+    border: 1px solid #f48c06;
+    background-color: #e85d04;
     border-radius: 5px;
     padding: 5px 10px;
     outline: none;
@@ -291,10 +291,10 @@ body{
 }
 
 .start-btn:hover{
-    animation: start-btn-anim 1s infinite alternate;
+    animation: start-btn-anim 500ms infinite alternate;
 }
 .next-btn:hover, .restart-btn:hover{
-    animation: next-btn-anim 1s infinite alternate;
+    animation: next-btn-anim 500ms infinite alternate;
 }
 
 
@@ -307,8 +307,8 @@ body{
         opacity: 90%;
         border-radius: 20px;
         font-size: 28px;
-        transform: scale(0.9);
-        background-color: hsla(223, 100%, 40%, 1);
+        transform: scale(0.995);
+        background-color: transparent;
     }
 }
 @keyframes next-btn-anim {
