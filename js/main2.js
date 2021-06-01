@@ -22,9 +22,13 @@ function start_game() {
             type: "POST",
             dataType: "json",
             data: {
-                nickname: $("#nickname").val()
+                nickname: $("#nickname").val(),
+                password: $("#password").val()
             },
+
             success: function(result) {
+                console.log(result)
+                /*
                 $("#id_nickname").html(result["name"])
                 $("#point_rank").html(result["point"])
                 console.log("login effettuato")
@@ -32,6 +36,7 @@ function start_game() {
                 listaPremi=result[1]
                 console.log(listaPremi)
                 daily_prizes(listaPremi)
+             */
             }
         })
 
@@ -170,6 +175,7 @@ $(document).ready( function() {
     });
 });
 
+/*
 $(document).ready( function() {
     $.ajax({
         url: 'http://localhost:5000/api/root',
@@ -189,7 +195,7 @@ $(document).ready( function() {
         }
     },2000)
 });
-
+*/
 
 
 
