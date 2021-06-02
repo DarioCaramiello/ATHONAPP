@@ -1,4 +1,7 @@
 let choice_quiz = -1
+let listaPremi
+let quiz
+let current_nickname=""
 
 function start_game() {
 
@@ -50,6 +53,41 @@ function start_game() {
                 console.log(listaPremi)
                 daily_prizes(listaPremi)
                 */
+                $.ajax({
+                    url: 'http://localhost:5000/api/get-nickname',
+                    type: 'POST',
+                    dataType: "json",
+
+                    success: function(result) {
+                        current_nickname=result["nickname"]
+                        console.log(current_nickname)
+                        if (current_nickname!=="")
+                        {
+                            console.log("squack")
+                            $.ajax({
+                                url: 'http://localhost:5000/api/get-quiz',
+                                type: 'POST',
+                                dataType: "json",
+                                data: {
+                                    'name': current_nickname
+                                },
+
+                                success: function (result) {
+
+                                    quiz = result
+                                    console.log(quiz)
+                                    for (const key in quiz) {
+                                        console.log(key + quiz[key])
+                                        if (quiz[key] === "1")
+                                            $("input[value = " + key + "").prop("disabled", true)
+                                    }
+                                }
+                            });
+
+
+                        }
+                    }
+                });
             }
         })
     }
@@ -183,30 +221,6 @@ $(document).ready( function() {
     });
 });
 
-/*
-$(document).ready( function() {
-    $.ajax({
-        url: 'http://localhost:5000/api/root',
-        type: 'GET',
-        dataType: "json",
-
-        success: function(result) {
-            quiz=result
-            console.log(quiz)
-        }
-    });
-    setTimeout(function() {
-        for (const key in quiz) {
-            console.log(key + quiz[key])
-            if (quiz[key] === "true")
-                $("input[value = "+key+"").prop("disabled",true)
-        }
-    },2000)
-});
-*/
-
-
-
 $(document).ready( function() {
     $("#container_info_rank").click(function () {
 
@@ -237,6 +251,26 @@ $(document).ready( function() {
 
     });
 });
+
+$(document).ready(function(){
+
+    $.ajax({
+        url: 'http://localhost:5000/api/show-prizes',
+        type: 'GET',
+        dataType: "json",
+
+        success: function(result) {
+            listaPremi=result
+            console.log(listaPremi)
+
+               console.log("login effettuato")
+
+
+               daily_prizes(listaPremi)
+        }
+    });
+})
+
 
 $(document).ready( function() {
     $("#container_info_prizes").click(function () {
@@ -282,4 +316,5 @@ function pop_up_istruzioni()
         document.getElementById("outer-circle").style.display = "none";
     }
 }
+
 
