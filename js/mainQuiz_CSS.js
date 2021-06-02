@@ -7,19 +7,22 @@ const getbackButton=document.getElementById("getback-btn")
 let Punti=0;
 let index_id
 
+let name_user_for_point = NaN
 
-/* --- request server for id user --- */
-$("document").ready(function(){
+/* function onload document */
+$("document").ready(function() {
+
+    /* --- request server for id user --- */
     $.ajax({
-        url: "http://localhost:5000/api/return-index",
+        url: "http://localhost:5000/api/get-nickname",
         type: "POST",
-        dataType: "text",
-        success: function(result) {
-            console.log("index_ricevuto : "+result)
-            index_id = result
+        dataType: "json",
+        success: function (result) {
+            console.log("index_ricevuto : " + result["nickname"])
+            name_user_for_point = result["nickname"]
         }
     });
-});
+})
 
 
 startButton.addEventListener("click",function start_game(){
@@ -130,11 +133,11 @@ let x = setInterval(function() {
 */
 
 
-function show_Result(){
+function show_Result() {
 
-    nextButton.style.display="none";
-    getbackButton.style.display="block";
-    questionContainerElement.style.display="none"
+    nextButton.style.display = "none";
+    getbackButton.style.display = "block";
+    questionContainerElement.style.display = "none"
 
     $.ajax({
         url: "http://localhost:5000/api/update-point",
@@ -142,13 +145,12 @@ function show_Result(){
         dataType: "text",
         data: {
             point: Punti,
-            index: index_id
+            name: name_user_for_point
         },
         success: function (result) {
             console.log(result)
         }
     })
-
 
     let element=document.getElementById("lista_domande")
     let i
@@ -167,10 +169,7 @@ function show_Result(){
             x.innerText = "Domanda nr. " + (i + 1) + " - Risposta errata"
             element.appendChild(x)
             x.insertAdjacentElement("afterend", a)
-
         }
-
-
     }
 
 
@@ -184,8 +183,9 @@ $("#getback-btn").click(function(){
         dataType : 'json',
         data:
             {
+                name: name_user_for_point,
                 quiz: 'CSS',
-                stato: 'true'
+                stato: 1
             },
 
         success: function (result){
