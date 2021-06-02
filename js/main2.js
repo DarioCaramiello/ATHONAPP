@@ -1,6 +1,4 @@
 let choice_quiz = -1
-let listaPremi
-let quiz
 
 function start_game() {
 
@@ -28,6 +26,8 @@ function start_game() {
 
             success: function(result) {
                 console.log(result)
+                name_current_user = result["name"]
+                console.log(name_current_user)
                 if( result["access"] === 1){
                     $("#id_nickname").html(result["name"])
                     $("#point_rank").html(result["point"])
@@ -52,14 +52,11 @@ function start_game() {
                 */
             }
         })
-
-
     }
 }
 
 function daily_prizes(daily_list)
 {
-
     let today=new Date()
     let day=today.getDay()
     console.log(day)
@@ -80,9 +77,7 @@ function daily_prizes(daily_list)
         let x = document.createElement("li");
         x.innerText= daily_list[day][i].toString();
         element.appendChild(x)
-
     }
-
 }
 
 function goQuiz() {

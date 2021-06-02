@@ -1,4 +1,4 @@
-let index_id
+
 let tot_reset = 0
 
 let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "return }" ]
@@ -7,18 +7,19 @@ let risposteQ3 = [ "x", "y", "z" ]
 let correct_risp_user = 0
 
 let timer = 30;
+let name_user_for_point = NaN
 
 /* function onload document */
 $("document").ready(function(){
 
     /* --- request server for id user --- */
     $.ajax({
-        url: "http://localhost:5000/api/return-index",
+        url: "http://localhost:5000/api/get-nickname",
         type: "POST",
-        dataType: "text",
+        dataType: "json",
         success: function(result) {
-            console.log("index_ricevuto : "+result)
-            index_id = result
+            console.log("index_ricevuto : " + result["nickname"])
+            name_user_for_point = result["nickname"]
         }
     })
 
@@ -64,7 +65,7 @@ function verifica_quiz_2(a, b, c, x, y, z){
             dataType: "text",
             data: {
                 point: 100,
-                index: index_id
+                name: name_user_for_point
             },
             success: function (result) {
                 console.log(result)

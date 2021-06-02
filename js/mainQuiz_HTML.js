@@ -28,7 +28,7 @@ nextButton.addEventListener('click',()=>{
     currentQuestionIndex++
     nextQuestion()
 })
-confirmButton.addEventListener('click', correct_string)
+
 
 function startGame(){
     startButton.classList.add('hide')
@@ -143,7 +143,6 @@ function timerStart(){
             document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
             /*per nascondere l'animazione del timer*/
             $('.circle_animation').hide();
-            verifica_quiz();
         }
         let confirm_button_id = document.getElementById("input_button")
         /* quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
@@ -187,7 +186,7 @@ const questions_array = [
             "        <title>Document</title>\n" +
             "    </head>\n" +
             "    <body>\n" +
-            "       <h1>Questo è un esercizio html!<\h1>\n" +
+            "       <h1>Questo è un esercizio html!</h1>\n" +
             "    </body>\n" +
             "</html>"
     },
@@ -214,3 +213,13 @@ const questions_array = [
             "    </html>"
     }
 ]
+
+
+function verify_quiz() {
+    let risposta = document.getElementById("question").value
+    if( risposta === questions_array[0]["answer"]) {
+        console.log("Risposta Corretta")
+    } else {
+        console.log("Risposta errata")
+    }
+}
