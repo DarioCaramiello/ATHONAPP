@@ -30,14 +30,40 @@ function start_game() {
             success: function(result) {
                 console.log(result)
                 name_current_user = result["name"]
-                console.log(name_current_user)
-                if( result["access"] === 1){
+                if( result["access"] === 1 || result["access"] === "create"){
                     $("#id_nickname").html(result["name"])
                     $("#point_rank").html(result["point"])
-                } else if ( result["access"] === "create" ){
-                    $("#id_nickname").html(result["name"])
-                    $("#point_rank").html(result["point"])
-                    console.log("create new user");
+                    $.ajax({
+                        url: 'http://localhost:5000/api/get-nickname',
+                        type: 'POST',
+                        dataType: "json",
+
+                        success: function(result) {
+                            current_nickname=result["nickname"]
+                            if (current_nickname!=="")
+                            {
+                                $.ajax({
+                                    url: 'http://localhost:5000/api/get-quiz',
+                                    type: 'POST',
+                                    dataType: "json",
+                                    data: {
+                                        'name': current_nickname
+                                    },
+
+                                    success: function (result) {
+
+                                        quiz = result
+                                        console.log(quiz)
+                                        for (const key in quiz) {
+                                            console.log(key + quiz[key])
+                                            if (quiz[key] === "1")
+                                                $("input[value = " + key + "").prop("disabled", true)
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    });
                 } else if ( result["access"] === 0 ){
                     console.log("accesso negato")
                     $("#myForm").show()
@@ -53,41 +79,6 @@ function start_game() {
                 console.log(listaPremi)
                 daily_prizes(listaPremi)
                 */
-                $.ajax({
-                    url: 'http://localhost:5000/api/get-nickname',
-                    type: 'POST',
-                    dataType: "json",
-
-                    success: function(result) {
-                        current_nickname=result["nickname"]
-                        console.log(current_nickname)
-                        if (current_nickname!=="")
-                        {
-                            console.log("squack")
-                            $.ajax({
-                                url: 'http://localhost:5000/api/get-quiz',
-                                type: 'POST',
-                                dataType: "json",
-                                data: {
-                                    'name': current_nickname
-                                },
-
-                                success: function (result) {
-
-                                    quiz = result
-                                    console.log(quiz)
-                                    for (const key in quiz) {
-                                        console.log(key + quiz[key])
-                                        if (quiz[key] === "1")
-                                            $("input[value = " + key + "").prop("disabled", true)
-                                    }
-                                }
-                            });
-
-
-                        }
-                    }
-                });
             }
         })
     }
@@ -252,6 +243,7 @@ $(document).ready( function() {
     });
 });
 
+
 $(document).ready(function(){
 
     $.ajax({
@@ -262,14 +254,12 @@ $(document).ready(function(){
         success: function(result) {
             listaPremi=result
             console.log(listaPremi)
-
-               console.log("login effettuato")
-
-
                daily_prizes(listaPremi)
         }
     });
 })
+
+
 
 
 $(document).ready( function() {

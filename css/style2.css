@@ -38,11 +38,9 @@ body {
 
 /* --------------------------------  LOGIN  ------------------------------------ */
 .form-popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -280px;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
     animation: change_dimension 1.5s infinite alternate;
     z-index: 10;
 }
@@ -64,10 +62,8 @@ body {
 .form-container input[type=text]{
     border: none;
     text-align: center;
-    width: 80%;
     padding: 10px 0 10px 0;
     margin: 50px 0 50px 50px;
-    background: black;
     color: #020202;
     z-index: 10;
 }
@@ -84,7 +80,7 @@ body {
     width: 100px;
     height: 50px;
     margin-bottom:10px;
-    margin-left: 200px;
+    margin-left: 250px;
     border-radius: 10px;
     z-index: 10;
 }
