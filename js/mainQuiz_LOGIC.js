@@ -27,7 +27,7 @@ function startGame(){
     randomQuestions = questions_array.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
-    
+
     nextQuestion()
 }
 
@@ -35,10 +35,10 @@ function nextQuestion(){
     resetState()
     //aggiunto check per verificare la fine delle domande VR
     if(randomQuestions.length > currentQuestionIndex)
-    showQuestion(randomQuestions[currentQuestionIndex])
+        showQuestion(randomQuestions[currentQuestionIndex])
     else // esco e verifico i risultati VR
-    show_Result()
-    
+        show_Result()
+
 }
 
 
@@ -85,8 +85,8 @@ function selectAnswer(e){
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-        /*mostro il bottone next*/
-        nextButton.classList.remove('hide')
+    /*mostro il bottone next*/
+    nextButton.classList.remove('hide')
 }
 
 function setStatusClass(element, correct){
@@ -96,6 +96,18 @@ function setStatusClass(element, correct){
         element.classList.add('correct')
         Punti+=1
         randomQuestions[currentQuestionIndex].result=true
+        $.ajax({
+            url: "http://localhost:5000/api/update-point",
+            type: "POST",
+            dataType: "text",
+            data: {
+                point: Punti,
+                name: name_user_for_point
+            },
+            success: function (result) {
+                console.log(result)
+            }
+        });
     }else{
         /*se la risposta e' sbagliata aggiungo la classe wrong*/
         element.classList.add('wrong')
@@ -158,7 +170,7 @@ function show_Result() {
     nextButton.style.display = "none";
     getbackButton.style.display = "block";
     questionContainerElement.style.display = "none"
-
+/*
     $.ajax({
         url: "http://localhost:5000/api/update-point",
         type: "POST",
@@ -171,6 +183,7 @@ function show_Result() {
             console.log(result)
         }
     });
+*/
 
     let element=document.getElementById("lista_domande")
     let i
@@ -183,7 +196,7 @@ function show_Result() {
         }
         else {
             let a=document.createElement("a")
-                a.innerText="Clicca qui per un riferimento!"
+            a.innerText="Clicca qui per un riferimento!"
             a.setAttribute("href",randomQuestions[i].Reference)
 
             x.innerText = "Domanda nr. " + (i + 1) + " - Risposta errata"

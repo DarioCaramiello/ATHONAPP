@@ -8,7 +8,8 @@ function start_game() {
     let user_name = document.getElementById("nickname").value
 
     if( user_name === ""){
-        document.getElementById("myForm").style.display="block";
+        document.getElementById("id_form_container").style.display="block";
+        //document.getElementById("myForm").style.display="block";
         document.getElementById("container_page").style.display="none";
         document.getElementById("Athonapp").style.display="none";
     } else {
@@ -125,7 +126,6 @@ function goQuiz() {
             break
     }
 }
-
 // function for dynamic buttom login
 function change_border_on() {
     let x = document.getElementById("login_id")
@@ -181,7 +181,6 @@ function button_start_on4(choice) {
     choice_quiz = choice
 }
 
-
 let open_info = 0
 let open_rank = 0
 
@@ -225,6 +224,16 @@ $(document).ready( function() {
             $("#pre_info_rank").hide()
             $("#container_info_rank2").show()
 
+            $.ajax({
+                url: 'http://localhost:5000/api/show-rank',
+                type: 'GET',
+                dataType: "json",
+
+                success: function(result) {
+                    console.log(result)
+                }
+            })
+
             open_rank = 1
         } else {
 
@@ -236,10 +245,8 @@ $(document).ready( function() {
             $("#pre_info_rank").show()
             $("#container_info_rank2").hide()
 
-
             open_rank = 0
         }
-
     });
 });
 
@@ -254,11 +261,10 @@ $(document).ready(function(){
         success: function(result) {
             listaPremi=result
             console.log(listaPremi)
-               daily_prizes(listaPremi)
+            daily_prizes(listaPremi)
         }
     });
 })
-
 
 
 
@@ -271,6 +277,7 @@ $(document).ready( function() {
                 padding: '5px 50px 5px 0',
                 animationDelay: '1000000000000s'
             }, "slow");
+
 
             $("#info_prize").hide()
             $("#container_info_prizes2").show()
