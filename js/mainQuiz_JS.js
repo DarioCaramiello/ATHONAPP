@@ -4,6 +4,9 @@ let tot_reset = 0
 let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "return }" ]
 let risposteQ2 = [ "a", "b", "c" ]
 let risposteQ3 = [ "x", "y", "z" ]
+let qestion = ["OK","ciao"]
+
+let count_question = 0
 let correct_risp_user = 0
 
 let timer = 30;
@@ -51,6 +54,7 @@ function show_game(){
     $("#timer").show()
     $("#game_").show()
     $("#confirm_button").show()
+    $("#id_question_quiz").show()
     $("#container_start").hide()
 }
 
@@ -96,6 +100,7 @@ function verifica_quiz() {
     $("#game_").hide()
     $("#timer").hide()
     $("#confirm_button").hide()
+    $("#id_question_quiz").hide()
     $("#reset_button").show()
 
     $("#riassunto_game").show()
@@ -128,6 +133,11 @@ function change_quiz() {
     $("#confirm_button").show()
     $("#riassunto_game").hide()
     $("#reset_button").hide()
+
+    $("#id_question_quiz").show()
+    $("#question").text(qestion[count_question])
+    count_question = count_question + 1
+
     timer = 30
 
     if(tot_reset === 1){
@@ -197,5 +207,4 @@ let x = setInterval(function () {
         $('.circle_animation').hide();
         verifica_quiz();
     }
-    let confirm_button_id = document.getElementById("input_button")
 }, 1000);

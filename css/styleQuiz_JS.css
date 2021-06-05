@@ -6,6 +6,19 @@ body {
     background: #ffd000;
 }
 
+/* style quesiton */
+#id_question_quiz {
+    display: flex;
+    position: absolute;
+    top: 1%;
+    left: 20%;
+}
+#question {
+    font-size: 30px;
+}
+
+
+/* style quiz */
 .container_div {
     display: grid;
     grid-template-columns: auto auto auto auto ;
@@ -15,7 +28,6 @@ body {
     font-family: Tahoma,sans-serif;
     font-size: 15pt;
 }
-
 .cella {
     background-color: #333533;
 
@@ -38,11 +50,9 @@ body {
 
     z-index: 10;
 }
-
 .cella:hover {
     color: red;
 }
-
 /*sono piu grandi ( anche se hanno stesso padding e stesso margin ) perche il font è piu grande */
 .cella_elem {
     background-color: #999898;
@@ -68,8 +78,6 @@ body {
 
     z-index: 10;
 }
-
-
 .cella_elem:hover{
     color: white;
     animation: zoom-button 500ms ease infinite alternate;
@@ -83,7 +91,7 @@ body {
         font-weight: 550;
     }
 }
-
+/* -------------------- */
 
 /* style button */
 .container_button {
@@ -116,6 +124,8 @@ body {
         transform: scale(1.05);
     }
 }
+/* --------------------- */
+
 
 /* start button */
 #container_start {
@@ -130,11 +140,9 @@ body {
     padding: 100px 0 100px 0;
 
 }
-
 #start-btn{
     margin: 50px;
 }
-
 .btn{
     cursor: pointer;
     font-size: 20px;
@@ -150,7 +158,6 @@ body {
     border: none;
     z-index: 10;
 }
-
 .start-btn {
     cursor: pointer;
     color: black;
@@ -160,7 +167,6 @@ body {
     padding: 10px 10px;
     z-index: 10;
 }
-
 .start-btn:hover{
     animation: start-btn-anim 1s infinite alternate;
 }
@@ -177,7 +183,7 @@ body {
         background-color: hsl(92, 100%, 50%);
     }
 }
-
+/* -------------------- */
 
 /* risp-corretta-errata */
 #riassunto_game {
@@ -208,7 +214,7 @@ body {
 }
 
 
-/* animazione sfondo */
+/* animation background */
 .light {
     position: absolute;
     width: 0;
@@ -221,60 +227,50 @@ body {
     right: 0;
     margin: auto;
 }
-
 .x1{
     animation: floatUp 4s infinite linear;
     transform: scale(1.0);
 }
-
 .x2{
     animation: floatUp 7s infinite linear;
     transform: scale(1.6);
     left: 15%;
 }
-
 .x3{
     animation: floatUp 2.5s infinite linear;
     transform: scale(.5);
     left: -15%;
 }
-
 .x4{
     animation: floatUp 4.5s infinite linear;
     transform: scale(1.2);
     left: -34%;
 }
-
 .x5{
     animation: floatUp 8s infinite linear;
     transform: scale(2.2);
     left: -57%;
 }
-
 .x6{
     animation: floatUp 3s infinite linear;
     transform: scale(.8);
     left: -81%;
 }
-
 .x7{
     animation: floatUp 5.3s infinite linear;
     transform: scale(3.2);
     left: 37%;
 }
-
 .x8{
     animation: floatUp 4.7s infinite linear;
     transform: scale(1.7);
     left: 62%;
 }
-
 .x9{
     animation: floatUp 4.1s infinite linear;
     transform: scale(0.9);
     left: 85%;
 }
-
 @keyframes floatUp{
     0%{top: 100vh; opacity: 0;}
     25%{opacity: 1;}
@@ -282,26 +278,26 @@ body {
     75%{opacity: 1;}
     100%{top: -100vh; opacity: 0;}
 }
-/* timer */
+/* end animation background  */
 
+
+/* timer */
 .container_timer{
-    font-size: 2.9rem;
-    margin-top: 20px;
-    margin-right: -50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 2.9rem;
+    margin-top: 30px;
+    margin-left: 75%;
 }
 #timer{
-    padding: 1px;
-    margin: 3px;
     height: 20vh;
-    width: 20vh;
+    width: 10vw;
 }
-#timer_value{
-    margin-left: 1px;
+#timer_value {
+    margin: 5px;
 }
+/* end timer */
 
+/* animation timer */
 #circle_animation1{
     margin: 1px;
     position: relative;
@@ -621,3 +617,4 @@ body {
         background-color: darkred;
     }
 }
+/* end animtion timer */

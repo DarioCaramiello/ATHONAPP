@@ -108,13 +108,10 @@ body {
     margin-top: 0;
 }
 
-#container_info_rank2 { padding: 100px; }
-
-
 #container_info { background: linear-gradient(to left, #8defae, #2e8b57); }
 #container_info2, #container_info_prizes2 { margin-left: 10px; }
 
-#container_name_user, #count_point_rank , #premi{
+#container_name_user, #lista_rank, #premi{
     font-size: 20pt;
     color: white;
     font-family: "Times New Roman",sans-serif;

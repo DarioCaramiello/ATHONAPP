@@ -2,6 +2,30 @@ let choice_quiz = -1
 let listaPremi
 let quiz
 let current_nickname=""
+let rank_out = {
+    1: {"name": " ", "point": 0},
+    2: {"name": " ", "point": 0},
+    3: {"name": " ", "point": 0},
+    4: {"name": " ", "point": 0},
+    5: {"name": " ", "point": 0},
+}
+
+/* required for daily rewards */
+$(document).ready(function(){
+    $.ajax({
+        url: 'http://localhost:5000/api/show-prizes',
+        type: 'GET',
+        dataType: "json",
+
+        success: function(result) {
+            listaPremi=result
+            console.log(listaPremi)
+            daily_prizes(listaPremi)
+        }
+    });
+})
+
+
 
 function start_game() {
 
@@ -38,7 +62,6 @@ function start_game() {
                         url: 'http://localhost:5000/api/get-nickname',
                         type: 'POST',
                         dataType: "json",
-
                         success: function(result) {
                             current_nickname=result["nickname"]
                             if (current_nickname!=="")
@@ -50,13 +73,11 @@ function start_game() {
                                     data: {
                                         'name': current_nickname
                                     },
-
                                     success: function (result) {
 
                                         quiz = result
                                         console.log(quiz)
                                         for (const key in quiz) {
-                                            console.log(key + quiz[key])
                                             if (quiz[key] === "1")
                                                 $("input[value = " + key + "").prop("disabled", true)
                                         }
@@ -73,13 +94,6 @@ function start_game() {
                 } else {
                     console.log("ERROR")
                 }
-                /*
-                console.log("login effettuato")
-                console.log(result)
-                listaPremi=result[1]
-                console.log(listaPremi)
-                daily_prizes(listaPremi)
-                */
             }
         })
     }
@@ -90,15 +104,6 @@ function daily_prizes(daily_list)
     let today=new Date()
     let day=today.getDay()
     console.log(day)
-    /* let daily_list=[
-        ["PS Store Credit" , "Dogecoing", "Amazon Credit"],
-        ["Google Credit", "Prize2" , "Prize3"],
-        ["Day3prie", "PRize2", "prize3"],
-        ["Day4prie", "PRize2", "prize3"],
-        ["Day5prie", "PRize2", "prize3"],
-        ["Day6prie", "PRize2", "prize3"],
-        ["Day7prie", "PRize2", "prize3"],
-    ]*/
     let element=document.getElementById("lista")
     let i
     for (i=0; i<daily_list[day].length;i++)
@@ -181,6 +186,22 @@ function button_start_on4(choice) {
     choice_quiz = choice
 }
 
+function pop_up_istruzioni()
+{
+    let displayCerchio=document.getElementById("outer-circle").style.display
+    console.log(displayCerchio)
+
+    if(displayCerchio!=="block"){
+        document.getElementById("outer-circle").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("outer-circle").style.display = "none";
+    }
+}
+
+
+
 let open_info = 0
 let open_rank = 0
 
@@ -214,7 +235,7 @@ $(document).ready( function() {
 $(document).ready( function() {
     $("#container_info_rank").click(function () {
 
-        if(open_rank === 0) {
+        if(open_rank === 0){
 
             $("#container_info_rank").animate({
                 padding: '5px 50px 5px 0',
@@ -224,6 +245,7 @@ $(document).ready( function() {
             $("#pre_info_rank").hide()
             $("#container_info_rank2").show()
 
+
             $.ajax({
                 url: 'http://localhost:5000/api/show-rank',
                 type: 'GET',
@@ -231,42 +253,37 @@ $(document).ready( function() {
 
                 success: function(result) {
                     console.log(result)
+
+                    let var_count = 1
+
+                    for (item in result ) {
+                        let element = document.getElementById("lista_rank")
+                        var_name = result[var_count]["name"]
+                        var_point = result[var_count]["point"]
+                        var_point_string = var_point.toString()
+                        out = var_name + " " + var_point_string
+                        let x = document.createElement("li")
+                        x.innerText = out
+                        element.appendChild(x)
+                        var_count = var_count + 1
+                    }
                 }
             })
 
             open_rank = 1
         } else {
 
+            $("#lista_rank").empty()
             $("#container_info_rank").animate({
                 padding: '0',
                 animationDelay: '0s'
             }, "slow");
-
             $("#pre_info_rank").show()
             $("#container_info_rank2").hide()
-
             open_rank = 0
         }
     });
 });
-
-
-$(document).ready(function(){
-
-    $.ajax({
-        url: 'http://localhost:5000/api/show-prizes',
-        type: 'GET',
-        dataType: "json",
-
-        success: function(result) {
-            listaPremi=result
-            console.log(listaPremi)
-            daily_prizes(listaPremi)
-        }
-    });
-})
-
-
 
 $(document).ready( function() {
     $("#container_info_prizes").click(function () {
@@ -299,19 +316,5 @@ $(document).ready( function() {
 
     });
 });
-
-function pop_up_istruzioni()
-{
-    let displayCerchio=document.getElementById("outer-circle").style.display
-    console.log(displayCerchio)
-
-    if(displayCerchio!=="block"){
-        document.getElementById("outer-circle").style.display = "block";
-    }
-    else
-    {
-        document.getElementById("outer-circle").style.display = "none";
-    }
-}
 
 
