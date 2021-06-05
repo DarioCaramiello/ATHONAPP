@@ -23,6 +23,11 @@ body {
     animation: zoomout 15s ease-in-out infinite alternate;
 }
 
+#Athon_app_login {
+
+}
+
+
 @keyframes zoomout {
     from{
         background-position: bottom;
@@ -54,35 +59,38 @@ body {
     }
 }
 .form-container {
-    margin: 0 0 0 0;
     padding: 100px  20px 100px 20px;
     border-radius: 20px;
-    background: radial-gradient(#3e8f51, #616161);
+    background: #109f00
 }
 .form-container input[type=text]{
     border: none;
     text-align: center;
-    padding: 10px 0 10px 0;
-    margin: 50px 0 50px 50px;
+    padding: 10px 50px 10px 50px;
+    margin: 50px 0 50px
+    50px;
     color: #020202;
-    z-index: 10;
 }
 .form-container input[type=text]:focus{
     background-color: #c0c0c0;
     outline: none;
 }
-.form-container .btn {
 
-    background-color: #80ed99;
+.btn {
+    text-align: center;
+    font-size: 20pt;
     color: black;
-    border: none;
-    cursor: pointer;
-    width: 100px;
+    background-color: #80ed99;
+
+    width: 200px;
     height: 50px;
-    margin-bottom:10px;
-    margin-left: 250px;
+
+    margin: 10px 20px 0 60px;
+
     border-radius: 10px;
-    z-index: 10;
+    border: none;
+
+    cursor: pointer;
 }
 
 /* --------------------------------- BANNER UTENTE  ---------------------------------- */
@@ -141,7 +149,7 @@ body {
 #container_info_prizes { background: linear-gradient(to right, #ecf01e,goldenrod); }
 
 
-/* sfondo del login */
+/* sfondo del login
 .light {
     position: absolute;
     width: 0;
@@ -214,7 +222,7 @@ body {
     75%{opacity: 1;}
     100%{top: 200px; opacity: 0;}
 }
-
+*/
 /******* testing simon stuff ********/
 
 #prova-outer-circle{
@@ -225,9 +233,6 @@ body {
     align-items: center;
 }
 
-#outer-circle {
-
-}
 
 #start{
     cursor: pointer;

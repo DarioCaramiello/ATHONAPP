@@ -20,6 +20,21 @@ $("document").ready(function(){
         success: function(result) {
             console.log("index_ricevuto : " + result["nickname"])
             name_user_for_point = result["nickname"]
+            $.ajax({
+                url:'http://localhost:5000/api/update-quiz',
+                type:'POST',
+                dataType : 'json',
+                data:
+                    {
+                        name: name_user_for_point,
+                        quiz: 'JS',
+                        stato: 1
+                    },
+
+                success: function (result){
+                    console.log(result)
+                }
+            })
         }
     })
 

@@ -1,6 +1,6 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
-const restartButton = document.getElementById('restart-btn')
+const getbackButton=document.getElementById("getback-btn")
 const questionContainerElement=document.getElementById('question_container')
 /*costante per la singola domanda*/
 const questionElement = document.getElementById('question')
@@ -8,10 +8,13 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 /*variabile per rendere random le domande*/
 let randomQuestions, currentQuestionIndex
 
+let Punti=0;
+let index_id
+let name_user_for_point = NaN
+
 
 
 startButton.addEventListener('click', startGame)
-restartButton.addEventListener('click',startGame)
 nextButton.addEventListener('click',()=>{
     /*incremento il contatore*/
     currentQuestionIndex++
@@ -19,19 +22,27 @@ nextButton.addEventListener('click',()=>{
 })
 
 function startGame(){
-    restartButton.classList.add('hide')
     startButton.classList.add('hide')
     /*genera domande in ordine casuale all'interno dell'array*/
     randomQuestions = questions_array.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
+
     nextQuestion()
 }
 
 function nextQuestion(){
     resetState()
-    showQuestion(randomQuestions[currentQuestionIndex])
+    //aggiunto check per verificare la fine delle domande VR
+    if(randomQuestions.length > currentQuestionIndex)
+        showQuestion(randomQuestions[currentQuestionIndex])
+    else // esco e verifico i risultati VR
+        show_Result()
+
 }
+
+
+
 
 /*********************question = oggetto dell'array questions_array*/
 function showQuestion(question){
@@ -74,14 +85,8 @@ function selectAnswer(e){
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-
-
-    if(randomQuestions.length > currentQuestionIndex + 1) {
-        /*mostro il bottone next*/
-        nextButton.classList.remove('hide')
-    }else{
-        restartButton.classList.remove('hide')
-    }
+    /*mostro il bottone next*/
+    nextButton.classList.remove('hide')
 }
 
 function setStatusClass(element, correct){
@@ -89,6 +94,20 @@ function setStatusClass(element, correct){
     if(correct){
         /*se la risposta e' corretta aggiungo la classe correct*/
         element.classList.add('correct')
+        Punti+=1
+        randomQuestions[currentQuestionIndex].result=true
+        $.ajax({
+            url: "http://localhost:5000/api/update-point",
+            type: "POST",
+            dataType: "text",
+            data: {
+                point: Punti,
+                name: name_user_for_point
+            },
+            success: function (result) {
+                console.log(result)
+            }
+        });
     }else{
         /*se la risposta e' sbagliata aggiungo la classe wrong*/
         element.classList.add('wrong')
@@ -110,7 +129,8 @@ const questions_array = [
             { text: '? = 27, ?? = 22', correct: false },
             { text: '? = 25, ?? = 27', correct: false },
             { text: '? = 24, ?? = 19', correct: false }
-        ]
+        ],
+        result: false
     },
     {
         question: 'Un contadino compra 500 kg di patate a 15 centesimi al kg. Le rivende a 27 centesimi al kg. Quanto guadagna in tutto?',
@@ -120,7 +140,93 @@ const questions_array = [
             { text: '60',correct: true },
             { text: '90',correct: false },
             { text: '600',correct: false },
-        ]
+        ],
+        result:false
 
     }
 ]
+
+
+
+/* function onload document */
+$("document").ready(function() {
+
+    /* --- request server for id user --- */
+    $.ajax({
+        url: "http://localhost:5000/api/get-nickname",
+        type: "POST",
+        dataType: "json",
+        success: function (result) {
+            console.log("index_ricevuto : " + result["nickname"])
+            name_user_for_point = result["nickname"]
+        }
+    });
+})
+
+
+// Send point to the server and show results
+function show_Result() {
+
+    nextButton.style.display = "none";
+    getbackButton.style.display = "block";
+    questionContainerElement.style.display = "none"
+/*
+    $.ajax({
+        url: "http://localhost:5000/api/update-point",
+        type: "POST",
+        dataType: "text",
+        data: {
+            point: Punti,
+            name: name_user_for_point
+        },
+        success: function (result) {
+            console.log(result)
+        }
+    });
+*/
+
+    let element=document.getElementById("lista_domande")
+    let i
+    for(i=0;i<randomQuestions.length;i++)
+    {
+        let x = document.createElement("li");
+        if (randomQuestions[i].result===true) {
+            x.innerText = "Domanda nr. " + (i + 1) + " - Risposta Corretta"
+            element.appendChild(x)
+        }
+        else {
+            let a=document.createElement("a")
+            a.innerText="Clicca qui per un riferimento!"
+            a.setAttribute("href",randomQuestions[i].Reference)
+
+            x.innerText = "Domanda nr. " + (i + 1) + " - Risposta errata"
+            element.appendChild(x)
+            x.insertAdjacentElement("afterend", a)
+        }
+    }
+
+}
+
+
+$("#getback-btn").click(function(){
+    $.ajax({
+        url:'http://localhost:5000/api/update-quiz',
+        type:'POST',
+        dataType : 'json',
+        data:
+            {
+                name: name_user_for_point,
+                quiz: 'LOGIC',
+                stato: 1
+            },
+
+        success: function (result){
+            console.log(result)
+        }
+
+    })
+    setTimeout(function(){
+        window.location = 'page2.html'
+    },2000)
+
+});
