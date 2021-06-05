@@ -11,7 +11,7 @@ body{
     padding: 0;
 }
 
-/*--------------------------------TIMER--------------------*/
+/*--------------------------------TIMER----------------------------*/
 #container_timer{
     display: flex;
     justify-content: center;
@@ -408,3 +408,40 @@ body{
 .hide {
     display: none;
 }
+
+#confirm-btn {
+    position: absolute;
+    width: max(10vw, 100px);
+    height: max(4vh, 40px);
+    margin: 0 auto;
+    top: 77%;
+    left: 57%;
+    z-index: 100;
+}
+
+/* risp-corretta-errata */
+#riassunto_game {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#risp_errata,#risp_corretta {
+    font-size: 1.2em;
+    padding: 2px 2px;
+    margin-bottom: 80%;
+    border-radius: 20px;
+    z-index: 10;
+}
+@keyframes change_  {
+    from{
+        margin: 0;
+        padding: 10%;
+        opacity: 0;
+    }
+    to {
+        padding: 30px;
+        opacity: 100%;
+        margin-top: 10%;
+    }
+}
+
