@@ -15,7 +15,7 @@
             <div id="circle_animation3" class="circle_animation"></div>
             <div id="circle_animation4" class="circle_animation"></div>
             <div id="circle_animation5" class="circle_animation"></div>
-            <div id="circle_animation6" class="csircle_animation"></div>
+            <div id="circle_animation6" class="circle_animation"></div>
             <div id="circle_animation7" class="circle_animation"></div>
             <div id="circle_animation8" class="circle_animation"></div>
             <div id="circle_animation9" class="circle_animation"></div>
@@ -27,6 +27,20 @@
         <div id="question_container" class="hide">
             <div id="question-container-inner">
                 <div id="request"></div>
+                <!-- ESITO GAME ----------->
+                <div id="riassunto_game" class="hide">
+                    <div id="risp_corretta" class="hide" style="background-color: green">
+                        <p>Soluzione corretta. Hai guadagnato 100 punti!</p>
+                    </div>
+                    <div id="risp_errata" class="hide" style="background-color: #950f0f">
+                        <p>Soluzione errata. Hai guadagnato 0 punti!</p>
+                        <p>Questo e' il codice corretto:</p>
+                    </div>
+                    <div id="reset_game" class="container_button hide">
+                        <input id="reset_button" class="style_button hide" type="button" value="Next" onclick="reset()">
+                    </div>
+                </div>
+                <!--- END -------------->
             </div>
             <label for="question"></label>
             <textarea id="question" autofocus></textarea>
@@ -35,11 +49,12 @@
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
-           <!-- <button id="confirm-btn" class="confirm-btn btn hide" onclick="verify_quiz()">Confirm</button> -->
         </div>
     </div>
 
-    <p  id="confirm-btn" class="confirm-btn btn hide" onclick="verify_quiz()"> A fess e mammt</p>
+
+
+    <button id="confirm-btn" class="confirm-btn btn hide">Confirm</button>
 
     <!-- background page -->
     <div class='light x1'></div>

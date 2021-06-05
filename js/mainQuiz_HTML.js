@@ -21,12 +21,26 @@ const circle9 = document.getElementById('circle_animation9')
 const circle10 = document.getElementById('circle_animation10')
 const outer_animation = document.getElementById('container_timer')
 
-
 startButton.addEventListener('click', startGame)
+confirmButton.addEventListener('click', verifyQuiz)
 nextButton.addEventListener('click',()=>{
     /*incremento il contatore*/
     currentQuestionIndex++
     nextQuestion()
+})
+
+/* function onload document */
+$("document").ready(function() {
+    /* --- request server for id user --- */
+    $.ajax({
+        url: "http://localhost:5000/api/get-nickname",
+        type: "POST",
+        dataType: "json",
+        success: function (result) {
+            console.log("index_ricevuto : " + result["nickname"])
+            name_user_for_point = result["nickname"]
+        }
+    })
 })
 
 
@@ -73,53 +87,15 @@ function showQuestion(question){
     textArea.value = question['code']
 }
 
-/*funzione per cancellare ogni volta le risposte*/
-function resetState(){
-    clearStatusClass(document.body)
-    nextButton.classList.add('hide')
-    /*finche' c'e' un figlio*/
-    while(answerButtonsElement.firstChild){
-        /*viene rimosso*/
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
-    }
-}
 
-function selectAnswer(e){
-    /*inseriamo nella variabile selectedButton il bottone premuto*/
-    const selectedButton = e.target
-    /*controllo se e' corretta*/
-    const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    /*inserisco tutti i figli (bottoni) in un array per ciclarli con forEach()*/
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
-
-
-    if(randomQuestions.length > currentQuestionIndex + 1) {
+    /*if(randomQuestions.length > currentQuestionIndex + 1) {
         /*mostro il bottone next*/
-        nextButton.classList.remove('hide')
+        /*nextButton.classList.remove('hide')
     }else{
-        /*restartButton.classList.remove('hide')*/
+        restartButton.classList.remove('hide')
     }
-}
-/*funzione per aggiungere le classi correct e wrong*/
-function setStatusClass(element, correct){
-    clearStatusClass(element)
-    if(correct){
-        /*se la risposta e' corretta aggiungo la classe correct*/
-        element.classList.add('correct')
-    }else{
-        /*se la risposta e' sbagliata aggiungo la classe wrong*/
-        element.classList.add('wrong')
-    }
-}
+}*/
 
-/*funzione per rimuovere la classe correct e wrong*/
-function clearStatusClass(element){
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-}
 
 //timer
 function timerStart(){
@@ -203,10 +179,29 @@ const questions_array = [
             "    </head>\n" +
             "    <body>\n" +
             "       <p>Questo è un paragrafo<\p>\n" +
-            "        <img src='foto.jpg'></img>\n" +
+            "        <src=foto.jpg>\n" +
             "        <style>\n" +
             "            body \n" +
             "            background-image: ('foto.jpg');\n" +
+            "        }\n"+
+            "        </style>\n" +
+            "    </body>\n" +
+            "    </html>",
+        answer: "<!doctype html>\n" +
+            "    <html lang=\"en\">\n" +
+            "    <head>\n" +
+            "        <meta charset=\"UTF-8\">\n" +
+            "        <meta name=\"viewport\"\n" +
+            "              content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n" +
+            "        <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n" +
+            "        <title>Document</title>\n" +
+            "    </head>\n" +
+            "    <body>\n" +
+            "       <p>Questo è un paragrafo<\p>\n" +
+            "        <img src='foto.jpg'>\n" +
+            "        <style>\n" +
+            "            body \n" +
+            "            background-image: url('foto.jpg');\n" +
             "        }\n"+
             "        </style>\n" +
             "    </body>\n" +
@@ -215,11 +210,22 @@ const questions_array = [
 ]
 
 
-function verify_quiz() {
+function verifyQuiz() {
     let risposta = document.getElementById("question").value
     if( risposta === questions_array[0]["answer"]) {
+        $('#confirm-btn').hide()
+        $('#request').hide()
+        $('#question').hide()
+        $('#riassunto_game').show()
+        $('#risp_corretta').show()
         console.log("Risposta Corretta")
     } else {
+        $('#confirm-btn').hide()
+        $('#request').hide()
+        questionElement.innerText = questions_array[0]["answer"]
+        $('#question').hide()
+        $('#riassunto_game').show()
+        $('#risp_errata').show()
         console.log("Risposta errata")
     }
 }
