@@ -316,5 +316,3 @@ $(document).ready( function() {
 
     });
 });
-
-

@@ -50,7 +50,7 @@ body.wrong{
     font-size: 20px;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
-   
+
 }
 
 .controls{
@@ -151,7 +151,7 @@ body.wrong{
     font-size: 14px;
     font-weight: normal;
     text-align: left;
-    
+
 
 }
 
@@ -162,7 +162,7 @@ body.wrong{
     padding: 20px;
     width: 150px;
     height: 130px;
-   /*margin: 40px 10px;*/
+    /*margin: 40px 10px;*/
     top: 0;
     -webkit-animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
     animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
@@ -215,3 +215,69 @@ body.wrong{
     }
 }
 
+
+/* animation background */
+.light {
+    position: absolute;
+    width: 0;
+    opacity: .75;
+    background-color: #172c99;
+    box-shadow: #000000 0 0 20px 2px;
+    top: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.x1{
+    animation: floatUp 4s infinite linear;
+    transform: scale(1.0);
+}
+.x2{
+    animation: floatUp 7s infinite linear;
+    transform: scale(1.6);
+    left: 15%;
+}
+.x3{
+    animation: floatUp 2.5s infinite linear;
+    transform: scale(.5);
+    left: -15%;
+}
+.x4{
+    animation: floatUp 4.5s infinite linear;
+    transform: scale(1.2);
+    left: -34%;
+}
+.x5{
+    animation: floatUp 8s infinite linear;
+    transform: scale(2.2);
+    left: -57%;
+}
+.x6{
+    animation: floatUp 3s infinite linear;
+    transform: scale(.8);
+    left: -81%;
+}
+.x7{
+    animation: floatUp 5.3s infinite linear;
+    transform: scale(3.2);
+    left: 37%;
+}
+.x8{
+    animation: floatUp 4.7s infinite linear;
+    transform: scale(1.7);
+    left: 62%;
+}
+.x9{
+    animation: floatUp 4.1s infinite linear;
+    transform: scale(0.9);
+    left: 85%;
+}
+@keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
+/* end animation background  */
