@@ -258,10 +258,10 @@ $(document).ready( function() {
 
                     for (item in result ) {
                         let element = document.getElementById("lista_rank")
-                        var_name = result[var_count]["name"]
-                        var_point = result[var_count]["point"]
-                        var_point_string = var_point.toString()
-                        out = var_name + " " + var_point_string
+                        let var_name = result[var_count]["name"]
+                        let var_point = result[var_count]["point"]
+                        let var_point_string = var_point.toString()
+                        let out = var_name + " " + var_point_string
                         let x = document.createElement("li")
                         x.innerText = out
                         element.appendChild(x)
