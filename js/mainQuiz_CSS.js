@@ -170,8 +170,8 @@ function show_Result() {
             let a=document.createElement("a")
             a.innerText="Clicca qui per un riferimento!"
             a.setAttribute("href",randomQuestions[i].Reference)
-
-            x.innerText = "Domanda nr. " + (i + 1) + " - Risposta errata"
+            a.setAttribute("target","_blank")
+            x.innerText = "Domanda nr. " + (i + 1) + " - Risposta errata - La risposta esatta è :" +randomQuestions[i].Answer
             element.appendChild(x)
             x.insertAdjacentElement("afterend", a)
         }
@@ -202,4 +202,11 @@ $("#getback-btn").click(function(){
         window.location = 'page2.html'
     },2000)
 
+});
+
+window.addEventListener('beforeunload', (event) => {
+    // Cancel the event as stated by the standard.
+    event.preventDefault();
+    // Chrome requires returnValue to be set.
+    event.returnValue = '';
 });
