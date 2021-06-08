@@ -2,13 +2,6 @@ let choice_quiz = -1
 let listaPremi
 let quiz
 let current_nickname=""
-let rank_out = {
-    1: {"name": " ", "point": 0},
-    2: {"name": " ", "point": 0},
-    3: {"name": " ", "point": 0},
-    4: {"name": " ", "point": 0},
-    5: {"name": " ", "point": 0},
-}
 
 /* required for daily rewards */
 $(document).ready(function(){

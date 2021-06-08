@@ -1,15 +1,11 @@
 
 let tot_reset = 0
-
 let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "return }" ]
 let risposteQ2 = [ "a", "b", "c" ]
 let risposteQ3 = [ "x", "y", "z" ]
 let qestion = ["OK","ciao"]
-
 let count_question = 0
 let correct_risp_user = 0
-
-let timer = 30;
 let name_user_for_point = NaN
 
 /* function onload document */
@@ -56,6 +52,7 @@ function show_game(){
     $("#confirm_button").show()
     $("#id_question_quiz").show()
     $("#container_start").hide()
+    timerStart()
 }
 
 /* ---- function for drag and drop ---- */
@@ -133,12 +130,12 @@ function change_quiz() {
     $("#confirm_button").show()
     $("#riassunto_game").hide()
     $("#reset_button").hide()
-
     $("#id_question_quiz").show()
     $("#question").text(qestion[count_question])
     count_question = count_question + 1
 
-    timer = 30
+    timerStart()
+    $('.circle_animation').show();
 
     if(tot_reset === 1){
         $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
@@ -185,26 +182,51 @@ function return_main_page() {
 }
 
 
-var time_out = "Time out";
-/* per cambiare font size alla scritta Time out */
-var result_time_out = time_out.fontsize(15);
+function timerStart(){
+    var time_out = "Time out";
+    /*per cambiare font size alla scritta Time out*/
+    var result_time_out = time_out.fontsize(6);
+    let timer = 60;
 // Update the count down every 1 second
+    let x = setInterval(function() {
+        timer -= 1
+        document.getElementById("timer_value").innerText = timer;
+        /*per spostare i numeri al centro*/
+        if(timer < 10) {
+            document.getElementById("timer_value").style.marginLeft = "33px";
+        }
+        if (timer <= 0) {
+            clearInterval(x);
+            /*per nascondere l'animazione del timer*/
+            $('.circle_animation').hide();
+            /*
+            document.getElementById("timer_value").style.marginLeft = "-25px";
+            document.getElementById("timer_value").innerHTML = result_time_out;
+            document.getElementById("timer_value").style.color = "#DDD92A";
+            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
+            */
+        }
 
-let x = setInterval(function () {
-    timer -= 1
-    document.getElementById("timer_value").innerText = timer;
-    /*per spostare i numeri al centro*/
-    if (timer < 10) {
-        document.getElementById("timer_value").style.marginLeft = "15px";
-    }
-    if (timer < 0) {
-        clearInterval(x);
-        document.getElementById("timer_value").style.marginLeft = "-40px";
-        document.getElementById("timer_value").innerHTML = result_time_out;
-        document.getElementById("timer_value").style.color = "#DDD92A";
-        document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
-        /*per nascondere l'animazione del timer*/
-        $('.circle_animation').hide();
-        verifica_quiz();
-    }
-}, 1000);
+        /*quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
+        let confirmButton = document.getElementById("input_button")
+        confirmButton.addEventListener("click", () => {
+            clearInterval(x)
+            $('.circle_animation').hide();
+            /*
+            document.getElementById("timer_value").style.marginLeft = "-25px";
+            document.getElementById("timer_value").style.color = "#DDD92A";
+            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
+            */
+            document.getElementById("timer_value").innerHTML = result_time_out;
+            /* document.getElementById("confirm_btn").style.display = "none" */
+            timer = 30
+        })
+
+        let nextButton = document.getElementById("reset_button")
+        nextButton.addEventListener("click", () => {
+            clearInterval(x)
+            document.getElementById("timer_value").innerHTML = 30
+            /* document.getElementById("confirm_btn").style.display = "none" */
+        } )
+    }, 1000);
+}

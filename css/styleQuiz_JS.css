@@ -1,8 +1,7 @@
 body {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
     background: #ffd000;
 }
 
@@ -10,25 +9,42 @@ body {
 #id_question_quiz {
     display: flex;
     position: absolute;
-    top: 1%;
+    top: 5%;
     left: 20%;
 }
 #question {
-    font-size: 30px;
-}
+    display: flex;
+    font-size: 1.5rem;
 
+    background-color: #5E6973;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    padding: 0.5rem;
+    width: 40vw;
+
+}
+/* -------------------- */
 
 /* style quiz */
 .container_div {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
     display: grid;
     grid-template-columns: auto auto auto auto ;
-    gap: 10pt;
-    margin: 0 0 100px 250px;
-    position:absolute;
+    gap: 1rem;
+
     font-family: Tahoma,sans-serif;
-    font-size: 15pt;
+    font-size: 1rem;
 }
 .cella {
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     background-color: #333533;
 
     padding: 40px;
@@ -36,6 +52,11 @@ body {
     color: white;
     border-radius: 20px;
 
+    width: 10vw;
+    height: 10vh;
+
+    z-index: 10;
+/*
     position: relative;
     right: -40px;
     top: -50px;
@@ -48,13 +69,16 @@ body {
     min-width: 10vw;
     min-height: 10vh;
 
-    z-index: 10;
+ */
 }
 .cella:hover {
     color: red;
 }
-/*sono piu grandi ( anche se hanno stesso padding e stesso margin ) perche il font è piu grande */
 .cella_elem {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
     background-color: #999898;
 
     cursor: grab;
@@ -63,20 +87,13 @@ body {
 
     border-radius: 20px;
 
-    position: relative;
-    top: -40px;
-    left: -40px;
+    width: 15vw;
+    height: 15vh;
 
-    padding: 30px;
-    width: 50vw;
-    height: 50vh;
-
-    max-width: 10vw;
-    max-height: 10vh;
-    min-width: 10vw;
-    min-height: 10vh;
+    padding-top: 2.3rem;
 
     z-index: 10;
+
 }
 .cella_elem:hover{
     color: white;
@@ -95,9 +112,20 @@ body {
 
 /* style button */
 .container_button {
+
+    justify-content: center;
+
     position: absolute;
-    bottom: 60px;
+    bottom: 5%;
+    max-height: 5%;
     left: 40%;
+    /*
+    max-width: 20vw;
+    max-height: 10vh;
+    min-width: 10vw;
+    min-height: 10vh;
+
+     */
 }
 .style_button {
     cursor: pointer;
@@ -130,18 +158,16 @@ body {
 /* start button */
 #container_start {
     justify-content: center;
-    align-items: center;
+    align-content: center;
     display: flex;
     background-color: #000000;
-
     z-index: 20;
-
-    margin: 300px 150px 0 150px;
-    padding: 100px 0 100px 0;
+    margin: 13% 20%;
+    padding: 5em;
 
 }
 #start-btn{
-    margin: 50px;
+    margin: 10%;
 }
 .btn{
     cursor: pointer;
@@ -212,7 +238,6 @@ body {
         margin-top: 10%;
     }
 }
-
 
 /* animation background */
 .light {
