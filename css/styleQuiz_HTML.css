@@ -22,7 +22,7 @@ body{
     margin: 0 auto;
     height: 52vh;
     width: 27vw;
-    z-index: 1;
+    z-index: -1;
 }
 
 /*.animation_js_outer{
@@ -50,18 +50,15 @@ body{
 #timer_value{
     margin-left: 0.5em;
     margin-bottom: 0;
+    text-shadow: 2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744
 }
 
 .circle_animation{
     height: 75px;
     width: 75px;
     border-radius: 50%;
-    border: 1px solid black;
     z-index: 2;
 }
-/*.animation_js_circle{
-    animation: timer-anim 6s ease-in forwards;
-}*/
 
 #circle_animation1{
     margin-left: 23%;
@@ -183,9 +180,16 @@ body{
     border-radius: 5px;
     box-shadow: 0 0 10px 6px;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.3em;
     font-family: "Montserrat", sans-serif;
     z-index: 100;
+}
+#container_list{
+    display: inherit;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.5rem;
+
 }
 
 #question_container {
@@ -195,7 +199,6 @@ body{
     width: 67vw;
     height: 90vh;
     background-color: orangered;
-    animation: little-transform 2s infinite linear alternate;
 }
 
 #question-container-inner {
@@ -209,25 +212,8 @@ body{
     width: 60vw;
     height: 80vh;
     background-color: orange;
-    animation: little-transform2 2s infinite linear alternate;
-}
-@keyframes little-transform {
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(1.04);
-    }
 }
 
-@keyframes little-transform2 {
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(0.960);
-    }
-}
 
 #request {
     margin-bottom: 29rem;
@@ -275,26 +261,16 @@ body{
 .btn:hover{
     border-color: black;
 }
-.start-btn, .next-btn, .restart-btn{
+.start-btn{
     cursor: pointer;
     color: black;
     font-size: 30px;
     font-weight: 800;
     padding: 10px 10px;
 }
-.next-btn, .restart-btn{
-    font-size: 20px;
-    margin: 0;
-    padding: 2px;
-    height: 38px;
-    width: 180px;
-}
 
 .start-btn:hover{
     animation: start-btn-anim 500ms infinite alternate;
-}
-.next-btn:hover, .restart-btn:hover{
-    animation: next-btn-anim 500ms infinite alternate;
 }
 
 
@@ -309,19 +285,6 @@ body{
         font-size: 28px;
         transform: scale(0.995);
         background-color: transparent;
-    }
-}
-@keyframes next-btn-anim {
-    from{
-        opacity: 100%;
-
-    }
-    to{
-        opacity: 90%;
-        border-radius: 20px;
-        font-size: 22px;
-        transform: scale(1.01);
-        background-color: hsla(223, 100%, 40%, 1);
     }
 }
 
@@ -410,6 +373,25 @@ body{
 }
 
 #confirm-btn {
+    position: absolute;
+    width: max(10vw, 100px);
+    height: max(4vh, 40px);
+    margin: 0 auto;
+    top: 77%;
+    left: 57%;
+    z-index: 100;
+}
+
+#next-btn{
+    position: absolute;
+    width: max(10vw, 100px);
+    height: max(4vh, 40px);
+    margin: 0 auto;
+    top: 77%;
+    left: 57%;
+    z-index: 100;
+}
+#main-btn{
     position: absolute;
     width: max(10vw, 100px);
     height: max(4vh, 40px);

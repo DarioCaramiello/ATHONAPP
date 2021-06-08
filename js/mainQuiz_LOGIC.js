@@ -27,7 +27,6 @@ function startGame(){
     randomQuestions = questions_array.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
-
     nextQuestion()
 }
 

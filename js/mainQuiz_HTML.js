@@ -4,10 +4,9 @@ const confirmButton = document.getElementById('confirm-btn')
 const questionContainerElement = document.getElementById('question_container')
 /*costante per la singola domanda*/
 const questionElement = document.getElementById('request')
-const answerButtonsElement = document.getElementById('answer-buttons')
 const textArea = document.getElementById('question')
 /*variabile per rendere random le domande*/
-let randomQuestions, currentQuestionIndex
+let randomQuestions, reset
 const timer_value = document.getElementById('timer')
 const circle1 = document.getElementById('circle_animation1')
 const circle2 = document.getElementById('circle_animation2')
@@ -23,11 +22,7 @@ const outer_animation = document.getElementById('container_timer')
 
 startButton.addEventListener('click', startGame)
 confirmButton.addEventListener('click', verifyQuiz)
-nextButton.addEventListener('click',()=>{
-    /*incremento il contatore*/
-    currentQuestionIndex++
-    nextQuestion()
-})
+nextButton.addEventListener('click', nextQuestion)
 
 /* function onload document */
 $("document").ready(function() {
@@ -43,9 +38,7 @@ $("document").ready(function() {
     })
 })
 
-
-function startGame(){
-    startButton.classList.add('hide')
+function startAnimations(){
     circle1.style.animation = "timer-anim 6s ease-in forwards"
     circle2.style.animation = "timer-anim 6s ease-in forwards"
     circle2.style.animationDelay = "6s"
@@ -65,11 +58,30 @@ function startGame(){
     circle9.style.animationDelay = "48s"
     circle10.style.animation = "timer-anim 6s ease-in forwards"
     circle10.style.animationDelay = "54s"
-    outer_animation.style.animation = "outer_anim 60s linear forwards"
+    outer_animation.style.animation = "outer_anim 20s infinite linear alternate"
+}
+function stopAnimations(){
+    circle1.style.animationPlayState = "paused"
+    circle2.style.animationPlayState = "paused"
+    circle3.style.animationPlayState = "paused"
+    circle4.style.animationPlayState = "paused"
+    circle5.style.animationPlayState = "paused"
+    circle6.style.animationPlayState = "paused"
+    circle7.style.animationPlayState = "paused"
+    circle8.style.animationPlayState = "paused"
+    circle9.style.animationPlayState = "paused"
+    circle10.style.animationPlayState = "paused"
+    outer_animation.style.animationPlayState = "paused"
+}
+
+function startGame(){
+    startButton.classList.add('hide')
+    reset = 0
+    startAnimations()
     timerStart()
     /*genera domande in ordine casuale all'interno dell'array*/
-    randomQuestions = questions_array.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
+    /*randomQuestions = questions_array.sort(() => Math.random() - .5)*/
+    randomQuestions = Math.floor(Math.random()*3)
     questionContainerElement.classList.remove('hide')
     confirmButton.classList.remove('hide')
     nextQuestion()
@@ -77,24 +89,34 @@ function startGame(){
 
 function nextQuestion(){
     /*resetState()*/
-    showQuestion(randomQuestions[currentQuestionIndex])
-}
-
-function showQuestion(question){
-    /*mostra il testo di una domanda che si trova nell'array question*/
-    questionElement.innerText = question['question']
-    /*mostro il codice da correggere*/
-    textArea.value = question['code']
-}
-
-
-    /*if(randomQuestions.length > currentQuestionIndex + 1) {
-        /*mostro il bottone next*/
-        /*nextButton.classList.remove('hide')
-    }else{
-        restartButton.classList.remove('hide')
+    if(reset > 2){
+        $('#container_timer').hide()
+        $('#main-btn').show()
+        $("#container_error_index").show()
+        $('#riassunto_game').hide()
+        $('#next-btn').hide()
+        $('#timer').hide()
     }
-}*/
+    else { // esco e verifico i risultati VR
+        $('.circle_animation').show()
+        showQuestion(randomQuestions)
+        reset = reset + 1
+        $('#confirm-btn').show()
+        $('#request').show()
+        $('#question').show()
+        $('#riassunto_game').hide()
+        $('#next-btn').hide()
+        timerStart()
+        startAnimations()
+    }
+}
+
+function showQuestion(){
+    /*mostra il testo di una domanda che si trova nell'array question*/
+    questionElement.innerText = questions_array[reset]['question']
+    /*mostro il codice da correggere*/
+    textArea.value = questions_array[reset]['code']
+}
 
 
 //timer
@@ -111,7 +133,7 @@ function timerStart(){
         if(timer < 10) {
             document.getElementById("timer_value").style.marginLeft = "33px";
         }
-        if (timer < 0) {
+        if (timer <= 0) {
             clearInterval(x);
             document.getElementById("timer_value").style.marginLeft = "-25px";
             document.getElementById("timer_value").innerHTML = result_time_out;
@@ -120,21 +142,31 @@ function timerStart(){
             /*per nascondere l'animazione del timer*/
             $('.circle_animation').hide();
         }
-        let confirm_button_id = document.getElementById("input_button")
-        /* quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
-        /*confirm_button_id.addEventListener("click", () => {
-            timer = 0;
-            document.getElementById("confirm_button").style.display = "none"
-        } )*/
+         /*quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
+        confirmButton.addEventListener("click", () => {
+            clearInterval(x)
+            $('.circle_animation').hide();
+            document.getElementById("timer_value").style.marginLeft = "-25px";
+            document.getElementById("timer_value").style.color = "#DDD92A";
+            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
+            document.getElementById("timer_value").innerHTML = result_time_out;
+            /*document.getElementById("confirm_btn").style.display = "none"*/
+            timer = 60
+        } )
+
+        nextButton.addEventListener("click", () => {
+            clearInterval(x)
+            document.getElementById("timer_value").style.marginLeft = "25px";
+            document.getElementById("timer_value").innerHTML = 60
+            startAnimations()
+            /*document.getElementById("confirm_btn").style.display = "none"*/
+        } )
+
+
     }, 1000);
 
 }
 
-function correct_string(question){
-    textAreaCorrect.value = question['answer']
-    textArea.value = question['code']
-    console.log(textAreaCorrect)
-}
 
 /*array delle domande*/
 const questions_array = [
@@ -183,7 +215,6 @@ const questions_array = [
             "        <style>\n" +
             "            body \n" +
             "            background-image: ('foto.jpg');\n" +
-            "        }\n"+
             "        </style>\n" +
             "    </body>\n" +
             "    </html>",
@@ -202,8 +233,36 @@ const questions_array = [
             "        <style>\n" +
             "            body \n" +
             "            background-image: url('foto.jpg');\n" +
-            "        }\n"+
             "        </style>\n" +
+            "    </body>\n" +
+            "    </html>"
+    },
+    {
+        question: "In questo esercizio c'e' 1 errore, trovalo e corregilo!",
+        code: "<!doctype html>\n" +
+            "    <html lang=\"en\">\n" +
+            "    <head>\n" +
+            "        <meta charset=\"UTF-8\">\n" +
+            "        <meta name=\"viewport\"\n" +
+            "              content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n" +
+            "        <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n" +
+            "        <title>Document</title>\n" +
+            "    </head>\n" +
+            "    <body>\n" +
+            "        <a='http://www.google.com'></a>\n" +
+            "    </body>\n" +
+            "    </html>",
+        answer: "<!doctype html>\n" +
+            "    <html lang=\"en\">\n" +
+            "    <head>\n" +
+            "        <meta charset=\"UTF-8\">\n" +
+            "        <meta name=\"viewport\"\n" +
+            "              content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n" +
+            "        <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n" +
+            "        <title>Document</title>\n" +
+            "    </head>\n" +
+            "    <body>\n" +
+            "        <a href='http://www.google.com'></a>\n" +
             "    </body>\n" +
             "    </html>"
     }
@@ -212,20 +271,22 @@ const questions_array = [
 
 function verifyQuiz() {
     let risposta = document.getElementById("question").value
-    if( risposta === questions_array[0]["answer"]) {
-        $('#confirm-btn').hide()
-        $('#request').hide()
-        $('#question').hide()
-        $('#riassunto_game').show()
+    $('#confirm-btn').hide()
+    $('#request').hide()
+    $('#question').hide()
+    $('#riassunto_game').show()
+    $('#next-btn').show()
+    stopAnimations()
+
+    if(risposta === questions_array[reset-1]["answer"]) {
         $('#risp_corretta').show()
         console.log("Risposta Corretta")
     } else {
-        $('#confirm-btn').hide()
-        $('#request').hide()
-        questionElement.innerText = questions_array[0]["answer"]
-        $('#question').hide()
-        $('#riassunto_game').show()
         $('#risp_errata').show()
         console.log("Risposta errata")
     }
+}
+
+function return_main_page() {
+    window.location = 'page2.html'
 }

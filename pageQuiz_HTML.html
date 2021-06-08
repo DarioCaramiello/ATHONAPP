@@ -8,8 +8,16 @@
     <title>AthonApp - HTML Quiz</title>
 </head>
 <body>
+    <!-- INDICE ERRORI -->
+    <div id="container_error_index" class="hide">
+        <div id="container_list">
+            <ul>
+                <li>Riferimento alle funzioni in Python : <a href="https://www.w3schools.com/js/js_functions.asp">Function in JavaScript</a> </li>
+            </ul>
+        </div>
+    </div>
     <div id="container_timer">
-        <div id="timer"><span id="timer_value">60</span>
+        <div id="timer"><span id="timer_value" style="color: yellow">60</span>
             <div id="circle_animation1" class="circle_animation"></div>
             <div id="circle_animation2" class="circle_animation"></div>
             <div id="circle_animation3" class="circle_animation"></div>
@@ -34,10 +42,6 @@
                     </div>
                     <div id="risp_errata" class="hide" style="background-color: #950f0f">
                         <p>Soluzione errata. Hai guadagnato 0 punti!</p>
-                        <p>Questo e' il codice corretto:</p>
-                    </div>
-                    <div id="reset_game" class="container_button hide">
-                        <input id="reset_button" class="style_button hide" type="button" value="Next" onclick="reset()">
                     </div>
                 </div>
                 <!--- END -------------->
@@ -48,13 +52,12 @@
 
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
     </div>
-
-
-
+    <button id="next-btn" class="next-btn btn hide">Next</button>
     <button id="confirm-btn" class="confirm-btn btn hide">Confirm</button>
+    <button id="main-btn" class="main-btn btn hide" onclick="return_main_page()">Main Page</button>
+
 
     <!-- background page -->
     <div class='light x1'></div>
