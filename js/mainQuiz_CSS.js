@@ -92,17 +92,28 @@ const questions_array = [
 
         Answer : "box-sizing",
         immagineQ: "images/CSS-Image1.JPG",
-        Result : false
+        Result : false,
+        Reference : "https://www.w3schools.com/css/css3_box-sizing.asp"
     },
     {
-        question: "Inserisci l'attributo mancante 2:",
+        question: "Inserisci la proprietà mancante per avere l'elemento raffigurato nell'immagine a destra:",
         code1 :"<!DOCTYPE html>\n <html>\n<head>\n<style>\n h1 { \n   color: red;",
         code2 : " : 2px 2px 4px #000000;\n }\n </style> \n</head> \n <body> \n <h1>This is text</h1> \n </body> \n </html>\n\n" ,
         Answer : "text-shadow",
         immagineQ: "images/CSS-Image2.JPG",
         Result: false,
         Reference : "https://www.w3schools.com/css/css3_shadows.asp"
+    },
+    {
+        question: "Inserisci l'attributo mancante 2:",
+        code1 :'<!DOCTYPE html> \n <html> \n <head> \n <style> \n \n#test1 { \n ',
+        code2 : ' : 15px 50px 30px 5px; \n  background: #73AD21; \n  padding: 20px; \n   width: 200px; \n height: 150px; \n } \n \n </style> \n </head> \n <body> \n <p id=\"test1\"></p> \n \n </body> \n </html> \n ' ,
+        Answer : "border-radius",
+        immagineQ: "images/CSS-Image3.JPG",
+        Result: false,
+        Reference : "https://www.w3schools.com/css/css3_borders.asp"
     }
+
 ]
 
 //timer
@@ -110,26 +121,20 @@ const questions_array = [
 let timer = 60;
 // Update the count down every 1 second
 let x = setInterval(function() {
-
     timer -= 1
     document.getElementById("timer").innerHTML = timer;
-
     if (timer < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "Time-out";
         verifica_quiz();
     }
-
     let confirm_button_id = document.getElementById("input_button")
-
      //quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo
     confirm_button_id.addEventListener("click", () => {
         timer = 0;
         document.getElementById("confirm_button").style.display = "none"
     } )
-
 }, 1000);
-
 */
 
 
@@ -163,7 +168,7 @@ function show_Result() {
         }
         else {
             let a=document.createElement("a")
-                a.innerText="Clicca qui per un riferimento!"
+            a.innerText="Clicca qui per un riferimento!"
             a.setAttribute("href",randomQuestions[i].Reference)
 
             x.innerText = "Domanda nr. " + (i + 1) + " - Risposta errata"
