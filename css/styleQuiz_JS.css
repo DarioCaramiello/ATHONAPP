@@ -1,50 +1,40 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
     box-sizing: border-box;
     background: #ffd000;
+
 }
 
 /* style quesiton */
 #id_question_quiz {
-    display: flex;
-    position: absolute;
+    position: relative;
     top: 5%;
     left: 20%;
+    font-size: 2rem;
 }
-#question {
-    display: flex;
-    font-size: 1.5rem;
 
-    background-color: #5E6973;
-    border: 1px solid black;
-    border-radius: 20px;
-
-    padding: 0.5rem;
-    width: 40vw;
-
-}
 /* -------------------- */
 
 /* style quiz */
 .container_div {
     justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
+    margin-top: 5%;
 
     display: grid;
     grid-template-columns: auto auto auto auto ;
     gap: 1rem;
 
+
     font-family: Tahoma,sans-serif;
     font-size: 1rem;
 }
 .cella {
-
     justify-content: center;
     align-content: center;
     align-items: center;
+
     background-color: #333533;
 
     padding: 40px;
@@ -78,7 +68,6 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
-
     background-color: #999898;
 
     cursor: grab;
@@ -116,7 +105,7 @@ body {
     justify-content: center;
 
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     max-height: 5%;
     left: 40%;
     /*
@@ -218,11 +207,14 @@ body {
     display: flex;
 }
 #risp_errata,#risp_corretta {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
     font-size: 3em;
     animation: change_ 3s 1;
     padding: 30px;
     margin-top: 10%;
-    text-align: center;
     border-radius: 20px;
     z-index: 10;
 }
@@ -309,9 +301,11 @@ body {
 /* timer */
 .container_timer{
     display: flex;
+    position: absolute;
+    right: 5%;
+    left: 75%;
     font-size: 2.9rem;
-    margin-top: 30px;
-    margin-left: 75%;
+
 }
 #timer{
     height: 20vh;
