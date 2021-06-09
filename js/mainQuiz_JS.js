@@ -1,9 +1,9 @@
 
 let tot_reset = 0
 let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "return }" ]
-let risposteQ2 = [ "a", "b", "c" ]
-let risposteQ3 = [ "x", "y", "z" ]
-let qestion = ["OK","ciao"]
+let risposteQ2 = [ "$(document).ready( function() {", "alert(\"TechWeb\")", "})" ]
+let risposteQ3 = [ "function assign() {", "$(\"#element\").innerText = text", "}" ]
+let qestion = ["complete function at 'click' event with JQuery,the function should bring up a warning window","complete function to insert text into an HTML element with id = \"element\""]
 let count_question = 0
 let correct_risp_user = 0
 let name_user_for_point = NaN
@@ -138,25 +138,25 @@ function change_quiz() {
     $('.circle_animation').show();
 
     if(tot_reset === 1){
-        $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
-        $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">b</code>")
-        $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">c</code>")
-        $("#id_drop4").html("<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
-        $("#id_drop5").html("<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
-        $("#id_drop6").html("<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
-        $("#id_drop7").html("<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
-        $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
-        $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">a</code>")
+        $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">$(document).ready( function() {</code>")
+        $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">function().ready {</code>")
+        $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">document.ready( {</code>")
+        $("#id_drop4").html("<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">alert(\"TechWeb\")</code>")
+        $("#id_drop5").html("<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">printf(\"TechWeb\")</code>")
+        $("#id_drop6").html("<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">console.log(\"TechWeb\")</code>")
+        $("#id_drop7").html("<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">return })</code>")
+        $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">})</code>")
+        $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">Null</code>")
     } else {
-        $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">x</code>")
-        $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">y</code>")
-        $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
-        $("#id_drop4").html("<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
-        $("#id_drop5").html("<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
-        $("#id_drop6").html("<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
-        $("#id_drop7").html("<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
-        $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
-        $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">z</code>")
+        $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">assign() {</code>")
+        $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">assign():</code>")
+        $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">function assign() {</code>")
+        $("#id_drop4").html("<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">$(\"#element\").innerText = text</code>")
+        $("#id_drop5").html("<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">element = text</code>")
+        $("#id_drop6").html("<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">document.body.innerText = text</code>")
+        $("#id_drop7").html("<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">}</code>")
+        $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">return text }</code>")
+        $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">return }</code>")
     }
 }
 
@@ -199,12 +199,12 @@ function timerStart(){
             clearInterval(x);
             /*per nascondere l'animazione del timer*/
             $('.circle_animation').hide();
-            /*
+
             document.getElementById("timer_value").style.marginLeft = "-25px";
             document.getElementById("timer_value").innerHTML = result_time_out;
             document.getElementById("timer_value").style.color = "#DDD92A";
             document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
-            */
+
         }
 
         /*quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
@@ -212,11 +212,11 @@ function timerStart(){
         confirmButton.addEventListener("click", () => {
             clearInterval(x)
             $('.circle_animation').hide();
-            /*
+
             document.getElementById("timer_value").style.marginLeft = "-25px";
             document.getElementById("timer_value").style.color = "#DDD92A";
             document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
-            */
+
             document.getElementById("timer_value").innerHTML = result_time_out;
             /* document.getElementById("confirm_btn").style.display = "none" */
             timer = 30

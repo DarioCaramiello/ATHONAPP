@@ -9,10 +9,19 @@ body {
 
 /* style quesiton */
 #id_question_quiz {
-    position: relative;
-    top: 5%;
-    left: 20%;
-    font-size: 2rem;
+    margin-left: 5%;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+#question{
+    color: red;
+    background-color: #EEE607;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0.5rem;
+    width: 80vw;
 }
 
 /* -------------------- */
@@ -20,66 +29,44 @@ body {
 /* style quiz */
 .container_div {
     justify-content: center;
+    align-items: center;
+    align-content: center;
     margin-top: 5%;
+    margin-left: 0;
 
     display: grid;
     grid-template-columns: auto auto auto auto ;
     gap: 1rem;
-
-
     font-family: Tahoma,sans-serif;
     font-size: 1rem;
 }
+
 .cella {
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-
     background-color: #333533;
-
-    padding: 40px;
     text-align: center;
     color: white;
     border-radius: 20px;
-
-    width: 10vw;
-    height: 10vh;
-
+    width: 30vw;
+    height: 20vh;
     z-index: 10;
-/*
-    position: relative;
-    right: -40px;
-    top: -50px;
-
-    width: 50vw;
-    height: 50vh;
-
-    max-width: 20vw;
-    max-height: 10vh;
-    min-width: 10vw;
-    min-height: 10vh;
-
- */
 }
 .cella:hover {
     color: red;
 }
 .cella_elem {
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+
     background-color: #999898;
 
     cursor: grab;
     color: black;
+
     text-align: center;
 
     border-radius: 20px;
 
-    width: 15vw;
-    height: 15vh;
+    width: 20vw;
+    height: 20vh;
 
-    padding-top: 2.3rem;
 
     z-index: 10;
 
@@ -101,20 +88,11 @@ body {
 
 /* style button */
 .container_button {
-
-    justify-content: center;
-
     position: absolute;
     bottom: 10%;
     max-height: 5%;
     left: 40%;
-    /*
-    max-width: 20vw;
-    max-height: 10vh;
-    min-width: 10vw;
-    min-height: 10vh;
 
-     */
 }
 .style_button {
     cursor: pointer;
@@ -123,6 +101,7 @@ body {
     height: 60pt;
     font-weight: 100;
     font-family: 'Fira Code Light', sans-serif;
+
     font-size: 40px;
     color: #ecf01e;
     border: 2px solid #ecf01e;
@@ -300,12 +279,9 @@ body {
 
 /* timer */
 .container_timer{
-    display: flex;
     position: absolute;
-    right: 5%;
-    left: 75%;
+    left: 90%;
     font-size: 2.9rem;
-
 }
 #timer{
     height: 20vh;
