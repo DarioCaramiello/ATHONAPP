@@ -8,28 +8,72 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>AthonApp - LOGIC Quiz</title>
 </head>
-<body>
-<div class="container">
-    <div id="question_container" class="hide">
-        <div id="question">Question</div>
-        <div id="answer-buttons" class="btn-grid">
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
+    <body>
+        <div class="container">
+            <div id="question_container" class="hide">
+                <!-- ESITO GAME ----------->
+                <div id="riassunto_game" class="hide">
+                    <div id="risp_corretta" class="hide" style="background-color: green">
+                        <p>Soluzione corretta. Hai guadagnato 1 punti!</p>
+                    </div>
+                    <div id="risp_errata" class="hide" style="background-color: #950f0f">
+                        <p>Soluzione errata. Hai guadagnato 0 punti!</p>
+                    </div>
+                </div>
+                <!--- END -------------->
+                <div id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+                <button id="getback-btn" class="getback btn hide">Torna al menu'</button>
+            </div>
+
+            <div  id ="result">
+                <ol id="lista_domande"></ol>
+            </div>
+
         </div>
-    </div>
-    <div class="controls">
-        <button id="start-btn" class="start-btn btn">Start</button>
-        <button id="next-btn" class="next-btn btn hide">Next</button>
-        <button id="getback-btn" class="getback btn hide">Torna al menù</button>
-    </div>
+        <!-- timer --- -->
+        <div class="container_timer">
+            <div id="timer"><span id="timer_value" style="color: darkblue">60</span>
+                <div id="circle_animation1" class="circle_animation"></div>
+                <div id="circle_animation2" class="circle_animation"></div>
+                <div id="circle_animation3" class="circle_animation"></div>
+                <div id="circle_animation4" class="circle_animation"></div>
+                <div id="circle_animation5" class="circle_animation"></div>
+                <div id="circle_animation6" class="circle_animation"></div>
+                <div id="circle_animation7" class="circle_animation"></div>
+                <div id="circle_animation8" class="circle_animation"></div>
+                <div id="circle_animation9" class="circle_animation"></div>
+                <div id="circle_animation10" class="circle_animation"></div>
+                <div id="circle_animation11" class="circle_animation"></div>
+                <div id="circle_animation12" class="circle_animation"></div>
+                <div id="circle_animation13" class="circle_animation"></div>
+                <div id="circle_animation14" class="circle_animation"></div>
+                <div id="circle_animation15" class="circle_animation"></div>
+                <div id="circle_animation16" class="circle_animation"></div>
+            </div>
+        </div>
 
-    <div  id ="result">
-        <ol id="lista_domande"></ol>
-    </div>
+        <!-- background page -->
+        <div class='light x1'></div>
+        <div class='light x2'></div>
+        <div class='light x3'></div>
+        <div class='light x4'></div>
+        <div class='light x5'></div>
+        <div class='light x6'></div>
+        <div class='light x7'></div>
+        <div class='light x8'></div>
+        <div class='light x9'></div>
+        <!-- end background page -->
 
-</div>
-<script language="JavaScript" src="js/mainQuiz_LOGIC.js"></script>
-</body>
+        <script src="js/mainQuiz_LOGIC.js"></script>
+    </body>
 </html>

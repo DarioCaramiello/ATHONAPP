@@ -47,6 +47,7 @@ body.wrong{
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    z-index: 10;
 }
 #question{
     font-family: "Book Antiqua",sans-serif;
@@ -95,7 +96,7 @@ body.wrong{
     justify-content: center;
     align-items: center;
 }
-.start-btn, .next-btn, .restart-btn{
+.start-btn, .next-btn{
     cursor: pointer;
     color: black;
     margin-top: 125px;
@@ -103,18 +104,16 @@ body.wrong{
     font-weight: 800;
     padding: 10px 10px;
 }
-.next-btn, .restart-btn{
+.next-btn{
+    margin-top: 10%;
     font-size: 20px;
-    margin: 0;
     padding: 2px;
-    height: 38px;
-    width: 180px;
 }
 
 .start-btn:hover{
     animation: start-btn-anim 1s infinite alternate;
 }
-.next-btn:hover, .restart-btn:hover{
+.next-btn:hover{
     animation: next-btn-anim 1s infinite alternate;
 }
 
@@ -144,6 +143,114 @@ body.wrong{
         transform: scale(1.01);
         background-color: hsla(223, 100%, 40%, 1);
     }
+}
+
+/* timer */
+.container_timer{
+    position: absolute;
+    left: 47%;
+    top: 6%;
+
+}
+#timer{
+    font-size: 2.6rem;
+    height: 20vh;
+    width: 10vw;
+}
+#timer_value {
+    margin-left: 10px;
+    text-shadow: 2px 2px 1px hsla(270, 100%, 60%, 1),-2px -2px 1px hsla(210, 90%, 62%, 0.92), 2px -2px 1px hsla(213, 100%, 40%, 1), -2px 2px 1px #1f00e6;
+}
+/* end timer */
+
+
+/*---------------------------BACKGROUND ANIMATION-----------------------*/
+.light {
+    position: absolute;
+    width: 0;
+    opacity: .75;
+    background-color: #5E6973;
+    box-shadow: darkviolet 0 0 20px 2px;
+    top: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.x1{
+    animation: floatUp 4s infinite linear;
+    transform: scale(1.0);
+}
+
+.x2{
+    animation: floatUp 7s infinite linear;
+    transform: scale(1.6);
+    left: 15%;
+}
+
+.x3{
+    animation: floatUp 2.5s infinite linear;
+    transform: scale(.5);
+    left: -15%;
+}
+
+.x4{
+    animation: floatUp 4.5s infinite linear;
+    transform: scale(1.2);
+    left: -34%;
+}
+
+.x5{
+    animation: floatUp 8s infinite linear;
+    transform: scale(2.2);
+    left: -57%;
+}
+
+.x6{
+    animation: floatUp 3s infinite linear;
+    transform: scale(.8);
+    left: -81%;
+}
+
+.x7{
+    animation: floatUp 5.3s infinite linear;
+    transform: scale(3.2);
+    left: 37%;
+}
+
+.x8{
+    animation: floatUp 4.7s infinite linear;
+    transform: scale(1.7);
+    left: 62%;
+}
+
+.x9{
+    animation: floatUp 4.1s infinite linear;
+    transform: scale(0.9);
+    left: 85%;
+}
+
+@keyframes floatUp{
+    0%{top: -100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: 100vh; opacity: 0;}
+}
+
+/* risp-corretta-errata */
+#riassunto_game {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#risp_errata,#risp_corretta {
+    justify-content: center;
+    font-size: 1.2em;
+    padding: 2px 2px;
+    border-radius: 20px;
+    z-index: 10;
 }
 
 .hide{

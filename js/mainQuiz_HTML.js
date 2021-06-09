@@ -154,10 +154,15 @@ function timerStart(){
         }
         if (timer <= 0) {
             clearInterval(x);
+            $('#confirm-btn').hide()
+            $('#request').hide()
+            $('#question').hide()
+            $('#riassunto_game').show()
+            $('#next-btn').show()
+            $('#risp_errata').show()
+            $('#risp_corretta').hide()
             document.getElementById("timer_value").style.marginLeft = "-25px";
             document.getElementById("timer_value").innerHTML = result_time_out;
-            document.getElementById("timer_value").style.color = "#DDD92A";
-            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
             /*per nascondere l'animazione del timer*/
             $('.circle_animation').hide();
             stopAnimations()
@@ -167,8 +172,6 @@ function timerStart(){
             clearInterval(x)
             $('.circle_animation').hide();
             document.getElementById("timer_value").style.marginLeft = "-25px";
-            document.getElementById("timer_value").style.color = "#DDD92A";
-            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
             document.getElementById("timer_value").innerHTML = result_time_out;
             /*document.getElementById("confirm_btn").style.display = "none"*/
             timer = 60

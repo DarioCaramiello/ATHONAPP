@@ -2,7 +2,7 @@
 body {
     overflow: hidden;
     margin: 0 0 0 0;
-    background-color: #6ABEA7 !important;
+    background-color: #464941;
     box-sizing: border-box;
 }
 
@@ -19,20 +19,21 @@ body {
     -webkit-background-clip: text;
     color: rgba(0,0,0,0);
     background-size: 30%;
-    animation: zoomout 5s ease-in-out infinite alternate-reverse;
+    animation: zoomout 10s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes zoomout {
     from{
-        background-position: bottom;
+        background-position: top;
     }
     to{
-        background-position: top;
+        background-position: bottom;
     }
 }
 
 #Athon_app_login {
     text-align: center;
+    z-index: 100;
 }
 
 /* --------------------------------  LOGIN  ------------------------------------ */
@@ -41,33 +42,34 @@ body {
     justify-content: center;
     margin-top: 150px;
     animation: change_dimension 1.5s infinite alternate;
-    z-index: 10;
+    z-index: 100;
 }
 @keyframes change_dimension {
     0%{
         transform: scale(1.0);
-
     }
     100%{
-        transform: scale(1.02);
+        transform: scale(1.01);
     }
 }
 .form-container {
     padding: 100px  20px 100px 20px;
     border-radius: 20px;
-    background: #109f00
+    background: #044e09;
+    z-index: 100 !important;
 }
 .form-container input[type=text]{
     border: none;
     text-align: center;
     padding: 10px 50px 10px 50px;
-    margin: 50px 0 50px
-    50px;
+    margin: 50px 0 50px 50px;
     color: #020202;
+    z-index: 100;
 }
 .form-container input[type=text]:focus{
     background-color: #c0c0c0;
     outline: none;
+    z-index: 100;
 }
 
 .btn {
@@ -83,7 +85,7 @@ body {
 
     border-radius: 10px;
     border: none;
-
+    z-index: 100;
     cursor: pointer;
 }
 
@@ -102,7 +104,7 @@ body {
     margin-top: 0;
 }
 
-#container_info { background: linear-gradient(to left, #8defae, #2e8b57); }
+#container_info { background: linear-gradient(to left, #033f07, #2e8b57); }
 #container_info2, #container_info_prizes2 { margin-left: 10px; }
 
 #container_name_user, #lista_rank, #premi{
@@ -140,7 +142,7 @@ body {
 #container_info_prizes { background: linear-gradient(to right, #ecf01e,goldenrod); }
 
 
-/* sfondo del login
+
 .light {
     position: absolute;
     width: 0;
@@ -175,6 +177,7 @@ body {
     animation: floatUp 2s infinite linear;
     transform: scale(0.2);
     left: -34%;
+    z-index: 1;
 }
 .x5{
     animation: floatUp 3s infinite linear;
@@ -194,7 +197,7 @@ body {
     left: 37%;
     z-index: 1;
 }
-.x8{
+.x8 {
     animation: floatUp 4.7s infinite linear;
     transform: scale(0.6);
     left: 62%;
@@ -205,7 +208,7 @@ body {
     transform: scale(0.1);
     left: 85%;
     z-index: 1;
-}
+}*/
 @keyframes floatUp{
     0%{top: -100px; opacity: 0;}
     25%{opacity: 1;}
@@ -213,7 +216,7 @@ body {
     75%{opacity: 1;}
     100%{top: 200px; opacity: 0;}
 }
-*/
+
 /******* testing simon stuff ********/
 
 #prova-outer-circle{
@@ -453,8 +456,8 @@ body {
 .light {
     width: 0;
     opacity: .75;
-    background-color: #6ABEA7;
-    box-shadow: lightblue 0 0 20px 2px;
+    background-color: #292b26;
+    box-shadow: #2a2d2a 0 0 20px 2px;
     top: 100vh;
     bottom: 0;
     left: 0;

@@ -17,11 +17,19 @@ let name_user_for_point = NaN
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click',()=>{
     /*incremento il contatore*/
+    $('#riassunto_game').hide()
+    $('#risp_corretta').hide()
+    $('#risp_errata').hide()
+    $('#timer').show()
+    $('#answer-buttons').show()
+    $('#question').show()
+    $('#next-btn').hide()
     currentQuestionIndex++
     nextQuestion()
 })
 
 function startGame(){
+    timerStart()
     startButton.classList.add('hide')
     /*genera domande in ordine casuale all'interno dell'array*/
     randomQuestions = questions_array.sort(() => Math.random() - .5)
@@ -31,13 +39,13 @@ function startGame(){
 }
 
 function nextQuestion(){
+    timerStart()
     resetState()
     //aggiunto check per verificare la fine delle domande VR
     if(randomQuestions.length > currentQuestionIndex)
         showQuestion(randomQuestions[currentQuestionIndex])
     else // esco e verifico i risultati VR
         show_Result()
-
 }
 
 
@@ -92,6 +100,13 @@ function setStatusClass(element, correct){
     clearStatusClass(element)
     if(correct){
         /*se la risposta e' corretta aggiungo la classe correct*/
+        $('#riassunto_game').show()
+        $('#risp_errata').hide()
+        $('#risp_corretta').show()
+        $('#timer').hide()
+        $('#next-btn').show()
+        $('#answer-buttons').hide()
+        $('#question').hide()
         element.classList.add('correct')
         Punti+=1
         randomQuestions[currentQuestionIndex].result=true
@@ -108,6 +123,13 @@ function setStatusClass(element, correct){
             }
         });
     }else{
+        $('#riassunto_game').show()
+        $('#risp_corretta').hide()
+        $('#risp_errata').show()
+        $('#timer').hide()
+        $('#answer-buttons').hide()
+        $('#question').hide()
+        $('#next-btn').show()
         /*se la risposta e' sbagliata aggiungo la classe wrong*/
         element.classList.add('wrong')
     }
@@ -149,7 +171,6 @@ const questions_array = [
 
 /* function onload document */
 $("document").ready(function() {
-
     /* --- request server for id user --- */
     $.ajax({
         url: "http://localhost:5000/api/get-nickname",
@@ -231,48 +252,38 @@ $("#getback-btn").click(function(){
 
 //timer
 function timerStart(){
-    var time_out = "Time out";
+    let time_out = "Time out";
+    /* variabile bool per controllare se i numeri < 10 devono essere spostati*/
+    let check=0
     /*per cambiare font size alla scritta Time out*/
-    var result_time_out = time_out.fontsize(6);
-    let timer = 30;
+    let result_time_out = time_out.fontsize(5);
+    let timer = 60;
 // Update the count down every 1 second
     let x = setInterval(function() {
         timer -= 1
         document.getElementById("timer_value").innerText = timer;
         /*per spostare i numeri al centro*/
         if(timer < 10) {
-            document.getElementById("timer_value").style.marginLeft = "33px";
+            document.getElementById("timer_value").style.marginLeft = "25px";
+            check = 1
         }
         if (timer <= 0) {
             clearInterval(x);
-            document.getElementById("timer_value").style.marginLeft = "-25px";
-            document.getElementById("timer_value").innerHTML = result_time_out;
-            document.getElementById("timer_value").style.color = "#DDD92A";
-            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
             /*per nascondere l'animazione del timer*/
             $('.circle_animation').hide();
-        }
-        /*quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
-        confirmButton.addEventListener("click", () => {
-            clearInterval(x)
-            $('.circle_animation').hide();
-            document.getElementById("timer_value").style.marginLeft = "-25px";
-            document.getElementById("timer_value").style.color = "#DDD92A";
-            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
+
             document.getElementById("timer_value").innerHTML = result_time_out;
-            /*document.getElementById("confirm_btn").style.display = "none"*/
-            timer = 60
-        } )
+            if(check===1){
+                check = 0
+                document.getElementById("timer_value").style.marginLeft = "10px";
+            }
+        }
 
         nextButton.addEventListener("click", () => {
             clearInterval(x)
-            document.getElementById("timer_value").style.marginLeft = "25px";
-            document.getElementById("timer_value").innerHTML = 60
-            startAnimations()
-            /*document.getElementById("confirm_btn").style.display = "none"*/
+            document.getElementById("timer_value").innerHTML = "60"
+            /* document.getElementById("confirm_btn").style.display = "none" */
         } )
-
-
     }, 1000);
-
 }
+

@@ -23,7 +23,6 @@ $(document).ready(function(){
 function start_game() {
 
     let user_name = document.getElementById("nickname").value
-
     if( user_name === ""){
         document.getElementById("id_form_container").style.display="block";
         //document.getElementById("myForm").style.display="block";
