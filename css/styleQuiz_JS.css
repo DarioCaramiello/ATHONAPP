@@ -4,7 +4,6 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     background: #ffd000;
-
 }
 
 /* style quesiton */
@@ -13,7 +12,6 @@ body {
     margin-bottom: 0;
     font-size: 1.5rem;
     text-align: center;
-
 }
 #question{
     color: red;
@@ -22,16 +20,9 @@ body {
     padding: 0.5rem;
     width: 80vw;
 }
-
 /* -------------------- */
 
 /* style quiz */
-
-#id_drop1 {
-    margin: 200px;
-}
-
-
 .container_div {
     justify-content: center;
     align-items: center;
@@ -447,16 +438,4 @@ body {
         transform: scale(1);
     }
 }
-
-
-/*
-@keyframes timer-anim {
-    0%{
-        background-color: inherit;
-    }
-    100%{
-        background-color: darkred;
-    }
-}
-*/
 /* end animtion timer */
