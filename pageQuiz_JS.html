@@ -33,10 +33,8 @@
             <div id="circle_animation15" class="circle_animation"></div>
             <div id="circle_animation16" class="circle_animation"></div>
         </div>
-
     </div>
     <!-- ---------------------------------------------- -->
-
 
     <!-- QUESTION QUIZ -->
     <div id="id_question_quiz" style="display: none">
@@ -44,33 +42,33 @@
     </div>
     <!-- GAME -->
     <div class="container_div" id="game_">
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_1" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop1" draggable="true" ondragstart="drag(event)">swap(int a, int b) {</code>
         </div>
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_2" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop2" draggable="true" ondragstart="drag(event)">function swap(a, b){</code>
         </div>
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_3" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop3" draggable="true" ondragstart="drag(event)">def prova(a, b){</code>
         </div>
         <div id="cella_utent1" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_4" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop4" draggable="true" ondragstart="drag(event)">let x; x = a; a = b; b = x;</code>
         </div>
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_5" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop5" draggable="true" ondragstart="drag(event)">int x; x = a; a = b; b = x;</code>
         </div>
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_6" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop6" draggable="true" ondragstart="drag(event)">a,b = b,a</code>
         </div>
         <div id="cella_utent2" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_7" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop7" draggable="true" ondragstart="drag(event)">return }</code>
         </div>
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_8" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop8" draggable="true" ondragstart="drag(event)">return a,b }</code>
         </div>
-        <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="cella_elem" id="container_cella_9" ondrop="drop(event)" ondragover="allowDrop(event)">
             <code id="id_drop9" draggable="true" ondragstart="drag(event)">return Nan }</code>
         </div>
         <div id="cella_utent3" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -79,6 +77,7 @@
         <input id="input_button" type="button" class="style_button" value="Confirm" onclick="verifica_quiz()">
     </div>
     <!--------------------------------------->
+
 
     <!-- ESITO GAME ----------->
     <div id="riassunto_game" style="display: none">
@@ -102,8 +101,7 @@
             <ul>
                 <li>References to the theory of functions in JavaScript : <a href="https://www.w3schools.com/js/js_functions.asp">Function in JavaScript</a> </li>
                 <li>References to the JavaScript, JQuery library : <a href="https://www.w3schools.com/html/html5_draganddrop.asp">JQuery theory</a></li>
-                <li>Reference to DOM theory in JavaScript : <a href="">DOM theory</a></li>
-
+                <li>Reference to DOM theory in JavaScript : <a href="https://www.w3schools.com/js/js_htmldom.asp">DOM theory</a></li>
             </ul>
         </div>
         <div id="main_page_" class="container_button">
@@ -124,5 +122,6 @@
     <!-- ------------------ -->
 
     <script src="js/mainQuiz_JS.js"></script>
+
 </body>
 </html>

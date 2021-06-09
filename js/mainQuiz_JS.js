@@ -1,7 +1,7 @@
 
 let tot_reset = 0
 let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "return }" ]
-let risposteQ2 = [ "$(document).ready( function() {", "alert(\"TechWeb\")", "})" ]
+let risposteQ2 = [ "$(\"#element\").click( function() {", "alert(\"TechWeb\")", "})" ]
 let risposteQ3 = [ "function assign() {", "$(\"#element\").innerText = text", "}" ]
 let qestion = ["complete function at 'click' event with JQuery,the function should bring up a warning window","complete function to insert text into an HTML element with id = \"element\""]
 let count_question = 0
@@ -137,26 +137,103 @@ function change_quiz() {
     timerStart()
     $('.circle_animation').show();
 
+
+    $("#cella_utent1").empty()
+    $("#cella_utent2").empty()
+    $("#cella_utent3").empty()
+
+
     if(tot_reset === 1){
-        $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">$(document).ready( function() {</code>")
-        $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">function().ready {</code>")
-        $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">document.ready( {</code>")
-        $("#id_drop4").html("<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">alert(\"TechWeb\")</code>")
-        $("#id_drop5").html("<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">printf(\"TechWeb\")</code>")
-        $("#id_drop6").html("<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">console.log(\"TechWeb\")</code>")
-        $("#id_drop7").html("<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">return })</code>")
-        $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">})</code>")
-        $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">Null</code>")
+        $("#container_cella_1").empty()
+        let cella1 = document.createElement("code")
+        cella1.innerHTML = "<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">$(\"#element\").click( function() {</code>"
+        document.getElementById("container_cella_1").appendChild(cella1)
+
+        $("#container_cella_2").empty()
+        let cella2 = document.createElement("code")
+        cella2.innerHTML = "<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">function().ready {</code>"
+        document.getElementById("container_cella_2").appendChild(cella2)
+
+        $("#container_cella_3").empty()
+        let cella3 = document.createElement("code")
+        cella3.innerHTML = "<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">document.ready( {</code>"
+        document.getElementById("container_cella_3").appendChild(cella3)
+
+        $("#container_cella_4").empty()
+        let cella4 = document.createElement("code")
+        cella4.innerHTML = "<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">alert(\"TechWeb\")</code>"
+        document.getElementById("container_cella_4").appendChild(cella4)
+
+        $("#container_cella_5").empty()
+        let cella5 = document.createElement("code")
+        cella5.innerHTML = "<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">printf(\"TechWeb\")</code>"
+        document.getElementById("container_cella_5").appendChild(cella5)
+
+        $("#container_cella_6").empty()
+        let cella6 = document.createElement("code")
+        cella6.innerHTML = "<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">console.log(\"TechWeb\")</code>"
+        document.getElementById("container_cella_6").appendChild(cella6)
+
+        $("#container_cella_7").empty()
+        let cella7 = document.createElement("code")
+        cella7.innerHTML = "<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">return })</code>"
+        document.getElementById("container_cella_7").appendChild(cella7)
+
+        $("#container_cella_8").empty()
+        let cella8 = document.createElement("code")
+        cella8.innerHTML = "<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">})</code>"
+        document.getElementById("container_cella_8").appendChild(cella8)
+
+        $("#container_cella_9").empty()
+        let cella9 = document.createElement("code")
+        cella9.innerHTML = "<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">Null</code>"
+        document.getElementById("container_cella_9").appendChild(cella9)
+
     } else {
-        $("#id_drop1").html("<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">assign() {</code>")
-        $("#id_drop2").html("<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">assign():</code>")
-        $("#id_drop3").html("<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">function assign() {</code>")
-        $("#id_drop4").html("<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">$(\"#element\").innerText = text</code>")
-        $("#id_drop5").html("<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">element = text</code>")
-        $("#id_drop6").html("<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">document.body.innerText = text</code>")
-        $("#id_drop7").html("<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">}</code>")
-        $("#id_drop8").html("<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">return text }</code>")
-        $("#id_drop9").html("<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">return }</code>")
+        $("#container_cella_1").empty()
+        let cella1 = document.createElement("code")
+        cella1.innerHTML = "<code id=\"id_drop1\" draggable=\"true\" ondragstart=\"drag(event)\">assign() {</code>"
+        document.getElementById("container_cella_1").appendChild(cella1)
+
+        $("#container_cella_2").empty()
+        let cella2 = document.createElement("code")
+        cella2.innerHTML = "<code id=\"id_drop2\" draggable=\"true\" ondragstart=\"drag(event)\">assign():</code>"
+        document.getElementById("container_cella_2").appendChild(cella2)
+
+        $("#container_cella_3").empty()
+        let cella3 = document.createElement("code")
+        cella3.innerHTML = "<code id=\"id_drop3\" draggable=\"true\" ondragstart=\"drag(event)\">function assign() {</code>"
+        document.getElementById("container_cella_3").appendChild(cella3)
+
+        $("#container_cella_4").empty()
+        let cella4 = document.createElement("code")
+        cella4.innerHTML = "<code id=\"id_drop4\" draggable=\"true\" ondragstart=\"drag(event)\">$(\"#element\").innerText = text</code>"
+        document.getElementById("container_cella_4").appendChild(cella4)
+
+        $("#container_cella_5").empty()
+        let cella5 = document.createElement("code")
+        cella5.innerHTML = "<code id=\"id_drop5\" draggable=\"true\" ondragstart=\"drag(event)\">element = text</code>"
+        document.getElementById("container_cella_5").appendChild(cella5)
+
+        $("#container_cella_6").empty()
+        let cella6 = document.createElement("code")
+        cella6.innerHTML = "<code id=\"id_drop6\" draggable=\"true\" ondragstart=\"drag(event)\">document.body.innerText = text</code>"
+        document.getElementById("container_cella_6").appendChild(cella6)
+
+        $("#container_cella_7").empty()
+        let cella7 = document.createElement("code")
+        cella7.innerHTML = "<code id=\"id_drop7\" draggable=\"true\" ondragstart=\"drag(event)\">}</code>"
+        document.getElementById("container_cella_7").appendChild(cella7)
+
+        $("#container_cella_8").empty()
+        let cella8 = document.createElement("code")
+        cella8.innerHTML = "<code id=\"id_drop8\" draggable=\"true\" ondragstart=\"drag(event)\">return text }</code>"
+        document.getElementById("container_cella_8").appendChild(cella8)
+
+        $("#container_cella_9").empty()
+        let cella9 = document.createElement("code")
+        cella9.innerHTML = "<code id=\"id_drop9\" draggable=\"true\" ondragstart=\"drag(event)\">return }</code>"
+        document.getElementById("container_cella_9").appendChild(cella9)
     }
 }
 
