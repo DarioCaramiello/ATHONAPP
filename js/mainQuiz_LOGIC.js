@@ -87,11 +87,12 @@ function selectAnswer(e){
     const selectedButton = e.target
     /*controllo se e' corretta*/
     const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    /*inserisco tutti i figli (bottoni) in un array per ciclarli con forEach()*/
+    setStatusClass(document.body, correct) // forse è corretto
+
+    /*inserisco tutti i figli (bottoni) in un array per ciclarli con forEach()
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
-    })
+    })*/
     /*mostro il bottone next*/
     nextButton.classList.remove('hide')
 }
@@ -108,14 +109,13 @@ function setStatusClass(element, correct){
         $('#answer-buttons').hide()
         $('#question').hide()
         element.classList.add('correct')
-        Punti+=1
         randomQuestions[currentQuestionIndex].result=true
         $.ajax({
             url: "http://localhost:5000/api/update-point",
             type: "POST",
             dataType: "text",
             data: {
-                point: Punti,
+                point: 1,
                 name: name_user_for_point
             },
             success: function (result) {
@@ -162,6 +162,7 @@ const questions_array = [
             { text: '90',correct: false },
             { text: '600',correct: false },
         ],
+
         result:false
 
     }
