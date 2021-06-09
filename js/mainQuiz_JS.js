@@ -80,7 +80,7 @@ function verifica_quiz_2(a, b, c, x, y, z){
             type: "POST",
             dataType: "text",
             data: {
-                point: 100,
+                point: 1,
                 name: name_user_for_point
             },
             success: function (result) {
@@ -186,7 +186,7 @@ function timerStart(){
     var time_out = "Time out";
     /*per cambiare font size alla scritta Time out*/
     var result_time_out = time_out.fontsize(6);
-    let timer = 60;
+    let timer = 30;
 // Update the count down every 1 second
     let x = setInterval(function() {
         timer -= 1
@@ -200,10 +200,9 @@ function timerStart(){
             /*per nascondere l'animazione del timer*/
             $('.circle_animation').hide();
 
-            document.getElementById("timer_value").style.marginLeft = "-25px";
+     ;
             document.getElementById("timer_value").innerHTML = result_time_out;
             document.getElementById("timer_value").style.color = "#DDD92A";
-            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
 
         }
 
@@ -213,13 +212,10 @@ function timerStart(){
             clearInterval(x)
             $('.circle_animation').hide();
 
-            document.getElementById("timer_value").style.marginLeft = "-25px";
             document.getElementById("timer_value").style.color = "#DDD92A";
-            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
 
             document.getElementById("timer_value").innerHTML = result_time_out;
             /* document.getElementById("confirm_btn").style.display = "none" */
-            timer = 30
         })
 
         let nextButton = document.getElementById("reset_button")

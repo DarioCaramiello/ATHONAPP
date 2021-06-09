@@ -1,12 +1,16 @@
+
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const confirmButton = document.getElementById('confirm-btn')
 const questionContainerElement = document.getElementById('question_container')
+
 /*costante per la singola domanda*/
 const questionElement = document.getElementById('request')
 const textArea = document.getElementById('question')
+
 /*variabile per rendere random le domande*/
 let randomQuestions, reset
+
 const timer_value = document.getElementById('timer')
 const circle1 = document.getElementById('circle_animation1')
 const circle2 = document.getElementById('circle_animation2')
@@ -24,6 +28,8 @@ startButton.addEventListener('click', startGame)
 confirmButton.addEventListener('click', verifyQuiz)
 nextButton.addEventListener('click', nextQuestion)
 
+let name_user_for_point = NaN
+
 /* function onload document */
 $("document").ready(function() {
     /* --- request server for id user --- */
@@ -34,6 +40,21 @@ $("document").ready(function() {
         success: function (result) {
             console.log("index_ricevuto : " + result["nickname"])
             name_user_for_point = result["nickname"]
+            $.ajax({
+                url: 'http://localhost:5000/api/update-quiz',
+                type: 'POST',
+                dataType: 'json',
+                data:
+                    {
+                        name: name_user_for_point,
+                        quiz: 'HTML',
+                        stato: 1
+                    },
+
+                success: function (result) {
+                    console.log(result)
+                }
+            })
         }
     })
 })
@@ -79,8 +100,6 @@ function startGame(){
     reset = 0
     startAnimations()
     timerStart()
-    /*genera domande in ordine casuale all'interno dell'array*/
-    /*randomQuestions = questions_array.sort(() => Math.random() - .5)*/
     randomQuestions = Math.floor(Math.random()*3)
     questionContainerElement.classList.remove('hide')
     confirmButton.classList.remove('hide')
@@ -164,7 +183,6 @@ function timerStart(){
 
 
     }, 1000);
-
 }
 
 
@@ -268,7 +286,6 @@ const questions_array = [
     }
 ]
 
-
 function verifyQuiz() {
     let risposta = document.getElementById("question").value
     $('#confirm-btn').hide()
@@ -280,9 +297,23 @@ function verifyQuiz() {
 
     if(risposta === questions_array[reset-1]["answer"]) {
         $('#risp_corretta').show()
+        $('#risp_errata').hide()
+        $.ajax({
+            url: "http://localhost:5000/api/update-point",
+            type: "POST",
+            dataType: "text",
+            data: {
+                point: 1,
+                name: name_user_for_point
+            },
+            success: function (result) {
+                console.log(result)
+            }
+        })
         console.log("Risposta Corretta")
     } else {
         $('#risp_errata').show()
+        $('#risp_corretta').hide()
         console.log("Risposta errata")
     }
 }
