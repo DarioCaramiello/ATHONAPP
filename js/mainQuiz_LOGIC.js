@@ -224,8 +224,55 @@ $("#getback-btn").click(function(){
         }
 
     })
-    setTimeout(function(){
-        window.location = 'page2.html'
-    },2000)
-
+    window.location = 'page2.html'
 });
+
+
+
+//timer
+function timerStart(){
+    var time_out = "Time out";
+    /*per cambiare font size alla scritta Time out*/
+    var result_time_out = time_out.fontsize(6);
+    let timer = 30;
+// Update the count down every 1 second
+    let x = setInterval(function() {
+        timer -= 1
+        document.getElementById("timer_value").innerText = timer;
+        /*per spostare i numeri al centro*/
+        if(timer < 10) {
+            document.getElementById("timer_value").style.marginLeft = "33px";
+        }
+        if (timer <= 0) {
+            clearInterval(x);
+            document.getElementById("timer_value").style.marginLeft = "-25px";
+            document.getElementById("timer_value").innerHTML = result_time_out;
+            document.getElementById("timer_value").style.color = "#DDD92A";
+            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
+            /*per nascondere l'animazione del timer*/
+            $('.circle_animation').hide();
+        }
+        /*quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
+        confirmButton.addEventListener("click", () => {
+            clearInterval(x)
+            $('.circle_animation').hide();
+            document.getElementById("timer_value").style.marginLeft = "-25px";
+            document.getElementById("timer_value").style.color = "#DDD92A";
+            document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
+            document.getElementById("timer_value").innerHTML = result_time_out;
+            /*document.getElementById("confirm_btn").style.display = "none"*/
+            timer = 60
+        } )
+
+        nextButton.addEventListener("click", () => {
+            clearInterval(x)
+            document.getElementById("timer_value").style.marginLeft = "25px";
+            document.getElementById("timer_value").innerHTML = 60
+            startAnimations()
+            /*document.getElementById("confirm_btn").style.display = "none"*/
+        } )
+
+
+    }, 1000);
+
+}

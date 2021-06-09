@@ -160,6 +160,7 @@ function timerStart(){
             document.getElementById("timer_value").style.textShadow = "2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744";
             /*per nascondere l'animazione del timer*/
             $('.circle_animation').hide();
+            stopAnimations()
         }
          /*quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
         confirmButton.addEventListener("click", () => {
