@@ -66,10 +66,24 @@ body {
     color: #020202;
     z-index: 100;
 }
+.form-container input[type=password]{
+    border: none;
+    text-align: center;
+    padding: 10px 50px 10px 50px;
+    margin: 50px 0 50px
+    50px;
+    color: #020202;
+}
+
 .form-container input[type=text]:focus{
     background-color: #c0c0c0;
     outline: none;
     z-index: 100;
+}
+
+.form-container input[type=password]:focus{
+    background-color: #c0c0c0;
+    outline: none;
 }
 
 .btn {
