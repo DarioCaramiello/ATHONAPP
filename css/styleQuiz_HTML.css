@@ -25,16 +25,11 @@ body{
     z-index: -1;
 }
 
-/*.animation_js_outer{
-    animation: outer_anim 60s linear forwards;
-}*/
-
 @keyframes outer_anim {
     from{
         height: 52vh;
         border-radius: 50%;
         background-color: inherit;
-
     }
     to{
         border-radius: 0;

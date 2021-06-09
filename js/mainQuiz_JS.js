@@ -80,7 +80,7 @@ function verifica_quiz_2(a, b, c, x, y, z){
             type: "POST",
             dataType: "text",
             data: {
-                point: 100,
+                point: 1,
                 name: name_user_for_point
             },
             success: function (result) {
@@ -188,12 +188,10 @@ function timerStart(){
     var check=0
     /*per cambiare font size alla scritta Time out*/
     var result_time_out = time_out.fontsize(6);
-    let timer = 15;
-
+    let timer = 60;
 // Update the count down every 1 second
     let x = setInterval(function() {
         timer -= 1
-        console.log(check)
         document.getElementById("timer_value").innerText = timer;
         /*per spostare i numeri al centro*/
         if(timer < 10) {
