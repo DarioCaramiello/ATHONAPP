@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styleQuiz_JS.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>AthonApp - JS Quiz</title>
+    <title>AthonApp - JavaScript Quiz</title>
 </head>
 <body>
     <!-- button start game -->
@@ -32,16 +32,6 @@
             <div id="circle_animation14" class="circle_animation"></div>
             <div id="circle_animation15" class="circle_animation"></div>
             <div id="circle_animation16" class="circle_animation"></div>
-            <div id="circle_animation17" class="circle_animation"></div>
-            <div id="circle_animation18" class="circle_animation"></div>
-            <div id="circle_animation19" class="circle_animation"></div>
-            <div id="circle_animation20" class="circle_animation"></div>
-            <div id="circle_animation21" class="circle_animation"></div>
-            <div id="circle_animation22" class="circle_animation"></div>
-            <div id="circle_animation23" class="circle_animation"></div>
-            <div id="circle_animation24" class="circle_animation"></div>
-            <div id="circle_animation25" class="circle_animation"></div>
-            <div id="circle_animation26" class="circle_animation"></div>
         </div>
 
     </div>
@@ -50,7 +40,7 @@
 
     <!-- QUESTION QUIZ -->
     <div id="id_question_quiz" style="display: none">
-        <p id="question">completes the 'swap ()' function in JavaScript</p>
+        <p id="question">Completes the 'swap ()' function in JavaScript</p>
     </div>
     <!-- GAME -->
     <div class="container_div" id="game_">
@@ -61,7 +51,7 @@
             <code id="id_drop2" draggable="true" ondragstart="drag(event)">function swap(a, b){</code>
         </div>
         <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <code id="id_drop3"  draggable="true" ondragstart="drag(event)">def prova(a, b){</code>
+            <code id="id_drop3" draggable="true" ondragstart="drag(event)">def prova(a, b){</code>
         </div>
         <div id="cella_utent1" class="cella" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div class="cella_elem" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -93,12 +83,12 @@
     <!-- ESITO GAME ----------->
     <div id="riassunto_game" style="display: none">
         <div id="risp_corretta" style="display: none; background-color: green">
-            <p>Soluzione corretta</p>
-            <p>Hai guadagnato 100 punti!</p>
+            <p>True</p>
+            <p>Congratulations, you have earned 1 point</p>
         </div>
         <div id="risp_errata" style="display:none; background-color: #f60000">
-            <p>Soluzione errata</p>
-            <p>Hai guadagnato 0 punti!</p>
+            <p>False</p>
+            <p>Sorry, you earned 0 points</p>
         </div>
         <div id="reset_game" class="container_button">
             <input id="reset_button" class="style_button" type="button" value="Next" onclick="reset()">
@@ -110,7 +100,10 @@
     <div id="container_error_index" style="display: none">
         <div id="container_list">
             <ul>
-                <li>Riferimento alle funzioni in Python : <a href="https://www.w3schools.com/js/js_functions.asp">Function in JavaScript</a> </li>
+                <li>References to the theory of functions in JavaScript : <a href="https://www.w3schools.com/js/js_functions.asp">Function in JavaScript</a> </li>
+                <li>References to the JavaScript, JQuery library : <a href="https://www.w3schools.com/html/html5_draganddrop.asp">JQuery theory</a></li>
+                <li>Reference to DOM theory in JavaScript : <a href="">DOM theory</a></li>
+
             </ul>
         </div>
         <div id="main_page_" class="container_button">

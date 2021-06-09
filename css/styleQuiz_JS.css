@@ -17,7 +17,6 @@ body {
 }
 #question{
     color: red;
-    background-color: #EEE607;
     border: 1px solid black;
     border-radius: 20px;
     padding: 0.5rem;
@@ -27,10 +26,16 @@ body {
 /* -------------------- */
 
 /* style quiz */
+
+#id_drop1 {
+    margin: 200px;
+}
+
+
 .container_div {
     justify-content: center;
     align-items: center;
-    align-content: center;
+
     margin-top: 5%;
     margin-left: 0;
 
@@ -42,8 +47,10 @@ body {
 }
 
 .cella {
-    background-color: #333533;
+
     text-align: center;
+    align-items: center;
+    background-color: #333533;
     color: white;
     border-radius: 20px;
     width: 30vw;
@@ -55,12 +62,12 @@ body {
 }
 .cella_elem {
 
+    text-align: center;
+    align-items: center;
     background-color: #999898;
 
     cursor: grab;
     color: black;
-
-    text-align: center;
 
     border-radius: 20px;
 
@@ -81,7 +88,7 @@ body {
     }
     100%{
         transform: scale(1.05);
-        font-weight: 550;
+
     }
 }
 /* -------------------- */
@@ -276,332 +283,173 @@ body {
 }
 /* end animation background  */
 
-
 /* timer */
 .container_timer{
     position: absolute;
     left: 90%;
-    font-size: 2.9rem;
 }
 #timer{
+    font-size: 2.6rem;
     height: 20vh;
     width: 10vw;
 }
 #timer_value {
-    margin: 5px;
+    margin-left: 10px;
+    /*text-shadow: 2px 2px 1px #ff0000,-2px -2px 1px #F56416, 2px -2px 1px #E28413, -2px 2px 1px #EA1744;*/
 }
 /* end timer */
-
-
-.circle_animation {
+/* animation timer */
+.circle_animation{
     height: 15px;
     width: 15px;
-    border: none;
     border-radius: 50%;
+    z-index: 2;
+    animation: timer-anim 3.75s ease-in forwards;
 }
-
 #circle_animation1{
+    margin-left: 21%;
     position: relative;
-    margin-left: 15%;
-    bottom: 69px;
-    /*
-    left: 27px;
-
-     */
-    border-radius: 50%;
-    animation: timer-anim 1.15s ease-in forwards;
+    bottom: 72px;
 }
 #circle_animation2{
+    margin-left: 32%;
     position: relative;
-    margin-left: 10%;
-    bottom: 69px;
-    /*
-    left: 27px;
-
-     */
-    border-radius: 50%;
-    animation: timer-anim 1.15s ease-in forwards;
+    bottom: 85px;
+    animation-delay: 3.75s;
 }
-
-/*
-#circle_animation2{
-    position: relative;
-    bottom: 76px;
-    left: 35px;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 1.15s;
-}
-*/
-
 #circle_animation3{
+    margin-left: 42%;
     position: relative;
-    bottom: 82px;
-    left: 43px;
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 2.30s;
-
-
+    bottom: 93px;
+    animation-delay: 7.05s;
 }
 #circle_animation4{
-    bottom: 85px;
-    left: 50px;
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 3.45s;
+    margin-left: 47%;
+    position: relative;
+    bottom: 94px;
+    animation-delay: 11.25s;
 }
 #circle_animation5{
-    bottom: 87px;
-    left: 56px;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 4.60s;
-
-
+    margin-left: 48%;
+    position: relative;
+    bottom: 94px;
+    animation-delay: 15s;
 }
 #circle_animation6{
-    margin: 1px;
+    margin-left: 46%;
     position: relative;
-    bottom: 87px;
-    left: 59px;
-
-    border-radius: 50%;
-/*
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 5.75s;
-
- */
+    bottom: 94px;
+    animation-delay: 18.75s;
 }
 #circle_animation7{
-    margin: 1px;
+    margin-left: 38%;
     position: relative;
-    bottom: 87px;
-    left: 60px;
-
-    border-radius: 50%;
-/*
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 6.90s;
-
- */
+    bottom: 98px;
+    animation-delay: 22.5s;
 }
 #circle_animation8{
-    margin: 1px;
+    margin-left: 28%;
     position: relative;
-    bottom: 87px;
-    left: 59px;
-
-    border-radius: 50%;
-/*
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 8.05s;
-
- */
+    bottom: 107px;
+    animation-delay: 26.25s;
 }
 #circle_animation9{
-    margin: 1px;
+    margin-left: 17%;
     position: relative;
-    bottom: 87px;
-
-    width: 5px;
-    border-radius: 50%;
-/*
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 9.20s;
-
- */
+    bottom: 120px;
+    animation-delay: 30s;
 }
 #circle_animation10{
-    margin: 1px;
+    margin-left: 6%;
     position: relative;
-    bottom: 88px;
-    left: 51px;
-
-    border-radius: 50%;
-/*
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 10.35s;
-
- */
+    bottom: 139px;
+    animation-delay: 33.75s;
 }
 #circle_animation11{
-    margin: 1px;
+    margin-left: -4%;
     position: relative;
-    bottom: 92px;
-    left: 43px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 11.50s;
+    bottom: 161px;
+    animation-delay: 37.5s;
 }
 #circle_animation12{
-    margin: 1px;
+    margin-left: -9%;
     position: relative;
-    bottom: 97px;
-    left: 35px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 12.65s;
+    bottom: 190px;
+    animation-delay: 41.25s;
 }
 #circle_animation13{
-    margin: 1px;
+    margin-left: -8%;
     position: relative;
-    bottom: 104px;
-    left: 27px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 13.80s;
+    bottom: 220px;
+    animation-delay: 45s;
 }
 #circle_animation14{
-    margin: 1px;
+    margin-left: -5%;
     position: relative;
-    bottom: 112px;
-    left: 19px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 14.95s;
+    bottom: 249px;
+    animation-delay: 48.75s;
 }
 #circle_animation15{
-    margin: 1px;
+    margin-left: 3%;
     position: relative;
-    bottom: 121px;
-    left: 11px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 16.10s;
+    bottom: 274px;
+    animation-delay: 52.5s;
 }
 #circle_animation16{
-    margin: 1px;
+    margin-left: 11%;
     position: relative;
-    bottom: 132px;
-    left: 3px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 17.25s;
+    bottom: 295px;
+    animation-delay: 56.25s;
 }
-#circle_animation17{
-    margin: 1px;
-    position: relative;
-    bottom: 144px;
-    right: 4px;
 
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 18.40s;
+@keyframes timer-anim {
+    0%{
+        background-color: inherit;
+    }
+    10%{
+        background-color: #1EB200;
+        transform: scale(1.01);
+    }
+    20%{
+        background-color: #53B200;
+        transform: scale(1);
+    }
+    30%{
+        background-color: #77B200;
+        transform: scale(1.01);
+    }
+    40%{
+        background-color: #AEC100;
+        transform: scale(1);
+    }
+    50%{
+        background-color: #EEE607;
+        transform: scale(1.01);
+    }
+    60%{
+        background-color: #EEB007;
+        transform: scale(1);
+    }
+    70%{
+        background-color: #D87605;
+        transform: scale(1.01);
+    }
+    80%{
+        background-color: #E14705;
+        transform: scale(1);
+    }
+    90%{
+        background-color: #E12205;
+        transform: scale(1.01);
+    }
+    100%{
+        background-color: #CB0909;
+        transform: scale(1);
+    }
 }
-#circle_animation18{
-    margin: 1px;
-    position: relative;
-    bottom: 159px;
-    right: 8px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 19.55s;
-}
-#circle_animation19{
-    margin: 1px;
-    position: relative;
-    bottom: 175px;
-    right: 11px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 20.70s;
-}
-#circle_animation20{
-    margin: 1px;
-    position: relative;
-    bottom: 191px;
-    right: 12px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 21.85s;
-}
-#circle_animation21{
-    margin: 1px;
-    position: relative;
-    bottom: 207px;
-    right: 10px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 23.00s;
-}
-#circle_animation22{
-    margin: 1px;
-    position: relative;
-    bottom: 222px;
-    right: 6px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 24.15s;
-}
-#circle_animation23{
-    margin: 1px;
-    position: relative;
-    bottom: 236px;
-    right: 1px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 25.30s;
-}
-#circle_animation24{
-    margin: 1px;
-    position: relative;
-    bottom: 248px;
-    left: 5px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 26.45s;
-}
-#circle_animation25{
-    margin: 1px;
-    position: relative;
-    bottom: 259px;
-    left: 12px;
-
-    border-radius: 50%;
 
 
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 27.60s;
-}
-#circle_animation26{
-    margin: 1px;
-    position: relative;
-    bottom: 269px;
-    left: 19px;
-
-    border-radius: 50%;
-
-    animation: timer-anim 1.15s ease-in forwards;
-    animation-delay: 28.75s;
-}
+/*
 @keyframes timer-anim {
     0%{
         background-color: inherit;
@@ -610,4 +458,5 @@ body {
         background-color: darkred;
     }
 }
+*/
 /* end animtion timer */
