@@ -1,8 +1,8 @@
-
 body {
     overflow: hidden;
     margin: 0 0 0 0;
-    background-color: #464941;
+    background-color: #586F7C;
+
     box-sizing: border-box;
 }
 
@@ -55,7 +55,7 @@ body {
 .form-container {
     padding: 100px  20px 100px 20px;
     border-radius: 20px;
-    background: #044e09;
+    background: #B8DBD9;
     z-index: 100 !important;
 }
 .form-container input[type=text]{
@@ -237,7 +237,7 @@ body {
     100%{top: 200px; opacity: 0;}
 }
 
-/******* testing simon stuff ********/
+/*** testing simon stuff ****/
 
 #prova-outer-circle{
     max-width: 10%;
@@ -254,7 +254,7 @@ body {
     height: 235px;
     width: 235px;
     text-align: center;
-    font-family: subway, cursive;
+    font-family: 'Courier New', monospace;
     font-size: 47pt;
     position: absolute;
     margin-left: 5px;
