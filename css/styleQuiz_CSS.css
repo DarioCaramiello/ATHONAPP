@@ -40,9 +40,8 @@ body.wrong{
 }
 
 .container{
-    height: 75%;
+    height: 80%;
     width: 80%;
-    max-width: 80%;
     background-color: #82AEB1;
     border-radius: 5px;
     padding: 10px;
@@ -52,7 +51,7 @@ body.wrong{
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     z-index: 10;
-
+    margin-top: 5%;
 }
 
 .controls{
@@ -66,8 +65,9 @@ body.wrong{
     width: 18vw;
     font-size: 30px;
     font-weight: 800;
-    padding: 10px 20px;
-
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .start-btn:hover{
@@ -86,12 +86,9 @@ body.wrong{
 }
 
 .next-btn{
-    bottom: 20px;
     position:relative;
-    justify-content: center;
-    align-items: center;
-    top: 450px;
-    right: 550px;
+    right: 20%;
+    top: 80%;
 }
 
 #img_question{

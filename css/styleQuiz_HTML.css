@@ -64,55 +64,46 @@ body{
     margin-left: 93%;
     position: relative;
     bottom: 246px;
-    animation-delay: 6s;
 }
 #circle_animation3{
     margin-left: 134%;
     position: relative;
     bottom: 255px;
-    animation-delay: 12s;
 }
 #circle_animation4{
     margin-left: 126%;
     position: relative;
     bottom: 253px;
-    animation-delay: 18s;
 }
 #circle_animation5{
     margin-left: 76%;
     position: relative;
     bottom: 270px;
-    animation-delay: 24s;
 }
 #circle_animation6{
     margin-left: 0;
     position: relative;
     bottom: 331px;
-    animation-delay: 30s;
 }
 #circle_animation7{
     margin-left: -70%;
     position: relative;
     bottom: 439px;
-    animation-delay: 36s;
 }
 #circle_animation8{
     margin-left: -109%;
     position: relative;
-    bottom: 584px;
-    animation-delay: 42s;
+    bottom: 580px;
 }
 #circle_animation9{
     margin-left: -99%;
     position: relative;
-    bottom: 738px;
-    animation-delay: 48s;
+    bottom: 733px;
 }
 #circle_animation10{
     margin-left: -51%;
     position: relative;
-    bottom: 875px;
-    animation-delay: 54s;
+    bottom: 866px;
 }
 
 
