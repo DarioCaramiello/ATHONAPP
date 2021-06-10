@@ -151,7 +151,8 @@ const questions_array = [
             { text: '? = 25, ?? = 27', correct: false },
             { text: '? = 24, ?? = 19', correct: false }
         ],
-        result: false
+        result: false,
+        Reference:""
     },
     {
         question: 'A farmer buys 500 kg of potatoes witch costs 15 cents per kg. He sells them at 27 cents per kg. How much did he earn?',
@@ -162,11 +163,9 @@ const questions_array = [
             { text: '90',correct: false },
             { text: '600',correct: false },
         ],
-        result:false
 
     }
 ]
-
 
 
 /* function onload document */
