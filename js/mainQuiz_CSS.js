@@ -137,6 +137,8 @@ function timerStart(){
         }
         if (timer <= 0) {
             clearInterval(x);
+            $("#question_container").hide()
+
 
             document.getElementById("timer_value").innerHTML = result_time_out;
             if(check===1){
@@ -144,8 +146,10 @@ function timerStart(){
                 document.getElementById("timer_value").style.marginLeft = "10px";
             }
         }
+
         nextButton.addEventListener("click", () => {
             clearInterval(x)
+            $("#question_container").show()
             document.getElementById("timer_value").innerHTML = "60"
             /* document.getElementById("confirm_btn").style.display = "none" */
         } )
