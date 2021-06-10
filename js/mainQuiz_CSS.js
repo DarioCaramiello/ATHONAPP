@@ -49,9 +49,10 @@ nextButton.addEventListener("click",function setPointAndNext(){
         randomQuestions[currentQuestionIndex].Result = true
     }
     currentQuestionIndex+=1;
-
-    if (currentQuestionIndex>=randomQuestions.length)
+    $("#question_container").hide()
+    if (currentQuestionIndex>=randomQuestions.length) {
         show_Result()
+    }
     else
         nextQuestion()
 })
@@ -149,7 +150,6 @@ function timerStart(){
 
         nextButton.addEventListener("click", () => {
             clearInterval(x)
-            $("#question_container").show()
             document.getElementById("timer_value").innerHTML = "60"
             /* document.getElementById("confirm_btn").style.display = "none" */
         } )
