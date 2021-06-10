@@ -27,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 0;
 
     display: grid;
@@ -95,8 +95,13 @@ body {
 .style_button {
     cursor: pointer;
     background: url("https://image.freepik.com/free-vector/abstract-technology-background-web-developer-computer-code_88211-423.jpg") 50%;
+    width: 18vw;
+    height: 4vw;
+    /*
     width: 200pt;
     height: 60pt;
+
+     */
     font-weight: 100;
     font-family: 'Fira Code Light', sans-serif;
 
@@ -278,6 +283,7 @@ body {
 .container_timer{
     position: absolute;
     left: 90%;
+    top: 5%;
 }
 #timer{
     font-size: 2.6rem;
