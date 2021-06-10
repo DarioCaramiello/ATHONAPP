@@ -138,6 +138,9 @@ let x = setInterval(function() {
 */
 
 
+
+
+
 function show_Result() {
 
     nextButton.style.display = "none";

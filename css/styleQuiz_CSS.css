@@ -94,9 +94,9 @@ body.wrong{
 }
 
 #img_question{
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 55%;
-    margin-right: 2%;
+    margin-right: 5%;
     max-width: 45%;
     background-color: white;
     border-radius: 7px;
@@ -133,15 +133,12 @@ body.wrong{
     }
 }
 #fill_form{
-
-
-    margin-top: 2%;
-    margin-right: 10%;
+    margin-top: 10%;
+    margin-left: 5%;
 
     height: 80%;
     width: 45%;
     max-width: 45%;
-
 
     background-color: #93C6D6;
     border-radius: 7px;
