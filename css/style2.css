@@ -222,7 +222,7 @@ body {
     transform: scale(0.1);
     left: 85%;
     z-index: 1;
-}*/
+}
 @keyframes floatUp{
     0%{top: -100px; opacity: 0;}
     25%{opacity: 1;}
@@ -549,17 +549,21 @@ body {
     75%{opacity: 1;}
     100%{top: 100vh; opacity: 0;}
 }
+
 /* istruzioni */
-
-
 .box {
-    width: 40%;
-    margin: 320px 0 0 370px;
-    padding: 25px;
+    position: absolute;
+    top: 87%;
+    left: 33%;
+    width: 30%;
+    padding: 15px;
     background: rgba(255,255,255,0.2);
     border: 2px solid #fff;
-    border-radius: 20px/50px;
+    border-radius: 20px;
+    /*
     background-clip: padding-box;
+
+     */
     text-align: center;
 }
 
@@ -575,7 +579,20 @@ body {
 }
 .button:hover {
     background: #097014;
+    animation: animation_button_rules 2s infinite normal;
 }
+
+
+@keyframes animation_button_rules {
+    from {
+        padding: 10px;
+    }
+    to {
+        padding: 10px 30% 10px 30%;
+    }
+}
+
+
 
 .overlay {
     position: fixed;

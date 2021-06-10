@@ -225,7 +225,6 @@ function show_Result() {
             x.insertAdjacentElement("afterend", a)
         }
     }
-
 }
 
 
