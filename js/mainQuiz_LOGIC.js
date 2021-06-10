@@ -123,6 +123,8 @@ function setStatusClass(element, correct){
             }
         });
     }else{
+        /*se la risposta e' sbagliata aggiungo la classe wrong*/
+        element.classList.add('wrong')
         $('#riassunto_game').show()
         $('#risp_corretta').hide()
         $('#risp_errata').show()
@@ -130,8 +132,6 @@ function setStatusClass(element, correct){
         $('#answer-buttons').hide()
         $('#question').hide()
         $('#next-btn').show()
-        /*se la risposta e' sbagliata aggiungo la classe wrong*/
-        element.classList.add('wrong')
     }
 }
 /*funzione per rimuovere la classe correct e wrong*/
@@ -162,7 +162,6 @@ const questions_array = [
             { text: '90',correct: false },
             { text: '600',correct: false },
         ],
-
         result:false
 
     }
