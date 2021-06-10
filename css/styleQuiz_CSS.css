@@ -24,7 +24,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+   /* overflow: hidden; */
 }
 
 /*noinspection ALL*/
@@ -89,15 +89,14 @@ body.wrong{
     position:relative;
     justify-content: center;
     align-items: center;
-    top:450px;
-    right:550px;
+    top: 450px;
+    right: 550px;
 }
 
 #img_question{
-    display: flex;
-    justify-content: center;
-    height: 80%;
-    width: 45%;
+    margin-top: 5%;
+    margin-left: 55%;
+    margin-right: 2%;
     max-width: 45%;
     background-color: white;
     border-radius: 7px;
@@ -134,16 +133,25 @@ body.wrong{
     }
 }
 #fill_form{
+
+
+    margin-top: 2%;
+    margin-right: 10%;
+
     height: 80%;
     width: 45%;
     max-width: 45%;
+
+
     background-color: #93C6D6;
     border-radius: 7px;
-    padding: 5px;
+
     box-shadow: 0 0 10px 2px;
     overflow:hidden;
     float:left;
+    /*
     top:35px;
+     */
     font-size: 0.9rem;
     font-weight: 400;
     text-align: left;
