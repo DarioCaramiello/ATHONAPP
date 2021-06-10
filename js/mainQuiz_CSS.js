@@ -80,13 +80,13 @@ function showQuestion(question)
     x.setAttribute("id", "textTofill");
     //element.appendChild(x)
     element.insertAdjacentElement("afterbegin", x)
-    document.getElementById("Domanda").innerText= "Domanda "+ (currentQuestionIndex+1)
+    document.getElementById("Domanda").innerText= "Question "+ (currentQuestionIndex+1)
 
 }
 
 const questions_array = [
     {
-        question: "Inserisci la proprietà mancante per avere l'elemento raffigurato nell'immagine a destra:",
+        question: "Insert the missing property in order to achieve the element represented in the image on the right:",
         code1 :"<!DOCTYPE html>\n<html>\n<head>\n<style>\n.div2 {\nwidth: 300px;\nheight: 100px; \npadding: 50px;\nborder: 1px solid red;\n",
         code2 : ": border-box;\n}\n</style>\n</head>\n<body>\n<div class='div2'>Hooray!</div>\n</body>\n</html>\n" ,
 
@@ -96,7 +96,7 @@ const questions_array = [
         Reference : "https://www.w3schools.com/css/css3_box-sizing.asp"
     },
     {
-        question: "Inserisci la proprietà mancante per avere l'elemento raffigurato nell'immagine a destra:",
+        question: "Insert the missing property in order to achieve the element represented in the image on the right:",
         code1 :"<!DOCTYPE html>\n <html>\n<head>\n<style>\n h1 { \n   color: red;",
         code2 : " : 2px 2px 4px #000000;\n }\n </style> \n</head> \n <body> \n <h1>This is text</h1> \n </body> \n </html>\n\n" ,
         Answer : "text-shadow",
@@ -105,7 +105,7 @@ const questions_array = [
         Reference : "https://www.w3schools.com/css/css3_shadows.asp"
     },
     {
-        question: "Inserisci l'attributo mancante 2:",
+        question: "Insert the missing property in order to achieve the element represented in the image on the right::",
         code1 :'<!DOCTYPE html> \n <html> \n <head> \n <style> \n \n#test1 { \n ',
         code2 : ' : 15px 50px 30px 5px; \n  background: #73AD21; \n  padding: 20px; \n   width: 200px; \n height: 150px; \n } \n \n </style> \n </head> \n <body> \n <p id=\"test1\"></p> \n \n </body> \n </html> \n ' ,
         Answer : "border-radius",
@@ -163,15 +163,15 @@ function show_Result() {
     {
         let x = document.createElement("li");
         if (randomQuestions[i].Result===true) {
-            x.innerText = "Domanda nr. " + (i + 1) + " - Risposta Corretta"
+            x.innerText = "Question nr. " + (i + 1) + " - Correct answer!"
             element.appendChild(x)
         }
         else {
             let a=document.createElement("a")
-            a.innerText="Clicca qui per un riferimento!"
+            a.innerText="Clich here for a reference!"
             a.setAttribute("href",randomQuestions[i].Reference)
             a.setAttribute("target","_blank")
-            x.innerText = "Domanda nr. " + (i + 1) + " - Risposta errata - La risposta esatta è :" +randomQuestions[i].Answer
+            x.innerText = "Question nr. " + (i + 1) + " - Wrong asnwer - The correct answer is : " +randomQuestions[i].Answer
             element.appendChild(x)
             x.insertAdjacentElement("afterend", a)
         }
@@ -204,9 +204,10 @@ $("#getback-btn").click(function(){
 
 });
 
+/*
 window.addEventListener('beforeunload', (event) => {
     // Cancel the event as stated by the standard.
     event.preventDefault();
     // Chrome requires returnValue to be set.
     event.returnValue = '';
-});
+}); */
