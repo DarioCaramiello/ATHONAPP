@@ -39,6 +39,8 @@ body.wrong{
     background-color: var(--color-correct);
 }
 
+
+
 .container{
     height: 80%;
     width: 80%;
@@ -51,7 +53,7 @@ body.wrong{
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     z-index: 10;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .controls{
@@ -86,20 +88,28 @@ body.wrong{
 }
 
 .next-btn{
-    position:relative;
-    right: 20%;
+
+    position: absolute;
     top: 80%;
+    right: 40%;
+
+
+
+
 }
 
 #img_question{
-    margin-top: 10%;
+    margin-top: 3%;
+    margin-right: 3%;
     margin-left: 55%;
-    margin-right: 5%;
+
     max-width: 45%;
     background-color: white;
     border-radius: 7px;
-    padding: 10px;
     box-shadow: 0 0 10px 2px;
+
+
+
 }
 
 
@@ -131,8 +141,8 @@ body.wrong{
     }
 }
 #fill_form{
-    margin-top: 10%;
-    margin-left: 5%;
+    margin-top: 3%;
+    margin-left: 3%;
 
     height: 80%;
     width: 45%;
