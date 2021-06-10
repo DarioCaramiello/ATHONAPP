@@ -151,7 +151,8 @@ const questions_array = [
             { text: '? = 25, ?? = 27', correct: false },
             { text: '? = 24, ?? = 19', correct: false }
         ],
-        result: false
+        result: false,
+        Reference:""
     },
     {
         question: 'Un contadino compra 500 kg di patate a 15 centesimi al kg. Le rivende a 27 centesimi al kg. Quanto guadagna in tutto?',
@@ -163,11 +164,11 @@ const questions_array = [
             { text: '600',correct: false },
         ],
 
-        result:false
+        result:false,
+        Reference:"",
 
     }
 ]
-
 
 
 /* function onload document */
