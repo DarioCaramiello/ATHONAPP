@@ -116,55 +116,27 @@ const questions_array = [
 
 ]
 
-function timerStart(){
-    var time_out = "Time out";
-    /* variabile bool per controllare se i numeri < 10 devono essere spostati*/
-    var check=0
-    /*per cambiare font size alla scritta Time out*/
-    var result_time_out = time_out.fontsize(5);
-    let timer = 60;
+//timer
+/*
+let timer = 60;
 // Update the count down every 1 second
-    let x = setInterval(function() {
-        timer -= 1
-        document.getElementById("timer_value").innerText = timer;
-        /*per spostare i numeri al centro*/
-        if(timer < 10) {
-            document.getElementById("timer_value").style.marginLeft = "25px";
-            check = 1
-        }
-        if (timer <= 0) {
-            clearInterval(x);
-            /*per nascondere l'animazione del timer*/
-            $('.circle_animation').hide();
-            $("#risp_errata").show()
-            $("#risp_corretta").hide()
-            $("#game_").hide()
-            $("#timer").hide()
-            $("#confirm_button").hide()
-            $("#id_question_quiz").hide()
-            $("#reset_button").show()
-            $('#riassunto_game').show()
-            document.getElementById("timer_value").innerHTML = result_time_out;
-            if(check===1){
-                check = 0
-                document.getElementById("timer_value").style.marginLeft = "10px";
-            }
-        }
-        /*quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo */
-        let confirmButton = document.getElementById("input_button")
-        confirmButton.addEventListener("click", () => {
-            clearInterval(x)
-            $('.circle_animation').hide();
-            document.getElementById("timer_value").innerHTML = result_time_out;
-            timer = 60
-        })
-        let nextButton = document.getElementById("reset_button")
-        nextButton.addEventListener("click", () => {
-            clearInterval(x)
-            document.getElementById("timer_value").innerHTML = 60
-        } )
-    }, 1000);
-}
+let x = setInterval(function() {
+    timer -= 1
+    document.getElementById("timer").innerHTML = timer;
+    if (timer < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "Time-out";
+        verifica_quiz();
+    }
+    let confirm_button_id = document.getElementById("input_button")
+     //quando clicca su conferma ed il tempo non è ancora finito, si blocca il tempo
+    confirm_button_id.addEventListener("click", () => {
+        timer = 0;
+        document.getElementById("confirm_button").style.display = "none"
+    } )
+}, 1000);
+*/
+
 
 function show_Result() {
 
