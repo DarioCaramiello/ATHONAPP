@@ -60,6 +60,7 @@ body.wrong{
 
 .btn-grid{
     display: grid;
+    justify-content: space-between;
     /*2 colonne*/
     grid-template-columns: repeat(2,auto);
     gap: 10px;

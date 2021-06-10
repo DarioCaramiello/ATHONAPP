@@ -24,6 +24,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 /*noinspection ALL*/
@@ -39,15 +40,15 @@ body.wrong{
 }
 
 .container{
-    height: 600px;
-    width: 1100px;
+    height: 75%;
+    width: 80%;
     max-width: 80%;
     background-color: #82AEB1;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    text-align:center;
-    font-size: 20px;
+    text-align: center;
+    font-size: 1rem;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
 
@@ -93,18 +94,15 @@ body.wrong{
 }
 
 #img_question{
-    height: 400px;
-    width: 750px;
-    max-width: 55%;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 45%;
+    max-width: 45%;
     background-color: white;
     border-radius: 7px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    position: relative;
-    overflow:hidden;
-    left:9px;
-    float:left;
-    top:35px;
 }
 
 
@@ -136,23 +134,19 @@ body.wrong{
     }
 }
 #fill_form{
-    height: 400px;
-    width: 650px;
-    max-width:44%;
+    height: 80%;
+    width: 45%;
+    max-width: 45%;
     background-color: #93C6D6;
     border-radius: 7px;
     padding: 5px;
     box-shadow: 0 0 10px 2px;
-    position:relative;
-    left:2px;
     overflow:hidden;
     float:left;
     top:35px;
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
     text-align: left;
-
-
 }
 
 
@@ -183,14 +177,12 @@ body.wrong{
 
 
 @keyframes background_color {
-
     50.6666666667% {
         background-color: #ecf01e;
     }
     75.6666666667% {
         background-color: #ff0606;
     }
-
 }
 
 #timer {
