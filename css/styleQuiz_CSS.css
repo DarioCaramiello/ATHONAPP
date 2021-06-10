@@ -51,6 +51,7 @@ body.wrong{
     font-size: 1rem;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
+    z-index: 10;
 
 }
 
@@ -155,62 +156,23 @@ body.wrong{
 }
 
 
-#timerLabel{
-    font-size: 15pt;
-    text-align: center;
-    padding: 20px;
-    width: 150px;
-    height: 130px;
-    /*margin: 40px 10px;*/
-    top: 0;
-    -webkit-animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
-    animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
-    display:none;
+/* timer */
+.container_timer{
     position: absolute;
+    left: 47%;
+    top: 3%;
 
 }
-
-#timer {
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 35pt;
-    color: rgb(255, 255, 255);
-    padding: 30px 50px 30px 50px;
-    text-shadow: 3.75vmin 3.75vmin 7.5vmin rgb(255, 255, 255);
-    font-weight: 300;
+#timer{
+    font-size: 2.6rem;
+    height: 20vh;
+    width: 10vw;
 }
-
-
-@keyframes background_color {
-    50.6666666667% {
-        background-color: #ecf01e;
-    }
-    75.6666666667% {
-        background-color: #ff0606;
-    }
+#timer_value {
+    margin-left: 10px;
+    text-shadow: 2px 2px 1px hsla(270, 100%, 60%, 1),-2px -2px 1px hsla(210, 90%, 62%, 0.92), 2px -2px 1px hsla(213, 100%, 40%, 1), -2px 2px 1px #1f00e6;
 }
-
-#timer {
-    -webkit-animation: timer_beat 1s ease-in-out infinite alternate forwards;
-    animation: timer_beat 1s ease-in-out infinite alternate forwards;
-}
-
-@-webkit-keyframes timer_beat {
-    from {
-        transform: none;
-    }
-    to {
-        transform: scale(1.125);
-    }
-}
-@keyframes timer_beat {
-    from {
-        transform: none;
-    }
-    to {
-        transform: scale(1.125);
-    }
-}
+/* end timer */
 
 
 /* animation background */
