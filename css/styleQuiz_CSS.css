@@ -24,6 +24,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+   /* overflow: hidden; */
 }
 
 /*noinspection ALL*/
@@ -39,17 +40,18 @@ body.wrong{
 }
 
 .container{
-    height: 600px;
-    width: 1100px;
+    height: 75%;
+    width: 80%;
     max-width: 80%;
     background-color: #82AEB1;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    text-align:center;
-    font-size: 20px;
+    text-align: center;
+    font-size: 1rem;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
+    z-index: 10;
 
 }
 
@@ -88,23 +90,19 @@ body.wrong{
     position:relative;
     justify-content: center;
     align-items: center;
-    top:450px;
-    right:550px;
+    top: 450px;
+    right: 550px;
 }
 
 #img_question{
-    height: 400px;
-    width: 750px;
-    max-width: 55%;
+    margin-top: 5%;
+    margin-left: 55%;
+    margin-right: 2%;
+    max-width: 45%;
     background-color: white;
     border-radius: 7px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    position: relative;
-    overflow:hidden;
-    left:9px;
-    float:left;
-    top:35px;
 }
 
 
@@ -136,84 +134,48 @@ body.wrong{
     }
 }
 #fill_form{
-    height: 400px;
-    width: 650px;
-    max-width:44%;
+
+
+    margin-top: 2%;
+    margin-right: 10%;
+
+    height: 80%;
+    width: 45%;
+    max-width: 45%;
+
+
     background-color: #93C6D6;
     border-radius: 7px;
-    padding: 5px;
+
     box-shadow: 0 0 10px 2px;
-    position:relative;
-    left:2px;
     overflow:hidden;
     float:left;
+    /*
     top:35px;
-    font-size: 14px;
-    font-weight: normal;
+     */
+    font-size: 0.9rem;
+    font-weight: 400;
     text-align: left;
-
-
 }
 
 
-#timerLabel{
-    font-size: 15pt;
-    text-align: center;
-    padding: 20px;
-    width: 150px;
-    height: 130px;
-    /*margin: 40px 10px;*/
-    top: 0;
-    -webkit-animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
-    animation: 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1) forwards background_color;
-    display:none;
+/* timer */
+.container_timer{
     position: absolute;
+    left: 47%;
+    top: 3%;
 
 }
-
-#timer {
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 35pt;
-    color: rgb(255, 255, 255);
-    padding: 30px 50px 30px 50px;
-    text-shadow: 3.75vmin 3.75vmin 7.5vmin rgb(255, 255, 255);
-    font-weight: 300;
+#timer{
+    font-size: 2.6rem;
+    height: 20vh;
+    width: 10vw;
 }
-
-
-@keyframes background_color {
-
-    50.6666666667% {
-        background-color: #ecf01e;
-    }
-    75.6666666667% {
-        background-color: #ff0606;
-    }
-
+#timer_value {
+    margin-left: 10px;
+    text-shadow: 2px 2px 1px hsla(270, 100%, 60%, 1),-2px -2px 1px hsla(210, 90%, 62%, 0.92), 2px -2px 1px hsla(213, 100%, 40%, 1), -2px 2px 1px #1f00e6;
 }
-
-#timer {
-    -webkit-animation: timer_beat 1s ease-in-out infinite alternate forwards;
-    animation: timer_beat 1s ease-in-out infinite alternate forwards;
-}
-
-@-webkit-keyframes timer_beat {
-    from {
-        transform: none;
-    }
-    to {
-        transform: scale(1.125);
-    }
-}
-@keyframes timer_beat {
-    from {
-        transform: none;
-    }
-    to {
-        transform: scale(1.125);
-    }
-}
+/* end timer */
 
 
 /* animation background */

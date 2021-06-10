@@ -259,6 +259,7 @@ function return_main_page() {
 }
 
 
+
 function timerStart(){
     var time_out = "Time out";
     /* variabile bool per controllare se i numeri < 10 devono essere spostati*/

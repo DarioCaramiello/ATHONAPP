@@ -114,26 +114,32 @@ body {
     cursor: pointer;
 }
 
-#container_all_banner_info {
-    margin-top: 0;
+#container_banner_rules {
+    background-color: red;
+    border: 1px solid #4c4848;
+    cursor: pointer;
+    margin: -350px 0 5px 85%;
+    text-align: center;
 }
+
+
 
 #container_info { background: linear-gradient(to left, #033f07, #2e8b57); }
 #container_info2, #container_info_prizes2 { margin-left: 10px; }
 
-#container_name_user, #lista_rank, #premi{
+#container_name_user, #lista_rank, #premi, #container_pre_info_rules{
     font-size: 20pt;
     color: white;
     font-family: "Times New Roman",sans-serif;
 }
 
-#pre_info, #pre_info_rank,#info_prize{
+#pre_info, #pre_info_rank,#info_prize, #pre_info_rules{
     font-size: 22pt;
     opacity: 30%;
     color: black;
 }
 
-#pre_info:hover, #pre_info_rank:hover, #info_prize:hover{
+#pre_info:hover, #pre_info_rank:hover, #info_prize:hover, #pre_info_rules:hover{
     opacity: 100%;
     color: seashell;
 }
@@ -571,18 +577,18 @@ body {
     font-size: 1em;
     padding: 10px;
     color: #fff;
-    border: 2px solid #097014;
     border-radius: 20px/50px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
+/*
 .button:hover {
     background: #097014;
     animation: animation_button_rules 2s infinite normal;
 }
-
-
+*/
+/*
 @keyframes animation_button_rules {
     from {
         padding: 10px;
@@ -591,7 +597,7 @@ body {
         padding: 10px 30% 10px 30%;
     }
 }
-
+*/
 
 
 .overlay {

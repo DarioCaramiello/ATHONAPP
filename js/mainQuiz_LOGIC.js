@@ -123,6 +123,8 @@ function setStatusClass(element, correct){
             }
         });
     }else{
+        /*se la risposta e' sbagliata aggiungo la classe wrong*/
+        element.classList.add('wrong')
         $('#riassunto_game').show()
         $('#risp_corretta').hide()
         $('#risp_errata').show()
@@ -130,8 +132,6 @@ function setStatusClass(element, correct){
         $('#answer-buttons').hide()
         $('#question').hide()
         $('#next-btn').show()
-        /*se la risposta e' sbagliata aggiungo la classe wrong*/
-        element.classList.add('wrong')
     }
 }
 /*funzione per rimuovere la classe correct e wrong*/
@@ -144,7 +144,7 @@ function clearStatusClass(element){
 /*array per tutte le domande*/
 const questions_array = [
     {
-        question: 'Completare la seguente serie numerica: 2, 6, 7, 10, 12, 14, 17, 18, 22, ?, ??',
+        question: 'Complete the following numerical series: 2, 6, 7, 10, 12, 14, 17, 18, 22, ?, ??',
         answers: [
             { text: '? = 22, ?? = 27',correct: true },
             { text: '? = 27, ?? = 22', correct: false },
@@ -155,7 +155,7 @@ const questions_array = [
         Reference:""
     },
     {
-        question: 'Un contadino compra 500 kg di patate a 15 centesimi al kg. Le rivende a 27 centesimi al kg. Quanto guadagna in tutto?',
+        question: 'A farmer buys 500 kg of potatoes witch costs 15 cents per kg. He sells them at 27 cents per kg. How much did he earn?',
         answers: [
             /*Ha un guadagno di 12 centesimo al chilo che moltiplicato per 500kg gli fa guadagnare 6000 centesimi = 60 euro*/
             { text: '30',correct: false },
@@ -163,9 +163,6 @@ const questions_array = [
             { text: '90',correct: false },
             { text: '600',correct: false },
         ],
-
-        result:false,
-        Reference:"",
 
     }
 ]
@@ -188,7 +185,7 @@ $("document").ready(function() {
 
 // Send point to the server and show results
 function show_Result() {
-
+    $('#timer').hide()
     nextButton.style.display = "none";
     getbackButton.style.display = "block";
     questionContainerElement.style.display = "none"
@@ -213,15 +210,15 @@ function show_Result() {
     {
         let x = document.createElement("li");
         if (randomQuestions[i].result===true) {
-            x.innerText = "Domanda nr. " + (i + 1) + " - Risposta Corretta"
+            x.innerText = "Question n°" + (i + 1) + " - Correct answer"
             element.appendChild(x)
         }
         else {
             let a=document.createElement("a")
-            a.innerText="Clicca qui per un riferimento!"
+            a.innerText="Click for the references!"
             a.setAttribute("href",randomQuestions[i].Reference)
 
-            x.innerText = "Domanda nr. " + (i + 1) + " - Risposta errata"
+            x.innerText = "Question n°" + (i + 1) + " - Wrong answer"
             element.appendChild(x)
             x.insertAdjacentElement("afterend", a)
         }

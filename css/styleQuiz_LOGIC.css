@@ -60,6 +60,7 @@ body.wrong{
 
 .btn-grid{
     display: grid;
+    justify-content: space-between;
     /*2 colonne*/
     grid-template-columns: repeat(2,auto);
     gap: 10px;
@@ -73,6 +74,8 @@ body.wrong{
     width: 28.1vw;
     height: 13vh;
     margin-top: 20px;
+    min-width: 50px;
+    max-width: 400px;
     border: 1px solid #1f00e6;
     background-color: hsla(223, 100%, 60%, 1);
     border-radius: 5px;
