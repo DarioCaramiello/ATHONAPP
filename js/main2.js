@@ -33,6 +33,7 @@ function start_game() {
         document.getElementById("myForm").style.display="none";
         document.getElementById("container_page").style.display="block";
         document.getElementById("name_project").style.display="block";
+        $("#container_banner_rules").show()
 
 
         $.ajax({

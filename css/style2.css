@@ -112,15 +112,25 @@ body {
     border-left: none;
     text-align: center;
     cursor: pointer;
+    z-index: 1;
 }
 
 #container_banner_rules {
-    background-color: red;
+    position: absolute;
+    top: 25%;
+    left: 87%;
+
+    padding: 0 50px;
+    text-align: center;
+    background-color: #ff0000;
     border: 1px solid #4c4848;
     cursor: pointer;
-    margin: -350px 0 5px 85%;
-    text-align: center;
+
+
+
+
 }
+
 
 
 
@@ -135,7 +145,7 @@ body {
 
 #pre_info, #pre_info_rank,#info_prize, #pre_info_rules{
     font-size: 22pt;
-    opacity: 30%;
+    opacity: 40%;
     color: black;
 }
 
@@ -319,7 +329,7 @@ body {
     left: 50%;
     margin: -250px 0 0 -250px;
     border-style: solid;
-    border-width: 1;
+    border-width: 1px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     z-index: 18;
@@ -359,7 +369,7 @@ body {
     left: 50%;
     margin: -250px 0 0 0;
     border-style: solid;
-    border-width: 1;
+    border-width: 1px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     z-index: 18;
@@ -400,7 +410,7 @@ body {
     left: 50%;
     margin: 0 -250px 0 -250px;
     border-style: solid;
-    border-width:1;
+    border-width: 1px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     z-index: 18;
@@ -439,7 +449,7 @@ body {
     left: 50%;
     margin: 0 0 -250px 0;
     border-style: solid;
-    border-width: 1;
+    border-width: 1px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     z-index: 18;
