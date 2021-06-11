@@ -106,7 +106,7 @@ const questions_array = [
         Reference : "https://www.w3schools.com/css/css3_shadows.asp"
     },
     {
-        question: "Insert the missing property in order to achieve the element represented in the image on the right::",
+        question: "Insert the missing property in order to achieve the element represented in the image on the right:",
         code1 :'<!DOCTYPE html> \n <html> \n <head> \n <style> \n \n#test1 { \n ',
         code2 : ' : 15px 50px 30px 5px; \n  background: #73AD21; \n  padding: 20px; \n   width: 200px; \n height: 150px; \n } \n \n </style> \n </head> \n <body> \n <p id=\"test1\"></p> \n \n </body> \n </html> \n ' ,
         Answer : "border-radius",
