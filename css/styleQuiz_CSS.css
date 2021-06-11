@@ -2,21 +2,11 @@
     box-sizing: border-box;
     font-family: Georgia,sans-serif;
 }
-/*usato per accedere all'elemento root e definire variabili globali*/
-:root{
-    /*colore default*/
-    --color-neutral: #264de4;
-    /*colore risposta errata*/
-    --color-wrong: red;
-    /*colore risposta corretta*/
-    --color-correct: green;
-
-}
 
 body{
     /*imposto il background a un colore di default*/
     /*noinspection CssUnresolvedCustomProperty*/
-    background-color: var(--color-neutral);
+    background-color: #4361ee;
     margin: 0;
     padding: 0;
     display: flex;
@@ -24,27 +14,13 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-   /* overflow: hidden; */
+    overflow: hidden;
 }
-
-/*noinspection ALL*/
-body.correct{
-    /*se la risposta è corretta cambio colore sfondo*/
-    background-color: var(--color-correct);
-}
-
-/*noinspection CssUnresolvedCustomProperty*/
-body.wrong{
-    /*se la risposta è sbagliata cambio colore sfondo*/
-    background-color: var(--color-correct);
-}
-
-
 
 .container{
     height: 80%;
     width: 80%;
-    background-color: #82AEB1;
+    background-color: #0077b6;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
@@ -62,10 +38,11 @@ body.wrong{
     align-items: center;
 }
 .start-btn, .next-btn, #getback-btn{
+    background-color: #90e0ef;
     margin: 0;
     height: 9vh;
     width: 18vw;
-    font-size: 30px;
+    font-size: 1.6rem;
     font-weight: 800;
     padding: 10px 15px;
     border-radius: 10px;
@@ -80,7 +57,6 @@ body.wrong{
     animation: next-btn-anim 1s infinite alternate;
 }
 #getback-btn:hover{
-
     animation: next-btn-anim 1s infinite alternate;
 }
 .hide{
@@ -88,14 +64,9 @@ body.wrong{
 }
 
 .next-btn{
-
     position: absolute;
     top: 80%;
     right: 40%;
-
-
-
-
 }
 
 #img_question{
@@ -104,12 +75,9 @@ body.wrong{
     margin-left: 55%;
 
     max-width: 45%;
-    background-color: white;
+    background-color: #00b4d8;
     border-radius: 7px;
     box-shadow: 0 0 10px 2px;
-
-
-
 }
 
 
@@ -121,9 +89,9 @@ body.wrong{
     to{
         opacity: 90%;
         border-radius: 20px;
-        font-size: 33px;
+        font-size: 1.9rem;
         transform: scale(1.01);
-        background-color: hsla(223, 100%, 40%, 1);
+        background-color: #4361ee;
     }
 }
 
@@ -135,7 +103,7 @@ body.wrong{
     to{
         opacity: 90%;
         border-radius: 20px;
-        font-size: 33px;
+        font-size: 1.9rem;
         transform: scale(1.01);
         background-color: hsla(223, 100%, 40%, 1);
     }
@@ -148,7 +116,7 @@ body.wrong{
     width: 45%;
     max-width: 45%;
 
-    background-color: #93C6D6;
+    background-color: #00b4d8;
     border-radius: 7px;
 
     box-shadow: 0 0 10px 2px;
@@ -160,6 +128,12 @@ body.wrong{
     font-size: 0.9rem;
     font-weight: 400;
     text-align: left;
+}
+#lista_domande{
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-top: 5%;
+    line-height: 2rem;
 }
 
 
