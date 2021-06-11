@@ -101,7 +101,6 @@ function daily_prizes(daily_list)
     let i
     for (i=0; i<daily_list[day].length;i++)
     {
-
         let x = document.createElement("li");
         x.innerText= daily_list[day][i].toString();
         element.appendChild(x)
