@@ -92,7 +92,7 @@ function start_game() {
     }
 }
 
-function daily_prizes(daily_list)
+function daily_prizes(daily_list){
 
     let today=new Date()
     let day=(today.getDay()) - 1
@@ -105,7 +105,7 @@ function daily_prizes(daily_list)
         let x = document.createElement("li");
         x.innerText= daily_list[day][i].toString();
         element.appendChild(x)
-    }k
+    }
 }
 
 function goQuiz() {
