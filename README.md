@@ -34,3 +34,9 @@ In order to do so please follow the steps:
 ##PROJECT PRESENTATION LINK
 You can now properly navigate through the AthonApp Website!
 
+
+https://docs.google.com/presentation/d/1I_NFdV2VMQ4wJuBoNa4zon7JrnJgES4Xr31LwkJbNE0/edit#slide=id.gdf81bbaab4_0_0 - Language : ENG
+https://docs.google.com/presentation/d/1oW6LNUkNJhuK29k4O-qWxUpvY6Aj1YQhA3bNAuQQVGE/edit?usp=sharing - Language : ITA
+
+
+
