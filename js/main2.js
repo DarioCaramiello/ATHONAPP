@@ -308,3 +308,24 @@ $(document).ready( function() {
 
     });
 });
+
+$(document).ready(function(){
+    let today=new Date()
+    let day=(today.getDay())
+    console.log(day)
+
+    $.ajax({
+        url: 'http://localhost:5000/api/clear-db',
+        type: 'POST',
+        dataType: "json",
+        data : {
+            'current' :  day
+        },
+
+        success: function(result) {
+            console.log(result)
+            }
+
+    });
+})
+
