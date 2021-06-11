@@ -94,8 +94,8 @@ function start_game() {
 
 function daily_prizes(daily_list)
 {
-    let today=new Date()
-    let day=today.getDay()
+    let today = new Date()
+    let day = (today.getDay())-1
     console.log(day)
     let element=document.getElementById("lista")
     let i
