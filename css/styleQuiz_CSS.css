@@ -29,7 +29,7 @@ body{
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     z-index: 10;
-    margin-top: 16px;
+    margin-top: 25px;
 }
 
 .controls{
@@ -50,7 +50,11 @@ body{
 }
 
 .start-btn{
-    margin-top: 25%;
+    margin-top: 22%;
+}
+
+#getback-btn{
+    margin-top: 10%;
 }
 
 .start-btn:hover{
@@ -85,9 +89,7 @@ body{
 }
 
 #Domanda {
-    position: relative;
-    top: 1%;
-    left: 5%;
+    text-align: center;
     font-size: 1.2em;
 
 }
