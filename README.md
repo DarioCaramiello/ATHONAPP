@@ -20,15 +20,15 @@ In order to do so please follow the steps:
 
 ###1 - Install Python Packages:
 
-  1. Install FLASK
-  2. Install CORS
-  3. Install PyMongo
+  1. pip install Flask
+  2. pip install CORS
+  3. pip install PyMongo
 
 ###2 - Run MongoDB from Docker
 
-####3 - Set Env. variable FLASK_APP=server.py \
-####4 - Set Environment - FLASK_ENV=debug \
-####5 - Run flask with the following command : flask run -h (IP) -p (port) 
+###3 - Set Env. variable FLASK_APP=server.py 
+###4 - Set Environment - FLASK_ENV=debug 
+###5 - Run flask with the following command : flask run -h (IP) -p (port) 
 
 
 ##PROJECT PRESENTATION LINK
