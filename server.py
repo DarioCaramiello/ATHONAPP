@@ -9,16 +9,26 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["database"]
 user_ = db["user"]
 name_corrent_user = [" "]
+currentday=  [" "]
 
 premi = [
-        ["PS Store Credit" , "Dogecoing", "Amazon Credit"],
-        ["Google Credit", "Prize2" , "Prize3"],
-        ["Day3prie", "PRize2", "prize3"],
-        ["Day4prie", "PRize2", "prize3"],
-        ["Day5prie", "PRize2", "prize3"],
-        ["Day6prie", "PRize2", "prize3"],
-        ["Day7prie", "PRize2", "prize3"],
-    ]
+    ["Prize1_Day1", "Prize2", "Prize3"],
+    ["Prize1_Day2", "Prize2", "Prize3"],
+    ["Prize1_Day3", "Prize2", "Prize3"],
+    ["Prize1_Day4", "Prize2", "Prize3"],
+    ["Prize1_Day5", "Prize2", "Prize3"],
+    ["Prize1_Day6", "Prize2", "Prize3"],
+    ["Prize1_Day7", "Prize2", "Prize3"],
+]
+
+rank = {
+    1: {"name": " ", "point": 0},
+    2: {"name": " ", "point": 0},
+    3: {"name": " ", "point": 0},
+    4: {"name": " ", "point": 0},
+    5: {"name": " ", "point": 0},
+}
+
 
 @app.route('/')
 def root():
@@ -67,13 +77,6 @@ def login():
     return jsonify(out)
 
 
-# API per eliminare la collezione
-@app.route('/clear-db')
-def clear():
-    user_.drop()
-    out = {"action": 1}
-    return jsonify(out)
-
 
 @app.route('/api/get-nickname', methods=['POST'])
 def get_nickname():
@@ -95,9 +98,8 @@ def add_point():
 
 @app.route('/api/update-quiz', methods=['POST'])
 def quiz_done():
-
     x = user_.find_one({"nickname": str(request.form.get('name'))})
-    quiz_aggiornato = request.form.get('quiz','non definito')
+    quiz_aggiornato = request.form.get('quiz', 'non definito')
     stato = request.form.get('stato', 0)
     myquery = {"nickname": request.form.get('name')}
     newValue = {"$set": {quiz_aggiornato: stato}}
@@ -105,11 +107,33 @@ def quiz_done():
 
     return str('quiz aggiornato')
 
-
 @app.route('/api/get-quiz', methods=['POST'])
 def get_quiz():
-
     x = user_.find_one({"nickname": str(request.form.get('name'))})
     out = {"CSS": x['CSS'], "LOGIC": x['LOGIC'], "JS": x['JS'], "HTML": x['HTML']}
 
+    return jsonify(out)
+
+@app.route('/api/show-rank', methods=['GET'])
+def update_rank():
+    out = user_.find().sort("point", -1)
+    var = 1
+
+    for item in out:
+        rank[var]["name"] = item["nickname"]
+        rank[var]["point"] = item["point"]
+        var = var + 1
+        if var > 5:
+            break
+
+    return jsonify(rank)
+
+# API per eliminare la collezione
+@app.route('/api/clear-db', methods=['POST'])
+def clear():
+    day=request.form.get('current')
+    if day != currentday[0] :
+        user_.drop()
+        out = {"action": 1}
+        currentday[0] = day
     return jsonify(out)

@@ -93,9 +93,10 @@ function start_game() {
 }
 
 function daily_prizes(daily_list)
-{
+
     let today=new Date()
     let day=(today.getDay()) - 1
+
     console.log(day)
     let element=document.getElementById("lista")
     let i
@@ -308,3 +309,24 @@ $(document).ready( function() {
 
     });
 });
+
+$(document).ready(function(){
+    let today=new Date()
+    let day=(today.getDay())
+    console.log(day)
+
+    $.ajax({
+        url: 'http://localhost:5000/api/clear-db',
+        type: 'POST',
+        dataType: "json",
+        data : {
+            'current' :  day
+        },
+
+        success: function(result) {
+            console.log(result)
+            }
+
+    });
+})
+
