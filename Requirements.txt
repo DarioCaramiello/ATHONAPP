@@ -18,7 +18,7 @@ cd mkdir mongodata
 Define environment variable MONGODATA
 export MONGODATA="$PWD/mongodata"
 
-Launch the container with the run command mouting the directory /data/db of the container on $MONGODATA of the host machine:
+Launch the container with the run command mounting the directory /data/db of the container on $MONGODATA of the host machine:
 docker run -it -v $MONGODATA:/data/db -p 27017:27017 --name mongodb -d mongo
 Check that the container is active
 docker ps
