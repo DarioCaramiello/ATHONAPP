@@ -193,7 +193,7 @@ function timerStart(){
 /*array delle domande*/
 const questions_array = [
     {
-        question: "In questo esercizio ci sono 2 errori, trovali e corregili!",
+        question: "This exercise has 2 errors, search and correct them!",
         code: "<!doctype html>\n" +
                 "<html lang=\"en\">\n" +
                 "        <meta charset=\"UTF-8\">\n" +
@@ -221,7 +221,7 @@ const questions_array = [
             "</html>"
     },
     {
-        question: "In questo esercizio ci sono 3 errori, trovali e corregili!",
+        question: "This exercise has 3 errors, search and correct them!",
         code: "<!doctype html>\n" +
             "    <html lang=\"en\">\n" +
             "    <head>\n" +
@@ -260,7 +260,7 @@ const questions_array = [
             "    </html>"
     },
     {
-        question: "In questo esercizio c'e' 1 errore, trovalo e corregilo!",
+        question: "This exercise has 1 error, search and correct it!",
         code: "<!doctype html>\n" +
             "    <html lang=\"en\">\n" +
             "    <head>\n" +
