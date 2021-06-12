@@ -1,0 +1,26 @@
+-----Server-----
+
+Python == 3.8.8
+Flask == 2.0.1
+Flask-Cors == 3.0.10
+pymongo == 3.11.4
+
+-----MONGODB-----
+
+Install Docker on your machine (https://www.docker.com) 
+Downlaod the latest Mongo image
+
+docker pull mongo
+
+Create a directory to save MongoDB data
+cd mkdir mongodata
+
+Define environment variable MONGODATA
+export MONGODATA="$PWD/mongodata"
+
+Launch the cointainer with the run command mouting the directory /data/db of the cointainer on $MONGODATA of the host machine: 
+docker run -it -v $MONGODATA:/data/db -p 27017:27017 --name mongodb -d mongo
+Check that the container is active
+docker ps
+Check MongoDB logs
+docker logs mongodb
