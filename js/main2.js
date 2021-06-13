@@ -100,7 +100,7 @@ function daily_prizes(daily_list){
     console.log(day)
     let element=document.getElementById("lista")
     let i
-    for (i=0; i<daily_list[day].length;i++)
+    for (i=0; i<daily_list[day].length ; i++)
     {
         let x = document.createElement("li");
         x.innerText= daily_list[day][i].toString();

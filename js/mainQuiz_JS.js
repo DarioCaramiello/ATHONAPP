@@ -1,6 +1,6 @@
 
 let tot_reset = 0
-let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "return }" ]
+let risposteQ1 = [ "function swap(a, b){", "let x; x = a; a = b; b = x;", "}" ]
 let risposteQ2 = [ "$(\"#element\").click( function() {", "alert(\"TechWeb\")", "})" ]
 let risposteQ3 = [ "function assign() {", "$(\"#element\").innerText = text", "}" ]
 let qestion = ["complete function at 'click' event with JQuery,the function should bring up a warning window","complete function to insert text into an HTML element with id = \"element\""]
